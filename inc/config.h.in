@@ -1,0 +1,17 @@
+/**
+ * @file config.h
+ * @brief Auto generated configure file
+ * @author mengdemao19951021@163.com (mengdemao)
+ * @version 1.0
+ * @date 2021-09-18
+ * 
+ * 
+ */
+#ifndef __COFNIG_H__
+#define __COFNIG_H__
+
+#ifndef AntlrExpr_VERSION
+#define AntlrExpr_VERSION 	"@AntlrExpr_VERSION@"
+#endif
+
+#endif /* __CONFIG_H__ */

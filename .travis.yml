@@ -1,0 +1,26 @@
+language: cpp
+
+dist: focal
+
+addons:
+  apt:
+    packages:
+      - cmake-data
+      - cmake
+
+compiler:
+  - clang
+
+before_script:
+  - git lfs checkout
+  - git lfs pull
+  - mkdir build
+  - cd build
+  - cmake ..
+
+script:
+  - make
+  - make test
+
+after_success:
+    - echo "Build Success"
