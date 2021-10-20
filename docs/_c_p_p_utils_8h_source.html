@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/support/CPPUtils.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_d4855dafb0f6bf1a4bc38ca998dea7ed.html">support</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CPPUtils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_c_p_p_utils_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="antlr4-common_8h.html">antlr4-common.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceantlrcpp.html">antlrcpp</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#aef8e81879ec73b9c0b331cb115cc7482">join</a>(std::vector&lt;std::string&gt; strings, <span class="keyword">const</span> std::string &amp;separator);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  std::map&lt;std::string, size_t&gt; <a class="code" href="namespaceantlrcpp.html#ac162d6f46677840e74b6b1d8374c3918">toMap</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;keys);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#a70f43b77dd07d83a921dbe5a5d3f0cdd">escapeWhitespace</a>(std::string str, <span class="keywordtype">bool</span> escapeSpaces);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#ab872865ce6358753d8b51e521d4b94c8">toHexString</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> t);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">arrayToString</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;data);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#a8a6e4b922dc9b28b53382cec7f2b29ce">replaceString</a>(<span class="keyword">const</span> std::string &amp;s, <span class="keyword">const</span> std::string &amp;from, <span class="keyword">const</span> std::string &amp;to);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  std::vector&lt;std::string&gt; <a class="code" href="namespaceantlrcpp.html#aab499b1852046271f8ace62a76456788">split</a>(<span class="keyword">const</span> std::string &amp;s, <span class="keyword">const</span> std::string &amp;sep, <span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#a32a313745652eef0a47c8a18ccaf578f">indent</a>(<span class="keyword">const</span> std::string &amp;s, <span class="keyword">const</span> std::string &amp;indentation, <span class="keywordtype">bool</span> includingFirst = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// Using RAII + a lambda to implement a &quot;finally&quot; replacement.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> OnEnd&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structantlrcpp_1_1_final_action.html">   23</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structantlrcpp_1_1_final_action.html">FinalAction</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structantlrcpp_1_1_final_action.html#aa2d7bad098982c3b9b770aa22a536f72">   24</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_final_action.html#aa2d7bad098982c3b9b770aa22a536f72">FinalAction</a>(OnEnd f) : <a class="code" href="structantlrcpp_1_1_final_action.html#ae4145bf12d04fb3509996c1b5102f17d">_cleanUp</a> { <a class="code" href="namespacestd.html">std</a>::move(f) } {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structantlrcpp_1_1_final_action.html#ac435024278563630ef5634dbb92c4c94">   25</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_final_action.html#ac435024278563630ef5634dbb92c4c94">FinalAction</a>(<a class="code" href="structantlrcpp_1_1_final_action.html">FinalAction</a> &amp;&amp;other) :</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="structantlrcpp_1_1_final_action.html#ae4145bf12d04fb3509996c1b5102f17d">_cleanUp</a>(<a class="code" href="namespacestd.html">std</a>::move(other.<a class="code" href="structantlrcpp_1_1_final_action.html#ae4145bf12d04fb3509996c1b5102f17d">_cleanUp</a>)), <a class="code" href="structantlrcpp_1_1_final_action.html#a818386adf3c95f403c9ecabc8df16744">_enabled</a>(other.<a class="code" href="structantlrcpp_1_1_final_action.html#a818386adf3c95f403c9ecabc8df16744">_enabled</a>) {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      other._enabled = <span class="keyword">false</span>; <span class="comment">// Don&#39;t trigger the lambda after ownership has moved.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structantlrcpp_1_1_final_action.html#a2ff720f166486e0a459a03d75cbd303d">   29</a></span>&#160;    <a class="code" href="structantlrcpp_1_1_final_action.html#a2ff720f166486e0a459a03d75cbd303d">~FinalAction</a>() { <span class="keywordflow">if</span> (<a class="code" href="structantlrcpp_1_1_final_action.html#a818386adf3c95f403c9ecabc8df16744">_enabled</a>) <a class="code" href="structantlrcpp_1_1_final_action.html#ae4145bf12d04fb3509996c1b5102f17d">_cleanUp</a>(); }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structantlrcpp_1_1_final_action.html#a502b8bdda45fd1328e753030bed8319e">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structantlrcpp_1_1_final_action.html#a502b8bdda45fd1328e753030bed8319e">disable</a>() { <a class="code" href="structantlrcpp_1_1_final_action.html#a818386adf3c95f403c9ecabc8df16744">_enabled</a> = <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structantlrcpp_1_1_final_action.html#ae4145bf12d04fb3509996c1b5102f17d">   33</a></span>&#160;    OnEnd <a class="code" href="structantlrcpp_1_1_final_action.html#ae4145bf12d04fb3509996c1b5102f17d">_cleanUp</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structantlrcpp_1_1_final_action.html#a818386adf3c95f403c9ecabc8df16744">   34</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="structantlrcpp_1_1_final_action.html#a818386adf3c95f403c9ecabc8df16744">_enabled</a> {<span class="keyword">true</span>};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> OnEnd&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespaceantlrcpp.html#ab3176dcc6d279e8aece046048b57f416">   38</a></span>&#160;  <a class="code" href="structantlrcpp_1_1_final_action.html">FinalAction&lt;OnEnd&gt;</a> <span class="keywordflow">finally</span>(OnEnd f) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structantlrcpp_1_1_final_action.html">FinalAction&lt;OnEnd&gt;</a>(std::move(f));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// Convenience functions to avoid lengthy dynamic_cast() != nullptr checks in many places.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="namespaceantlrcpp.html#a9d6cc632a8936e34086610305fd0c35d">   44</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceantlrcpp.html#a9d6cc632a8936e34086610305fd0c35d">is</a>(T2 *obj) { <span class="comment">// For pointer types.</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>typename std::add_const&lt;T1&gt;::type<span class="keyword">&gt;</span>(obj) != <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespaceantlrcpp.html#a8179b90a45648faf3ba0389fcd725f97">   49</a></span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceantlrcpp.html#a9d6cc632a8936e34086610305fd0c35d">is</a>(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;T2&gt;</a> <span class="keyword">const</span>&amp; obj) { <span class="comment">// For shared pointers.</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T1 *<span class="keyword">&gt;</span>(obj.get()) != <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">   54</a></span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>(<span class="keyword">const</span> T &amp;o) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// typeid gives the mangled class name, but that&#39;s all what&#39;s possible</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// in a portable way.</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ss &lt;&lt; <span class="keyword">typeid</span>(o).name() &lt;&lt; <span class="stringliteral">&quot;@&quot;</span> &lt;&lt; std::hex &lt;&lt; reinterpret_cast&lt;uintptr_t&gt;(&amp;o);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// Get the error text from an exception pointer or the current exception.</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  std::string <a class="code" href="namespaceantlrcpp.html#af3bcbdaa031b4e8ca1df1f28e645355d">what</a>(std::exception_ptr eptr = std::current_exception());</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">   65</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">SingleWriteMultipleReadLock</a> {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ae6709bfaed62f05615982fceabbea1b2">readLock</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a4d9717794f49faa731785384c3c24879">readUnlock</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b">writeLock</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a">writeUnlock</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a24099ac1239e921153acaec21ef4f182">   73</a></span>&#160;    std::condition_variable <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a24099ac1239e921153acaec21ef4f182">_readerGate</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ac8a7ba5b3ae5a7100d4a54d422634b4a">   74</a></span>&#160;    std::condition_variable <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ac8a7ba5b3ae5a7100d4a54d422634b4a">_writerGate</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a942632f4c34be0a3d69538e7f62cacc4">   76</a></span>&#160;    std::mutex <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a942632f4c34be0a3d69538e7f62cacc4">_mutex</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a394aaff6f23a089b1d4555b9f8a5d9d5">   77</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a394aaff6f23a089b1d4555b9f8a5d9d5">_activeReaders</a> = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ad6a4d9c7c2bacdccf5acf079c7ae9e58">   78</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ad6a4d9c7c2bacdccf5acf079c7ae9e58">_waitingWriters</a> = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a6036495317beca3751c41b93d7134ca6">   79</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a6036495317beca3751c41b93d7134ca6">_activeWriters</a> = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">// namespace antlrcpp</span></div>
+<div class="ttc" id="aantlr4-common_8h_html"><div class="ttname"><a href="antlr4-common_8h.html">antlr4-common.h</a></div></div>
+<div class="ttc" id="aantlr4-common_8h_html_add5e90b302c31b74a46619f240214bcc"><div class="ttname"><a href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:139</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a></div><div class="ttdef"><b>Definition:</b> CPPUtils.h:65</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a24099ac1239e921153acaec21ef4f182"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a24099ac1239e921153acaec21ef4f182">antlrcpp::SingleWriteMultipleReadLock::_readerGate</a></div><div class="ttdeci">std::condition_variable _readerGate</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:73</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a394aaff6f23a089b1d4555b9f8a5d9d5"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a394aaff6f23a089b1d4555b9f8a5d9d5">antlrcpp::SingleWriteMultipleReadLock::_activeReaders</a></div><div class="ttdeci">size_t _activeReaders</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:77</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a3e1dda5e0e36edf6b80d8a3965851d1b"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b">antlrcpp::SingleWriteMultipleReadLock::writeLock</a></div><div class="ttdeci">void writeLock()</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:222</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a4d9717794f49faa731785384c3c24879"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a4d9717794f49faa731785384c3c24879">antlrcpp::SingleWriteMultipleReadLock::readUnlock</a></div><div class="ttdeci">void readUnlock()</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:215</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a6036495317beca3751c41b93d7134ca6"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a6036495317beca3751c41b93d7134ca6">antlrcpp::SingleWriteMultipleReadLock::_activeWriters</a></div><div class="ttdeci">size_t _activeWriters</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:79</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_a942632f4c34be0a3d69538e7f62cacc4"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a942632f4c34be0a3d69538e7f62cacc4">antlrcpp::SingleWriteMultipleReadLock::_mutex</a></div><div class="ttdeci">std::mutex _mutex</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:76</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_ac8a7ba5b3ae5a7100d4a54d422634b4a"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ac8a7ba5b3ae5a7100d4a54d422634b4a">antlrcpp::SingleWriteMultipleReadLock::_writerGate</a></div><div class="ttdeci">std::condition_variable _writerGate</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:74</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_ad6a4d9c7c2bacdccf5acf079c7ae9e58"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ad6a4d9c7c2bacdccf5acf079c7ae9e58">antlrcpp::SingleWriteMultipleReadLock::_waitingWriters</a></div><div class="ttdeci">size_t _waitingWriters</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:78</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_adefecf5fd0a7b3843d4044f10e525f8a"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a">antlrcpp::SingleWriteMultipleReadLock::writeUnlock</a></div><div class="ttdeci">void writeUnlock()</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:231</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_single_write_multiple_read_lock_html_ae6709bfaed62f05615982fceabbea1b2"><div class="ttname"><a href="classantlrcpp_1_1_single_write_multiple_read_lock.html#ae6709bfaed62f05615982fceabbea1b2">antlrcpp::SingleWriteMultipleReadLock::readLock</a></div><div class="ttdeci">void readLock()</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:207</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html"><div class="ttname"><a href="namespaceantlrcpp.html">antlrcpp</a></div><div class="ttdef"><b>Definition:</b> ANTLRErrorListener.h:10</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_a32a313745652eef0a47c8a18ccaf578f"><div class="ttname"><a href="namespaceantlrcpp.html#a32a313745652eef0a47c8a18ccaf578f">antlrcpp::indent</a></div><div class="ttdeci">std::string indent(const std::string &amp;s, const std::string &amp;indentation, bool includingFirst)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:128</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_a377b903dbd6c57c2d3c9d885de177a83"><div class="ttname"><a href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">antlrcpp::toString</a></div><div class="ttdeci">std::string toString(const T &amp;o)</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:54</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_a70f43b77dd07d83a921dbe5a5d3f0cdd"><div class="ttname"><a href="namespaceantlrcpp.html#a70f43b77dd07d83a921dbe5a5d3f0cdd">antlrcpp::escapeWhitespace</a></div><div class="ttdeci">std::string escapeWhitespace(std::string str, bool escapeSpaces)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:31</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_a8a6e4b922dc9b28b53382cec7f2b29ce"><div class="ttname"><a href="namespaceantlrcpp.html#a8a6e4b922dc9b28b53382cec7f2b29ce">antlrcpp::replaceString</a></div><div class="ttdeci">std::string replaceString(const std::string &amp;s, const std::string &amp;from, const std::string &amp;to)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:81</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_a9d6cc632a8936e34086610305fd0c35d"><div class="ttname"><a href="namespaceantlrcpp.html#a9d6cc632a8936e34086610305fd0c35d">antlrcpp::is</a></div><div class="ttdeci">bool is(T2 *obj)</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:44</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_aab499b1852046271f8ace62a76456788"><div class="ttname"><a href="namespaceantlrcpp.html#aab499b1852046271f8ace62a76456788">antlrcpp::split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split(const std::string &amp;s, const std::string &amp;sep, int count)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:100</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_ab872865ce6358753d8b51e521d4b94c8"><div class="ttname"><a href="namespaceantlrcpp.html#ab872865ce6358753d8b51e521d4b94c8">antlrcpp::toHexString</a></div><div class="ttdeci">std::string toHexString(const int t)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:67</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_ac162d6f46677840e74b6b1d8374c3918"><div class="ttname"><a href="namespaceantlrcpp.html#ac162d6f46677840e74b6b1d8374c3918">antlrcpp::toMap</a></div><div class="ttdeci">std::map&lt; std::string, size_t &gt; toMap(const std::vector&lt; std::string &gt; &amp;keys)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:23</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_ac6ea228343730365ed4159f2420ad2aa"><div class="ttname"><a href="namespaceantlrcpp.html#ac6ea228343730365ed4159f2420ad2aa">antlrcpp::arrayToString</a></div><div class="ttdeci">std::string arrayToString(const std::vector&lt; std::string &gt; &amp;data)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:73</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_aef8e81879ec73b9c0b331cb115cc7482"><div class="ttname"><a href="namespaceantlrcpp.html#aef8e81879ec73b9c0b331cb115cc7482">antlrcpp::join</a></div><div class="ttdeci">std::string join(std::vector&lt; std::string &gt; strings, const std::string &amp;separator)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:10</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_af3bcbdaa031b4e8ca1df1f28e645355d"><div class="ttname"><a href="namespaceantlrcpp.html#af3bcbdaa031b4e8ca1df1f28e645355d">antlrcpp::what</a></div><div class="ttdeci">std::string what(std::exception_ptr eptr)</div><div class="ttdef"><b>Definition:</b> CPPUtils.cpp:166</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> ATNConfig.h:132</div></div>
+<div class="ttc" id="astructantlrcpp_1_1_final_action_html"><div class="ttname"><a href="structantlrcpp_1_1_final_action.html">antlrcpp::FinalAction</a></div><div class="ttdef"><b>Definition:</b> CPPUtils.h:23</div></div>
+<div class="ttc" id="astructantlrcpp_1_1_final_action_html_a2ff720f166486e0a459a03d75cbd303d"><div class="ttname"><a href="structantlrcpp_1_1_final_action.html#a2ff720f166486e0a459a03d75cbd303d">antlrcpp::FinalAction::~FinalAction</a></div><div class="ttdeci">~FinalAction()</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:29</div></div>
+<div class="ttc" id="astructantlrcpp_1_1_final_action_html_a502b8bdda45fd1328e753030bed8319e"><div class="ttname"><a href="structantlrcpp_1_1_final_action.html#a502b8bdda45fd1328e753030bed8319e">antlrcpp::FinalAction::disable</a></div><div class="ttdeci">void disable()</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:31</div></div>
+<div class="ttc" id="astructantlrcpp_1_1_final_action_html_a818386adf3c95f403c9ecabc8df16744"><div class="ttname"><a href="structantlrcpp_1_1_final_action.html#a818386adf3c95f403c9ecabc8df16744">antlrcpp::FinalAction::_enabled</a></div><div class="ttdeci">bool _enabled</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:34</div></div>
+<div class="ttc" id="astructantlrcpp_1_1_final_action_html_aa2d7bad098982c3b9b770aa22a536f72"><div class="ttname"><a href="structantlrcpp_1_1_final_action.html#aa2d7bad098982c3b9b770aa22a536f72">antlrcpp::FinalAction::FinalAction</a></div><div class="ttdeci">FinalAction(OnEnd f)</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:24</div></div>
+<div class="ttc" id="astructantlrcpp_1_1_final_action_html_ac435024278563630ef5634dbb92c4c94"><div class="ttname"><a href="structantlrcpp_1_1_final_action.html#ac435024278563630ef5634dbb92c4c94">antlrcpp::FinalAction::FinalAction</a></div><div class="ttdeci">FinalAction(FinalAction &amp;&amp;other)</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:25</div></div>
+<div class="ttc" id="astructantlrcpp_1_1_final_action_html_ae4145bf12d04fb3509996c1b5102f17d"><div class="ttname"><a href="structantlrcpp_1_1_final_action.html#ae4145bf12d04fb3509996c1b5102f17d">antlrcpp::FinalAction::_cleanUp</a></div><div class="ttdeci">OnEnd _cleanUp</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::CommonTokenFactory类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="classantlr4_1_1_common_token_factory.html">CommonTokenFactory</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classantlr4_1_1_common_token_factory-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::CommonTokenFactory类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_common_token_factory_8h_source.html">CommonTokenFactory.h</a>&gt;</code></p>
+<div class="dynheader">
+类 antlr4::CommonTokenFactory 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1_common_token_factory__inherit__graph.png" border="0" usemap="#aantlr4_1_1_common_token_factory_inherit__map" alt="Inheritance graph"/></div>
+<map name="aantlr4_1_1_common_token_factory_inherit__map" id="aantlr4_1_1_common_token_factory_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,95,199,121"/>
+<area shape="rect" href="classantlr4_1_1_token_factory.html" title=" " alt="" coords="31,5,173,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+antlr4::CommonTokenFactory 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1_common_token_factory__coll__graph.png" border="0" usemap="#aantlr4_1_1_common_token_factory_coll__map" alt="Collaboration graph"/></div>
+<map name="aantlr4_1_1_common_token_factory_coll__map" id="aantlr4_1_1_common_token_factory_coll__map">
+<area shape="rect" title=" " alt="" coords="5,95,199,121"/>
+<area shape="rect" href="classantlr4_1_1_token_factory.html" title=" " alt="" coords="31,5,173,47"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a580c068f46164c58052858432bbf974c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_common_token_factory.html#a580c068f46164c58052858432bbf974c">CommonTokenFactory</a> (bool <a class="el" href="classantlr4_1_1_common_token_factory.html#a944c106da2cf4638ea989bcb20b482df">copyText</a>)</td></tr>
+<tr class="separator:a580c068f46164c58052858432bbf974c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf0a30d96f0239d56c72d0b5dc634f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_common_token_factory.html#a4bf0a30d96f0239d56c72d0b5dc634f7">CommonTokenFactory</a> ()</td></tr>
+<tr class="separator:a4bf0a30d96f0239d56c72d0b5dc634f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff78844ffb8c16bbd217211f83e18e0"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_common_token_factory.html#adff78844ffb8c16bbd217211f83e18e0">create</a> (std::pair&lt; <a class="el" href="classantlr4_1_1_token_source.html">TokenSource</a> *, CharStream * &gt; source, size_t type, const std::string &amp;text, size_t channel, size_t start, size_t stop, size_t line, size_t charPositionInLine) override</td></tr>
+<tr class="separator:adff78844ffb8c16bbd217211f83e18e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b21aad910d0976a291c7b4aed688aad"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_common_token_factory.html#a9b21aad910d0976a291c7b4aed688aad">create</a> (size_t type, const std::string &amp;text) override</td></tr>
+<tr class="memdesc:a9b21aad910d0976a291c7b4aed688aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generically useful  <a href="classantlr4_1_1_common_token_factory.html#a9b21aad910d0976a291c7b4aed688aad">更多...</a><br /></td></tr>
+<tr class="separator:a9b21aad910d0976a291c7b4aed688aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1_token_factory"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1_token_factory')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1_token_factory.html">antlr4::TokenFactory&lt; CommonToken &gt;</a></td></tr>
+<tr class="memitem:acb81b9a4d5d250d37533da93c05a5497 inherit pub_methods_classantlr4_1_1_token_factory"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_token_factory.html#acb81b9a4d5d250d37533da93c05a5497">~TokenFactory</a> ()</td></tr>
+<tr class="separator:acb81b9a4d5d250d37533da93c05a5497 inherit pub_methods_classantlr4_1_1_token_factory"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a6a98d78f6f938b980940b6a9c5609c71"><td class="memItemLeft" align="right" valign="top">static const std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_token_factory.html">TokenFactory</a>&lt; <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_common_token_factory.html#a6a98d78f6f938b980940b6a9c5609c71">DEFAULT</a></td></tr>
+<tr class="separator:a6a98d78f6f938b980940b6a9c5609c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a944c106da2cf4638ea989bcb20b482df"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_common_token_factory.html#a944c106da2cf4638ea989bcb20b482df">copyText</a></td></tr>
+<tr class="separator:a944c106da2cf4638ea989bcb20b482df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This default implementation of <a class="el" href="classantlr4_1_1_token_factory.html">TokenFactory</a> creates <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a> objects. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a580c068f46164c58052858432bbf974c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580c068f46164c58052858432bbf974c">&#9670;&nbsp;</a></span>CommonTokenFactory() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommonTokenFactory::CommonTokenFactory </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>copyText</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructs a <a class="el" href="classantlr4_1_1_common_token_factory.html">CommonTokenFactory</a> with the specified value for <a class="el" href="classantlr4_1_1_common_token_factory.html#a944c106da2cf4638ea989bcb20b482df">copyText</a>.</p>
+<p>When</p><div class="fragment"><div class="line"><a class="code" href="classantlr4_1_1_common_token_factory.html#a944c106da2cf4638ea989bcb20b482df">copyText</a> </div>
+<div class="ttc" id="aclassantlr4_1_1_common_token_factory_html_a944c106da2cf4638ea989bcb20b482df"><div class="ttname"><a href="classantlr4_1_1_common_token_factory.html#a944c106da2cf4638ea989bcb20b482df">antlr4::CommonTokenFactory::copyText</a></div><div class="ttdeci">const bool copyText</div><div class="ttdef"><b>Definition:</b> CommonTokenFactory.h:43</div></div>
+</div><!-- fragment --><p> is</p><div class="fragment"><div class="line"><span class="keyword">false</span> </div>
+</div><!-- fragment --><p> , the <a class="el" href="classantlr4_1_1_common_token_factory.html#a6a98d78f6f938b980940b6a9c5609c71">DEFAULT</a> instance should be used instead of constructing a new instance.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">copyText</td><td>The value for <a class="el" href="classantlr4_1_1_common_token_factory.html#a944c106da2cf4638ea989bcb20b482df">copyText</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4bf0a30d96f0239d56c72d0b5dc634f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf0a30d96f0239d56c72d0b5dc634f7">&#9670;&nbsp;</a></span>CommonTokenFactory() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CommonTokenFactory::CommonTokenFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructs a <a class="el" href="classantlr4_1_1_common_token_factory.html">CommonTokenFactory</a> with <a class="el" href="classantlr4_1_1_common_token_factory.html#a944c106da2cf4638ea989bcb20b482df">copyText</a> set to </p><div class="fragment"><div class="line"><span class="keyword">false</span> </div>
+</div><!-- fragment --><p> .</p>
+<p>The <a class="el" href="classantlr4_1_1_common_token_factory.html#a6a98d78f6f938b980940b6a9c5609c71">DEFAULT</a> instance should be used instead of calling this directly.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a9b21aad910d0976a291c7b4aed688aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b21aad910d0976a291c7b4aed688aad">&#9670;&nbsp;</a></span>create() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a> &gt; CommonTokenFactory::create </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generically useful </p>
+
+<p>实现了 <a class="el" href="classantlr4_1_1_token_factory.html#a43347835d5d4f2184156ed7427e23a1b">antlr4::TokenFactory&lt; CommonToken &gt;</a>.</p>
+
+</div>
+</div>
+<a id="adff78844ffb8c16bbd217211f83e18e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff78844ffb8c16bbd217211f83e18e0">&#9670;&nbsp;</a></span>create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a> &gt; CommonTokenFactory::create </td>
+          <td>(</td>
+          <td class="paramtype">std::pair&lt; <a class="el" href="classantlr4_1_1_token_source.html">TokenSource</a> *, CharStream * &gt;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>charPositionInLine</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This is the method used to create tokens in the lexer and in the error handling strategy. If text!=null, than the start and stop positions are wiped to -1 in the text override is set in the <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a>. </p>
+
+<p>实现了 <a class="el" href="classantlr4_1_1_token_factory.html#a2cfe56427b830d99f3f7b146d98c9dfd">antlr4::TokenFactory&lt; CommonToken &gt;</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a944c106da2cf4638ea989bcb20b482df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a944c106da2cf4638ea989bcb20b482df">&#9670;&nbsp;</a></span>copyText</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool antlr4::CommonTokenFactory::copyText</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Indicates whether <a class="el" href="classantlr4_1_1_common_token.html#a2963f31fa12fdb1c5c26711004177554">CommonToken#setText</a> should be called after constructing tokens to explicitly set the text. This is useful for cases where the input stream might not be able to provide arbitrary substrings of text from the input after the lexer creates a token (e.g. the implementation of <a class="el" href="">CharStream#getText</a> in <a class="el" href="">UnbufferedCharStream</a> throws an <a class="el" href="classantlr4_1_1_unsupported_operation_exception.html">UnsupportedOperationException</a>). Explicitly setting the token text allows <a class="el" href="classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844">Token#getText</a> to be called at any time regardless of the input stream implementation.</p>
+<p>The default value is</p><div class="fragment"><div class="line"><span class="keyword">false</span> </div>
+</div><!-- fragment --><p> to avoid the performance and memory overhead of copying text for every token unless explicitly requested.</p>
+
+</div>
+</div>
+<a id="a6a98d78f6f938b980940b6a9c5609c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a98d78f6f938b980940b6a9c5609c71">&#9670;&nbsp;</a></span>DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_token_factory.html">TokenFactory</a>&lt; <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a> &gt; &gt; CommonTokenFactory::DEFAULT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The default <a class="el" href="classantlr4_1_1_common_token_factory.html">CommonTokenFactory</a> instance.</p>
+<p>This token factory does not explicitly copy token text when constructing tokens.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/<a class="el" href="_common_token_factory_8h_source.html">CommonTokenFactory.h</a></li>
+<li>runtime/<a class="el" href="_common_token_factory_8cpp.html">CommonTokenFactory.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="antlr4::BufferedTokenStream::getHiddenTokensToRight" name="antlr4::BufferedTokenStream::getHiddenTokensToRight">
+<area shape="rect" id="node1" title=" " alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_buffered_token_stream.html#a962f9c5cfb338e728948510a687174ec" title="Collect all hidden tokens (any off&#45;default channel) to the right of the current token up until we see..." alt="" coords="5,5,192,47"/>
+</map>

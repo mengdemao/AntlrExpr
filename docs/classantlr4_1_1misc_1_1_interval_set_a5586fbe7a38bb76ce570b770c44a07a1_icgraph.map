@@ -1,0 +1,6 @@
+<map id="antlr4::misc::IntervalSet::size" name="antlr4::misc::IntervalSet::size">
+<area shape="rect" id="node1" title=" " alt="" coords="435,39,593,80"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_a_t_n_serializer.html#ae4d16b888446eddfd0faaf5356d6d884" title="Serialize state descriptors, edge descriptors, and decision&#45;&gt;state map into list of ints:" alt="" coords="220,5,387,47"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1misc_1_1_interval_set.html#ae43c9223eb4175c1ef49cd770555142b" title=" " alt="" coords="224,71,383,112"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_a_t_n_serializer.html#acc79fa1515109ef7edbb54278fdbb1a9" title=" " alt="" coords="5,5,172,47"/>
+</map>

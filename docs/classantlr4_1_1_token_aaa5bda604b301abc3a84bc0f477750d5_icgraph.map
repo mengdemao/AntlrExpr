@@ -1,0 +1,12 @@
+<map id="antlr4::Token::getTokenIndex" name="antlr4::Token::getTokenIndex">
+<area shape="rect" id="node1" title=" " alt="" coords="244,290,433,317"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_common_token.html#a7e8aa41e9bf31b4899c18ca9302a65f4" title=" " alt="" coords="26,5,175,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1tree_1_1_trees.html#a84a58ac34196e16cfc51a14bf1263656" title=" " alt="" coords="5,71,196,127"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1_parser_rule_context.html#a8d1858e04ce2a478986ded6dced62dc4" title=" " alt="" coords="15,152,186,193"/>
+<area shape="rect" id="node5" href="$classantlr4_1_1tree_1_1_terminal_node_impl.html#a1b21f2ddee3bc02f9b242849ce4f1b0f" title=" " alt="" coords="15,217,186,259"/>
+<area shape="rect" id="node6" href="$classantlr4_1_1_buffered_token_stream.html#a2090d846bb61a625a8ca23483571cebd" title=" " alt="" coords="7,283,194,324"/>
+<area shape="rect" id="node7" href="$classantlr4_1_1_token_stream_rewriter.html#af7daac75bb69e6080ddc643909d554aa" title=" " alt="" coords="7,348,194,389"/>
+<area shape="rect" id="node8" href="$classantlr4_1_1_token_stream_rewriter.html#a5bf5f0c22aee0aa578948dc41bda08fe" title=" " alt="" coords="7,413,194,455"/>
+<area shape="rect" id="node9" href="$classantlr4_1_1_token_stream_rewriter.html#a98af0af02cdd4cee8324ce2488cb3db8" title=" " alt="" coords="7,479,194,520"/>
+<area shape="rect" id="node10" href="$classantlr4_1_1_parser_rule_context.html#a36fdb4f19d0b2dce76164b3ffee6d81e" title="Used for rule context info debugging during parse&#45;time, not so much for ATN debugging" alt="" coords="15,544,186,585"/>
+</map>

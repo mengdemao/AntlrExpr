@@ -1,0 +1,6 @@
+<map id="antlr4::atn::ATNSerializer::getSerialized" name="antlr4::atn::ATNSerializer::getSerialized">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,172,80"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_a_t_n_serializer.html#ae4d16b888446eddfd0faaf5356d6d884" title="Serialize state descriptors, edge descriptors, and decision&#45;&gt;state map into list of ints:" alt="" coords="220,39,387,80"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_transition.html#a9a850c39a688cf755a1983342a67ec22" title=" " alt="" coords="441,5,587,47"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1misc_1_1_interval_set.html#a5586fbe7a38bb76ce570b770c44a07a1" title=" " alt="" coords="435,71,593,112"/>
+</map>
