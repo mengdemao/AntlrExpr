@@ -1,5 +1,0 @@
-<map id="antlr4::tree::ParseTreeWalker::enterRule" name="antlr4::tree::ParseTreeWalker::enterRule">
-<area shape="rect" id="node1" title="Enters a grammar rule by first triggering the generic event ParseTreeListener::enterEveryRulethen by ..." alt="" coords="5,39,197,80"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1tree_1_1_parse_tree_listener.html#adf8725fe1dc794db9b27371350c516dd" title=" " alt="" coords="245,5,443,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_parser_rule_context.html#aee63c438f6be836d5592cf1f045c735f" title=" " alt="" coords="259,71,429,112"/>
-</map>

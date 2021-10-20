@@ -1,4 +1,0 @@
-<map id="antlr4::atn::ParseInfo::getLLDecisions" name="antlr4::atn::ParseInfo::getLLDecisions">
-<area shape="rect" id="node1" title="Gets the decision numbers for decisions that required one or more full&#45;context predictions during par..." alt="" coords="5,5,148,47"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#aa202e757203f75c742017f3c4756322f" title=" " alt="" coords="196,5,411,47"/>
-</map>

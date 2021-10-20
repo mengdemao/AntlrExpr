@@ -1,6 +1,0 @@
-<map id="antlr4::BaseErrorListener" name="antlr4::BaseErrorListener">
-<area shape="rect" id="node1" title=" " alt="" coords="113,80,280,107"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_console_error_listener.html" title=" " alt="" coords="5,162,188,189"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1tree_1_1xpath_1_1_x_path_lexer_error_listener.html" title=" " alt="" coords="213,155,383,196"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java)." alt="" coords="108,5,285,32"/>
-</map>

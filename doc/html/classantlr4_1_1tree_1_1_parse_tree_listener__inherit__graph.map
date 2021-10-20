@@ -1,7 +1,0 @@
-<map id="antlr4::tree::ParseTreeListener" name="antlr4::tree::ParseTreeListener">
-<area shape="rect" id="node1" title=" " alt="" coords="135,5,332,32"/>
-<area shape="rect" id="node2" href="$class_expr_listener.html" title=" " alt="" coords="21,87,115,114"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_parser_1_1_trace_listener.html" title=" " alt="" coords="140,87,327,114"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_parser_1_1_trim_to_size_listener.html" title=" " alt="" coords="351,80,524,121"/>
-<area shape="rect" id="node3" href="$class_expr_base_listener.html" title=" " alt="" coords="5,169,131,196"/>
-</map>

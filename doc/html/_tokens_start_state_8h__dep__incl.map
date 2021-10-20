@@ -1,7 +1,0 @@
-<map id="runtime/atn/TokensStartState.h" name="runtime/atn/TokensStartState.h">
-<area shape="rect" id="node1" title=" " alt="" coords="353,5,555,32"/>
-<area shape="rect" id="node2" href="$_a_t_n_deserializer_8cpp.html" title=" " alt="" coords="5,80,215,107"/>
-<area shape="rect" id="node3" href="$_a_t_n_serializer_8cpp.html" title=" " alt="" coords="239,80,434,107"/>
-<area shape="rect" id="node4" href="$_lexer_a_t_n_simulator_8cpp.html" title=" " alt="" coords="459,80,687,107"/>
-<area shape="rect" id="node5" href="$_tokens_start_state_8cpp.html" title=" " alt="" coords="711,80,928,107"/>
-</map>

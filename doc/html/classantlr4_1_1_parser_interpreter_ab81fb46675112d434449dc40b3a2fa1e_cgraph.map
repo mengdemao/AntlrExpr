@@ -1,5 +1,0 @@
-<map id="antlr4::ParserInterpreter::visitRuleStopState" name="antlr4::ParserInterpreter::visitRuleStopState">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,164,80"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_recognizer.html#a04755e8c634599894ce85d1179a34431" title=" " alt="" coords="212,5,339,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_recognizer.html#a01f30b45ab12a03262826e23382c8a89" title="Indicate that the recognizer has changed internal state that is consistent with the ATN state passed ..." alt="" coords="212,71,339,112"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" title=" " alt="" coords="5,177,109,203"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1tree_1_1xpath_1_1_x_path_rule_anywhere_element.html" title="Either {" alt="" coords="170,5,365,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1tree_1_1xpath_1_1_x_path_rule_element.html" title=" " alt="" coords="198,71,337,112"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1tree_1_1xpath_1_1_x_path_token_anywhere_element.html" title=" " alt="" coords="165,136,369,177"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1tree_1_1xpath_1_1_x_path_token_element.html" title=" " alt="" coords="194,201,341,243"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1tree_1_1xpath_1_1_x_path_wildcard_anywhere_element.html" title=" " alt="" coords="157,267,377,308"/>
-<area shape="rect" id="node7" href="$classantlr4_1_1tree_1_1xpath_1_1_x_path_wildcard_element.html" title=" " alt="" coords="186,332,349,373"/>
-</map>

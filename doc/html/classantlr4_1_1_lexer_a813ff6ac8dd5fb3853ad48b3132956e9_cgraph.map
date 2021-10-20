@@ -1,8 +1,0 @@
-<map id="antlr4::Lexer::emitEOF" name="antlr4::Lexer::emitEOF">
-<area shape="rect" id="node1" title=" " alt="" coords="5,93,160,119"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_token_factory.html#a2cfe56427b830d99f3f7b146d98c9dfd" title=" " alt="" coords="469,5,611,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_lexer.html#abc214e5f1f83f7eb144faa12a5b8e900" title=" " alt="" coords="242,63,369,90"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_lexer.html#a6f2437c9681598c4d9475cb8a91bb2c0" title="Get the index into the current line for the current position in the input stream. The first character..." alt="" coords="208,115,403,156"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1_lexer.html#a8ecc41ff09e40b469e519ed1b0d0912a" title="Get the line number for the current position in the input stream. The first line in the input is line..." alt="" coords="233,181,377,207"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_lexer.html#a6cc2284389bd2cda03741eab05fc7d45" title="What is the index of the current character of lookahead?" alt="" coords="451,71,629,98"/>
-</map>

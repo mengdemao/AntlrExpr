@@ -1,6 +1,0 @@
-<map id="antlr4::CommonTokenStream::getNumberOfOnChannelTokens" name="antlr4::CommonTokenStream::getNumberOfOnChannelTokens">
-<area shape="rect" id="node1" title="Count EOF just once." alt="" coords="5,64,217,105"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_buffered_token_stream.html#a373c27c4d4ec7358ba6985f4839e988a" title="Get all tokens from lexer until EOF." alt="" coords="265,5,452,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_token.html#a92991c0566e4cb00ae2c5f9e7d8fe6b4" title=" " alt="" coords="273,71,444,98"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4" title="Get the token type of the token" alt="" coords="283,122,434,149"/>
-</map>

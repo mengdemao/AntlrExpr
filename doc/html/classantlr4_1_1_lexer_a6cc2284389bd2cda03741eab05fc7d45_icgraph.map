@@ -1,7 +1,0 @@
-<map id="antlr4::Lexer::getCharIndex" name="antlr4::Lexer::getCharIndex">
-<area shape="rect" id="node1" title="What is the index of the current character of lookahead?" alt="" coords="819,31,997,57"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_lexer.html#abc214e5f1f83f7eb144faa12a5b8e900" title=" " alt="" coords="644,31,771,57"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_lexer.html#a813ff6ac8dd5fb3853ad48b3132956e9" title=" " alt="" coords="441,5,596,32"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_lexer.html#a50ac15500fabb9c3fee8d23af11fdc02" title="Return a token from this source; i.e., match a token on the char stream." alt="" coords="231,31,393,57"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_lexer.html#a113a0f0bdb864c0137f173a6c441f363" title=" " alt="" coords="5,31,183,57"/>
-</map>

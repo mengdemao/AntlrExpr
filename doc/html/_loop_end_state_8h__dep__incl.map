@@ -1,7 +1,0 @@
-<map id="runtime/atn/LoopEndState.h" name="runtime/atn/LoopEndState.h">
-<area shape="rect" id="node1" title=" " alt="" coords="355,5,539,32"/>
-<area shape="rect" id="node2" href="$_a_t_n_deserializer_8cpp.html" title=" " alt="" coords="5,80,215,107"/>
-<area shape="rect" id="node3" href="$_a_t_n_serializer_8cpp.html" title=" " alt="" coords="239,80,434,107"/>
-<area shape="rect" id="node4" href="$_loop_end_state_8cpp.html" title=" " alt="" coords="459,80,657,107"/>
-<area shape="rect" id="node5" href="$_parser_interpreter_8cpp.html" title=" " alt="" coords="681,80,872,107"/>
-</map>

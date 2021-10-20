@@ -1,5 +1,0 @@
-<map id="antlr4::atn::ParserATNSimulator::precedenceTransition" name="antlr4::atn::ParserATNSimulator::precedenceTransition">
-<area shape="rect" id="node1" title=" " alt="" coords="5,27,212,69"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_semantic_context.html#ae5fa5f9f1afcb130e72a863261dfdf17" title=" " alt="" coords="260,5,479,32"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_precedence_predicate_transition.html#a40ff738d5bd550cb3075f21dc38320f6" title=" " alt="" coords="263,57,475,98"/>
-</map>

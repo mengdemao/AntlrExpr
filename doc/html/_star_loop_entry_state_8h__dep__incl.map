@@ -1,9 +1,0 @@
-<map id="runtime/atn/StarLoopEntryState.h" name="runtime/atn/StarLoopEntryState.h">
-<area shape="rect" id="node1" title=" " alt="" coords="595,5,769,47"/>
-<area shape="rect" id="node2" href="$_a_t_n_deserializer_8cpp.html" title=" " alt="" coords="5,102,215,129"/>
-<area shape="rect" id="node3" href="$_parser_a_t_n_simulator_8cpp.html" title=" " alt="" coords="239,102,474,129"/>
-<area shape="rect" id="node4" href="$_star_loopback_state_8cpp.html" title=" " alt="" coords="498,95,669,136"/>
-<area shape="rect" id="node5" href="$_star_loop_entry_state_8cpp.html" title=" " alt="" coords="693,95,868,136"/>
-<area shape="rect" id="node6" href="$_d_f_a_8cpp.html" title=" " alt="" coords="893,102,1034,129"/>
-<area shape="rect" id="node7" href="$_parser_interpreter_8cpp.html" title=" " alt="" coords="1059,102,1249,129"/>
-</map>

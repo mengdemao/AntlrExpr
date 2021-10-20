@@ -1,6 +1,0 @@
-<map id="antlr4::atn::NotSetTransition" name="antlr4::atn::NotSetTransition">
-<area shape="rect" id="node1" title=" " alt="" coords="7,173,191,200"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_set_transition.html" title="A transition containing a set of values." alt="" coords="17,97,181,124"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_transition.html" title="An ATN transition between any two ATN states. Subclasses define atom, set, epsilon,..." alt="" coords="5,7,149,33"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1misc_1_1_interval_set.html" title=" " alt="" coords="174,7,333,33"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="antlr4::tree::ParseTreeWalker::exitRule" name="antlr4::tree::ParseTreeWalker::exitRule">
-<area shape="rect" id="node1" title="Exits a grammar rule by first triggering the event specific to the given parse tree node then by trig..." alt="" coords="5,39,197,80"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1tree_1_1_parse_tree_listener.html#ab8993be396adf21d7da138f61a8fd38b" title=" " alt="" coords="245,5,443,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_parser_rule_context.html#acd661fddddc4e72900091d23f6c81afe" title=" " alt="" coords="259,71,429,112"/>
-</map>

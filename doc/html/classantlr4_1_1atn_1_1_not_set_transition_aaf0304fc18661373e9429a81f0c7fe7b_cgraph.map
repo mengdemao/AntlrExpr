@@ -1,6 +1,0 @@
-<map id="antlr4::atn::NotSetTransition::toString" name="antlr4::atn::NotSetTransition::toString">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,189,76"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_transition.html#ac98fee69542c40aaadbd330e28c91105" title=" " alt="" coords="457,5,601,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_set_transition.html#a54984b348b26fec851a8a4360b69eb03" title=" " alt="" coords="237,64,401,105"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1misc_1_1_interval_set.html#a8ad8fd554f7cf35c896287e7e2be1e63" title=" " alt="" coords="449,71,608,112"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="antlr4::atn::LexerATNConfig" name="antlr4::atn::LexerATNConfig">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,187,107"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_a_t_n_config.html" title="A tuple: (ATN state, predicted alt, syntactic, semantic context). The syntactic context is a graph&#45;st..." alt="" coords="21,5,171,32"/>
-</map>

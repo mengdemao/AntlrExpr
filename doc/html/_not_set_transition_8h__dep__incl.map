@@ -1,7 +1,0 @@
-<map id="runtime/atn/NotSetTransition.h" name="runtime/atn/NotSetTransition.h">
-<area shape="rect" id="node1" title=" " alt="" coords="345,5,544,32"/>
-<area shape="rect" id="node2" href="$_a_t_n_deserializer_8cpp.html" title=" " alt="" coords="5,80,215,107"/>
-<area shape="rect" id="node3" href="$_l_l1_analyzer_8cpp.html" title=" " alt="" coords="239,80,427,107"/>
-<area shape="rect" id="node4" href="$_not_set_transition_8cpp.html" title=" " alt="" coords="451,80,663,107"/>
-<area shape="rect" id="node5" href="$_parser_a_t_n_simulator_8cpp.html" title=" " alt="" coords="687,80,922,107"/>
-</map>
