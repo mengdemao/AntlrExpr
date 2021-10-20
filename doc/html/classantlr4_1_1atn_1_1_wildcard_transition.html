@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::atn::WildcardTransition类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1atn.html">atn</a></li><li class="navelem"><a class="el" href="classantlr4_1_1atn_1_1_wildcard_transition.html">WildcardTransition</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classantlr4_1_1atn_1_1_wildcard_transition-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::atn::WildcardTransition类 参考<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_wildcard_transition_8h_source.html">WildcardTransition.h</a>&gt;</code></p>
+<div class="dynheader">
+类 antlr4::atn::WildcardTransition 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_wildcard_transition__inherit__graph.png" border="0" usemap="#aantlr4_1_1atn_1_1_wildcard_transition_inherit__map" alt="Inheritance graph"/></div>
+<map name="aantlr4_1_1atn_1_1_wildcard_transition_inherit__map" id="aantlr4_1_1atn_1_1_wildcard_transition_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,200,107"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_transition.html" title="An ATN transition between any two ATN states. Subclasses define atom, set, epsilon,..." alt="" coords="31,5,175,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+antlr4::atn::WildcardTransition 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_wildcard_transition__coll__graph.png" border="0" usemap="#aantlr4_1_1atn_1_1_wildcard_transition_coll__map" alt="Collaboration graph"/></div>
+<map name="aantlr4_1_1atn_1_1_wildcard_transition_coll__map" id="aantlr4_1_1atn_1_1_wildcard_transition_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,200,107"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_transition.html" title="An ATN transition between any two ATN states. Subclasses define atom, set, epsilon,..." alt="" coords="31,5,175,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a05cfc6031e8c187d1bedb8d6c0db9c72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_wildcard_transition.html#a05cfc6031e8c187d1bedb8d6c0db9c72">WildcardTransition</a> (ATNState *<a class="el" href="classantlr4_1_1atn_1_1_transition.html#aaaed7f4ddda71e156b36de33e88f66a7">target</a>)</td></tr>
+<tr class="separator:a05cfc6031e8c187d1bedb8d6c0db9c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99ac4e9394cb0281ae34bbe1fcadffbe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843">SerializationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_wildcard_transition.html#a99ac4e9394cb0281ae34bbe1fcadffbe">getSerializationType</a> () const override</td></tr>
+<tr class="separator:a99ac4e9394cb0281ae34bbe1fcadffbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2380c03587d9e6003877089f73afc94"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_wildcard_transition.html#aa2380c03587d9e6003877089f73afc94">matches</a> (size_t symbol, size_t minVocabSymbol, size_t maxVocabSymbol) const override</td></tr>
+<tr class="separator:aa2380c03587d9e6003877089f73afc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa576d5e643321e008d89ab4a7abbd0a6"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_wildcard_transition.html#aa576d5e643321e008d89ab4a7abbd0a6">toString</a> () const override</td></tr>
+<tr class="separator:aa576d5e643321e008d89ab4a7abbd0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1atn_1_1_transition"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1atn_1_1_transition')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></td></tr>
+<tr class="memitem:ab66e8623f23c71cd4f07c69596427bab inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#ab66e8623f23c71cd4f07c69596427bab">~Transition</a> ()</td></tr>
+<tr class="separator:ab66e8623f23c71cd4f07c69596427bab inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e712c7a46586d73c054c56f481b1be7 inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#a8e712c7a46586d73c054c56f481b1be7">isEpsilon</a> () const</td></tr>
+<tr class="separator:a8e712c7a46586d73c054c56f481b1be7 inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4e36a49e1d97d7a4bb6e16da088208 inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classantlr4_1_1misc_1_1_interval_set.html">misc::IntervalSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#abf4e36a49e1d97d7a4bb6e16da088208">label</a> () const</td></tr>
+<tr class="separator:abf4e36a49e1d97d7a4bb6e16da088208 inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a308299411ddffa07e8e2efe5b683d00e inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#a308299411ddffa07e8e2efe5b683d00e">Transition</a> (<a class="el" href="classantlr4_1_1atn_1_1_transition.html">Transition</a> const &amp;)=delete</td></tr>
+<tr class="separator:a308299411ddffa07e8e2efe5b683d00e inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc05f9e7ef50501858b89a870a27c92 inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1atn_1_1_transition.html">Transition</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#a1bc05f9e7ef50501858b89a870a27c92">operator=</a> (<a class="el" href="classantlr4_1_1atn_1_1_transition.html">Transition</a> const &amp;)=delete</td></tr>
+<tr class="separator:a1bc05f9e7ef50501858b89a870a27c92 inherit pub_methods_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_types_classantlr4_1_1atn_1_1_transition"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classantlr4_1_1atn_1_1_transition')"><img src="closed.png" alt="-"/>&#160;Public 类型 继承自 <a class="el" href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></td></tr>
+<tr class="memitem:a05a5668a4bc551c4ef1a90721fb80843 inherit pub_types_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843">SerializationType</a> { <br />
+&#160;&#160;<a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a8296539fbd49ac8ea62836009f340b2a">EPSILON</a> = 1
+, <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843aba6a77d2b8f171aac44415f96983ba7e">RANGE</a> = 2
+, <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a0c77d5c5af327043a19c51ec0c5416e9">RULE</a> = 3
+, <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a40733d35b31c5bdc4e0e6a210a13bf85">PREDICATE</a> = 4
+, <br />
+&#160;&#160;<a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a3fb405b3299ad13a2c42986121cf0b77">ATOM</a> = 5
+, <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a71becfd45d0ac3354eb14d24c48c7deb">ACTION</a> = 6
+, <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a76bcb31dbefb90cf29fed1fc596932e4">SET</a> = 7
+, <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843ae07e272da2f397b3406b124ace5a5123">NOT_SET</a> = 8
+, <br />
+&#160;&#160;<a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a9f79ed39ada718eb31e3d925a8a77350">WILDCARD</a> = 9
+, <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843a3acf4d990a817b8ccba4a5976a03e995">PRECEDENCE</a> = 10
+<br />
+ }</td></tr>
+<tr class="separator:a05a5668a4bc551c4ef1a90721fb80843 inherit pub_types_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classantlr4_1_1atn_1_1_transition"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classantlr4_1_1atn_1_1_transition')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></td></tr>
+<tr class="memitem:aaaed7f4ddda71e156b36de33e88f66a7 inherit pub_attribs_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top">ATNState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#aaaed7f4ddda71e156b36de33e88f66a7">target</a></td></tr>
+<tr class="memdesc:aaaed7f4ddda71e156b36de33e88f66a7 inherit pub_attribs_classantlr4_1_1atn_1_1_transition"><td class="mdescLeft">&#160;</td><td class="mdescRight">The target of this transition.  <a href="classantlr4_1_1atn_1_1_transition.html#aaaed7f4ddda71e156b36de33e88f66a7">更多...</a><br /></td></tr>
+<tr class="separator:aaaed7f4ddda71e156b36de33e88f66a7 inherit pub_attribs_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classantlr4_1_1atn_1_1_transition"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classantlr4_1_1atn_1_1_transition')"><img src="closed.png" alt="-"/>&#160;静态 Public 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></td></tr>
+<tr class="memitem:a891b08e421df76b8a19c9d6ac6f54ddc inherit pub_static_attribs_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#a891b08e421df76b8a19c9d6ac6f54ddc">serializationNames</a></td></tr>
+<tr class="separator:a891b08e421df76b8a19c9d6ac6f54ddc inherit pub_static_attribs_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classantlr4_1_1atn_1_1_transition"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classantlr4_1_1atn_1_1_transition')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></td></tr>
+<tr class="memitem:a46f1588fb7eddb745625b03a21b0fbcb inherit pro_methods_classantlr4_1_1atn_1_1_transition"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#a46f1588fb7eddb745625b03a21b0fbcb">Transition</a> (ATNState *<a class="el" href="classantlr4_1_1atn_1_1_transition.html#aaaed7f4ddda71e156b36de33e88f66a7">target</a>)</td></tr>
+<tr class="separator:a46f1588fb7eddb745625b03a21b0fbcb inherit pro_methods_classantlr4_1_1atn_1_1_transition"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a05cfc6031e8c187d1bedb8d6c0db9c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05cfc6031e8c187d1bedb8d6c0db9c72">&#9670;&nbsp;</a></span>WildcardTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WildcardTransition::WildcardTransition </td>
+          <td>(</td>
+          <td class="paramtype">ATNState *&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a99ac4e9394cb0281ae34bbe1fcadffbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ac4e9394cb0281ae34bbe1fcadffbe">&#9670;&nbsp;</a></span>getSerializationType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1atn_1_1_transition.html#a05a5668a4bc551c4ef1a90721fb80843">Transition::SerializationType</a> WildcardTransition::getSerializationType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="classantlr4_1_1atn_1_1_transition.html#a9a850c39a688cf755a1983342a67ec22">antlr4::atn::Transition</a>.</p>
+
+</div>
+</div>
+<a id="aa2380c03587d9e6003877089f73afc94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2380c03587d9e6003877089f73afc94">&#9670;&nbsp;</a></span>matches()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WildcardTransition::matches </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>symbol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>minVocabSymbol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>maxVocabSymbol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="classantlr4_1_1atn_1_1_transition.html#ae68515757231433d42580021e9e64432">antlr4::atn::Transition</a>.</p>
+
+</div>
+</div>
+<a id="aa576d5e643321e008d89ab4a7abbd0a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa576d5e643321e008d89ab4a7abbd0a6">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string WildcardTransition::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="classantlr4_1_1atn_1_1_transition.html#ac98fee69542c40aaadbd330e28c91105">antlr4::atn::Transition</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_wildcard_transition_aa576d5e643321e008d89ab4a7abbd0a6_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_wildcard_transition_aa576d5e643321e008d89ab4a7abbd0a6_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_wildcard_transition_aa576d5e643321e008d89ab4a7abbd0a6_cgraph" id="aclassantlr4_1_1atn_1_1_wildcard_transition_aa576d5e643321e008d89ab4a7abbd0a6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,200,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_transition.html#ac98fee69542c40aaadbd330e28c91105" title=" " alt="" coords="248,5,392,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/atn/<a class="el" href="_wildcard_transition_8h_source.html">WildcardTransition.h</a></li>
+<li>runtime/atn/<a class="el" href="_wildcard_transition_8cpp.html">WildcardTransition.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

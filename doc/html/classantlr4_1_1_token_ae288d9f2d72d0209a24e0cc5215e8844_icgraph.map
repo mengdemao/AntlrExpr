@@ -1,0 +1,13 @@
+<map id="antlr4::Token::getText" name="antlr4::Token::getText">
+<area shape="rect" id="node1" title="Get the text of the token." alt="" coords="459,229,607,255"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_common_token.html#a7e8aa41e9bf31b4899c18ca9302a65f4" title=" " alt="" coords="243,5,392,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1tree_1_1_trees.html#ae0417fc83a42ca012ac9c250d93505b1" title=" " alt="" coords="29,93,153,135"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1tree_1_1_terminal_node_impl.html#ab1a82ffc1a8ce0d927baec060f4a3098" title=" " alt="" coords="232,123,403,164"/>
+<area shape="rect" id="node5" href="$classantlr4_1_1_buffered_token_stream.html#a330ddd9c7472b2fa9c59eb24ec1f4b94" title=" " alt="" coords="224,188,411,229"/>
+<area shape="rect" id="node6" href="$classantlr4_1_1_token_stream_rewriter.html#a3e5c55af743b11284fa2dd2e1fecc9ea" title=" " alt="" coords="224,253,411,295"/>
+<area shape="rect" id="node7" href="$classantlr4_1_1_recognizer.html#a4f7740ffef4e68ea219a3f3103281e1d" title=" " alt="" coords="240,319,395,360"/>
+<area shape="rect" id="node8" href="$classantlr4_1_1_parser_interpreter.html#af76ec70c5be8d476a610b0cb85d2e696" title=" " alt="" coords="238,384,397,425"/>
+<area shape="rect" id="node10" href="$classantlr4_1_1tree_1_1_terminal_node_impl.html#a5f9a40cc7b5d8bb9d5fc49ee057845b7" title=" " alt="" coords="232,449,403,491"/>
+<area shape="rect" id="node9" href="$classantlr4_1_1_parser_interpreter.html#aaa891c8229fdbebdafc7e6c01cf92b8d" title="Begin parsing at startRuleIndex" alt="" coords="11,384,170,425"/>
+<area shape="rect" id="node11" href="$classantlr4_1_1tree_1_1_terminal_node_impl.html#a493e5b917f25c5547440a27c0f043343" title=" " alt="" coords="5,449,176,491"/>
+</map>

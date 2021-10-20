@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::tree::IterativeParseTreeWalker类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1tree.html">tree</a></li><li class="navelem"><a class="el" href="classantlr4_1_1tree_1_1_iterative_parse_tree_walker.html">IterativeParseTreeWalker</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classantlr4_1_1tree_1_1_iterative_parse_tree_walker-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::tree::IterativeParseTreeWalker类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_iterative_parse_tree_walker_8h_source.html">IterativeParseTreeWalker.h</a>&gt;</code></p>
+<div class="dynheader">
+类 antlr4::tree::IterativeParseTreeWalker 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1tree_1_1_iterative_parse_tree_walker__inherit__graph.png" border="0" usemap="#aantlr4_1_1tree_1_1_iterative_parse_tree_walker_inherit__map" alt="Inheritance graph"/></div>
+<map name="aantlr4_1_1tree_1_1_iterative_parse_tree_walker_inherit__map" id="aantlr4_1_1tree_1_1_iterative_parse_tree_walker_inherit__map">
+<area shape="rect" title=" " alt="" coords="16,80,187,121"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_walker.html" title=" " alt="" coords="5,5,197,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+antlr4::tree::IterativeParseTreeWalker 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1tree_1_1_iterative_parse_tree_walker__coll__graph.png" border="0" usemap="#aantlr4_1_1tree_1_1_iterative_parse_tree_walker_coll__map" alt="Collaboration graph"/></div>
+<map name="aantlr4_1_1tree_1_1_iterative_parse_tree_walker_coll__map" id="aantlr4_1_1tree_1_1_iterative_parse_tree_walker_coll__map">
+<area shape="rect" title=" " alt="" coords="16,81,187,123"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_walker.html" title=" " alt="" coords="5,5,197,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9e06f08e36dbe4bc96dc7ad24cc2ad24"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_iterative_parse_tree_walker.html#a9e06f08e36dbe4bc96dc7ad24cc2ad24">walk</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree_listener.html">ParseTreeListener</a> *listener, <a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *t) const override</td></tr>
+<tr class="memdesc:a9e06f08e36dbe4bc96dc7ad24cc2ad24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a walk on the given parse tree starting at the root and going down recursively with depth-first search. On each node, </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a18b01a6f9d467e6b5895011d18e620c1" title="Enters a grammar rule by first triggering the generic event ParseTreeListener::enterEveryRulethen by ...">ParseTreeWalker::enterRule</a>, <a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#acb3a293e3f2e558eb7a351097f7897a9" title="Exits a grammar rule by first triggering the event specific to the given parse tree node then by trig...">ParseTreeWalker::exitRule</a></dd></dl>
+<p>is called before recursively walking down into child nodes, then  is called after the recursive call to wind up.  <a href="classantlr4_1_1tree_1_1_iterative_parse_tree_walker.html#a9e06f08e36dbe4bc96dc7ad24cc2ad24">更多...</a><br /></td></tr>
+<tr class="separator:a9e06f08e36dbe4bc96dc7ad24cc2ad24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1tree_1_1_parse_tree_walker')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">antlr4::tree::ParseTreeWalker</a></td></tr>
+<tr class="memitem:ae19f5c31bce0e216da0eaf5910dda521 inherit pub_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#ae19f5c31bce0e216da0eaf5910dda521">~ParseTreeWalker</a> ()</td></tr>
+<tr class="separator:ae19f5c31bce0e216da0eaf5910dda521 inherit pub_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_classantlr4_1_1tree_1_1_parse_tree_walker"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classantlr4_1_1tree_1_1_parse_tree_walker')"><img src="closed.png" alt="-"/>&#160;静态 Public 属性 继承自 <a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">antlr4::tree::ParseTreeWalker</a></td></tr>
+<tr class="memitem:a473f4746776ea776418bada651f534db inherit pub_static_attribs_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">ParseTreeWalker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a473f4746776ea776418bada651f534db">DEFAULT</a> = <a class="el" href="_parse_tree_walker_8cpp.html#a765f2581a8dfcba89ef7db33507e177d">defaultWalker</a></td></tr>
+<tr class="separator:a473f4746776ea776418bada651f534db inherit pub_static_attribs_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classantlr4_1_1tree_1_1_parse_tree_walker')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html">antlr4::tree::ParseTreeWalker</a></td></tr>
+<tr class="memitem:a18b01a6f9d467e6b5895011d18e620c1 inherit pro_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a18b01a6f9d467e6b5895011d18e620c1">enterRule</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree_listener.html">ParseTreeListener</a> *listener, <a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *r) const</td></tr>
+<tr class="memdesc:a18b01a6f9d467e6b5895011d18e620c1 inherit pro_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enters a grammar rule by first triggering the generic event </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#adf8725fe1dc794db9b27371350c516dd">ParseTreeListener::enterEveryRule</a></dd></dl>
+<p>then by triggering the event specific to the given parse tree node  <a href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a18b01a6f9d467e6b5895011d18e620c1">更多...</a><br /></td></tr>
+<tr class="separator:a18b01a6f9d467e6b5895011d18e620c1 inherit pro_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3a293e3f2e558eb7a351097f7897a9 inherit pro_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#acb3a293e3f2e558eb7a351097f7897a9">exitRule</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree_listener.html">ParseTreeListener</a> *listener, <a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *r) const</td></tr>
+<tr class="memdesc:acb3a293e3f2e558eb7a351097f7897a9 inherit pro_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exits a grammar rule by first triggering the event specific to the given parse tree node then by triggering the generic event </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#ab8993be396adf21d7da138f61a8fd38b">ParseTreeListener::exitEveryRule</a></dd></dl>
+ <a href="classantlr4_1_1tree_1_1_parse_tree_walker.html#acb3a293e3f2e558eb7a351097f7897a9">更多...</a><br /></td></tr>
+<tr class="separator:acb3a293e3f2e558eb7a351097f7897a9 inherit pro_methods_classantlr4_1_1tree_1_1_parse_tree_walker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An iterative (read: non-recursive) pre-order and post-order tree walker that doesn't use the thread stack but heap-based stacks. Makes it possible to process deeply nested parse trees. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a9e06f08e36dbe4bc96dc7ad24cc2ad24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e06f08e36dbe4bc96dc7ad24cc2ad24">&#9670;&nbsp;</a></span>walk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IterativeParseTreeWalker::walk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_listener.html">ParseTreeListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Performs a walk on the given parse tree starting at the root and going down recursively with depth-first search. On each node, </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a18b01a6f9d467e6b5895011d18e620c1" title="Enters a grammar rule by first triggering the generic event ParseTreeListener::enterEveryRulethen by ...">ParseTreeWalker::enterRule</a>, <a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#acb3a293e3f2e558eb7a351097f7897a9" title="Exits a grammar rule by first triggering the event specific to the given parse tree node then by trig...">ParseTreeWalker::exitRule</a></dd></dl>
+<p>is called before recursively walking down into child nodes, then  is called after the recursive call to wind up. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The listener used by the walker to process grammar rules </td></tr>
+    <tr><td class="paramname">t</td><td>The parse tree to be walked on </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>重载 <a class="el" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a6b5fdb6419bf62860a87dfde5c9815fb">antlr4::tree::ParseTreeWalker</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1tree_1_1_iterative_parse_tree_walker_a9e06f08e36dbe4bc96dc7ad24cc2ad24_cgraph.png" border="0" usemap="#aclassantlr4_1_1tree_1_1_iterative_parse_tree_walker_a9e06f08e36dbe4bc96dc7ad24cc2ad24_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1tree_1_1_iterative_parse_tree_walker_a9e06f08e36dbe4bc96dc7ad24cc2ad24_cgraph" id="aclassantlr4_1_1tree_1_1_iterative_parse_tree_walker_a9e06f08e36dbe4bc96dc7ad24cc2ad24_cgraph">
+<area shape="rect" title="Performs a walk on the given parse tree starting at the root and going down recursively with depth&#45;fi..." alt="" coords="5,169,176,211"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#a18b01a6f9d467e6b5895011d18e620c1" title="Enters a grammar rule by first triggering the generic event ParseTreeListener::enterEveryRulethen by ..." alt="" coords="227,71,419,112"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_walker.html#acb3a293e3f2e558eb7a351097f7897a9" title="Exits a grammar rule by first triggering the event specific to the given parse tree node then by trig..." alt="" coords="227,136,419,177"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#ad736ceae08c0838ccd34ce716c8ea8cb" title=" " alt="" coords="224,201,421,243"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#a1b18d7e13cb0e59cca877c99115da90f" title=" " alt="" coords="224,267,421,308"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#adf8725fe1dc794db9b27371350c516dd" title=" " alt="" coords="469,5,667,47"/>
+<area shape="rect" href="classantlr4_1_1_parser_rule_context.html#aee63c438f6be836d5592cf1f045c735f" title=" " alt="" coords="483,71,653,112"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree_listener.html#ab8993be396adf21d7da138f61a8fd38b" title=" " alt="" coords="469,136,667,177"/>
+<area shape="rect" href="classantlr4_1_1_parser_rule_context.html#acd661fddddc4e72900091d23f6c81afe" title=" " alt="" coords="483,201,653,243"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/tree/<a class="el" href="_iterative_parse_tree_walker_8h_source.html">IterativeParseTreeWalker.h</a></li>
+<li>runtime/tree/<a class="el" href="_iterative_parse_tree_walker_8cpp.html">IterativeParseTreeWalker.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

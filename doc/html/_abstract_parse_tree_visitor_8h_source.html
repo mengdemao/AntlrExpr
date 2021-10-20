@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/tree/AbstractParseTreeVisitor.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_ec50670f89e9db2ebe67c601b8fdb9e9.html">tree</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AbstractParseTreeVisitor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_abstract_parse_tree_visitor_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_parse_tree_visitor_8h.html">tree/ParseTreeVisitor.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>tree {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html">   13</a></span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html">AbstractParseTreeVisitor</a> : <span class="keyword">public</span> ParseTreeVisitor {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">   17</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a>(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *tree)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <span class="keywordflow">return</span> tree-&gt;accept(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">   34</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a>(<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *node)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> result = defaultResult();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordtype">size_t</span> n = node-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>.size();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> (!shouldVisitNextChild(node, result)) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> childResult = node-&gt;<a class="code" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a>[i]-&gt;accept(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        result = aggregateResult(result, childResult);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a6045b85607e961bf7f364b91fd50c3ef">   51</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a6045b85607e961bf7f364b91fd50c3ef">visitTerminal</a>(<a class="code" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> * <span class="comment">/*node*/</span>)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">return</span> defaultResult();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a4cd5f0eaaf54140af51f1549d0a6b62d">   57</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <a class="code" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a4cd5f0eaaf54140af51f1549d0a6b62d">visitErrorNode</a>(<a class="code" href="classantlr4_1_1tree_1_1_error_node.html">ErrorNode</a> * <span class="comment">/*node*/</span>)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">return</span> defaultResult();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> defaultResult() {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; <span class="comment">// support isNotNull</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> aggregateResult(<a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> <span class="comment">/*aggregate*/</span>, <span class="keyword">const</span> <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> &amp;nextResult) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordflow">return</span> nextResult;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> shouldVisitNextChild(ParseTree * <span class="comment">/*node*/</span>, <span class="keyword">const</span> <a class="code" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> &amp;<span class="comment">/*currentResult*/</span>) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  };</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// namespace tree</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// namespace antlr4</span></div>
+<div class="ttc" id="a_parse_tree_visitor_8h_html"><div class="ttname"><a href="_parse_tree_visitor_8h.html">ParseTreeVisitor.h</a></div></div>
+<div class="ttc" id="aantlr4-common_8h_html_a856abffd348f82209d9588078d9fea33"><div class="ttname"><a href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a></div><div class="ttdeci">#define ANTLR4CPP_PUBLIC</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:106</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html">antlr4::tree::AbstractParseTreeVisitor</a></div><div class="ttdef"><b>Definition:</b> AbstractParseTreeVisitor.h:13</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html_a2f0e9c7e0c581b3ec08d59d216d7554d"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">antlr4::tree::AbstractParseTreeVisitor::visit</a></div><div class="ttdeci">virtual antlrcpp::Any visit(ParseTree *tree) override</div><div class="ttdef"><b>Definition:</b> AbstractParseTreeVisitor.h:17</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html_a38605a51f1b8828eedb2f2ccb9e6c705"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">antlr4::tree::AbstractParseTreeVisitor::visitChildren</a></div><div class="ttdeci">virtual antlrcpp::Any visitChildren(ParseTree *node) override</div><div class="ttdef"><b>Definition:</b> AbstractParseTreeVisitor.h:34</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html_a4cd5f0eaaf54140af51f1549d0a6b62d"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a4cd5f0eaaf54140af51f1549d0a6b62d">antlr4::tree::AbstractParseTreeVisitor::visitErrorNode</a></div><div class="ttdeci">virtual antlrcpp::Any visitErrorNode(ErrorNode *) override</div><div class="ttdef"><b>Definition:</b> AbstractParseTreeVisitor.h:57</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_abstract_parse_tree_visitor_html_a6045b85607e961bf7f364b91fd50c3ef"><div class="ttname"><a href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a6045b85607e961bf7f364b91fd50c3ef">antlr4::tree::AbstractParseTreeVisitor::visitTerminal</a></div><div class="ttdeci">virtual antlrcpp::Any visitTerminal(TerminalNode *) override</div><div class="ttdef"><b>Definition:</b> AbstractParseTreeVisitor.h:51</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_error_node_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_error_node.html">antlr4::tree::ErrorNode</a></div><div class="ttdef"><b>Definition:</b> ErrorNode.h:13</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html">antlr4::tree::ParseTree</a></div><div class="ttdef"><b>Definition:</b> ParseTree.h:20</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_parse_tree_html_aad52b12c9e03c4a117e1ac00bba74073"><div class="ttname"><a href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">antlr4::tree::ParseTree::children</a></div><div class="ttdeci">std::vector&lt; ParseTree * &gt; children</div><div class="ttdef"><b>Definition:</b> ParseTree.h:38</div></div>
+<div class="ttc" id="aclassantlr4_1_1tree_1_1_terminal_node_html"><div class="ttname"><a href="classantlr4_1_1tree_1_1_terminal_node.html">antlr4::tree::TerminalNode</a></div><div class="ttdef"><b>Definition:</b> TerminalNode.h:13</div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> ANTLRErrorListener.h:14</div></div>
+<div class="ttc" id="astructantlrcpp_1_1_any_html"><div class="ttname"><a href="structantlrcpp_1_1_any.html">antlrcpp::Any</a></div><div class="ttdef"><b>Definition:</b> Any.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::ProxyErrorListener类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="classantlr4_1_1_proxy_error_listener.html">ProxyErrorListener</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classantlr4_1_1_proxy_error_listener-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::ProxyErrorListener类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_proxy_error_listener_8h_source.html">ProxyErrorListener.h</a>&gt;</code></p>
+<div class="dynheader">
+类 antlr4::ProxyErrorListener 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1_proxy_error_listener__inherit__graph.png" border="0" usemap="#aantlr4_1_1_proxy_error_listener_inherit__map" alt="Inheritance graph"/></div>
+<map name="aantlr4_1_1_proxy_error_listener_inherit__map" id="aantlr4_1_1_proxy_error_listener_inherit__map">
+<area shape="rect" title=" " alt="" coords="9,80,179,107"/>
+<area shape="rect" href="classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java)." alt="" coords="5,5,183,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+antlr4::ProxyErrorListener 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1_proxy_error_listener__coll__graph.png" border="0" usemap="#aantlr4_1_1_proxy_error_listener_coll__map" alt="Collaboration graph"/></div>
+<map name="aantlr4_1_1_proxy_error_listener_coll__map" id="aantlr4_1_1_proxy_error_listener_coll__map">
+<area shape="rect" title=" " alt="" coords="9,80,179,107"/>
+<area shape="rect" href="classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java)." alt="" coords="5,5,183,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a972056883899e3280b0aaf7d7fdaa963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_proxy_error_listener.html#a972056883899e3280b0aaf7d7fdaa963">addErrorListener</a> (<a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html">ANTLRErrorListener</a> *listener)</td></tr>
+<tr class="separator:a972056883899e3280b0aaf7d7fdaa963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a830328aed09a28de5be14da8131a07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_proxy_error_listener.html#a5a830328aed09a28de5be14da8131a07">removeErrorListener</a> (<a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html">ANTLRErrorListener</a> *listener)</td></tr>
+<tr class="separator:a5a830328aed09a28de5be14da8131a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48444aa51a8b4e4f08fa847ba7f82f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_proxy_error_listener.html#ad48444aa51a8b4e4f08fa847ba7f82f2">removeErrorListeners</a> ()</td></tr>
+<tr class="separator:ad48444aa51a8b4e4f08fa847ba7f82f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3323723f9ea559b0daa6202b426d4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_proxy_error_listener.html#a4c3323723f9ea559b0daa6202b426d4b">syntaxError</a> (<a class="el" href="classantlr4_1_1_recognizer.html">Recognizer</a> *recognizer, <a class="el" href="classantlr4_1_1_token.html">Token</a> *offendingSymbol, size_t line, size_t charPositionInLine, const std::string &amp;msg, std::exception_ptr e) override</td></tr>
+<tr class="separator:a4c3323723f9ea559b0daa6202b426d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7b84282b79cd8512a09116f86a780d2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_proxy_error_listener.html#aa7b84282b79cd8512a09116f86a780d2">reportAmbiguity</a> (<a class="el" href="classantlr4_1_1_parser.html">Parser</a> *recognizer, const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, size_t startIndex, size_t stopIndex, bool exact, const <a class="el" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;ambigAlts, <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> *configs) override</td></tr>
+<tr class="separator:aa7b84282b79cd8512a09116f86a780d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4685c32424c820dcfec5862d822869"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_proxy_error_listener.html#ada4685c32424c820dcfec5862d822869">reportAttemptingFullContext</a> (<a class="el" href="classantlr4_1_1_parser.html">Parser</a> *recognizer, const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, size_t startIndex, size_t stopIndex, const <a class="el" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;conflictingAlts, <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> *configs) override</td></tr>
+<tr class="separator:ada4685c32424c820dcfec5862d822869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e2d5665e2077a9adc67ae70e1deb2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_proxy_error_listener.html#a56e2d5665e2077a9adc67ae70e1deb2a">reportContextSensitivity</a> (<a class="el" href="classantlr4_1_1_parser.html">Parser</a> *recognizer, const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, size_t startIndex, size_t stopIndex, size_t prediction, <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> *configs) override</td></tr>
+<tr class="separator:a56e2d5665e2077a9adc67ae70e1deb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1_a_n_t_l_r_error_listener"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1_a_n_t_l_r_error_listener')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html">antlr4::ANTLRErrorListener</a></td></tr>
+<tr class="memitem:af6702b666357d91ab5f607835c747e73 inherit pub_methods_classantlr4_1_1_a_n_t_l_r_error_listener"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html#af6702b666357d91ab5f607835c747e73">~ANTLRErrorListener</a> ()</td></tr>
+<tr class="separator:af6702b666357d91ab5f607835c747e73 inherit pub_methods_classantlr4_1_1_a_n_t_l_r_error_listener"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a63298c40fec0205db5a1c02b423d78a9"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html">ANTLRErrorListener</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_proxy_error_listener.html#a63298c40fec0205db5a1c02b423d78a9">_delegates</a></td></tr>
+<tr class="separator:a63298c40fec0205db5a1c02b423d78a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This implementation of <a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java).">ANTLRErrorListener</a> dispatches all calls to a collection of delegate listeners. This reduces the effort required to support multiple listeners. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a972056883899e3280b0aaf7d7fdaa963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a972056883899e3280b0aaf7d7fdaa963">&#9670;&nbsp;</a></span>addErrorListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProxyErrorListener::addErrorListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html">ANTLRErrorListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a830328aed09a28de5be14da8131a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a830328aed09a28de5be14da8131a07">&#9670;&nbsp;</a></span>removeErrorListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProxyErrorListener::removeErrorListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html">ANTLRErrorListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad48444aa51a8b4e4f08fa847ba7f82f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48444aa51a8b4e4f08fa847ba7f82f2">&#9670;&nbsp;</a></span>removeErrorListeners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProxyErrorListener::removeErrorListeners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7b84282b79cd8512a09116f86a780d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7b84282b79cd8512a09116f86a780d2">&#9670;&nbsp;</a></span>reportAmbiguity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProxyErrorListener::reportAmbiguity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *&#160;</td>
+          <td class="paramname"><em>recognizer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stopIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>exact</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>ambigAlts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> *&#160;</td>
+          <td class="paramname"><em>configs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada4685c32424c820dcfec5862d822869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4685c32424c820dcfec5862d822869">&#9670;&nbsp;</a></span>reportAttemptingFullContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProxyErrorListener::reportAttemptingFullContext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *&#160;</td>
+          <td class="paramname"><em>recognizer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stopIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>conflictingAlts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> *&#160;</td>
+          <td class="paramname"><em>configs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56e2d5665e2077a9adc67ae70e1deb2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e2d5665e2077a9adc67ae70e1deb2a">&#9670;&nbsp;</a></span>reportContextSensitivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProxyErrorListener::reportContextSensitivity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *&#160;</td>
+          <td class="paramname"><em>recognizer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stopIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>prediction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">atn::ATNConfigSet</a> *&#160;</td>
+          <td class="paramname"><em>configs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c3323723f9ea559b0daa6202b426d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3323723f9ea559b0daa6202b426d4b">&#9670;&nbsp;</a></span>syntaxError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProxyErrorListener::syntaxError </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_recognizer.html">Recognizer</a> *&#160;</td>
+          <td class="paramname"><em>recognizer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_token.html">Token</a> *&#160;</td>
+          <td class="paramname"><em>offendingSymbol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>charPositionInLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::exception_ptr&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1_proxy_error_listener_a4c3323723f9ea559b0daa6202b426d4b_icgraph.png" border="0" usemap="#aclassantlr4_1_1_proxy_error_listener_a4c3323723f9ea559b0daa6202b426d4b_icgraph" alt=""/></div>
+<map name="aclassantlr4_1_1_proxy_error_listener_a4c3323723f9ea559b0daa6202b426d4b_icgraph" id="aclassantlr4_1_1_proxy_error_listener_a4c3323723f9ea559b0daa6202b426d4b_icgraph">
+<area shape="rect" title=" " alt="" coords="676,5,847,47"/>
+<area shape="rect" href="classantlr4_1_1_lexer.html#a026e283b0d6977e70e9aff78ddc4928b" title=" " alt="" coords="441,13,628,39"/>
+<area shape="rect" href="classantlr4_1_1_lexer.html#a50ac15500fabb9c3fee8d23af11fdc02" title="Return a token from this source; i.e., match a token on the char stream." alt="" coords="231,13,393,39"/>
+<area shape="rect" href="classantlr4_1_1_lexer.html#a113a0f0bdb864c0137f173a6c441f363" title=" " alt="" coords="5,13,183,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a63298c40fec0205db5a1c02b423d78a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63298c40fec0205db5a1c02b423d78a9">&#9670;&nbsp;</a></span>_delegates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="classantlr4_1_1_a_n_t_l_r_error_listener.html">ANTLRErrorListener</a> *&gt; antlr4::ProxyErrorListener::_delegates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/<a class="el" href="_proxy_error_listener_8h_source.html">ProxyErrorListener.h</a></li>
+<li>runtime/<a class="el" href="_proxy_error_listener_8cpp.html">ProxyErrorListener.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: ExprBaseVisitor类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_expr_base_visitor-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">ExprBaseVisitor类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_expr_base_visitor_8h_source.html">ExprBaseVisitor.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ExprBaseVisitor 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor__inherit__graph.png" border="0" usemap="#a_expr_base_visitor_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_expr_base_visitor_inherit__map" id="a_expr_base_visitor_inherit__map">
+<area shape="rect" title=" " alt="" coords="35,244,151,271"/>
+<area shape="rect" href="class_expr_visitor.html" title=" " alt="" coords="49,169,136,196"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html" title=" " alt="" coords="5,80,180,121"/>
+<area shape="rect" title=" " alt="" coords="33,5,152,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+ExprBaseVisitor 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor__coll__graph.png" border="0" usemap="#a_expr_base_visitor_coll__map" alt="Collaboration graph"/></div>
+<map name="a_expr_base_visitor_coll__map" id="a_expr_base_visitor_coll__map">
+<area shape="rect" title=" " alt="" coords="35,244,151,271"/>
+<area shape="rect" href="class_expr_visitor.html" title=" " alt="" coords="49,169,136,196"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html" title=" " alt="" coords="5,80,180,121"/>
+<area shape="rect" title=" " alt="" coords="33,5,152,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af3cbcb6decc45851a56d9587dafd404b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#af3cbcb6decc45851a56d9587dafd404b">visitProg</a> (<a class="el" href="class_expr_parser_1_1_prog_context.html">ExprParser::ProgContext</a> *ctx) override</td></tr>
+<tr class="separator:af3cbcb6decc45851a56d9587dafd404b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8304277e9316144bc21b7e3662be5a1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#aa8304277e9316144bc21b7e3662be5a1">visitPrintExpr</a> (<a class="el" href="class_expr_parser_1_1_print_expr_context.html">ExprParser::PrintExprContext</a> *ctx) override</td></tr>
+<tr class="separator:aa8304277e9316144bc21b7e3662be5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bfe8e1fde7417827dff541dd17ddf93"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#a5bfe8e1fde7417827dff541dd17ddf93">visitAssign</a> (<a class="el" href="class_expr_parser_1_1_assign_context.html">ExprParser::AssignContext</a> *ctx) override</td></tr>
+<tr class="separator:a5bfe8e1fde7417827dff541dd17ddf93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7589b4526c2d4b9f5df3563ab830d714"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#a7589b4526c2d4b9f5df3563ab830d714">visitBlank</a> (<a class="el" href="class_expr_parser_1_1_blank_context.html">ExprParser::BlankContext</a> *ctx) override</td></tr>
+<tr class="separator:a7589b4526c2d4b9f5df3563ab830d714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d1bb4ace979a6dc44357ee66590213"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#af9d1bb4ace979a6dc44357ee66590213">visitParens</a> (<a class="el" href="class_expr_parser_1_1_parens_context.html">ExprParser::ParensContext</a> *ctx) override</td></tr>
+<tr class="separator:af9d1bb4ace979a6dc44357ee66590213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cf22c711f281251991442d039833b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#ac5cf22c711f281251991442d039833b6">visitMulDiv</a> (<a class="el" href="class_expr_parser_1_1_mul_div_context.html">ExprParser::MulDivContext</a> *ctx) override</td></tr>
+<tr class="separator:ac5cf22c711f281251991442d039833b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d366d3fa1fe6cf6de7af23859e57de"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#ad4d366d3fa1fe6cf6de7af23859e57de">visitAddSub</a> (<a class="el" href="class_expr_parser_1_1_add_sub_context.html">ExprParser::AddSubContext</a> *ctx) override</td></tr>
+<tr class="separator:ad4d366d3fa1fe6cf6de7af23859e57de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a413d08c0e1adc276ceee431129780254"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#a413d08c0e1adc276ceee431129780254">visitId</a> (<a class="el" href="class_expr_parser_1_1_id_context.html">ExprParser::IdContext</a> *ctx) override</td></tr>
+<tr class="separator:a413d08c0e1adc276ceee431129780254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbcff75ce7aacc48ed370d09d55d3a34"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_expr_base_visitor.html#adbcff75ce7aacc48ed370d09d55d3a34">visitInt</a> (<a class="el" href="class_expr_parser_1_1_int_context.html">ExprParser::IntContext</a> *ctx) override</td></tr>
+<tr class="separator:adbcff75ce7aacc48ed370d09d55d3a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html">antlr4::tree::AbstractParseTreeVisitor</a></td></tr>
+<tr class="memitem:a2f0e9c7e0c581b3ec08d59d216d7554d inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a2f0e9c7e0c581b3ec08d59d216d7554d">visit</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *tree) override</td></tr>
+<tr class="separator:a2f0e9c7e0c581b3ec08d59d216d7554d inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38605a51f1b8828eedb2f2ccb9e6c705 inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705">visitChildren</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *node) override</td></tr>
+<tr class="separator:a38605a51f1b8828eedb2f2ccb9e6c705 inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6045b85607e961bf7f364b91fd50c3ef inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a6045b85607e961bf7f364b91fd50c3ef">visitTerminal</a> (<a class="el" href="classantlr4_1_1tree_1_1_terminal_node.html">TerminalNode</a> *) override</td></tr>
+<tr class="separator:a6045b85607e961bf7f364b91fd50c3ef inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd5f0eaaf54140af51f1549d0a6b62d inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a4cd5f0eaaf54140af51f1549d0a6b62d">visitErrorNode</a> (<a class="el" href="classantlr4_1_1tree_1_1_error_node.html">ErrorNode</a> *) override</td></tr>
+<tr class="separator:a4cd5f0eaaf54140af51f1549d0a6b62d inherit pub_methods_classantlr4_1_1tree_1_1_abstract_parse_tree_visitor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This class provides an empty implementation of <a class="el" href="class_expr_visitor.html">ExprVisitor</a>, which can be extended to create a visitor which only needs to handle a subset of the available methods. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ad4d366d3fa1fe6cf6de7af23859e57de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d366d3fa1fe6cf6de7af23859e57de">&#9670;&nbsp;</a></span>visitAddSub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitAddSub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_add_sub_context.html">ExprParser::AddSubContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#a7bbbe4b649e4133fde60b265ceb54bbf">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_ad4d366d3fa1fe6cf6de7af23859e57de_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_ad4d366d3fa1fe6cf6de7af23859e57de_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_ad4d366d3fa1fe6cf6de7af23859e57de_cgraph" id="aclass_expr_base_visitor_ad4d366d3fa1fe6cf6de7af23859e57de_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,197,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="245,5,420,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5bfe8e1fde7417827dff541dd17ddf93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bfe8e1fde7417827dff541dd17ddf93">&#9670;&nbsp;</a></span>visitAssign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitAssign </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_assign_context.html">ExprParser::AssignContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#afc856a25a21bc0aa759b47b96150e904">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_a5bfe8e1fde7417827dff541dd17ddf93_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_a5bfe8e1fde7417827dff541dd17ddf93_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_a5bfe8e1fde7417827dff541dd17ddf93_cgraph" id="aclass_expr_base_visitor_a5bfe8e1fde7417827dff541dd17ddf93_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,192,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="240,5,415,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7589b4526c2d4b9f5df3563ab830d714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7589b4526c2d4b9f5df3563ab830d714">&#9670;&nbsp;</a></span>visitBlank()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitBlank </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_blank_context.html">ExprParser::BlankContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#a0ab4259d2a8195e350f45c2430c6894f">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_a7589b4526c2d4b9f5df3563ab830d714_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_a7589b4526c2d4b9f5df3563ab830d714_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_a7589b4526c2d4b9f5df3563ab830d714_cgraph" id="aclass_expr_base_visitor_a7589b4526c2d4b9f5df3563ab830d714_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,184,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="232,5,407,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a413d08c0e1adc276ceee431129780254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413d08c0e1adc276ceee431129780254">&#9670;&nbsp;</a></span>visitId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_id_context.html">ExprParser::IdContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#acd39dbe2a108246ec9ab972d6a670229">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_a413d08c0e1adc276ceee431129780254_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_a413d08c0e1adc276ceee431129780254_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_a413d08c0e1adc276ceee431129780254_cgraph" id="aclass_expr_base_visitor_a413d08c0e1adc276ceee431129780254_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,161,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="209,5,384,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adbcff75ce7aacc48ed370d09d55d3a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbcff75ce7aacc48ed370d09d55d3a34">&#9670;&nbsp;</a></span>visitInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitInt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_int_context.html">ExprParser::IntContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#ac9d4e6e011c94d0ddab50162784671a3">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_adbcff75ce7aacc48ed370d09d55d3a34_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_adbcff75ce7aacc48ed370d09d55d3a34_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_adbcff75ce7aacc48ed370d09d55d3a34_cgraph" id="aclass_expr_base_visitor_adbcff75ce7aacc48ed370d09d55d3a34_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,165,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="213,5,388,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac5cf22c711f281251991442d039833b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cf22c711f281251991442d039833b6">&#9670;&nbsp;</a></span>visitMulDiv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitMulDiv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_mul_div_context.html">ExprParser::MulDivContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#a3c91e5c9d5b3f927d284f51b65a02b09">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_ac5cf22c711f281251991442d039833b6_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_ac5cf22c711f281251991442d039833b6_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_ac5cf22c711f281251991442d039833b6_cgraph" id="aclass_expr_base_visitor_ac5cf22c711f281251991442d039833b6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,189,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="237,5,412,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9d1bb4ace979a6dc44357ee66590213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9d1bb4ace979a6dc44357ee66590213">&#9670;&nbsp;</a></span>visitParens()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitParens </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_parens_context.html">ExprParser::ParensContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#a00ed7109ba92395375d104c4ae038e90">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_af9d1bb4ace979a6dc44357ee66590213_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_af9d1bb4ace979a6dc44357ee66590213_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_af9d1bb4ace979a6dc44357ee66590213_cgraph" id="aclass_expr_base_visitor_af9d1bb4ace979a6dc44357ee66590213_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,192,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="240,5,415,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa8304277e9316144bc21b7e3662be5a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8304277e9316144bc21b7e3662be5a1">&#9670;&nbsp;</a></span>visitPrintExpr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitPrintExpr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_print_expr_context.html">ExprParser::PrintExprContext</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#adc55bbf11bb32be990027edb4ea954ea">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_aa8304277e9316144bc21b7e3662be5a1_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_aa8304277e9316144bc21b7e3662be5a1_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_aa8304277e9316144bc21b7e3662be5a1_cgraph" id="aclass_expr_base_visitor_aa8304277e9316144bc21b7e3662be5a1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,205,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="253,5,428,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af3cbcb6decc45851a56d9587dafd404b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3cbcb6decc45851a56d9587dafd404b">&#9670;&nbsp;</a></span>visitProg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structantlrcpp_1_1_any.html">antlrcpp::Any</a> ExprBaseVisitor::visitProg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_expr_parser_1_1_prog_context.html">ExprParser::ProgContext</a> *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Visit parse trees produced by <a class="el" href="class_expr_parser.html">ExprParser</a>. </p>
+
+<p>实现了 <a class="el" href="class_expr_visitor.html#ad82face939ecb9a7260342975c62986e">ExprVisitor</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_expr_base_visitor_af3cbcb6decc45851a56d9587dafd404b_cgraph.png" border="0" usemap="#aclass_expr_base_visitor_af3cbcb6decc45851a56d9587dafd404b_cgraph" alt=""/></div>
+<map name="aclass_expr_base_visitor_af3cbcb6decc45851a56d9587dafd404b_cgraph" id="aclass_expr_base_visitor_af3cbcb6decc45851a56d9587dafd404b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,179,39"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_abstract_parse_tree_visitor.html#a38605a51f1b8828eedb2f2ccb9e6c705" title=" " alt="" coords="227,5,401,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/<a class="el" href="_expr_base_visitor_8h_source.html">ExprBaseVisitor.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

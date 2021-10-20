@@ -1,0 +1,392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::dfa::DFASerializer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1dfa.html">dfa</a></li><li class="navelem"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html">DFASerializer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classantlr4_1_1dfa_1_1_d_f_a_serializer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::dfa::DFASerializer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> walker that knows how to dump them to serialized strings.  
+ <a href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_d_f_a_serializer_8h_source.html">DFASerializer.h</a>&gt;</code></p>
+<div class="dynheader">
+类 antlr4::dfa::DFASerializer 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_serializer__inherit__graph.png" border="0" usemap="#aantlr4_1_1dfa_1_1_d_f_a_serializer_inherit__map" alt="Inheritance graph"/></div>
+<map name="aantlr4_1_1dfa_1_1_d_f_a_serializer_inherit__map" id="aantlr4_1_1dfa_1_1_d_f_a_serializer_inherit__map">
+<area shape="rect" title="A DFA walker that knows how to dump them to serialized strings." alt="" coords="21,5,188,32"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_lexer_d_f_a_serializer.html" title=" " alt="" coords="5,80,204,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+antlr4::dfa::DFASerializer 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_serializer__coll__graph.png" border="0" usemap="#aantlr4_1_1dfa_1_1_d_f_a_serializer_coll__map" alt="Collaboration graph"/></div>
+<map name="aantlr4_1_1dfa_1_1_d_f_a_serializer_coll__map" id="aantlr4_1_1dfa_1_1_d_f_a_serializer_coll__map">
+<area shape="rect" title="A DFA walker that knows how to dump them to serialized strings." alt="" coords="7,260,173,287"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html" title=" " alt="" coords="33,171,147,197"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_decision_state.html" title=" " alt="" coords="5,81,175,108"/>
+<area shape="rect" title=" " alt="" coords="51,5,129,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4ddb2f4485acb92f0d7c788cc6e3550c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a4ddb2f4485acb92f0d7c788cc6e3550c">DFASerializer</a> (const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> *dfa, const std::vector&lt; std::string &gt; &amp;tnames)</td></tr>
+<tr class="separator:a4ddb2f4485acb92f0d7c788cc6e3550c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b2f8347bf1964c90d0085ae16b0777"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a53b2f8347bf1964c90d0085ae16b0777">DFASerializer</a> (const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> *dfa, const Vocabulary &amp;vocabulary)</td></tr>
+<tr class="separator:a53b2f8347bf1964c90d0085ae16b0777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a338dc97417f8e9a717ba16514eac2b0c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a338dc97417f8e9a717ba16514eac2b0c">~DFASerializer</a> ()</td></tr>
+<tr class="separator:a338dc97417f8e9a717ba16514eac2b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a459289bc5dac02365e5474a51ade1d"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d">toString</a> () const</td></tr>
+<tr class="separator:a3a459289bc5dac02365e5474a51ade1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a93719dde2778b820567b40726e896610"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610">getEdgeLabel</a> (size_t i) const</td></tr>
+<tr class="separator:a93719dde2778b820567b40726e896610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1d210c8d845dbc2ecf21c497ecbfaa"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa">getStateString</a> (DFAState *s) const</td></tr>
+<tr class="separator:acc1d210c8d845dbc2ecf21c497ecbfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a80e777d704980e288455b4973cb4f74e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a80e777d704980e288455b4973cb4f74e">_dfa</a></td></tr>
+<tr class="separator:a80e777d704980e288455b4973cb4f74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5836e62d9caaede0070873abe38eff98"><td class="memItemLeft" align="right" valign="top">const Vocabulary &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a5836e62d9caaede0070873abe38eff98">_vocabulary</a></td></tr>
+<tr class="separator:a5836e62d9caaede0070873abe38eff98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> walker that knows how to dump them to serialized strings. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4ddb2f4485acb92f0d7c788cc6e3550c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddb2f4485acb92f0d7c788cc6e3550c">&#9670;&nbsp;</a></span>DFASerializer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFASerializer::DFASerializer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> *&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tnames</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53b2f8347bf1964c90d0085ae16b0777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b2f8347bf1964c90d0085ae16b0777">&#9670;&nbsp;</a></span>DFASerializer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFASerializer::DFASerializer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a> *&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vocabulary &amp;&#160;</td>
+          <td class="paramname"><em>vocabulary</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a338dc97417f8e9a717ba16514eac2b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a338dc97417f8e9a717ba16514eac2b0c">&#9670;&nbsp;</a></span>~DFASerializer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFASerializer::~DFASerializer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a93719dde2778b820567b40726e896610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93719dde2778b820567b40726e896610">&#9670;&nbsp;</a></span>getEdgeLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DFASerializer::getEdgeLabel </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>被 <a class="el" href="classantlr4_1_1dfa_1_1_lexer_d_f_a_serializer.html#af3464020079343b41c28c6eeb48a48ab">antlr4::dfa::LexerDFASerializer</a> 重载.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_serializer_a93719dde2778b820567b40726e896610_icgraph.png" border="0" usemap="#aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a93719dde2778b820567b40726e896610_icgraph" alt=""/></div>
+<map name="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a93719dde2778b820567b40726e896610_icgraph" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a93719dde2778b820567b40726e896610_icgraph">
+<area shape="rect" title=" " alt="" coords="435,35,601,76"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d" title=" " alt="" coords="220,35,387,76"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a17f180730ab4ac077e4811665ec1e0e0" title=" " alt="" coords="7,5,171,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56" title=" " alt="" coords="5,71,172,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acc1d210c8d845dbc2ecf21c497ecbfaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1d210c8d845dbc2ecf21c497ecbfaa">&#9670;&nbsp;</a></span>getStateString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DFASerializer::getStateString </td>
+          <td>(</td>
+          <td class="paramtype">DFAState *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_serializer_acc1d210c8d845dbc2ecf21c497ecbfaa_icgraph.png" border="0" usemap="#aclassantlr4_1_1dfa_1_1_d_f_a_serializer_acc1d210c8d845dbc2ecf21c497ecbfaa_icgraph" alt=""/></div>
+<map name="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_acc1d210c8d845dbc2ecf21c497ecbfaa_icgraph" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_acc1d210c8d845dbc2ecf21c497ecbfaa_icgraph">
+<area shape="rect" title=" " alt="" coords="435,35,601,76"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d" title=" " alt="" coords="220,35,387,76"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a17f180730ab4ac077e4811665ec1e0e0" title=" " alt="" coords="7,5,171,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56" title=" " alt="" coords="5,71,172,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3a459289bc5dac02365e5474a51ade1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a459289bc5dac02365e5474a51ade1d">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DFASerializer::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_serializer_a3a459289bc5dac02365e5474a51ade1d_cgraph.png" border="0" usemap="#aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a3a459289bc5dac02365e5474a51ade1d_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a3a459289bc5dac02365e5474a51ade1d_cgraph" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a3a459289bc5dac02365e5474a51ade1d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,64,172,105"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610" title=" " alt="" coords="225,5,392,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29" title="Return a list of all states in this DFA, ordered by state number." alt="" coords="220,71,397,98"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa" title=" " alt="" coords="225,123,392,164"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1dfa_1_1_d_f_a_serializer_a3a459289bc5dac02365e5474a51ade1d_icgraph.png" border="0" usemap="#aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a3a459289bc5dac02365e5474a51ade1d_icgraph" alt=""/></div>
+<map name="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a3a459289bc5dac02365e5474a51ade1d_icgraph" id="aclassantlr4_1_1dfa_1_1_d_f_a_serializer_a3a459289bc5dac02365e5474a51ade1d_icgraph">
+<area shape="rect" title=" " alt="" coords="220,35,387,76"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a17f180730ab4ac077e4811665ec1e0e0" title=" " alt="" coords="7,5,171,47"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#adae4f569d3075101ae3571fe67748b56" title=" " alt="" coords="5,71,172,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a80e777d704980e288455b4973cb4f74e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e777d704980e288455b4973cb4f74e">&#9670;&nbsp;</a></span>_dfa</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">DFA</a>* antlr4::dfa::DFASerializer::_dfa</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5836e62d9caaede0070873abe38eff98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5836e62d9caaede0070873abe38eff98">&#9670;&nbsp;</a></span>_vocabulary</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Vocabulary&amp; antlr4::dfa::DFASerializer::_vocabulary</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/dfa/<a class="el" href="_d_f_a_serializer_8h_source.html">DFASerializer.h</a></li>
+<li>runtime/dfa/<a class="el" href="_d_f_a_serializer_8cpp.html">DFASerializer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

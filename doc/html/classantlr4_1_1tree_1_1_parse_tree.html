@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::tree::ParseTree类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1tree.html">tree</a></li><li class="navelem"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="classantlr4_1_1tree_1_1_parse_tree-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::tree::ParseTree类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_parse_tree_8h_source.html">ParseTree.h</a>&gt;</code></p>
+<div class="dynheader">
+类 antlr4::tree::ParseTree 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1tree_1_1_parse_tree__inherit__graph.png" border="0" usemap="#aantlr4_1_1tree_1_1_parse_tree_inherit__map" alt="Inheritance graph"/></div>
+<map name="aantlr4_1_1tree_1_1_parse_tree_inherit__map" id="aantlr4_1_1tree_1_1_parse_tree_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,360,156,387"/>
+<area shape="rect" href="classantlr4_1_1_rule_context.html" title=" " alt="" coords="223,323,356,349"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_terminal_node.html" title=" " alt="" coords="204,385,375,412"/>
+<area shape="rect" href="classantlr4_1_1_parser_rule_context.html" title="A rule invocation record for parsing." alt="" coords="435,297,605,324"/>
+<area shape="rect" href="class_expr_parser_1_1_expr_context.html" title=" " alt="" coords="683,132,850,159"/>
+<area shape="rect" href="class_expr_parser_1_1_prog_context.html" title=" " alt="" coords="683,233,850,260"/>
+<area shape="rect" href="class_expr_parser_1_1_stat_context.html" title=" " alt="" coords="685,284,849,311"/>
+<area shape="rect" href="classantlr4_1_1_interpreter_rule_context.html" title=" " alt="" coords="671,335,862,361"/>
+<area shape="rect" href="classantlr4_1_1_rule_context_with_alt_num.html" title=" " alt="" coords="665,385,868,412"/>
+<area shape="rect" href="class_expr_parser_1_1_add_sub_context.html" title=" " alt="" coords="920,5,1107,32"/>
+<area shape="rect" href="class_expr_parser_1_1_id_context.html" title=" " alt="" coords="938,56,1089,83"/>
+<area shape="rect" href="class_expr_parser_1_1_int_context.html" title=" " alt="" coords="936,107,1091,133"/>
+<area shape="rect" href="class_expr_parser_1_1_mul_div_context.html" title=" " alt="" coords="924,157,1103,184"/>
+<area shape="rect" href="class_expr_parser_1_1_parens_context.html" title=" " alt="" coords="923,208,1104,235"/>
+<area shape="rect" href="class_expr_parser_1_1_assign_context.html" title=" " alt="" coords="923,259,1103,285"/>
+<area shape="rect" href="class_expr_parser_1_1_blank_context.html" title=" " alt="" coords="927,309,1100,336"/>
+<area shape="rect" href="class_expr_parser_1_1_print_expr_context.html" title=" " alt="" coords="916,360,1111,387"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_error_node.html" title=" " alt="" coords="445,385,595,412"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_terminal_node_impl.html" title=" " alt="" coords="423,436,617,463"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_error_node_impl.html" title="Represents a token that was consumed during resynchronization rather than during a valid match operat..." alt="" coords="679,436,854,463"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+antlr4::tree::ParseTree 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1tree_1_1_parse_tree__coll__graph.png" border="0" usemap="#aantlr4_1_1tree_1_1_parse_tree_coll__map" alt="Collaboration graph"/></div>
+<map name="aantlr4_1_1tree_1_1_parse_tree_coll__map" id="aantlr4_1_1tree_1_1_parse_tree_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,156,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aabcd52305565de5f8cc1be004d494e65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html#aabcd52305565de5f8cc1be004d494e65">ParseTree</a> ()</td></tr>
+<tr class="separator:aabcd52305565de5f8cc1be004d494e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12143657590efe85f35f76c68134d666"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html#a12143657590efe85f35f76c68134d666">ParseTree</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> const &amp;)=delete</td></tr>
+<tr class="separator:a12143657590efe85f35f76c68134d666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25bee79e011ebc88a5a02784e6049927"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html#a25bee79e011ebc88a5a02784e6049927">~ParseTree</a> ()</td></tr>
+<tr class="separator:a25bee79e011ebc88a5a02784e6049927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785332e4215830db13155e7989a15a91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html#a785332e4215830db13155e7989a15a91">operator=</a> (<a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> const &amp;)=delete</td></tr>
+<tr class="separator:a785332e4215830db13155e7989a15a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a83402632670316b68280c04e6be70d50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html#a83402632670316b68280c04e6be70d50">parent</a></td></tr>
+<tr class="separator:a83402632670316b68280c04e6be70d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad52b12c9e03c4a117e1ac00bba74073"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html#aad52b12c9e03c4a117e1ac00bba74073">children</a></td></tr>
+<tr class="separator:aad52b12c9e03c4a117e1ac00bba74073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>An interface to access the tree of </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_rule_context.html">RuleContext</a></dd></dl>
+<p>objects created during a parse that makes the data structure look like a simple parse tree. This node represents both internal nodes, rule invocations, and leaf nodes, token matches.</p>
+<p>The payload is either a </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_token.html">Token</a>, <a class="el" href="classantlr4_1_1_rule_context.html">RuleContext</a></dd></dl>
+<p>or a  object. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aabcd52305565de5f8cc1be004d494e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcd52305565de5f8cc1be004d494e65">&#9670;&nbsp;</a></span>ParseTree() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ParseTree::ParseTree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12143657590efe85f35f76c68134d666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12143657590efe85f35f76c68134d666">&#9670;&nbsp;</a></span>ParseTree() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">antlr4::tree::ParseTree::ParseTree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25bee79e011ebc88a5a02784e6049927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25bee79e011ebc88a5a02784e6049927">&#9670;&nbsp;</a></span>~ParseTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual antlr4::tree::ParseTree::~ParseTree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a785332e4215830db13155e7989a15a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785332e4215830db13155e7989a15a91">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>&amp; antlr4::tree::ParseTree::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aad52b12c9e03c4a117e1ac00bba74073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad52b12c9e03c4a117e1ac00bba74073">&#9670;&nbsp;</a></span>children</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a> *&gt; antlr4::tree::ParseTree::children</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If we are debugging or building a parse tree for a visitor, we need to track all of the tokens and rule invocations associated with this rule's context. This is empty for parsing w/o tree constr. operation because we don't the need to track the details about how we parse this rule. </p>
+
+</div>
+</div>
+<a id="a83402632670316b68280c04e6be70d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83402632670316b68280c04e6be70d50">&#9670;&nbsp;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classantlr4_1_1tree_1_1_parse_tree.html">ParseTree</a>* antlr4::tree::ParseTree::parent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The parent of this node. If the return value is null, then this node is the root of the tree. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/tree/<a class="el" href="_parse_tree_8h_source.html">ParseTree.h</a></li>
+<li>runtime/tree/<a class="el" href="_parse_tree_8cpp.html">ParseTree.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

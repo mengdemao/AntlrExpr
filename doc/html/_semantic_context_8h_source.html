@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/atn/SemanticContext.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_8ae922f545c47473d82446fd4d2998a4.html">atn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SemanticContext.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_semantic_context_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_recognizer_8h.html">Recognizer.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_p_p_utils_8h.html">support/CPPUtils.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>atn {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html">   20</a></span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;SemanticContext&gt; {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structantlr4_1_1atn_1_1_semantic_context_1_1_hasher.html">   22</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structantlr4_1_1atn_1_1_semantic_context_1_1_hasher.html">Hasher</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structantlr4_1_1atn_1_1_semantic_context_1_1_hasher.html#a116633ad354037483264ea6361faa278">   24</a></span>&#160;      <span class="keywordtype">size_t</span> <a class="code" href="structantlr4_1_1atn_1_1_semantic_context_1_1_hasher.html#a116633ad354037483264ea6361faa278">operator()</a>(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; k)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> k-&gt;hashCode();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structantlr4_1_1atn_1_1_semantic_context_1_1_comparer.html">   29</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structantlr4_1_1atn_1_1_semantic_context_1_1_comparer.html">Comparer</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structantlr4_1_1atn_1_1_semantic_context_1_1_comparer.html#a3b881e913bdb47f3e7bcfb833533c3f9">   30</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="structantlr4_1_1atn_1_1_semantic_context_1_1_comparer.html#a3b881e913bdb47f3e7bcfb833533c3f9">operator()</a>(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; lhs, <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; rhs)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">if</span> (lhs == rhs)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> (lhs-&gt;hashCode() == rhs-&gt;hashCode()) &amp;&amp; (*lhs == *rhs);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a7f2ee5eb7e0604f7923fdfafccd64979">   38</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a7f2ee5eb7e0604f7923fdfafccd64979">Set</a> = std::unordered_set&lt;Ref&lt;SemanticContext&gt;, <a class="code" href="structantlr4_1_1atn_1_1_semantic_context_1_1_hasher.html">Hasher</a>, <a class="code" href="structantlr4_1_1atn_1_1_semantic_context_1_1_comparer.html">Comparer</a>&gt;;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a1c9db994b89d06e9d8969e78050aeff5">   44</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a1c9db994b89d06e9d8969e78050aeff5">NONE</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ac08c09d5e71f61632683d179839286bb">   48</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ac08c09d5e71f61632683d179839286bb">hashCode</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a090303bb78b1261298a5affb3f2e318e">   49</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a090303bb78b1261298a5affb3f2e318e">toString</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a815a63f3e7564e93ea52c2612b5bec55">   50</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &amp;other) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> operator != (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &amp;other) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a77bcdcfae815a6497ed281445417f699">   66</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a77bcdcfae815a6497ed281445417f699">eval</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack) = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> evalPrecedence(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">static</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> And(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; a, <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; b);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">static</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> Or(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; a, <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; b);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">class </span>Predicate;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">class </span>PrecedencePredicate;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">class </span>Operator;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">class </span>AND;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">class </span>OR;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">static</span> std::vector&lt;Ref&lt;PrecedencePredicate&gt;&gt; filterPrecedencePredicates(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a7f2ee5eb7e0604f7923fdfafccd64979">Set</a> &amp;collection);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  };</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a>::Predicate : <span class="keyword">public</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#aaa69247b8b3438faa30bdf602e069d9c">  105</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#aaa69247b8b3438faa30bdf602e069d9c">ruleIndex</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a2652c6e126c20b53d778bb47ecfd10f0">  106</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a2652c6e126c20b53d778bb47ecfd10f0">predIndex</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#aa1b978bf67f2afd84ade39551069caac">  107</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#aa1b978bf67f2afd84ade39551069caac">isCtxDependent</a>; <span class="comment">// e.g., $i ref in pred</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ae6b503f70a95cd1ddf8bdf8c95c3992c">  110</a></span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ae6b503f70a95cd1ddf8bdf8c95c3992c">Predicate</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ac9cc627e265603c153838f62b56f3e99">  113</a></span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ac9cc627e265603c153838f62b56f3e99">Predicate</a>(<span class="keywordtype">size_t</span> ruleIndex, <span class="keywordtype">size_t</span> predIndex, <span class="keywordtype">bool</span> isCtxDependent);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">  115</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">eval</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">  116</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">hashCode</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a1400e1ca84faec671a3756ff0b9f4734">  117</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &amp;other) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">  118</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">toString</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  };</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a>::PrecedencePredicate : <span class="keyword">public</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a282c15dd847543c2b65f902afdf6dde4">  123</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a282c15dd847543c2b65f902afdf6dde4">precedence</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ae637856c52152446144e87c312da587a">  126</a></span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ae637856c52152446144e87c312da587a">PrecedencePredicate</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a4f10c58d91b681e4346cbd000b6c48b3">  129</a></span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a4f10c58d91b681e4346cbd000b6c48b3">PrecedencePredicate</a>(<span class="keywordtype">int</span> precedence);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">  131</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">eval</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a813c90739c89d03f17bf38ae5cbaa3dc">  132</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a813c90739c89d03f17bf38ae5cbaa3dc">evalPrecedence</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a8c652840222e22e8fdc4dd348b00a153">  133</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a8c652840222e22e8fdc4dd348b00a153">compareTo</a>(PrecedencePredicate *o);</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">  134</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">hashCode</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a1400e1ca84faec671a3756ff0b9f4734">  135</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &amp;other) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">  136</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">toString</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  };</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a>::Operator : <span class="keyword">public</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a8b69d02d6dd9104254842ff64a63f3ae">  147</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a8b69d02d6dd9104254842ff64a63f3ae">~Operator</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ae47c3a65cf405cecabf3f9c109ca6690">  158</a></span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Ref&lt;SemanticContext&gt;&gt; <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ae47c3a65cf405cecabf3f9c109ca6690">getOperands</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  };</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a>::AND : <span class="keyword">public</span> SemanticContext::Operator {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ad10b5a57a36aa9b51eb943fe20b9a178">  167</a></span>&#160;    std::vector&lt;Ref&lt;SemanticContext&gt;&gt; <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ad10b5a57a36aa9b51eb943fe20b9a178">opnds</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ac490980398ebba9a265420d20fd14764">  169</a></span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ac490980398ebba9a265420d20fd14764">AND</a>(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; a, <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; b) ;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ab1584465b3b88d7f75f030a24482fd13">  171</a></span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Ref&lt;SemanticContext&gt;&gt; <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ab1584465b3b88d7f75f030a24482fd13">getOperands</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a1400e1ca84faec671a3756ff0b9f4734">  172</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &amp;other) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">  173</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">hashCode</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">  179</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">eval</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a813c90739c89d03f17bf38ae5cbaa3dc">  180</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a813c90739c89d03f17bf38ae5cbaa3dc">evalPrecedence</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">  181</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">toString</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  };</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a>::OR : <span class="keyword">public</span> SemanticContext::Operator {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    std::vector&lt;Ref&lt;SemanticContext&gt;&gt; opnds;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ace16c047124bb5e9fb62145e0b282a11">  192</a></span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ace16c047124bb5e9fb62145e0b282a11">OR</a>(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; a, <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <span class="keyword">const</span>&amp; b);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#ab1584465b3b88d7f75f030a24482fd13">  194</a></span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Ref&lt;SemanticContext&gt;&gt; <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ab1584465b3b88d7f75f030a24482fd13">getOperands</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a1400e1ca84faec671a3756ff0b9f4734">  195</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &amp;other) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">  196</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">hashCode</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">  202</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">eval</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a813c90739c89d03f17bf38ae5cbaa3dc">  203</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SemanticContext&gt;</a> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a813c90739c89d03f17bf38ae5cbaa3dc">evalPrecedence</a>(<a class="code" href="classantlr4_1_1_recognizer.html">Recognizer</a> *parser, <a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *parserCallStack) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">  204</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">toString</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  };</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;} <span class="comment">// namespace atn</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;} <span class="comment">// namespace antlr4</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">// Hash function for SemanticContext, used in the MurmurHash::update function</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacestd.html">std</a> {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">using</span> <a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">antlr4::atn::SemanticContext</a>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01_semantic_context_01_4.html">  215</a></span>&#160;  <span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>hash&lt;<a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a>&gt;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  {</div>
+<div class="line"><a name="l00217"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01_semantic_context_01_4.html#ae43aa63e72b61f77cdb980ce52a8d02e">  217</a></span>&#160;    <span class="keywordtype">size_t</span> operator () (<a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &amp;x)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordflow">return</span> x.<a class="code" href="classantlr4_1_1atn_1_1_semantic_context.html#ac08c09d5e71f61632683d179839286bb">hashCode</a>();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  };</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
+<div class="ttc" id="a_c_p_p_utils_8h_html"><div class="ttname"><a href="_c_p_p_utils_8h.html">CPPUtils.h</a></div></div>
+<div class="ttc" id="a_recognizer_8h_html"><div class="ttname"><a href="_recognizer_8h.html">Recognizer.h</a></div></div>
+<div class="ttc" id="aantlr4-common_8h_html_a856abffd348f82209d9588078d9fea33"><div class="ttname"><a href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a></div><div class="ttdeci">#define ANTLR4CPP_PUBLIC</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:106</div></div>
+<div class="ttc" id="aantlr4-common_8h_html_add5e90b302c31b74a46619f240214bcc"><div class="ttname"><a href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:139</div></div>
+<div class="ttc" id="aclassantlr4_1_1_recognizer_html"><div class="ttname"><a href="classantlr4_1_1_recognizer.html">antlr4::Recognizer</a></div><div class="ttdef"><b>Definition:</b> Recognizer.h:12</div></div>
+<div class="ttc" id="aclassantlr4_1_1_rule_context_html"><div class="ttname"><a href="classantlr4_1_1_rule_context.html">antlr4::RuleContext</a></div><div class="ttdef"><b>Definition:</b> RuleContext.h:62</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html">antlr4::atn::SemanticContext</a></div><div class="ttdef"><b>Definition:</b> SemanticContext.h:20</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a090303bb78b1261298a5affb3f2e318e"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a090303bb78b1261298a5affb3f2e318e">antlr4::atn::SemanticContext::toString</a></div><div class="ttdeci">virtual std::string toString() const =0</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a1c9db994b89d06e9d8969e78050aeff5"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a1c9db994b89d06e9d8969e78050aeff5">antlr4::atn::SemanticContext::NONE</a></div><div class="ttdeci">static const Ref&lt; SemanticContext &gt; NONE</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:44</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a2652c6e126c20b53d778bb47ecfd10f0"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a2652c6e126c20b53d778bb47ecfd10f0">antlr4::atn::SemanticContext::predIndex</a></div><div class="ttdeci">const size_t predIndex</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:106</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a282c15dd847543c2b65f902afdf6dde4"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a282c15dd847543c2b65f902afdf6dde4">antlr4::atn::SemanticContext::precedence</a></div><div class="ttdeci">const int precedence</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:123</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a2a712638848af9bc2c996bda844eb15b"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a2a712638848af9bc2c996bda844eb15b">antlr4::atn::SemanticContext::toString</a></div><div class="ttdeci">virtual std::string toString() const override</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a4f10c58d91b681e4346cbd000b6c48b3"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a4f10c58d91b681e4346cbd000b6c48b3">antlr4::atn::SemanticContext::PrecedencePredicate</a></div><div class="ttdeci">PrecedencePredicate(int precedence)</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a77bcdcfae815a6497ed281445417f699"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a77bcdcfae815a6497ed281445417f699">antlr4::atn::SemanticContext::eval</a></div><div class="ttdeci">virtual bool eval(Recognizer *parser, RuleContext *parserCallStack)=0</div><div class="ttdoc">For context independent predicates, we evaluate them without a local context (i.e....</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a7f2ee5eb7e0604f7923fdfafccd64979"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a7f2ee5eb7e0604f7923fdfafccd64979">antlr4::atn::SemanticContext::Set</a></div><div class="ttdeci">std::unordered_set&lt; Ref&lt; SemanticContext &gt;, Hasher, Comparer &gt; Set</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:38</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a813c90739c89d03f17bf38ae5cbaa3dc"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a813c90739c89d03f17bf38ae5cbaa3dc">antlr4::atn::SemanticContext::evalPrecedence</a></div><div class="ttdeci">virtual Ref&lt; SemanticContext &gt; evalPrecedence(Recognizer *parser, RuleContext *parserCallStack) override</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a82a09a52cfc8030b1c33f1eaadad539a"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a82a09a52cfc8030b1c33f1eaadad539a">antlr4::atn::SemanticContext::hashCode</a></div><div class="ttdeci">virtual size_t hashCode() const override</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a8b69d02d6dd9104254842ff64a63f3ae"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a8b69d02d6dd9104254842ff64a63f3ae">antlr4::atn::SemanticContext::~Operator</a></div><div class="ttdeci">virtual ~Operator() override</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_a8c652840222e22e8fdc4dd348b00a153"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#a8c652840222e22e8fdc4dd348b00a153">antlr4::atn::SemanticContext::compareTo</a></div><div class="ttdeci">virtual int compareTo(PrecedencePredicate *o)</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_aa1b978bf67f2afd84ade39551069caac"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#aa1b978bf67f2afd84ade39551069caac">antlr4::atn::SemanticContext::isCtxDependent</a></div><div class="ttdeci">const bool isCtxDependent</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:107</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_aaa69247b8b3438faa30bdf602e069d9c"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#aaa69247b8b3438faa30bdf602e069d9c">antlr4::atn::SemanticContext::ruleIndex</a></div><div class="ttdeci">const size_t ruleIndex</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:105</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_aaf020c5b73a8d0216f8423acd5d4cea8"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#aaf020c5b73a8d0216f8423acd5d4cea8">antlr4::atn::SemanticContext::eval</a></div><div class="ttdeci">virtual bool eval(Recognizer *parser, RuleContext *parserCallStack) override</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ab1584465b3b88d7f75f030a24482fd13"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ab1584465b3b88d7f75f030a24482fd13">antlr4::atn::SemanticContext::getOperands</a></div><div class="ttdeci">virtual std::vector&lt; Ref&lt; SemanticContext &gt; &gt; getOperands() const override</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ac08c09d5e71f61632683d179839286bb"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ac08c09d5e71f61632683d179839286bb">antlr4::atn::SemanticContext::hashCode</a></div><div class="ttdeci">virtual size_t hashCode() const =0</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ac490980398ebba9a265420d20fd14764"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ac490980398ebba9a265420d20fd14764">antlr4::atn::SemanticContext::AND</a></div><div class="ttdeci">AND(Ref&lt; SemanticContext &gt; const &amp;a, Ref&lt; SemanticContext &gt; const &amp;b)</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ac9cc627e265603c153838f62b56f3e99"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ac9cc627e265603c153838f62b56f3e99">antlr4::atn::SemanticContext::Predicate</a></div><div class="ttdeci">Predicate(size_t ruleIndex, size_t predIndex, bool isCtxDependent)</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ace16c047124bb5e9fb62145e0b282a11"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ace16c047124bb5e9fb62145e0b282a11">antlr4::atn::SemanticContext::OR</a></div><div class="ttdeci">OR(Ref&lt; SemanticContext &gt; const &amp;a, Ref&lt; SemanticContext &gt; const &amp;b)</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ad10b5a57a36aa9b51eb943fe20b9a178"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ad10b5a57a36aa9b51eb943fe20b9a178">antlr4::atn::SemanticContext::opnds</a></div><div class="ttdeci">std::vector&lt; Ref&lt; SemanticContext &gt; &gt; opnds</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:167</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ae47c3a65cf405cecabf3f9c109ca6690"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ae47c3a65cf405cecabf3f9c109ca6690">antlr4::atn::SemanticContext::getOperands</a></div><div class="ttdeci">virtual std::vector&lt; Ref&lt; SemanticContext &gt; &gt; getOperands() const =0</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ae637856c52152446144e87c312da587a"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ae637856c52152446144e87c312da587a">antlr4::atn::SemanticContext::PrecedencePredicate</a></div><div class="ttdeci">PrecedencePredicate()</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_semantic_context_html_ae6b503f70a95cd1ddf8bdf8c95c3992c"><div class="ttname"><a href="classantlr4_1_1atn_1_1_semantic_context.html#ae6b503f70a95cd1ddf8bdf8c95c3992c">antlr4::atn::SemanticContext::Predicate</a></div><div class="ttdeci">Predicate()</div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> ANTLRErrorListener.h:14</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> ATNConfig.h:132</div></div>
+<div class="ttc" id="astructantlr4_1_1atn_1_1_semantic_context_1_1_comparer_html"><div class="ttname"><a href="structantlr4_1_1atn_1_1_semantic_context_1_1_comparer.html">antlr4::atn::SemanticContext::Comparer</a></div><div class="ttdef"><b>Definition:</b> SemanticContext.h:29</div></div>
+<div class="ttc" id="astructantlr4_1_1atn_1_1_semantic_context_1_1_comparer_html_a3b881e913bdb47f3e7bcfb833533c3f9"><div class="ttname"><a href="structantlr4_1_1atn_1_1_semantic_context_1_1_comparer.html#a3b881e913bdb47f3e7bcfb833533c3f9">antlr4::atn::SemanticContext::Comparer::operator()</a></div><div class="ttdeci">bool operator()(Ref&lt; SemanticContext &gt; const &amp;lhs, Ref&lt; SemanticContext &gt; const &amp;rhs) const</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:30</div></div>
+<div class="ttc" id="astructantlr4_1_1atn_1_1_semantic_context_1_1_hasher_html"><div class="ttname"><a href="structantlr4_1_1atn_1_1_semantic_context_1_1_hasher.html">antlr4::atn::SemanticContext::Hasher</a></div><div class="ttdef"><b>Definition:</b> SemanticContext.h:23</div></div>
+<div class="ttc" id="astructantlr4_1_1atn_1_1_semantic_context_1_1_hasher_html_a116633ad354037483264ea6361faa278"><div class="ttname"><a href="structantlr4_1_1atn_1_1_semantic_context_1_1_hasher.html#a116633ad354037483264ea6361faa278">antlr4::atn::SemanticContext::Hasher::operator()</a></div><div class="ttdeci">size_t operator()(Ref&lt; SemanticContext &gt; const &amp;k) const</div><div class="ttdef"><b>Definition:</b> SemanticContext.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
