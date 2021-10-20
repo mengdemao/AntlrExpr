@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/atn/ATNConfigSet.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_8ae922f545c47473d82446fd4d2998a4.html">atn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ATNConfigSet.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_a_t_n_config_set_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_bit_set_8h.html">support/BitSet.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_prediction_context_8h.html">atn/PredictionContext.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>atn {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">   16</a></span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a5404495afc6bb7823429d202a1625bdc">   19</a></span>&#160;    std::vector&lt;Ref&lt;ATNConfig&gt;&gt; <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a5404495afc6bb7823429d202a1625bdc">configs</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// TODO: these fields make me pretty uncomfortable but nice to pack up info together, saves recomputation</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// TODO: can we track conflicts as they are added to save scanning configs later?</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#abbb020e6f64f01e7bd959551afb1fc93">   23</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#abbb020e6f64f01e7bd959551afb1fc93">uniqueAlt</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a37b30c5a21147bdc63325cffd2f99041">   30</a></span>&#160;    <a class="code" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a37b30c5a21147bdc63325cffd2f99041">conflictingAlts</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Used in parser and lexer. In lexer, it indicates we hit a pred</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// while computing a closure operation.  Don&#39;t make a DFA state from this.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#acf4dc336b07151064e0acdd84d5a6dcc">   34</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#acf4dc336b07151064e0acdd84d5a6dcc">hasSemanticContext</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a8ed06e3a821509fe0f003c00e2a14676">   35</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a8ed06e3a821509fe0f003c00e2a14676">dipsIntoOuterContext</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#af5ef274bd4b6185f2865add7f943633c">   40</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#af5ef274bd4b6185f2865add7f943633c">fullCtx</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a>(<span class="keywordtype">bool</span> fullCtx = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a>(<span class="keyword">const</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;ATNConfigSet&gt;</a> &amp;old);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> add(<span class="keyword">const</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;ATNConfig&gt;</a> &amp;config);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> add(<span class="keyword">const</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;ATNConfig&gt;</a> &amp;config, <a class="code" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html">PredictionContextMergeCache</a> *mergeCache);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;ATNState *&gt; getStates();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> getAlts();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Ref&lt;SemanticContext&gt;&gt; getPredicates();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;ATNConfig&gt;</a> get(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> optimizeConfigs(<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">ATNSimulator</a> *interpreter);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">bool</span> addAll(<span class="keyword">const</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;ATNConfigSet&gt;</a> &amp;other);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> &amp;other);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> hashCode();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> size();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isEmpty();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isReadonly();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setReadonly(<span class="keywordtype">bool</span> readonly);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> _readonly;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> getHash(<a class="code" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> *c); <span class="comment">// Hash differs depending on set type.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">size_t</span> _cachedHashCode;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    std::unordered_map&lt;size_t, ATNConfig *&gt; _configLookup;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> InitializeInstanceFields();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  };</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;} <span class="comment">// namespace atn</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;} <span class="comment">// namespace antlr4</span></div>
+<div class="ttc" id="a_bit_set_8h_html"><div class="ttname"><a href="_bit_set_8h.html">BitSet.h</a></div></div>
+<div class="ttc" id="a_prediction_context_8h_html"><div class="ttname"><a href="_prediction_context_8h.html">PredictionContext.h</a></div></div>
+<div class="ttc" id="aantlr4-common_8h_html_a856abffd348f82209d9588078d9fea33"><div class="ttname"><a href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a></div><div class="ttdeci">#define ANTLR4CPP_PUBLIC</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:106</div></div>
+<div class="ttc" id="aantlr4-common_8h_html_add5e90b302c31b74a46619f240214bcc"><div class="ttname"><a href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:139</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config.html">antlr4::atn::ATNConfig</a></div><div class="ttdoc">A tuple: (ATN state, predicted alt, syntactic, semantic context). The syntactic context is a graph-st...</div><div class="ttdef"><b>Definition:</b> ATNConfig.h:19</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">antlr4::atn::ATNConfigSet</a></div><div class="ttdef"><b>Definition:</b> ATNConfigSet.h:16</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html_a37b30c5a21147bdc63325cffd2f99041"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a37b30c5a21147bdc63325cffd2f99041">antlr4::atn::ATNConfigSet::conflictingAlts</a></div><div class="ttdeci">antlrcpp::BitSet conflictingAlts</div><div class="ttdef"><b>Definition:</b> ATNConfigSet.h:30</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html_a5404495afc6bb7823429d202a1625bdc"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a5404495afc6bb7823429d202a1625bdc">antlr4::atn::ATNConfigSet::configs</a></div><div class="ttdeci">std::vector&lt; Ref&lt; ATNConfig &gt; &gt; configs</div><div class="ttdoc">Track the elements as they are added to the set; supports get(i)</div><div class="ttdef"><b>Definition:</b> ATNConfigSet.h:19</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html_a8ed06e3a821509fe0f003c00e2a14676"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#a8ed06e3a821509fe0f003c00e2a14676">antlr4::atn::ATNConfigSet::dipsIntoOuterContext</a></div><div class="ttdeci">bool dipsIntoOuterContext</div><div class="ttdef"><b>Definition:</b> ATNConfigSet.h:35</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html_abbb020e6f64f01e7bd959551afb1fc93"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#abbb020e6f64f01e7bd959551afb1fc93">antlr4::atn::ATNConfigSet::uniqueAlt</a></div><div class="ttdeci">size_t uniqueAlt</div><div class="ttdef"><b>Definition:</b> ATNConfigSet.h:23</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html_acf4dc336b07151064e0acdd84d5a6dcc"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#acf4dc336b07151064e0acdd84d5a6dcc">antlr4::atn::ATNConfigSet::hasSemanticContext</a></div><div class="ttdeci">bool hasSemanticContext</div><div class="ttdef"><b>Definition:</b> ATNConfigSet.h:34</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_config_set_html_af5ef274bd4b6185f2865add7f943633c"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_config_set.html#af5ef274bd4b6185f2865add7f943633c">antlr4::atn::ATNConfigSet::fullCtx</a></div><div class="ttdeci">const bool fullCtx</div><div class="ttdef"><b>Definition:</b> ATNConfigSet.h:40</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_a_t_n_simulator_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></div><div class="ttdef"><b>Definition:</b> ATNSimulator.h:16</div></div>
+<div class="ttc" id="aclassantlr4_1_1atn_1_1_prediction_context_merge_cache_html"><div class="ttname"><a href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html">antlr4::atn::PredictionContextMergeCache</a></div><div class="ttdef"><b>Definition:</b> PredictionContext.h:247</div></div>
+<div class="ttc" id="aclassantlrcpp_1_1_bit_set_html"><div class="ttname"><a href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a></div><div class="ttdef"><b>Definition:</b> BitSet.h:12</div></div>
+<div class="ttc" id="anamespaceantlr4_html"><div class="ttname"><a href="namespaceantlr4.html">antlr4</a></div><div class="ttdef"><b>Definition:</b> ANTLRErrorListener.h:14</div></div>
+<div class="ttc" id="anamespaceantlrcpp_html_a377b903dbd6c57c2d3c9d885de177a83"><div class="ttname"><a href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">antlrcpp::toString</a></div><div class="ttdeci">std::string toString(const T &amp;o)</div><div class="ttdef"><b>Definition:</b> CPPUtils.h:54</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

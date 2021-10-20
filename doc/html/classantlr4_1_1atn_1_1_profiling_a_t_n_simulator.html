@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::atn::ProfilingATNSimulator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1atn.html">atn</a></li><li class="navelem"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html">ProfilingATNSimulator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a> &#124;
+<a href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::atn::ProfilingATNSimulator类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_profiling_a_t_n_simulator_8h_source.html">ProfilingATNSimulator.h</a>&gt;</code></p>
+<div class="dynheader">
+类 antlr4::atn::ProfilingATNSimulator 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator__inherit__graph.png" border="0" usemap="#aantlr4_1_1atn_1_1_profiling_a_t_n_simulator_inherit__map" alt="Inheritance graph"/></div>
+<map name="aantlr4_1_1atn_1_1_profiling_a_t_n_simulator_inherit__map" id="aantlr4_1_1atn_1_1_profiling_a_t_n_simulator_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,155,220,181"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html" title=" " alt="" coords="9,80,216,107"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html" title=" " alt="" coords="29,5,197,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+antlr4::atn::ProfilingATNSimulator 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator__coll__graph.png" border="0" usemap="#aantlr4_1_1atn_1_1_profiling_a_t_n_simulator_coll__map" alt="Collaboration graph"/></div>
+<map name="aantlr4_1_1atn_1_1_profiling_a_t_n_simulator_coll__map" id="aantlr4_1_1atn_1_1_profiling_a_t_n_simulator_coll__map">
+<area shape="rect" title=" " alt="" coords="1489,145,1704,172"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html" title=" " alt="" coords="1233,145,1440,172"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html" title=" " alt="" coords="311,79,479,105"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html" title=" " alt="" coords="632,44,759,71"/>
+<area shape="rect" href="classantlrcpp_1_1_single_write_multiple_read_lock.html" title=" " alt="" coords="5,71,193,113"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html" title=" " alt="" coords="948,145,1061,172"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_decision_state.html" title=" " alt="" coords="611,145,780,172"/>
+<area shape="rect" title=" " alt="" coords="355,145,434,172"/>
+<area shape="rect" href="classantlr4_1_1_parser_rule_context.html" title="A rule invocation record for parsing." alt="" coords="919,235,1090,261"/>
+<area shape="rect" href="classantlr4_1_1_rule_context.html" title=" " alt="" coords="629,235,762,261"/>
+<area shape="rect" href="classantlr4_1_1tree_1_1_parse_tree.html" title=" " alt="" coords="319,235,470,261"/>
+<area shape="rect" href="classantlr4_1_1_token.html" title=" " alt="" coords="647,285,744,312"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html" title=" " alt="" coords="909,286,1100,327"/>
+<area shape="rect" href="classantlr4_1_1_parser.html" title="This is all the parsing support code essentially; most of it is error recovery stuff." alt="" coords="955,44,1055,71"/>
+<area shape="rect" href="classantlr4_1_1_proxy_error_listener.html" title=" " alt="" coords="309,5,480,32"/>
+<area shape="rect" href="classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java)." alt="" coords="11,5,188,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8ba8652d31dd48182cd971ee7306fd79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a8ba8652d31dd48182cd971ee7306fd79">ProfilingATNSimulator</a> (<a class="el" href="classantlr4_1_1_parser.html">Parser</a> *<a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>)</td></tr>
+<tr class="separator:a8ba8652d31dd48182cd971ee7306fd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75cfac2534e32419fca3820ad3e8143"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143">adaptivePredict</a> (TokenStream *input, size_t decision, <a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *outerContext) override</td></tr>
+<tr class="separator:ab75cfac2534e32419fca3820ad3e8143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa202e757203f75c742017f3c4756322f"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classantlr4_1_1atn_1_1_decision_info.html">DecisionInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#aa202e757203f75c742017f3c4756322f">getDecisionInfo</a> () const</td></tr>
+<tr class="separator:aa202e757203f75c742017f3c4756322f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882f7dbbfc19ca741b38f7059c2ad662"><td class="memItemLeft" align="right" valign="top">virtual dfa::DFAState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a882f7dbbfc19ca741b38f7059c2ad662">getCurrentState</a> () const</td></tr>
+<tr class="separator:a882f7dbbfc19ca741b38f7059c2ad662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html">antlr4::atn::ParserATNSimulator</a></td></tr>
+<tr class="memitem:a3a4a291fbbd42c48c1b604b68f52925a inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a3a4a291fbbd42c48c1b604b68f52925a">ParserATNSimulator</a> (const ATN &amp;<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, std::vector&lt; <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &gt; &amp;<a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>, <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;sharedContextCache)</td></tr>
+<tr class="memdesc:a3a4a291fbbd42c48c1b604b68f52925a inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testing only!  <a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a3a4a291fbbd42c48c1b604b68f52925a">更多...</a><br /></td></tr>
+<tr class="separator:a3a4a291fbbd42c48c1b604b68f52925a inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee56c1f43a9dd6385b13aead6021cc3e inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aee56c1f43a9dd6385b13aead6021cc3e">ParserATNSimulator</a> (<a class="el" href="classantlr4_1_1_parser.html">Parser</a> *<a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a>, const ATN &amp;<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, std::vector&lt; <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &gt; &amp;<a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a>, <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;sharedContextCache)</td></tr>
+<tr class="separator:aee56c1f43a9dd6385b13aead6021cc3e inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c8564d19c23bdb33d53008d823c387 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a05c8564d19c23bdb33d53008d823c387">reset</a> () override</td></tr>
+<tr class="separator:a05c8564d19c23bdb33d53008d823c387 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846da7dc607b212d443cb401f5830bae inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a846da7dc607b212d443cb401f5830bae">clearDFA</a> () override</td></tr>
+<tr class="separator:a846da7dc607b212d443cb401f5830bae inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3212501674dd0323d4875461304d976c inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a3212501674dd0323d4875461304d976c">canDropLoopEntryEdgeInLeftRecursiveRule</a> (<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> *config) const</td></tr>
+<tr class="separator:a3212501674dd0323d4875461304d976c inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183b00733905fd53dc42e8e2655c5853 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a183b00733905fd53dc42e8e2655c5853">getRuleName</a> (size_t index)</td></tr>
+<tr class="separator:a183b00733905fd53dc42e8e2655c5853 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c127196f9e2214fe8451d680bdb5e3 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a75c127196f9e2214fe8451d680bdb5e3">precedenceTransition</a> (<a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config.html">ATNConfig</a> &gt; const &amp;config, <a class="el" href="classantlr4_1_1atn_1_1_precedence_predicate_transition.html">PrecedencePredicateTransition</a> *pt, bool collectPredicates, bool inContext, bool fullCtx)</td></tr>
+<tr class="separator:a75c127196f9e2214fe8451d680bdb5e3 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5fc9f6a099bdc9931f9afc50f35232 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a0b5fc9f6a099bdc9931f9afc50f35232">setPredictionMode</a> (<a class="el" href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25">PredictionMode</a> newMode)</td></tr>
+<tr class="separator:a0b5fc9f6a099bdc9931f9afc50f35232 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b226f17f38266404b543d286717b28d inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceantlr4_1_1atn.html#ad9285036b2a01af0109507c442ea0e25">PredictionMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a6b226f17f38266404b543d286717b28d">getPredictionMode</a> ()</td></tr>
+<tr class="separator:a6b226f17f38266404b543d286717b28d inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76320b0c4de94dc4e4615346c659f0b inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac76320b0c4de94dc4e4615346c659f0b">getParser</a> ()</td></tr>
+<tr class="separator:ac76320b0c4de94dc4e4615346c659f0b inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f79c144aff232c37c906060e84a3d3f inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f">getTokenName</a> (size_t t)</td></tr>
+<tr class="separator:a5f79c144aff232c37c906060e84a3d3f inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b55922ce19b4812b517f717233495a inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a">getLookaheadName</a> (TokenStream *input)</td></tr>
+<tr class="separator:a51b55922ce19b4812b517f717233495a inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17be01f2a7db2f2c18c973cc2799a5a0 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a17be01f2a7db2f2c18c973cc2799a5a0">dumpDeadEndConfigs</a> (<a class="el" href="classantlr4_1_1_no_viable_alt_exception.html">NoViableAltException</a> &amp;nvae)</td></tr>
+<tr class="memdesc:a17be01f2a7db2f2c18c973cc2799a5a0 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for debugging in adaptivePredict around execATN but I cut it out for clarity now that alg. works well. We can leave this "dead" code for a bit.  <a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a17be01f2a7db2f2c18c973cc2799a5a0">更多...</a><br /></td></tr>
+<tr class="separator:a17be01f2a7db2f2c18c973cc2799a5a0 inherit pub_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:aea00369023c5b32d3b73e9e4b2726cbe inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aea00369023c5b32d3b73e9e4b2726cbe">ATNSimulator</a> (const ATN &amp;<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;sharedContextCache)</td></tr>
+<tr class="separator:aea00369023c5b32d3b73e9e4b2726cbe inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5022527a241e5a255618cf8c29d29743 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a5022527a241e5a255618cf8c29d29743">~ATNSimulator</a> ()</td></tr>
+<tr class="separator:a5022527a241e5a255618cf8c29d29743 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112cafa9554cff202c037672ddc918e5 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a112cafa9554cff202c037672ddc918e5">getSharedContextCache</a> ()</td></tr>
+<tr class="separator:a112cafa9554cff202c037672ddc918e5 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fb144eaf79bf6052a0abe290f7a3a2 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa4fb144eaf79bf6052a0abe290f7a3a2">getCachedContext</a> (<a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> &gt; const &amp;context)</td></tr>
+<tr class="separator:aa4fb144eaf79bf6052a0abe290f7a3a2 inherit pub_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a2406132f5c14394f5b426d3bff44cf68"><td class="memItemLeft" align="right" valign="top">virtual dfa::DFAState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a2406132f5c14394f5b426d3bff44cf68">getExistingTargetState</a> (dfa::DFAState *previousD, size_t t) override</td></tr>
+<tr class="separator:a2406132f5c14394f5b426d3bff44cf68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548b99a618c2943651df012ee670d12e"><td class="memItemLeft" align="right" valign="top">virtual dfa::DFAState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a548b99a618c2943651df012ee670d12e">computeTargetState</a> (<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, dfa::DFAState *previousD, size_t t) override</td></tr>
+<tr class="separator:a548b99a618c2943651df012ee670d12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d28983d4cff6c1bcc5fd18afcb1119"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#aa2d28983d4cff6c1bcc5fd18afcb1119">computeReachSet</a> (<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> *closure, size_t t, bool fullCtx) override</td></tr>
+<tr class="separator:aa2d28983d4cff6c1bcc5fd18afcb1119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225d742a50c68d84206fd93c87ffdfcb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a225d742a50c68d84206fd93c87ffdfcb">evalSemanticContext</a> (<a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &gt; const &amp;pred, <a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *parserCallStack, size_t alt, bool fullCtx) override</td></tr>
+<tr class="separator:a225d742a50c68d84206fd93c87ffdfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6287c59cd670e368fbe478ba9886e4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a8e6287c59cd670e368fbe478ba9886e4">reportAttemptingFullContext</a> (<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, const <a class="el" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;conflictingAlts, <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> *configs, size_t startIndex, size_t stopIndex) override</td></tr>
+<tr class="separator:a8e6287c59cd670e368fbe478ba9886e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd11027484af73b41b01bfa2e3a6f721"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#abd11027484af73b41b01bfa2e3a6f721">reportContextSensitivity</a> (<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, size_t prediction, <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> *configs, size_t startIndex, size_t stopIndex) override</td></tr>
+<tr class="separator:abd11027484af73b41b01bfa2e3a6f721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3eea846d54eff30cf00d36ec404481d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#aa3eea846d54eff30cf00d36ec404481d">reportAmbiguity</a> (<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, dfa::DFAState *D, size_t startIndex, size_t stopIndex, bool exact, const <a class="el" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;ambigAlts, <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> *configs) override</td></tr>
+<tr class="separator:aa3eea846d54eff30cf00d36ec404481d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html">antlr4::atn::ParserATNSimulator</a></td></tr>
+<tr class="memitem:ac7fbaf0a637744b43e6709660a5b12f2 inherit pro_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2">execATN</a> (<a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;dfa, dfa::DFAState *s0, TokenStream *input, size_t startIndex, <a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *outerContext)</td></tr>
+<tr class="memdesc:ac7fbaf0a637744b43e6709660a5b12f2 inherit pro_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs ATN simulation to compute a predicted alternative based upon the remaining input, but also updates the DFA cache to avoid having to traverse the ATN again for the same input sequence.  <a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2">更多...</a><br /></td></tr>
+<tr class="separator:ac7fbaf0a637744b43e6709660a5b12f2 inherit pro_methods_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:acea790de680bb7daf232c92cd3bbeefc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classantlr4_1_1atn_1_1_decision_info.html">DecisionInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#acea790de680bb7daf232c92cd3bbeefc">_decisions</a></td></tr>
+<tr class="separator:acea790de680bb7daf232c92cd3bbeefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9751cd4d23aa0ad68a39741d896fe6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab9751cd4d23aa0ad68a39741d896fe6b">_sllStopIndex</a> = 0</td></tr>
+<tr class="separator:ab9751cd4d23aa0ad68a39741d896fe6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb22a963389758fb5fda5eb36f0776d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#afb22a963389758fb5fda5eb36f0776d2">_llStopIndex</a> = 0</td></tr>
+<tr class="separator:afb22a963389758fb5fda5eb36f0776d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff86eac293a5a5fe84f80c406346bfa2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#aff86eac293a5a5fe84f80c406346bfa2">_currentDecision</a> = 0</td></tr>
+<tr class="separator:aff86eac293a5a5fe84f80c406346bfa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a404582fe9f278c4d055e93f25606b1"><td class="memItemLeft" align="right" valign="top">dfa::DFAState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a3a404582fe9f278c4d055e93f25606b1">_currentState</a></td></tr>
+<tr class="separator:a3a404582fe9f278c4d055e93f25606b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbda69bda28802f01fb9171d25b42b8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a5bbda69bda28802f01fb9171d25b42b8">conflictingAltResolvedBySLL</a> = 0</td></tr>
+<tr class="memdesc:a5bbda69bda28802f01fb9171d25b42b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">At the point of LL failover, we record how SLL would resolve the conflict so that we can determine whether or not a decision / input pair is context-sensitive. If LL gives a different result than SLL's predicted alternative, we have a context sensitivity for sure. The converse is not necessarily true, however. It's possible that after conflict resolution chooses minimum alternatives, SLL could get the same answer as LL. Regardless of whether or not the result indicates an ambiguity, it is not treated as a context sensitivity because LL prediction was not required in order to produce a correct prediction for this decision and input sequence. It may in fact still be a context sensitivity but we don't know by looking at the minimum alternatives for the current input.  <a href="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a5bbda69bda28802f01fb9171d25b42b8">更多...</a><br /></td></tr>
+<tr class="separator:a5bbda69bda28802f01fb9171d25b42b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html">antlr4::atn::ParserATNSimulator</a></td></tr>
+<tr class="memitem:ad4351ce091415097bb205d647cecfb86 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad4351ce091415097bb205d647cecfb86">parser</a></td></tr>
+<tr class="separator:ad4351ce091415097bb205d647cecfb86 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d885910cc6f113c761a232d297e8e4 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html">PredictionContextMergeCache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4d885910cc6f113c761a232d297e8e4">mergeCache</a></td></tr>
+<tr class="memdesc:aa4d885910cc6f113c761a232d297e8e4 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Each prediction operation uses a cache for merge of prediction contexts. Don't keep around as it wastes huge amounts of memory. The merge cache isn't synchronized but we're ok since two threads shouldn't reuse same parser/atnsim object because it can only handle one input at a time. This maps graphs a and b to merged result c. (a,b)-&gt;c. We can avoid the merge if we ever see a and b again. Note that (b,a)-&gt;c should also be examined during cache lookup.  <a href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4d885910cc6f113c761a232d297e8e4">更多...</a><br /></td></tr>
+<tr class="separator:aa4d885910cc6f113c761a232d297e8e4 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823106102e611d8c746145640956c34f inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">TokenStream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a823106102e611d8c746145640956c34f">_input</a></td></tr>
+<tr class="separator:a823106102e611d8c746145640956c34f inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad970329e7a96edbc93ce38604608f0b2 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad970329e7a96edbc93ce38604608f0b2">_startIndex</a></td></tr>
+<tr class="separator:ad970329e7a96edbc93ce38604608f0b2 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32cd2d2a9fdee36456898fba307f03b inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ad32cd2d2a9fdee36456898fba307f03b">_outerContext</a></td></tr>
+<tr class="separator:ad32cd2d2a9fdee36456898fba307f03b inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4900c86546ea8b582b5ebb935c142d8 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#aa4900c86546ea8b582b5ebb935c142d8">_dfa</a></td></tr>
+<tr class="separator:aa4900c86546ea8b582b5ebb935c142d8 inherit pro_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:a73bf77d58d1457cc0543600da3201bea inherit pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceantlr4_1_1atn.html#a1c45e22af88cac4a7ce0f823dc39f26b">PredictionContextCache</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a73bf77d58d1457cc0543600da3201bea">_sharedContextCache</a></td></tr>
+<tr class="memdesc:a73bf77d58d1457cc0543600da3201bea inherit pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">The context cache maps all <a class="el" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> objects that are equals() to a single cached copy. This cache is shared across all contexts in all ATNConfigs in all DFA states. We rebuild each <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> to use only cached nodes/graphs in addDFAState(). We don't want to fill this during closure() since there are lots of contexts that pop up but are not used ever again. It also greatly slows down closure(). This cache makes a huge difference in memory and a little bit in speed. For the Java grammar on java.*, it dropped the memory requirements at the end from 25M to 16M. We don't store any of the full context graphs in the DFA because they are limited to local context only, but apparently there's a lot of repetition there as well. We optimize the config contexts before storing the config set in the DFA states by literally rebuilding them with cached subgraphs only. I tried a cache for use during closure operations, that was whacked after each adaptivePredict(). It cost a little bit more time I think and doesn't save on the overall footprint so it's not worth the complexity.  <a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a73bf77d58d1457cc0543600da3201bea">更多...</a><br /></td></tr>
+<tr class="separator:a73bf77d58d1457cc0543600da3201bea inherit pro_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;静态 Public 成员函数 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:ae516df637ee1f4be4787d533ed88b3b9 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static ATN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ae516df637ee1f4be4787d533ed88b3b9">deserialize</a> (const std::vector&lt; uint16_t &gt; &amp;data)</td></tr>
+<tr class="separator:ae516df637ee1f4be4787d533ed88b3b9 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa827be017f3bf3a431ef91972d38e3d1 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#aa827be017f3bf3a431ef91972d38e3d1">checkCondition</a> (bool condition)</td></tr>
+<tr class="separator:aa827be017f3bf3a431ef91972d38e3d1 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394cdeb1e2d6028bc73e0f1d22830b3d inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a394cdeb1e2d6028bc73e0f1d22830b3d">checkCondition</a> (bool condition, const std::string &amp;message)</td></tr>
+<tr class="separator:a394cdeb1e2d6028bc73e0f1d22830b3d inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3fc8caefaecf90ac5eb45561aafdcc inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classantlr4_1_1atn_1_1_transition.html">Transition</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a8e3fc8caefaecf90ac5eb45561aafdcc">edgeFactory</a> (const ATN &amp;<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a>, int type, int src, int trg, int arg1, int arg2, int arg3, const std::vector&lt; <a class="el" href="classantlr4_1_1misc_1_1_interval_set.html">misc::IntervalSet</a> &gt; &amp;sets)</td></tr>
+<tr class="separator:a8e3fc8caefaecf90ac5eb45561aafdcc inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57878604b6496cc6aa80e29811e05660 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static ATNState *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a57878604b6496cc6aa80e29811e05660">stateFactory</a> (int type, int ruleIndex)</td></tr>
+<tr class="separator:a57878604b6496cc6aa80e29811e05660 inherit pub_static_methods_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html">antlr4::atn::ParserATNSimulator</a></td></tr>
+<tr class="memitem:a1e32f99f820baf3079b4bb631e5ada4f inherit pub_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a1e32f99f820baf3079b4bb631e5ada4f">decisionToDFA</a></td></tr>
+<tr class="separator:a1e32f99f820baf3079b4bb631e5ada4f inherit pub_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;Public 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:afec8e232a4c11c864ecc770252a2bcb6 inherit pub_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">const ATN &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#afec8e232a4c11c864ecc770252a2bcb6">atn</a></td></tr>
+<tr class="separator:afec8e232a4c11c864ecc770252a2bcb6 inherit pub_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;静态 Public 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html">antlr4::atn::ParserATNSimulator</a></td></tr>
+<tr class="memitem:a8c639842e974461b22d4b4c314ee4d1d inherit pub_static_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a8c639842e974461b22d4b4c314ee4d1d">TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT</a> = ParserATNSimulator::getLrLoopSetting()</td></tr>
+<tr class="separator:a8c639842e974461b22d4b4c314ee4d1d inherit pub_static_attribs_classantlr4_1_1atn_1_1_parser_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;静态 Public 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:a1a88e9a52986711b319268c6e6faf6c6 inherit pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; dfa::DFAState &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a1a88e9a52986711b319268c6e6faf6c6">ERROR</a> = std::make_shared&lt;DFAState&gt;(INT32_MAX)</td></tr>
+<tr class="memdesc:a1a88e9a52986711b319268c6e6faf6c6 inherit pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Must distinguish between missing edge and edge we know leads nowhere.  <a href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a1a88e9a52986711b319268c6e6faf6c6">更多...</a><br /></td></tr>
+<tr class="separator:a1a88e9a52986711b319268c6e6faf6c6 inherit pub_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator')"><img src="closed.png" alt="-"/>&#160;静态 Protected 属性 继承自 <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html">antlr4::atn::ATNSimulator</a></td></tr>
+<tr class="memitem:a0ceff3caefbd8f9067c549fdf60e973b inherit pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#a0ceff3caefbd8f9067c549fdf60e973b">_stateLock</a></td></tr>
+<tr class="separator:a0ceff3caefbd8f9067c549fdf60e973b inherit pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c0921267abe8227f51aa4f1201a82a inherit pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classantlrcpp_1_1_single_write_multiple_read_lock.html">antlrcpp::SingleWriteMultipleReadLock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_simulator.html#ab3c0921267abe8227f51aa4f1201a82a">_edgeLock</a></td></tr>
+<tr class="separator:ab3c0921267abe8227f51aa4f1201a82a inherit pro_static_attribs_classantlr4_1_1atn_1_1_a_t_n_simulator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a8ba8652d31dd48182cd971ee7306fd79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba8652d31dd48182cd971ee7306fd79">&#9670;&nbsp;</a></span>ProfilingATNSimulator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProfilingATNSimulator::ProfilingATNSimulator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser.html">Parser</a> *&#160;</td>
+          <td class="paramname"><em>parser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab75cfac2534e32419fca3820ad3e8143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab75cfac2534e32419fca3820ad3e8143">&#9670;&nbsp;</a></span>adaptivePredict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ProfilingATNSimulator::adaptivePredict </td>
+          <td>(</td>
+          <td class="paramtype">TokenStream *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>decision</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *&#160;</td>
+          <td class="paramname"><em>outerContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5">antlr4::atn::ParserATNSimulator</a> .</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator_ab75cfac2534e32419fca3820ad3e8143_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_ab75cfac2534e32419fca3820ad3e8143_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_ab75cfac2534e32419fca3820ad3e8143_cgraph" id="aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_ab75cfac2534e32419fca3820ad3e8143_cgraph">
+<area shape="rect" title=" " alt="" coords="5,217,220,259"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5" title=" " alt="" coords="268,217,475,259"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_prediction_context_merge_cache.html#acf7501a4cd385b70239191dfcf16e9c1" title=" " alt="" coords="531,5,722,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2" title="Performs ATN simulation to compute a predicted alternative based upon the remaining input,..." alt="" coords="523,123,730,164"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a51b55922ce19b4812b517f717233495a" title=" " alt="" coords="785,64,991,105"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a6e0d2aca83d6cb0d155d971594c8dc7f" title=" " alt="" coords="523,188,731,229"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a16f04e1d91f059b882505aff2174a1e1" title=" " alt="" coords="779,275,997,302"/>
+<area shape="rect" href="classantlr4_1_1dfa_1_1_d_f_a.html#a0283251c54b224124da6fc0600717617" title=" " alt="" coords="523,305,731,347"/>
+<area shape="rect" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#a3e1dda5e0e36edf6b80d8a3965851d1b" title=" " alt="" coords="794,332,982,373"/>
+<area shape="rect" href="classantlrcpp_1_1_single_write_multiple_read_lock.html#adefecf5fd0a7b3843d4044f10e525f8a" title=" " alt="" coords="794,408,982,449"/>
+<area shape="rect" href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500" title=" " alt="" coords="797,130,979,157"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a5f79c144aff232c37c906060e84a3d3f" title=" " alt="" coords="1045,64,1252,105"/>
+<area shape="rect" href="classantlr4_1_1_recognizer.html#aae7ec953d3f35749e62ccb96fa3e0946" title=" " alt="" coords="1300,64,1427,105"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa2d28983d4cff6c1bcc5fd18afcb1119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d28983d4cff6c1bcc5fd18afcb1119">&#9670;&nbsp;</a></span>computeReachSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> &gt; ProfilingATNSimulator::computeReachSet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> *&#160;</td>
+          <td class="paramname"><em>closure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fullCtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a548b99a618c2943651df012ee670d12e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548b99a618c2943651df012ee670d12e">&#9670;&nbsp;</a></span>computeTargetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFAState * ProfilingATNSimulator::computeTargetState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">dfa::DFAState *&#160;</td>
+          <td class="paramname"><em>previousD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a225d742a50c68d84206fd93c87ffdfcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a225d742a50c68d84206fd93c87ffdfcb">&#9670;&nbsp;</a></span>evalSemanticContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ProfilingATNSimulator::evalSemanticContext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a>&lt; <a class="el" href="classantlr4_1_1atn_1_1_semantic_context.html">SemanticContext</a> &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>pred</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1_parser_rule_context.html">ParserRuleContext</a> *&#160;</td>
+          <td class="paramname"><em>parserCallStack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fullCtx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a882f7dbbfc19ca741b38f7059c2ad662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882f7dbbfc19ca741b38f7059c2ad662">&#9670;&nbsp;</a></span>getCurrentState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFAState * ProfilingATNSimulator::getCurrentState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa202e757203f75c742017f3c4756322f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa202e757203f75c742017f3c4756322f">&#9670;&nbsp;</a></span>getDecisionInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classantlr4_1_1atn_1_1_decision_info.html">DecisionInfo</a> &gt; ProfilingATNSimulator::getDecisionInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator_aa202e757203f75c742017f3c4756322f_icgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_aa202e757203f75c742017f3c4756322f_icgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_aa202e757203f75c742017f3c4756322f_icgraph" id="aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_aa202e757203f75c742017f3c4756322f_icgraph">
+<area shape="rect" title=" " alt="" coords="264,235,479,276"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parse_info.html#a637a7b2c52ca5cd2a3f247ba5de623f7" title="Gets an array of DecisionInfoinstances containing the profiling information gathered for each decisio..." alt="" coords="39,5,182,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parse_info.html#a6f9fb6e5fc44568c6e6f0337ff9cb357" title="Gets the decision numbers for decisions that required one or more full&#45;context predictions during par..." alt="" coords="39,71,182,112"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parse_info.html#ad96f64c07f563177909d856a40f420fe" title="Gets the total number of ATN lookahead operations for SLL and LL prediction across all decisions made..." alt="" coords="17,136,205,177"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parse_info.html#aa99c2df168f4fe0673b6ae24900a33d9" title="Gets the total number of ATN lookahead operations for LL prediction across all decisions made during ..." alt="" coords="9,201,212,243"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parse_info.html#ae5e5cadb9cf4df3fff49583f0c46afc4" title="Gets the total number of LL lookahead operations across all decisions made during parsing...." alt="" coords="22,267,199,308"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parse_info.html#a0d67b72cf3de480e3b2142711568129e" title="Gets the total number of ATN lookahead operations for SLL prediction across all decisions made during..." alt="" coords="5,332,216,373"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parse_info.html#ab38049ea664df2514084fd24ee7cdc87" title="Gets the total number of SLL lookahead operations across all decisions made during parsing...." alt="" coords="17,397,204,439"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_parse_info.html#a8aea8e30f374b00aaf60c0f5a5cddd1e" title="Gets the total time spent during prediction across all decisions made during parsing...." alt="" coords="25,463,197,504"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2406132f5c14394f5b426d3bff44cf68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2406132f5c14394f5b426d3bff44cf68">&#9670;&nbsp;</a></span>getExistingTargetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DFAState * ProfilingATNSimulator::getExistingTargetState </td>
+          <td>(</td>
+          <td class="paramtype">dfa::DFAState *&#160;</td>
+          <td class="paramname"><em>previousD</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3eea846d54eff30cf00d36ec404481d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3eea846d54eff30cf00d36ec404481d">&#9670;&nbsp;</a></span>reportAmbiguity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfilingATNSimulator::reportAmbiguity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">dfa::DFAState *&#160;</td>
+          <td class="paramname"><em>D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stopIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>exact</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>ambigAlts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> *&#160;</td>
+          <td class="paramname"><em>configs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator_aa3eea846d54eff30cf00d36ec404481d_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_aa3eea846d54eff30cf00d36ec404481d_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_aa3eea846d54eff30cf00d36ec404481d_cgraph" id="aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_aa3eea846d54eff30cf00d36ec404481d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,220,47"/>
+<area shape="rect" href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500" title=" " alt="" coords="268,13,449,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e6287c59cd670e368fbe478ba9886e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e6287c59cd670e368fbe478ba9886e4">&#9670;&nbsp;</a></span>reportAttemptingFullContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfilingATNSimulator::reportAttemptingFullContext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classantlrcpp_1_1_bit_set.html">antlrcpp::BitSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>conflictingAlts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> *&#160;</td>
+          <td class="paramname"><em>configs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stopIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_profiling_a_t_n_simulator_a8e6287c59cd670e368fbe478ba9886e4_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_a8e6287c59cd670e368fbe478ba9886e4_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_a8e6287c59cd670e368fbe478ba9886e4_cgraph" id="aclassantlr4_1_1atn_1_1_profiling_a_t_n_simulator_a8e6287c59cd670e368fbe478ba9886e4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,220,47"/>
+<area shape="rect" href="classantlrcpp_1_1_bit_set.html#a42f487492a858e90b594a24615241500" title=" " alt="" coords="268,13,449,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abd11027484af73b41b01bfa2e3a6f721"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd11027484af73b41b01bfa2e3a6f721">&#9670;&nbsp;</a></span>reportContextSensitivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProfilingATNSimulator::reportContextSensitivity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1dfa_1_1_d_f_a.html">dfa::DFA</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>prediction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_config_set.html">ATNConfigSet</a> *&#160;</td>
+          <td class="paramname"><em>configs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>startIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>stopIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aff86eac293a5a5fe84f80c406346bfa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff86eac293a5a5fe84f80c406346bfa2">&#9670;&nbsp;</a></span>_currentDecision</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t antlr4::atn::ProfilingATNSimulator::_currentDecision = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a404582fe9f278c4d055e93f25606b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a404582fe9f278c4d055e93f25606b1">&#9670;&nbsp;</a></span>_currentState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dfa::DFAState* antlr4::atn::ProfilingATNSimulator::_currentState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acea790de680bb7daf232c92cd3bbeefc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea790de680bb7daf232c92cd3bbeefc">&#9670;&nbsp;</a></span>_decisions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classantlr4_1_1atn_1_1_decision_info.html">DecisionInfo</a>&gt; antlr4::atn::ProfilingATNSimulator::_decisions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb22a963389758fb5fda5eb36f0776d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb22a963389758fb5fda5eb36f0776d2">&#9670;&nbsp;</a></span>_llStopIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int antlr4::atn::ProfilingATNSimulator::_llStopIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9751cd4d23aa0ad68a39741d896fe6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9751cd4d23aa0ad68a39741d896fe6b">&#9670;&nbsp;</a></span>_sllStopIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int antlr4::atn::ProfilingATNSimulator::_sllStopIndex = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bbda69bda28802f01fb9171d25b42b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbda69bda28802f01fb9171d25b42b8">&#9670;&nbsp;</a></span>conflictingAltResolvedBySLL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t antlr4::atn::ProfilingATNSimulator::conflictingAltResolvedBySLL = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>At the point of LL failover, we record how SLL would resolve the conflict so that we can determine whether or not a decision / input pair is context-sensitive. If LL gives a different result than SLL's predicted alternative, we have a context sensitivity for sure. The converse is not necessarily true, however. It's possible that after conflict resolution chooses minimum alternatives, SLL could get the same answer as LL. Regardless of whether or not the result indicates an ambiguity, it is not treated as a context sensitivity because LL prediction was not required in order to produce a correct prediction for this decision and input sequence. It may in fact still be a context sensitivity but we don't know by looking at the minimum alternatives for the current input. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/atn/<a class="el" href="_profiling_a_t_n_simulator_8h_source.html">ProfilingATNSimulator.h</a></li>
+<li>runtime/atn/<a class="el" href="_profiling_a_t_n_simulator_8cpp.html">ProfilingATNSimulator.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

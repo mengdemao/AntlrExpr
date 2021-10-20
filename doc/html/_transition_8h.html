@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: runtime/atn/Transition.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_cb031e414f281a658b23dddb30bb9d2c.html">runtime</a></li><li class="navelem"><a class="el" href="dir_8ae922f545c47473d82446fd4d2998a4.html">atn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle">
+<div class="title">Transition.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_interval_set_8h_source.html">misc/IntervalSet.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Transition.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_transition_8h__incl.png" border="0" usemap="#aruntime_2atn_2_transition_8h" alt=""/></div>
+<map name="aruntime_2atn_2_transition_8h" id="aruntime_2atn_2_transition_8h">
+<area shape="rect" title=" " alt="" coords="1142,5,1301,32"/>
+<area shape="rect" href="_interval_set_8h.html" title=" " alt="" coords="1159,80,1284,107"/>
+<area shape="rect" href="_interval_8h.html" title=" " alt="" coords="1106,155,1211,181"/>
+<area shape="rect" href="_exceptions_8h.html" title=" " alt="" coords="1236,155,1335,181"/>
+<area shape="rect" href="antlr4-common_8h.html" title=" " alt="" coords="1162,229,1281,256"/>
+<area shape="rect" title=" " alt="" coords="5,304,80,331"/>
+<area shape="rect" title=" " alt="" coords="104,304,173,331"/>
+<area shape="rect" title=" " alt="" coords="197,304,259,331"/>
+<area shape="rect" title=" " alt="" coords="283,304,344,331"/>
+<area shape="rect" title=" " alt="" coords="369,304,434,331"/>
+<area shape="rect" title=" " alt="" coords="353,379,425,405"/>
+<area shape="rect" title=" " alt="" coords="841,304,903,331"/>
+<area shape="rect" title=" " alt="" coords="928,304,981,331"/>
+<area shape="rect" title=" " alt="" coords="1005,304,1069,331"/>
+<area shape="rect" title=" " alt="" coords="1094,304,1133,331"/>
+<area shape="rect" title=" " alt="" coords="1157,304,1203,331"/>
+<area shape="rect" title=" " alt="" coords="1228,304,1297,331"/>
+<area shape="rect" title=" " alt="" coords="1321,304,1361,331"/>
+<area shape="rect" title=" " alt="" coords="1385,304,1455,331"/>
+<area shape="rect" title=" " alt="" coords="450,379,515,405"/>
+<area shape="rect" title=" " alt="" coords="1479,304,1543,331"/>
+<area shape="rect" title=" " alt="" coords="540,379,609,405"/>
+<area shape="rect" title=" " alt="" coords="1567,304,1622,331"/>
+<area shape="rect" title=" " alt="" coords="725,379,779,405"/>
+<area shape="rect" title=" " alt="" coords="1647,304,1713,331"/>
+<area shape="rect" title=" " alt="" coords="1737,304,1820,331"/>
+<area shape="rect" title=" " alt="" coords="1845,304,1955,331"/>
+<area shape="rect" title=" " alt="" coords="1980,304,2084,331"/>
+<area shape="rect" title=" " alt="" coords="2108,304,2161,331"/>
+<area shape="rect" title=" " alt="" coords="804,379,860,405"/>
+<area shape="rect" title=" " alt="" coords="2185,304,2244,331"/>
+<area shape="rect" title=" " alt="" coords="2269,304,2347,331"/>
+<area shape="rect" title=" " alt="" coords="2371,304,2426,331"/>
+<area shape="rect" title=" " alt="" coords="2450,304,2574,331"/>
+<area shape="rect" title=" " alt="" coords="2599,304,2665,331"/>
+<area shape="rect" href="guid_8h.html" title=" " alt="" coords="611,304,715,331"/>
+<area shape="rect" href="_declarations_8h.html" title=" " alt="" coords="2689,304,2841,331"/>
+<area shape="rect" title=" " alt="" coords="633,379,700,405"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_transition_8h__dep__incl.png" border="0" usemap="#aruntime_2atn_2_transition_8hdep" alt=""/></div>
+<map name="aruntime_2atn_2_transition_8hdep" id="aruntime_2atn_2_transition_8hdep">
+<area shape="rect" title=" " alt="" coords="2341,5,2499,32"/>
+<area shape="rect" href="_abstract_predicate_transition_8h.html" title=" " alt="" coords="1585,80,1780,121"/>
+<area shape="rect" href="_l_l1_analyzer_8cpp.html" title=" " alt="" coords="3897,266,4085,293"/>
+<area shape="rect" href="_a_t_n_serializer_8cpp.html" title=" " alt="" coords="1463,266,1657,293"/>
+<area shape="rect" href="_action_transition_8h.html" title=" " alt="" coords="1137,177,1332,203"/>
+<area shape="rect" href="_a_t_n_state_8cpp.html" title=" " alt="" coords="2005,87,2177,114"/>
+<area shape="rect" href="_atom_transition_8cpp.html" title=" " alt="" coords="1940,266,2143,293"/>
+<area shape="rect" href="_atom_transition_8h.html" title=" " alt="" coords="1916,177,2105,203"/>
+<area shape="rect" href="_epsilon_transition_8h.html" title=" " alt="" coords="2181,177,2382,203"/>
+<area shape="rect" href="_range_transition_8h.html" title=" " alt="" coords="2407,177,2601,203"/>
+<area shape="rect" href="_rule_transition_8h.html" title=" " alt="" coords="2676,177,2860,203"/>
+<area shape="rect" href="_set_transition_8h.html" title=" " alt="" coords="2549,87,2728,114"/>
+<area shape="rect" href="_star_loopback_state_8cpp.html" title=" " alt="" coords="3425,80,3596,121"/>
+<area shape="rect" href="_transition_8cpp.html" title=" " alt="" coords="3621,87,3793,114"/>
+<area shape="rect" href="_wildcard_transition_8h.html" title=" " alt="" coords="3850,177,4059,203"/>
+<area shape="rect" href="_abstract_predicate_transition_8cpp.html" title=" " alt="" coords="1356,169,1551,211"/>
+<area shape="rect" href="_precedence_predicate_transition_8h.html" title=" " alt="" coords="1575,169,1790,211"/>
+<area shape="rect" href="_predicate_transition_8h.html" title=" " alt="" coords="900,177,1113,203"/>
+<area shape="rect" href="_a_t_n_deserializer_8cpp.html" title=" " alt="" coords="2406,266,2615,293"/>
+<area shape="rect" href="_parser_a_t_n_simulator_8cpp.html" title=" " alt="" coords="1681,266,1916,293"/>
+<area shape="rect" href="_precedence_predicate_transition_8cpp.html" title=" " alt="" coords="1009,259,1223,300"/>
+<area shape="rect" href="_parser_interpreter_8cpp.html" title=" " alt="" coords="1247,266,1438,293"/>
+<area shape="rect" href="_lexer_a_t_n_simulator_8cpp.html" title=" " alt="" coords="757,266,985,293"/>
+<area shape="rect" href="_predicate_transition_8cpp.html" title=" " alt="" coords="5,266,232,293"/>
+<area shape="rect" href="_failed_predicate_exception_8cpp.html" title=" " alt="" coords="256,266,499,293"/>
+<area shape="rect" href="_action_transition_8cpp.html" title=" " alt="" coords="523,266,733,293"/>
+<area shape="rect" href="_epsilon_transition_8cpp.html" title=" " alt="" coords="2167,266,2382,293"/>
+<area shape="rect" href="_range_transition_8cpp.html" title=" " alt="" coords="2639,266,2849,293"/>
+<area shape="rect" href="_a_t_n_8cpp.html" title=" " alt="" coords="3252,266,3393,293"/>
+<area shape="rect" href="_prediction_context_8cpp.html" title=" " alt="" coords="3417,266,3636,293"/>
+<area shape="rect" href="_rule_transition_8cpp.html" title=" " alt="" coords="2873,266,3071,293"/>
+<area shape="rect" href="_parser_8cpp.html" title=" " alt="" coords="3095,266,3227,293"/>
+<area shape="rect" href="_not_set_transition_8h.html" title=" " alt="" coords="2885,177,3083,203"/>
+<area shape="rect" href="_set_transition_8cpp.html" title=" " alt="" coords="3159,177,3351,203"/>
+<area shape="rect" href="_not_set_transition_8cpp.html" title=" " alt="" coords="3661,266,3873,293"/>
+<area shape="rect" href="_wildcard_transition_8cpp.html" title=" " alt="" coords="4109,266,4331,293"/>
+</map>
+</div>
+</div>
+<p><a href="_transition_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_transition.html">antlr4::atn::Transition</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An ATN transition between any two ATN states. Subclasses define atom, set, epsilon, action, predicate, rule transitions. This is a one way link. It emanates from a state (usually via a list of transitions) and has a target state. Since we never have to change the ATN transitions once we construct it, we can fix these transitions as specific classes. The DFA transitions on the other hand need to update the labels as it adds transitions to the states. We'll use the term Edge for the DFA to distinguish them from ATN transitions.  <a href="classantlr4_1_1atn_1_1_transition.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceantlr4"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlr4.html">antlr4</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceantlr4_1_1atn"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceantlr4_1_1atn.html">antlr4::atn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

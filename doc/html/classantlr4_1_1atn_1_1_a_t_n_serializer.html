@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AntlrExpr: antlr4::atn::ATNSerializer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AntlrExpr
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Antlr表达式</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceantlr4.html">antlr4</a></li><li class="navelem"><a class="el" href="namespaceantlr4_1_1atn.html">atn</a></li><li class="navelem"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html">ATNSerializer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classantlr4_1_1atn_1_1_a_t_n_serializer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">antlr4::atn::ATNSerializer类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_a_t_n_serializer_8h_source.html">ATNSerializer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a75bff3cf4e62ff43bfdedd1795f9fad8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a75bff3cf4e62ff43bfdedd1795f9fad8">ATNSerializer</a> (ATN *<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a8d94c9a858d576727244bbe896fe52c7">atn</a>)</td></tr>
+<tr class="separator:a75bff3cf4e62ff43bfdedd1795f9fad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b466a6c4cf5e9e44224b8a245f7231"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a17b466a6c4cf5e9e44224b8a245f7231">ATNSerializer</a> (ATN *<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a8d94c9a858d576727244bbe896fe52c7">atn</a>, const std::vector&lt; std::string &gt; &amp;tokenNames)</td></tr>
+<tr class="separator:a17b466a6c4cf5e9e44224b8a245f7231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511efb78567622836ef8d15f9e40ffbc"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a511efb78567622836ef8d15f9e40ffbc">~ATNSerializer</a> ()</td></tr>
+<tr class="separator:a511efb78567622836ef8d15f9e40ffbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d16b888446eddfd0faaf5356d6d884"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#ae4d16b888446eddfd0faaf5356d6d884">serialize</a> ()</td></tr>
+<tr class="memdesc:ae4d16b888446eddfd0faaf5356d6d884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialize state descriptors, edge descriptors, and decision-&gt;state map into list of ints:  <a href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#ae4d16b888446eddfd0faaf5356d6d884">更多...</a><br /></td></tr>
+<tr class="separator:ae4d16b888446eddfd0faaf5356d6d884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938398654ea3ca5d26699dce55785600"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a938398654ea3ca5d26699dce55785600">decode</a> (const std::wstring &amp;data)</td></tr>
+<tr class="separator:a938398654ea3ca5d26699dce55785600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90abb185836850e7d17be3e94109b45b"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a90abb185836850e7d17be3e94109b45b">getTokenName</a> (size_t t)</td></tr>
+<tr class="separator:a90abb185836850e7d17be3e94109b45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a837138e7a36404f8397569f95e4e98bc"><td class="memItemLeft" align="right" valign="top">static std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a837138e7a36404f8397569f95e4e98bc">getSerializedAsString</a> (ATN *<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a8d94c9a858d576727244bbe896fe52c7">atn</a>)</td></tr>
+<tr class="memdesc:a837138e7a36404f8397569f95e4e98bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by Java target to encode short/int array as chars in string.  <a href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a837138e7a36404f8397569f95e4e98bc">更多...</a><br /></td></tr>
+<tr class="separator:a837138e7a36404f8397569f95e4e98bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc79fa1515109ef7edbb54278fdbb1a9"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#acc79fa1515109ef7edbb54278fdbb1a9">getSerialized</a> (ATN *<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a8d94c9a858d576727244bbe896fe52c7">atn</a>)</td></tr>
+<tr class="separator:acc79fa1515109ef7edbb54278fdbb1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9664559456e4c5babc1a6f650a1bbcb7"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a9664559456e4c5babc1a6f650a1bbcb7">getDecoded</a> (ATN *<a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a8d94c9a858d576727244bbe896fe52c7">atn</a>, std::vector&lt; std::string &gt; &amp;tokenNames)</td></tr>
+<tr class="separator:a9664559456e4c5babc1a6f650a1bbcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a8d94c9a858d576727244bbe896fe52c7"><td class="memItemLeft" align="right" valign="top">ATN *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a8d94c9a858d576727244bbe896fe52c7">atn</a></td></tr>
+<tr class="separator:a8d94c9a858d576727244bbe896fe52c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a3ad6326534b999fc59a59e7b6fcd92f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a3ad6326534b999fc59a59e7b6fcd92f7">serializeUUID</a> (std::vector&lt; size_t &gt; &amp;data, <a class="el" href="class_guid.html">Guid</a> uuid)</td></tr>
+<tr class="separator:a3ad6326534b999fc59a59e7b6fcd92f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac18ae7de3503b514fc638605dfb45070"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#ac18ae7de3503b514fc638605dfb45070">_tokenNames</a></td></tr>
+<tr class="separator:ac18ae7de3503b514fc638605dfb45070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a75bff3cf4e62ff43bfdedd1795f9fad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75bff3cf4e62ff43bfdedd1795f9fad8">&#9670;&nbsp;</a></span>ATNSerializer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ATNSerializer::ATNSerializer </td>
+          <td>(</td>
+          <td class="paramtype">ATN *&#160;</td>
+          <td class="paramname"><em>atn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17b466a6c4cf5e9e44224b8a245f7231"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b466a6c4cf5e9e44224b8a245f7231">&#9670;&nbsp;</a></span>ATNSerializer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ATNSerializer::ATNSerializer </td>
+          <td>(</td>
+          <td class="paramtype">ATN *&#160;</td>
+          <td class="paramname"><em>atn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tokenNames</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a511efb78567622836ef8d15f9e40ffbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511efb78567622836ef8d15f9e40ffbc">&#9670;&nbsp;</a></span>~ATNSerializer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ATNSerializer::~ATNSerializer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a938398654ea3ca5d26699dce55785600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938398654ea3ca5d26699dce55785600">&#9670;&nbsp;</a></span>decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ATNSerializer::decode </td>
+          <td>(</td>
+          <td class="paramtype">const std::wstring &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_a_t_n_serializer_a938398654ea3ca5d26699dce55785600_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_a_t_n_serializer_a938398654ea3ca5d26699dce55785600_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a938398654ea3ca5d26699dce55785600_cgraph" id="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a938398654ea3ca5d26699dce55785600_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" href="class_guid.html#a3a107da5f94f8b90b7d23d3249dc83c9" title=" " alt="" coords="220,13,323,39"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_a_t_n_serializer_a938398654ea3ca5d26699dce55785600_icgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_a_t_n_serializer_a938398654ea3ca5d26699dce55785600_icgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a938398654ea3ca5d26699dce55785600_icgraph" id="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a938398654ea3ca5d26699dce55785600_icgraph">
+<area shape="rect" title=" " alt="" coords="220,5,387,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a9664559456e4c5babc1a6f650a1bbcb7" title=" " alt="" coords="5,5,172,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9664559456e4c5babc1a6f650a1bbcb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9664559456e4c5babc1a6f650a1bbcb7">&#9670;&nbsp;</a></span>getDecoded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ATNSerializer::getDecoded </td>
+          <td>(</td>
+          <td class="paramtype">ATN *&#160;</td>
+          <td class="paramname"><em>atn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>tokenNames</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_a_t_n_serializer_a9664559456e4c5babc1a6f650a1bbcb7_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_a_t_n_serializer_a9664559456e4c5babc1a6f650a1bbcb7_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a9664559456e4c5babc1a6f650a1bbcb7_cgraph" id="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a9664559456e4c5babc1a6f650a1bbcb7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#a938398654ea3ca5d26699dce55785600" title=" " alt="" coords="220,5,387,47"/>
+<area shape="rect" href="class_guid.html#a3a107da5f94f8b90b7d23d3249dc83c9" title=" " alt="" coords="435,13,537,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acc79fa1515109ef7edbb54278fdbb1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc79fa1515109ef7edbb54278fdbb1a9">&#9670;&nbsp;</a></span>getSerialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; size_t &gt; ATNSerializer::getSerialized </td>
+          <td>(</td>
+          <td class="paramtype">ATN *&#160;</td>
+          <td class="paramname"><em>atn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_a_t_n_serializer_acc79fa1515109ef7edbb54278fdbb1a9_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_a_t_n_serializer_acc79fa1515109ef7edbb54278fdbb1a9_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_a_t_n_serializer_acc79fa1515109ef7edbb54278fdbb1a9_cgraph" id="aclassantlr4_1_1atn_1_1_a_t_n_serializer_acc79fa1515109ef7edbb54278fdbb1a9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,172,80"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#ae4d16b888446eddfd0faaf5356d6d884" title="Serialize state descriptors, edge descriptors, and decision&#45;&gt;state map into list of ints:" alt="" coords="220,39,387,80"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_transition.html#a9a850c39a688cf755a1983342a67ec22" title=" " alt="" coords="441,5,587,47"/>
+<area shape="rect" href="classantlr4_1_1misc_1_1_interval_set.html#a5586fbe7a38bb76ce570b770c44a07a1" title=" " alt="" coords="435,71,593,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a837138e7a36404f8397569f95e4e98bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a837138e7a36404f8397569f95e4e98bc">&#9670;&nbsp;</a></span>getSerializedAsString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::wstring ATNSerializer::getSerializedAsString </td>
+          <td>(</td>
+          <td class="paramtype">ATN *&#160;</td>
+          <td class="paramname"><em>atn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used by Java target to encode short/int array as chars in string. </p>
+
+</div>
+</div>
+<a id="a90abb185836850e7d17be3e94109b45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90abb185836850e7d17be3e94109b45b">&#9670;&nbsp;</a></span>getTokenName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ATNSerializer::getTokenName </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_a_t_n_serializer_a90abb185836850e7d17be3e94109b45b_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_a_t_n_serializer_a90abb185836850e7d17be3e94109b45b_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a90abb185836850e7d17be3e94109b45b_cgraph" id="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a90abb185836850e7d17be3e94109b45b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,47"/>
+<area shape="rect" href="namespaceantlrcpp.html#ab872865ce6358753d8b51e521d4b94c8" title=" " alt="" coords="220,13,364,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4d16b888446eddfd0faaf5356d6d884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d16b888446eddfd0faaf5356d6d884">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; size_t &gt; ATNSerializer::serialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Serialize state descriptors, edge descriptors, and decision-&gt;state map into list of ints: </p>
+<pre class="fragment">   grammar-type, (ANTLRParser.LEXER, ...)
+</pre><p> max token type, num states, state-0-type ruleIndex, state-1-type ruleIndex, ... state-i-type ruleIndex optional-arg ... num rules, rule-1-start-state rule-1-args, rule-2-start-state rule-2-args, ... (args are token type,actionIndex in lexer else 0,0) num modes, mode-0-start-state, mode-1-start-state, ... (parser has 0 modes) num sets set-0-interval-count intervals, set-1-interval-count intervals, ... num total edges, src, trg, edge-type, edge arg1, optional edge arg2 (present always), ... num decisions, decision-0-start-state, decision-1-start-state, ...</p>
+<p>Convenient to pack into unsigned shorts to make as Java string.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_a_t_n_serializer_ae4d16b888446eddfd0faaf5356d6d884_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_a_t_n_serializer_ae4d16b888446eddfd0faaf5356d6d884_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_a_t_n_serializer_ae4d16b888446eddfd0faaf5356d6d884_cgraph" id="aclassantlr4_1_1atn_1_1_a_t_n_serializer_ae4d16b888446eddfd0faaf5356d6d884_cgraph">
+<area shape="rect" title="Serialize state descriptors, edge descriptors, and decision&#45;&gt;state map into list of ints:" alt="" coords="5,39,172,80"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_transition.html#a9a850c39a688cf755a1983342a67ec22" title=" " alt="" coords="226,5,373,47"/>
+<area shape="rect" href="classantlr4_1_1misc_1_1_interval_set.html#a5586fbe7a38bb76ce570b770c44a07a1" title=" " alt="" coords="220,71,379,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_a_t_n_serializer_ae4d16b888446eddfd0faaf5356d6d884_icgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_a_t_n_serializer_ae4d16b888446eddfd0faaf5356d6d884_icgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_a_t_n_serializer_ae4d16b888446eddfd0faaf5356d6d884_icgraph" id="aclassantlr4_1_1atn_1_1_a_t_n_serializer_ae4d16b888446eddfd0faaf5356d6d884_icgraph">
+<area shape="rect" title="Serialize state descriptors, edge descriptors, and decision&#45;&gt;state map into list of ints:" alt="" coords="220,5,387,47"/>
+<area shape="rect" href="classantlr4_1_1atn_1_1_a_t_n_serializer.html#acc79fa1515109ef7edbb54278fdbb1a9" title=" " alt="" coords="5,5,172,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3ad6326534b999fc59a59e7b6fcd92f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ad6326534b999fc59a59e7b6fcd92f7">&#9670;&nbsp;</a></span>serializeUUID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ATNSerializer::serializeUUID </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_guid.html">Guid</a>&#160;</td>
+          <td class="paramname"><em>uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classantlr4_1_1atn_1_1_a_t_n_serializer_a3ad6326534b999fc59a59e7b6fcd92f7_cgraph.png" border="0" usemap="#aclassantlr4_1_1atn_1_1_a_t_n_serializer_a3ad6326534b999fc59a59e7b6fcd92f7_cgraph" alt=""/></div>
+<map name="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a3ad6326534b999fc59a59e7b6fcd92f7_cgraph" id="aclassantlr4_1_1atn_1_1_a_t_n_serializer_a3ad6326534b999fc59a59e7b6fcd92f7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,172,65"/>
+<area shape="rect" href="class_guid.html#ad4b5ed16ee361a49dbb32835a2b255ea" title=" " alt="" coords="220,5,312,32"/>
+<area shape="rect" href="class_guid.html#aed84d3d42c8bf2c41146ca33ad7fd2bb" title=" " alt="" coords="225,56,307,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ac18ae7de3503b514fc638605dfb45070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18ae7de3503b514fc638605dfb45070">&#9670;&nbsp;</a></span>_tokenNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; antlr4::atn::ATNSerializer::_tokenNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d94c9a858d576727244bbe896fe52c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d94c9a858d576727244bbe896fe52c7">&#9670;&nbsp;</a></span>atn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ATN* antlr4::atn::ATNSerializer::atn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>runtime/atn/<a class="el" href="_a_t_n_serializer_8h_source.html">ATNSerializer.h</a></li>
+<li>runtime/atn/<a class="el" href="_a_t_n_serializer_8cpp.html">ATNSerializer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

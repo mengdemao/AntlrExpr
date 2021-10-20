@@ -1,0 +1,5 @@
+<map id="antlr4::TokenStreamRewriter::RewriteOperation" name="antlr4::TokenStreamRewriter::RewriteOperation">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,192,80"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_token_stream_rewriter_1_1_insert_before_op.html" title=" " alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1_token_stream_rewriter_1_1_replace_op.html" title=" " alt="" coords="240,71,427,112"/>
+</map>

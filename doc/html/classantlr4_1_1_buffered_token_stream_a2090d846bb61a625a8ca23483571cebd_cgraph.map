@@ -1,0 +1,7 @@
+<map id="antlr4::BufferedTokenStream::getText" name="antlr4::BufferedTokenStream::getText">
+<area shape="rect" id="node1" title=" " alt="" coords="5,68,192,109"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_buffered_token_stream.html#ad7a1573fe9be79daf42c793ebfe1abc6" title=" " alt="" coords="241,39,428,80"/>
+<area shape="rect" id="node5" href="$classantlr4_1_1_token.html#aaa5bda604b301abc3a84bc0f477750d5" title=" " alt="" coords="240,105,429,131"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1_buffered_token_stream.html#a373c27c4d4ec7358ba6985f4839e988a" title="Get all tokens from lexer until EOF." alt="" coords="477,5,664,47"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1_buffered_token_stream.html#abacc9f5776ad27c0dde09daea4930952" title=" " alt="" coords="477,71,664,112"/>
+</map>
