@@ -12,8 +12,6 @@ compiler:
   - clang
 
 before_script:
-  - git lfs checkout
-  - git lfs pull
   - mkdir build
   - cd build
   - cmake ..
