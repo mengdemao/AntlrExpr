@@ -1,8 +1,9 @@
 AntlrExpr学习
 ====
-[TOC]
+[![CMake](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml)
 
-## 提交信息模板
+[代码阅读](https://mengdemao.github.io/AntlrExpr/)
+
 > 提交模板
 ```markdown
 <type> (<scope>): <subject>
