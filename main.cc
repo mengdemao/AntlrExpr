@@ -26,7 +26,7 @@ using namespace antlr4;
  * @brief 主函数
  * @param  argc 参数个数
  * @param  argv 参数列表
- * @return int 
+ * @return int  返回数据
  */
 int main(int argc, const char *argv[]) 
 {
@@ -55,3 +55,4 @@ int main(int argc, const char *argv[])
 
     return 0;
 }
+

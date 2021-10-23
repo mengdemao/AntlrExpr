@@ -18,14 +18,23 @@ find_package(Git QUIET)
 if (GIT_FOUND)
     # 主版本号
     execute_process(
-        COMMAND ${GIT_EXECUTABLE} describe --tags
-        OUTPUT_VARIABLE VERSION_GIT
+        COMMAND ${GIT_EXECUTABLE} describe --tags --abbrev=0 HEAD
+        OUTPUT_VARIABLE GIT_TAG
         OUTPUT_STRIP_TRAILING_WHITESPACE
         ERROR_QUIET
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     )
-endif(GIT_FOUND)
-set(${PROJECT_NAME}_VERSION ${VERSION_GIT})
+    # 次版本号
+    execute_process(
+        COMMAND ${GIT_EXECUTABLE} rev-parse --short HEAD
+        OUTPUT_VARIABLE GIT_SHA
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        ERROR_QUIET
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    )
+endif (GIT_FOUND)
+set(${PROJECT_NAME}_VERSION_MAJOR ${GIT_TAG})
+set(${PROJECT_NAME}_VERSION_MINOR ${GIT_SHA})
 
 # 生成配置文件
 configure_file(inc/config.h.in inc/config.h)
