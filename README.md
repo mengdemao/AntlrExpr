@@ -1,4 +1,4 @@
-AntlrExpr学习
+AntlrExpr笔记
 ====
 [![CMake](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml)
 
