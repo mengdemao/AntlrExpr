@@ -33,16 +33,4 @@ jobs:
     - name: Test
       working-directory: ${{github.workspace}}/build
       run: ctest -C ${{env.BUILD_TYPE}}
-    
-    - name: make doc
-      run: cmake --build ${{github.workspace}}/build --target doc
-    
-    - name: Deploy Doc
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        deploy_key: ${{ secrets.DEPLOY_KEY }}
-        external_repository: mengdemao/AntlrExprDocs
-        publish_dir: ${{github.workspace}}/build/docs
-        keep_files: false
-        publish_branch: master
 
