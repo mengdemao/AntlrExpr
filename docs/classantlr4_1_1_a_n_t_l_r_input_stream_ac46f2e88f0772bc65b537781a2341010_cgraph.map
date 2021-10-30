@@ -1,6 +1,6 @@
 <map id="antlr4::ANTLRInputStream::seek" name="antlr4::ANTLRInputStream::seek">
-<area shape="rect" id="node1" title="consume() ahead until p==index; can&#39;t just set p=index as we must update line and charPositionInLine...." alt="" coords="5,39,179,80"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_a_n_t_l_r_input_stream.html#a8edddb1d103e27801c98211acf482f67" title=" " alt="" coords="227,5,400,47"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_a_n_t_l_r_input_stream.html#a4c9a7beab5662a33a537fa49fc27db9f" title="Return the current input symbol index 0..n where n indicates the last symbol has been read...." alt="" coords="227,71,400,112"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_a_n_t_l_r_input_stream.html#afa8fc0a6689cc0ce807dfc06c89bae9d" title=" " alt="" coords="448,13,645,39"/>
+<area shape="rect" id="node1" title="consume() ahead until p==index; can&#39;t just set p=index as we must update line and charPositionInLine...." alt="" coords="5,39,196,80"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_a_n_t_l_r_input_stream.html#a8edddb1d103e27801c98211acf482f67" title=" " alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1_a_n_t_l_r_input_stream.html#a4c9a7beab5662a33a537fa49fc27db9f" title="Return the current input symbol index 0..n where n indicates the last symbol has been read...." alt="" coords="244,71,435,112"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1_a_n_t_l_r_input_stream.html#afa8fc0a6689cc0ce807dfc06c89bae9d" title=" " alt="" coords="483,13,699,39"/>
 </map>

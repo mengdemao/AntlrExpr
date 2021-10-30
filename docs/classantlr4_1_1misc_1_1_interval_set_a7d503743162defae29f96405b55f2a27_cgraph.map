@@ -1,9 +1,9 @@
 <map id="antlr4::misc::IntervalSet::add" name="antlr4::misc::IntervalSet::add">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,192,134"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1misc_1_1_interval.html#a1a32b591f050ea6cfafedb20106410e0" title="Are two intervals adjacent such as 0..41 and 42..42?" alt="" coords="240,5,379,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1misc_1_1_interval.html#ae23f94846f2564bf62d30791568c820e" title="Are both ranges disjoint? I.e., no overlap?" alt="" coords="240,71,379,112"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1misc_1_1_interval.html#a74cbb460b47b3f30a9b1c974ff96698e" title="Does this start completely before other? Disjoint" alt="" coords="427,127,569,168"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1misc_1_1_interval.html#a4bb5a05fa042422c5b3d2389a27288c4" title="Return the interval computed from combining this and other" alt="" coords="240,189,379,231"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1misc_1_1_interval.html#a9a0cc6ae72135b1bb58d86e08eef139e" title="Does this start completely after other? Disjoint" alt="" coords="429,61,567,103"/>
-<area shape="rect" id="node7" href="$classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429" title=" " alt="" coords="429,192,567,233"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,216,134"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1misc_1_1_interval.html#a1a32b591f050ea6cfafedb20106410e0" title="Are two intervals adjacent such as 0..41 and 42..42?" alt="" coords="264,5,421,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1misc_1_1_interval.html#ae23f94846f2564bf62d30791568c820e" title="Are both ranges disjoint? I.e., no overlap?" alt="" coords="264,71,421,112"/>
+<area shape="rect" id="node5" href="$classantlr4_1_1misc_1_1_interval.html#a74cbb460b47b3f30a9b1c974ff96698e" title="Does this start completely before other? Disjoint" alt="" coords="469,127,629,168"/>
+<area shape="rect" id="node6" href="$classantlr4_1_1misc_1_1_interval.html#a4bb5a05fa042422c5b3d2389a27288c4" title="Return the interval computed from combining this and other" alt="" coords="264,189,421,231"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1misc_1_1_interval.html#a9a0cc6ae72135b1bb58d86e08eef139e" title="Does this start completely after other? Disjoint" alt="" coords="471,61,628,103"/>
+<area shape="rect" id="node7" href="$classantlr4_1_1misc_1_1_interval.html#ae48b9a9e9f672f81977627b609e32429" title=" " alt="" coords="471,192,628,233"/>
 </map>

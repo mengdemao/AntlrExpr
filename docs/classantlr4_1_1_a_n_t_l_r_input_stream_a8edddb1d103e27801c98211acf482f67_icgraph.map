@@ -1,4 +1,4 @@
 <map id="antlr4::ANTLRInputStream::consume" name="antlr4::ANTLRInputStream::consume">
-<area shape="rect" id="node1" title=" " alt="" coords="227,5,400,47"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_a_n_t_l_r_input_stream.html#ac46f2e88f0772bc65b537781a2341010" title="consume() ahead until p==index; can&#39;t just set p=index as we must update line and charPositionInLine...." alt="" coords="5,5,179,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_a_n_t_l_r_input_stream.html#ac46f2e88f0772bc65b537781a2341010" title="consume() ahead until p==index; can&#39;t just set p=index as we must update line and charPositionInLine...." alt="" coords="5,5,196,47"/>
 </map>

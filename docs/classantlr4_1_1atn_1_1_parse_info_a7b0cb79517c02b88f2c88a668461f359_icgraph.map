@@ -1,0 +1,3 @@
+<map id="antlr4::atn::ParseInfo::getDFASize" name="antlr4::atn::ParseInfo::getDFASize">
+<area shape="rect" id="node1" title="Gets the total number of DFA states stored in the DFA cache for all decisions in the ATN." alt="" coords="5,29,163,71"/>
+</map>

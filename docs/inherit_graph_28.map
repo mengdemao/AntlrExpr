@@ -1,4 +1,4 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$classantlr4_1_1dfa_1_1_d_f_a_serializer.html" title="A DFA walker that knows how to dump them to serialized strings." alt="" coords="5,5,172,32"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1dfa_1_1_lexer_d_f_a_serializer.html" title=" " alt="" coords="220,5,419,32"/>
+<area shape="rect" id="node1" href="$classantlr4_1_1dfa_1_1_d_f_a_serializer.html" title="A DFA walker that knows how to dump them to serialized strings." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1dfa_1_1_lexer_d_f_a_serializer.html" title=" " alt="" coords="236,5,455,32"/>
 </map>

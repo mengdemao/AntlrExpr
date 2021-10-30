@@ -1,6 +1,4 @@
 <map id="antlrcpp::toString" name="antlrcpp::toString">
-<area shape="rect" id="node1" title=" " alt="" coords="223,78,344,105"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_decision_state.html#a30e21564791b80bbe0cd93d4444a29de" title=" " alt="" coords="5,5,175,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_common_token.html#ae9ed9e748f6e64f12fd15329829e44a9" title=" " alt="" coords="15,71,165,112"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_rule_context.html#a73fb65c70dea4528092c6fe5122a04bf" title=" " alt="" coords="23,136,157,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="240,13,375,39"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_decision_state.html#a30e21564791b80bbe0cd93d4444a29de" title=" " alt="" coords="5,5,192,47"/>
 </map>

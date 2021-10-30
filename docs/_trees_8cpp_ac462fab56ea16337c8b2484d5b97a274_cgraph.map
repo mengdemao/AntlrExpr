@@ -1,6 +1,6 @@
 <map id="_findAllNodes" name="_findAllNodes">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,107,105"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956" title=" " alt="" coords="173,5,307,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879" title=" " alt="" coords="155,71,325,112"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4" title="Get the token type of the token" alt="" coords="165,137,315,163"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,116,105"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_rule_context.html#ab3c47d330254d4224073408522ac6956" title=" " alt="" coords="186,5,334,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1tree_1_1_terminal_node.html#a96b51fb561f762ebdb91d56275b9e2ac" title=" " alt="" coords="164,71,356,112"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4" title="Get the token type of the token" alt="" coords="178,137,342,163"/>
 </map>

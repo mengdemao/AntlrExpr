@@ -1,7 +1,7 @@
 <map id="antlr4::TokenSource" name="antlr4::TokenSource">
-<area shape="rect" id="node1" title="A source of tokens must provide a sequence of tokens via nextToken(), CommonToken,..." alt="" coords="86,5,225,32"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_lexer.html" title=" " alt="" coords="108,80,203,107"/>
-<area shape="rect" id="node3" href="$class_expr_lexer.html" title=" " alt="" coords="5,155,87,181"/>
-<area shape="rect" id="node4" href="$class_x_path_lexer.html" title=" " alt="" coords="111,155,199,181"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_lexer_interpreter.html" title=" " alt="" coords="223,155,375,181"/>
+<area shape="rect" id="node1" title="A source of tokens must provide a sequence of tokens via nextToken(), CommonToken,..." alt="" coords="89,5,238,32"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_lexer.html" title=" " alt="" coords="112,80,215,107"/>
+<area shape="rect" id="node3" href="$class_expr_lexer.html" title=" " alt="" coords="5,155,92,181"/>
+<area shape="rect" id="node4" href="$class_x_path_lexer.html" title=" " alt="" coords="116,155,211,181"/>
+<area shape="rect" id="node5" href="$classantlr4_1_1_lexer_interpreter.html" title=" " alt="" coords="235,155,407,181"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="antlr4::BufferedTokenStream::get" name="antlr4::BufferedTokenStream::get">
-<area shape="rect" id="node1" title="Get all tokens from start..stop inclusively." alt="" coords="5,5,217,32"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4" title="Get the token type of the token" alt="" coords="265,5,416,32"/>
+<area shape="rect" id="node1" title="Get all tokens from start..stop inclusively." alt="" coords="5,5,241,32"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4" title="Get the token type of the token" alt="" coords="289,5,453,32"/>
 </map>

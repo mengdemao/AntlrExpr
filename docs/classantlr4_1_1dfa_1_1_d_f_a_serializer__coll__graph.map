@@ -1,6 +1,6 @@
 <map id="antlr4::dfa::DFASerializer" name="antlr4::dfa::DFASerializer">
-<area shape="rect" id="node1" title="A DFA walker that knows how to dump them to serialized strings." alt="" coords="7,260,173,287"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1dfa_1_1_d_f_a.html" title=" " alt="" coords="33,171,147,197"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_decision_state.html" title=" " alt="" coords="5,81,175,108"/>
-<area shape="rect" id="node4" title=" " alt="" coords="51,5,129,32"/>
+<area shape="rect" id="node1" title="A DFA walker that knows how to dump them to serialized strings." alt="" coords="7,260,190,287"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1dfa_1_1_d_f_a.html" title=" " alt="" coords="37,171,160,197"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_decision_state.html" title=" " alt="" coords="5,81,192,108"/>
+<area shape="rect" id="node4" title=" " alt="" coords="57,5,140,32"/>
 </map>

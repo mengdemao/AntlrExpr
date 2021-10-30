@@ -1,0 +1,5 @@
+<map id="antlr4::Recognizer::getATN" name="antlr4::Recognizer::getATN">
+<area shape="rect" id="node1" title=" " alt="" coords="388,5,528,47"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_recognizer.html#a44e911d62132ccc76375b6c28bc340d5" title="Get a map from token names to token types. Used for XPath and tree pattern compilation." alt="" coords="193,5,340,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1_recognizer.html#a58398895efe6617e791cef6a39762b38" title=" " alt="" coords="5,5,145,47"/>
+</map>

@@ -5,3 +5,7 @@ build
 /.settings
 /.vscode
 /Doxyfile
+
+GPATH
+GRTAGS
+GTAGS

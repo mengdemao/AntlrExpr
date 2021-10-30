@@ -1,5 +1,5 @@
 <map id="antlr4::DefaultErrorStrategy" name="antlr4::DefaultErrorStrategy">
-<area shape="rect" id="node1" title=" " alt="" coords="65,97,243,124"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_a_n_t_l_r_error_strategy.html" title="The interface for defining strategies to deal with syntax errors encountered during a parse by ANTLR&#45;..." alt="" coords="5,7,185,33"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1misc_1_1_interval_set.html" title=" " alt="" coords="209,7,368,33"/>
+<area shape="rect" id="node1" title=" " alt="" coords="67,97,269,124"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_a_n_t_l_r_error_strategy.html" title="The interface for defining strategies to deal with syntax errors encountered during a parse by ANTLR&#45;..." alt="" coords="5,7,203,33"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1misc_1_1_interval_set.html" title=" " alt="" coords="227,7,405,33"/>
 </map>

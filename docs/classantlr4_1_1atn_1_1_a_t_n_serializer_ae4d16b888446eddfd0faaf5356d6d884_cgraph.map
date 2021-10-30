@@ -1,5 +1,9 @@
 <map id="antlr4::atn::ATNSerializer::serialize" name="antlr4::atn::ATNSerializer::serialize">
-<area shape="rect" id="node1" title="Serialize state descriptors, edge descriptors, and decision&#45;&gt;state map into list of ints:" alt="" coords="5,39,172,80"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_transition.html#a9a850c39a688cf755a1983342a67ec22" title=" " alt="" coords="226,5,373,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1misc_1_1_interval_set.html#a5586fbe7a38bb76ce570b770c44a07a1" title=" " alt="" coords="220,71,379,112"/>
+<area shape="rect" id="node1" title="Serialize state descriptors, edge descriptors, and decision&#45;&gt;state map into list of ints:" alt="" coords="5,104,189,145"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_transition.html#a9a850c39a688cf755a1983342a67ec22" title=" " alt="" coords="257,5,419,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_a_t_n_deserializer.html#a00524eaade634ca63a4c5fe3d65a9b75" title="This is the current serialized UUID." alt="" coords="237,71,439,112"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1atn_1_1_a_t_n_serializer.html#a3ad6326534b999fc59a59e7b6fcd92f7" title=" " alt="" coords="246,136,430,177"/>
+<area shape="rect" id="node7" href="$classantlr4_1_1misc_1_1_interval_set.html#a5586fbe7a38bb76ce570b770c44a07a1" title=" " alt="" coords="249,201,427,243"/>
+<area shape="rect" id="node5" href="$class_guid.html#a7f1a0eaea50676342e59ec11cb85c524" title=" " alt="" coords="487,118,588,145"/>
+<area shape="rect" id="node6" href="$class_guid.html#a2466076783cbd999407f91be32da9f41" title=" " alt="" coords="493,169,582,195"/>
 </map>

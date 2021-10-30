@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AntlrExpr: runtime/atn/SingletonPredictionContext.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -21,8 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">V0.0.0-7315f00</span>
+   <div id="projectname">AntlrExpr<span id="projectnumber">&#160;V0.0.0-29f89db</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -31,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.9.2 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -67,46 +67,45 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">SingletonPredictionContext.h</div>  </div>
+  <div class="headertitle"><div class="title">SingletonPredictionContext.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_singleton_prediction_context_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_prediction_context_8h.html">atn/PredictionContext.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>atn {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">   13</a></span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">SingletonPredictionContext</a> : <span class="keyword">public</span> <a class="code" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Usually a parent is linked via a weak ptr. Not so here as we have kinda reverse reference chain.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// There are no child contexts stored here and often the parent context is left dangling when it&#39;s</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// owning ATNState is released. In order to avoid having this context released as well (leaving all other contexts</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// which got this one as parent with a null reference) we use a shared_ptr here instead, to keep those left alone</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// parent contexts alive.</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#afefd7a72db8ae9da2cf7e33ec1d0c921">   20</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <a class="code" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#afefd7a72db8ae9da2cf7e33ec1d0c921">parent</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#a7fcf91e83cd1d904d964ae9a67779653">   21</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#a7fcf91e83cd1d904d964ae9a67779653">returnState</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">SingletonPredictionContext</a>(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <span class="keyword">const</span>&amp; parent, <span class="keywordtype">size_t</span> returnState);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">SingletonPredictionContext</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">static</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SingletonPredictionContext&gt;</a> create(<a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <span class="keyword">const</span>&amp; parent, <span class="keywordtype">size_t</span> returnState);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> size() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> getParent(<span class="keywordtype">size_t</span> index) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> getReturnState(<span class="keywordtype">size_t</span> index) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> &amp;o) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  };</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;} <span class="comment">// namespace atn</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} <span class="comment">// namespace antlr4</span></div>
+<a href="_singleton_prediction_context_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_prediction_context_8h.html">atn/PredictionContext.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceantlr4.html">antlr4</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>atn {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">   13</a></span>  <span class="keyword">class </span><a class="code hl_define" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code hl_class" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">SingletonPredictionContext</a> : <span class="keyword">public</span> <a class="code hl_class" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// Usually a parent is linked via a weak ptr. Not so here as we have kinda reverse reference chain.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// There are no child contexts stored here and often the parent context is left dangling when it&#39;s</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// owning ATNState is released. In order to avoid having this context released as well (leaving all other contexts</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// which got this one as parent with a null reference) we use a shared_ptr here instead, to keep those left alone</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// parent contexts alive.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#afefd7a72db8ae9da2cf7e33ec1d0c921">   20</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <a class="code hl_variable" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#afefd7a72db8ae9da2cf7e33ec1d0c921">parent</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#a7fcf91e83cd1d904d964ae9a67779653">   21</a></span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html#a7fcf91e83cd1d904d964ae9a67779653">returnState</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">SingletonPredictionContext</a>(<a class="code hl_typedef" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <span class="keyword">const</span>&amp; parent, <span class="keywordtype">size_t</span> returnState);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classantlr4_1_1atn_1_1_singleton_prediction_context.html">~SingletonPredictionContext</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;SingletonPredictionContext&gt;</a> create(<a class="code hl_typedef" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> <span class="keyword">const</span>&amp; parent, <span class="keywordtype">size_t</span> returnState);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> size() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">virtual</span> <a class="code hl_typedef" href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref&lt;PredictionContext&gt;</a> getParent(<span class="keywordtype">size_t</span> index) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> getReturnState(<span class="keywordtype">size_t</span> index) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code hl_class" href="classantlr4_1_1atn_1_1_prediction_context.html">PredictionContext</a> &amp;o) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="namespaceantlrcpp.html#a377b903dbd6c57c2d3c9d885de177a83">toString</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  };</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>} <span class="comment">// namespace atn</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// namespace antlr4</span></div>
 <div class="ttc" id="a_prediction_context_8h_html"><div class="ttname"><a href="_prediction_context_8h.html">PredictionContext.h</a></div></div>
 <div class="ttc" id="aantlr4-common_8h_html_a856abffd348f82209d9588078d9fea33"><div class="ttname"><a href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a></div><div class="ttdeci">#define ANTLR4CPP_PUBLIC</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:106</div></div>
 <div class="ttc" id="aantlr4-common_8h_html_add5e90b302c31b74a46619f240214bcc"><div class="ttname"><a href="antlr4-common_8h.html#add5e90b302c31b74a46619f240214bcc">Ref</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; Ref</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:139</div></div>
@@ -119,7 +118,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

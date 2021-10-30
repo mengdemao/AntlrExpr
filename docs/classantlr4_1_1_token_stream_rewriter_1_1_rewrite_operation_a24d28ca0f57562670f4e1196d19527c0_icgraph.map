@@ -1,5 +1,5 @@
 <map id="antlr4::TokenStreamRewriter::RewriteOperation::toString" name="antlr4::TokenStreamRewriter::RewriteOperation::toString">
-<area shape="rect" id="node1" title=" " alt="" coords="515,5,701,47"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_token_stream_rewriter.html#ae15eb1abf74099af267f840e3ac9187b" title="We need to combine operations and report invalid operations (like overlapping replaces that are not c..." alt="" coords="240,5,467,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_token_stream_rewriter.html#a3e5c55af743b11284fa2dd2e1fecc9ea" title=" " alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="557,5,764,47"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_token_stream_rewriter.html#ae15eb1abf74099af267f840e3ac9187b" title="We need to combine operations and report invalid operations (like overlapping replaces that are not c..." alt="" coords="260,5,509,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1_token_stream_rewriter.html#a3e5c55af743b11284fa2dd2e1fecc9ea" title=" " alt="" coords="5,5,212,47"/>
 </map>

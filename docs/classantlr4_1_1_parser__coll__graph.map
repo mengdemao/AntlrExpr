@@ -1,8 +1,8 @@
 <map id="antlr4::Parser" name="antlr4::Parser">
-<area shape="rect" id="node1" title="This is all the parsing support code essentially; most of it is error recovery stuff." alt="" coords="149,289,249,316"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_recognizer.html" title=" " alt="" coords="136,213,263,240"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_a_t_n_simulator.html" title=" " alt="" coords="19,124,187,151"/>
-<area shape="rect" id="node4" href="$classantlrcpp_1_1_single_write_multiple_read_lock.html" title=" " alt="" coords="5,5,193,47"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_proxy_error_listener.html" title=" " alt="" coords="218,124,389,151"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java)." alt="" coords="217,13,395,39"/>
+<area shape="rect" id="node1" title="This is all the parsing support code essentially; most of it is error recovery stuff." alt="" coords="166,289,274,316"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_recognizer.html" title=" " alt="" coords="150,213,290,240"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_a_t_n_simulator.html" title=" " alt="" coords="21,124,208,151"/>
+<area shape="rect" id="node4" href="$classantlrcpp_1_1_single_write_multiple_read_lock.html" title=" " alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node5" href="$classantlr4_1_1_proxy_error_listener.html" title=" " alt="" coords="239,124,427,151"/>
+<area shape="rect" id="node6" href="$classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java)." alt="" coords="240,13,435,39"/>
 </map>

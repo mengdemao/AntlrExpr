@@ -1,4 +1,4 @@
 <map id="antlr4::atn::ParseInfo::getTotalATNLookaheadOps" name="antlr4::atn::ParseInfo::getTotalATNLookaheadOps">
-<area shape="rect" id="node1" title="Gets the total number of ATN lookahead operations for SLL and LL prediction across all decisions made..." alt="" coords="5,5,193,47"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#aa202e757203f75c742017f3c4756322f" title=" " alt="" coords="241,5,456,47"/>
+<area shape="rect" id="node1" title="Gets the total number of ATN lookahead operations for SLL and LL prediction across all decisions made..." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#aa202e757203f75c742017f3c4756322f" title=" " alt="" coords="256,5,495,47"/>
 </map>

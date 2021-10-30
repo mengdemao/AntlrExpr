@@ -1,4 +1,4 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$classantlr4_1_1_a_n_t_l_r_error_strategy.html" title="The interface for defining strategies to deal with syntax errors encountered during a parse by ANTLR&#45;..." alt="" coords="5,5,185,32"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_default_error_strategy.html" title=" " alt="" coords="233,5,412,32"/>
+<area shape="rect" id="node1" href="$classantlr4_1_1_a_n_t_l_r_error_strategy.html" title="The interface for defining strategies to deal with syntax errors encountered during a parse by ANTLR&#45;..." alt="" coords="5,5,203,32"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_default_error_strategy.html" title=" " alt="" coords="251,5,453,32"/>
 </map>

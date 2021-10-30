@@ -1,5 +1,5 @@
 <map id="antlr4::ParserRuleContext::getTokens" name="antlr4::ParserRuleContext::getTokens">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,176,76"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1tree_1_1_terminal_node.html#a05b5c99cbcc8bf436c693979a312e879" title=" " alt="" coords="224,5,395,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4" title="Get the token type of the token" alt="" coords="234,71,385,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,35,193,76"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1tree_1_1_terminal_node.html#a96b51fb561f762ebdb91d56275b9e2ac" title=" " alt="" coords="241,5,433,47"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4" title="Get the token type of the token" alt="" coords="255,71,419,98"/>
 </map>

@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AntlrExpr: antlr4::TokenSource类 参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -21,8 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">V0.0.0-7315f00</span>
+   <div id="projectname">AntlrExpr<span id="projectnumber">&#160;V0.0.0-29f89db</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -31,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.9.2 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -70,12 +70,11 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="classantlr4_1_1_token_source-members.html">所有成员列表</a>  </div>
-  <div class="headertitle">
-<div class="title">antlr4::TokenSource类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+  <div class="headertitle"><div class="title">antlr4::TokenSource类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A source of tokens must provide a sequence of tokens via </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_token_source.html#a41e3a36074ba6dcd3e0dab9250d4b179">nextToken()</a>, <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a>, CharStream</dd></dl>
+<p>A source of tokens must provide a sequence of tokens via </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_token_source.html#affea94df07318e049b3a8069ddfff778">nextToken()</a>, <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a>, CharStream</dd></dl>
 <p>and also must reveal it's source of characters; 's text is computed from a ; it only store indices into the char stream. Errors from the lexer are never passed to the parser. Either you want to keep going or you do not upon token recognition error. If you do not want to continue lexing then you do not want to continue parsing. Just throw an exception not under </p><dl class="section see"><dt>参见</dt><dd>RecognitionException</dd></dl>
 <p>and Java will naturally toss you all the way out of the recognizers. If you want to continue lexing then you should not throw an exception to the parser&ndash;it has already requested a token. Keep lexing until you get a valid one. Just report errors and keep going, looking for a valid token.  
  <a href="classantlr4_1_1_token_source.html#details">更多...</a></p>
@@ -86,20 +85,20 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="classantlr4_1_1_token_source__inherit__graph.png" border="0" usemap="#aantlr4_1_1_token_source_inherit__map" alt="Inheritance graph"/></div>
 <map name="aantlr4_1_1_token_source_inherit__map" id="aantlr4_1_1_token_source_inherit__map">
-<area shape="rect" title="A source of tokens must provide a sequence of tokens via nextToken(), CommonToken,..." alt="" coords="86,5,225,32"/>
-<area shape="rect" href="classantlr4_1_1_lexer.html" title=" " alt="" coords="108,80,203,107"/>
-<area shape="rect" href="class_expr_lexer.html" title=" " alt="" coords="5,155,87,181"/>
-<area shape="rect" href="class_x_path_lexer.html" title=" " alt="" coords="111,155,199,181"/>
-<area shape="rect" href="classantlr4_1_1_lexer_interpreter.html" title=" " alt="" coords="223,155,375,181"/>
+<area shape="rect" title="A source of tokens must provide a sequence of tokens via nextToken(), CommonToken,..." alt="" coords="89,5,238,32"/>
+<area shape="rect" href="classantlr4_1_1_lexer.html" title=" " alt="" coords="112,80,215,107"/>
+<area shape="rect" href="class_expr_lexer.html" title=" " alt="" coords="5,155,92,181"/>
+<area shape="rect" href="class_x_path_lexer.html" title=" " alt="" coords="116,155,211,181"/>
+<area shape="rect" href="classantlr4_1_1_lexer_interpreter.html" title=" " alt="" coords="235,155,407,181"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:afe2d25cebf40568ca5b8f4cd5f3254d2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_token_source.html#afe2d25cebf40568ca5b8f4cd5f3254d2">~TokenSource</a> ()</td></tr>
 <tr class="separator:afe2d25cebf40568ca5b8f4cd5f3254d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41e3a36074ba6dcd3e0dab9250d4b179"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_token.html">Token</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_token_source.html#a41e3a36074ba6dcd3e0dab9250d4b179">nextToken</a> ()=0</td></tr>
-<tr class="separator:a41e3a36074ba6dcd3e0dab9250d4b179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affea94df07318e049b3a8069ddfff778"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_token.html">Token</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_token_source.html#affea94df07318e049b3a8069ddfff778">nextToken</a> ()=0</td></tr>
+<tr class="separator:affea94df07318e049b3a8069ddfff778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b5d8cfd192fd9b9e4518010e600c714"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classantlr4_1_1_token_source.html#a3b5d8cfd192fd9b9e4518010e600c714">getLine</a> () const =0</td></tr>
 <tr class="memdesc:a3b5d8cfd192fd9b9e4518010e600c714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the line number for the current position in the input stream. The first line in the input is line 1.  <a href="classantlr4_1_1_token_source.html#a3b5d8cfd192fd9b9e4518010e600c714">更多...</a><br /></td></tr>
 <tr class="separator:a3b5d8cfd192fd9b9e4518010e600c714"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,12 +107,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a69822a3dcbce1bd4ca407626a2420e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>A source of tokens must provide a sequence of tokens via </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_token_source.html#a41e3a36074ba6dcd3e0dab9250d4b179">nextToken()</a>, <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a>, CharStream</dd></dl>
+<div class="textblock"><p >A source of tokens must provide a sequence of tokens via </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_token_source.html#affea94df07318e049b3a8069ddfff778">nextToken()</a>, <a class="el" href="classantlr4_1_1_common_token.html">CommonToken</a>, CharStream</dd></dl>
 <p>and also must reveal it's source of characters; 's text is computed from a ; it only store indices into the char stream. </p>
-<p>Errors from the lexer are never passed to the parser. Either you want to keep going or you do not upon token recognition error. If you do not want to continue lexing then you do not want to continue parsing. Just throw an exception not under </p><dl class="section see"><dt>参见</dt><dd>RecognitionException</dd></dl>
+<p >Errors from the lexer are never passed to the parser. Either you want to keep going or you do not upon token recognition error. If you do not want to continue lexing then you do not want to continue parsing. Just throw an exception not under </p><dl class="section see"><dt>参见</dt><dd>RecognitionException</dd></dl>
 <p>and Java will naturally toss you all the way out of the recognizers. If you want to continue lexing then you should not throw an exception to the parser&ndash;it has already requested a token. Keep lexing until you get a valid one. Just report errors and keep going, looking for a valid token. </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a id="afe2d25cebf40568ca5b8f4cd5f3254d2"></a>
+<a id="afe2d25cebf40568ca5b8f4cd5f3254d2" name="afe2d25cebf40568ca5b8f4cd5f3254d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe2d25cebf40568ca5b8f4cd5f3254d2">&#9670;&nbsp;</a></span>~TokenSource()</h2>
 
 <div class="memitem">
@@ -139,7 +138,7 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="a69822a3dcbce1bd4ca407626a2420e4d"></a>
+<a id="a69822a3dcbce1bd4ca407626a2420e4d" name="a69822a3dcbce1bd4ca407626a2420e4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69822a3dcbce1bd4ca407626a2420e4d">&#9670;&nbsp;</a></span>getCharPositionInLine()</h2>
 
 <div class="memitem">
@@ -169,7 +168,7 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a3b5d8cfd192fd9b9e4518010e600c714"></a>
+<a id="a3b5d8cfd192fd9b9e4518010e600c714" name="a3b5d8cfd192fd9b9e4518010e600c714"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b5d8cfd192fd9b9e4518010e600c714">&#9670;&nbsp;</a></span>getLine()</h2>
 
 <div class="memitem">
@@ -199,8 +198,8 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a id="a41e3a36074ba6dcd3e0dab9250d4b179"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41e3a36074ba6dcd3e0dab9250d4b179">&#9670;&nbsp;</a></span>nextToken()</h2>
+<a id="affea94df07318e049b3a8069ddfff778" name="affea94df07318e049b3a8069ddfff778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affea94df07318e049b3a8069ddfff778">&#9670;&nbsp;</a></span>nextToken()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +208,7 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classantlr4_1_1_token.html">Token</a>&gt; antlr4::TokenSource::nextToken </td>
+          <td class="memname">virtual std::unique_ptr&lt; <a class="el" href="classantlr4_1_1_token.html">Token</a> &gt; antlr4::TokenSource::nextToken </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -221,7 +220,7 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return a </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_token.html">Token</a>, CharStream</dd></dl>
+<p >Return a </p><dl class="section see"><dt>参见</dt><dd><a class="el" href="classantlr4_1_1_token.html">Token</a>, CharStream</dd></dl>
 <p>object from your input stream (usually a ). Do not fail/return upon lexing error; keep chewing on the characters until you get a good one; errors are not passed through to the parser. </p>
 
 <p>在 <a class="el" href="classantlr4_1_1_lexer.html#a50ac15500fabb9c3fee8d23af11fdc02">antlr4::Lexer</a> 内被实现.</p>
@@ -235,7 +234,7 @@ Public 成员函数</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

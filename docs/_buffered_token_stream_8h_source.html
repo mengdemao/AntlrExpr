@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>AntlrExpr: runtime/BufferedTokenStream.h 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -21,8 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">AntlrExpr
-   &#160;<span id="projectnumber">V0.0.0-7315f00</span>
+   <div id="projectname">AntlrExpr<span id="projectnumber">&#160;V0.0.0-29f89db</span>
    </div>
    <div id="projectbrief">AntlrExpr笔记</div>
   </td>
@@ -31,21 +30,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 制作者 Doxygen 1.9.1 -->
+<!-- 制作者 Doxygen 1.9.2 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'搜索','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'搜索','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','搜索');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -67,104 +67,103 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">BufferedTokenStream.h</div>  </div>
+  <div class="headertitle"><div class="title">BufferedTokenStream.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_buffered_token_stream_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_token_stream_8h.html">TokenStream.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceantlr4.html">antlr4</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html">   24</a></span>&#160;  <span class="keyword">class </span><a class="code" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a> : <span class="keyword">public</span> TokenStream {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>(<a class="code" href="classantlr4_1_1_token_source.html">TokenSource</a> *tokenSource);</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#aa80d128b76649cb544a2687392b455ba">   27</a></span>&#160;    <a class="code" href="classantlr4_1_1_buffered_token_stream.html#aa80d128b76649cb544a2687392b455ba">BufferedTokenStream</a>(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>&amp; other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#aa3a4c451709b72c3a1fc3b5e129a0589">   29</a></span>&#160;    <a class="code" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>&amp; other) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classantlr4_1_1_token_source.html">TokenSource</a>* getTokenSource() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> index() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> ssize_t mark() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> release(ssize_t marker) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> seek(<span class="keywordtype">size_t</span> index) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> size() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> consume() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classantlr4_1_1_token.html">Token</a>* get(<span class="keywordtype">size_t</span> i) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; get(<span class="keywordtype">size_t</span> start, <span class="keywordtype">size_t</span> stop);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> LA(ssize_t i) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classantlr4_1_1_token.html">Token</a>* LT(ssize_t k) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setTokenSource(<a class="code" href="classantlr4_1_1_token_source.html">TokenSource</a> *tokenSource);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getTokens();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getTokens(<span class="keywordtype">size_t</span> start, <span class="keywordtype">size_t</span> stop);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getTokens(<span class="keywordtype">size_t</span> start, <span class="keywordtype">size_t</span> stop, <span class="keyword">const</span> std::vector&lt;size_t&gt; &amp;types);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getTokens(<span class="keywordtype">size_t</span> start, <span class="keywordtype">size_t</span> stop, <span class="keywordtype">size_t</span> ttype);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getHiddenTokensToRight(<span class="keywordtype">size_t</span> tokenIndex, ssize_t channel);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getHiddenTokensToRight(<span class="keywordtype">size_t</span> tokenIndex);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getHiddenTokensToLeft(<span class="keywordtype">size_t</span> tokenIndex, ssize_t channel);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getHiddenTokensToLeft(<span class="keywordtype">size_t</span> tokenIndex);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">virtual</span> std::string getSourceName() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> std::string getText() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> std::string getText(<span class="keyword">const</span> <a class="code" href="classantlr4_1_1misc_1_1_interval.html">misc::Interval</a> &amp;interval) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">virtual</span> std::string getText(<a class="code" href="classantlr4_1_1_rule_context.html">RuleContext</a> *ctx) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">virtual</span> std::string getText(<a class="code" href="classantlr4_1_1_token.html">Token</a> *start, <a class="code" href="classantlr4_1_1_token.html">Token</a> *stop) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> fill();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#aa0a28e43e9e3329ddfe404804f726023">  101</a></span>&#160;    <a class="code" href="classantlr4_1_1_token_source.html">TokenSource</a> *<a class="code" href="classantlr4_1_1_buffered_token_stream.html#aa0a28e43e9e3329ddfe404804f726023">_tokenSource</a>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">  108</a></span>&#160;    std::vector&lt;std::unique_ptr&lt;Token&gt;&gt; <a class="code" href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">_tokens</a>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// ml: since -1 requires to make this member signed for just this single aspect we use a member _needSetup instead.</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">//     Use bool isInitialized() to find out if this stream has started reading.</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">  123</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">_p</a>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#a400797b54a3d7d151aa0ace27e766e8e">  138</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classantlr4_1_1_buffered_token_stream.html#a400797b54a3d7d151aa0ace27e766e8e">_fetchedEOF</a>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> sync(<span class="keywordtype">size_t</span> i);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> fetch(<span class="keywordtype">size_t</span> n);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classantlr4_1_1_token.html">Token</a>* LB(<span class="keywordtype">size_t</span> k);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">virtual</span> ssize_t adjustSeekIndex(<span class="keywordtype">size_t</span> i);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span> lazyInit();</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setup();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">virtual</span> ssize_t nextTokenOnChannel(<span class="keywordtype">size_t</span> i, <span class="keywordtype">size_t</span> channel);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">virtual</span> ssize_t previousTokenOnChannel(<span class="keywordtype">size_t</span> i, <span class="keywordtype">size_t</span> channel);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; filterForChannel(<span class="keywordtype">size_t</span> from, <span class="keywordtype">size_t</span> to, ssize_t channel);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">bool</span> isInitialized() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">bool</span> _needSetup;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordtype">void</span> InitializeInstanceFields();</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  };</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;} <span class="comment">// namespace antlr4</span></div>
+<a href="_buffered_token_stream_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Copyright (c) 2012-2017 The ANTLR Project. All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Use of this file is governed by the BSD 3-clause license that</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * can be found in the LICENSE.txt file in the project root.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_token_stream_8h.html">TokenStream.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceantlr4.html">antlr4</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html">   24</a></span>  <span class="keyword">class </span><a class="code hl_define" href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a> <a class="code hl_class" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a> : <span class="keyword">public</span> TokenStream {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>(<a class="code hl_class" href="classantlr4_1_1_token_source.html">TokenSource</a> *tokenSource);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#aa80d128b76649cb544a2687392b455ba">   27</a></span>    <a class="code hl_function" href="classantlr4_1_1_buffered_token_stream.html#aa80d128b76649cb544a2687392b455ba">BufferedTokenStream</a>(<span class="keyword">const</span> <a class="code hl_class" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#a1eb39f9add5a8c63cf98036a1731d636">   29</a></span>    <a class="code hl_class" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>&amp; operator = (<span class="keyword">const</span> <a class="code hl_class" href="classantlr4_1_1_buffered_token_stream.html">BufferedTokenStream</a>&amp; other) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classantlr4_1_1_token_source.html">TokenSource</a>* getTokenSource() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> index() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">virtual</span> ssize_t mark() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> release(ssize_t marker) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> seek(<span class="keywordtype">size_t</span> index) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> size() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> consume() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classantlr4_1_1_token.html">Token</a>* get(<span class="keywordtype">size_t</span> i) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; get(<span class="keywordtype">size_t</span> start, <span class="keywordtype">size_t</span> stop);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> LA(ssize_t i) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classantlr4_1_1_token.html">Token</a>* LT(ssize_t k) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setTokenSource(<a class="code hl_class" href="classantlr4_1_1_token_source.html">TokenSource</a> *tokenSource);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getTokens();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getTokens(<span class="keywordtype">size_t</span> start, <span class="keywordtype">size_t</span> stop);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getTokens(<span class="keywordtype">size_t</span> start, <span class="keywordtype">size_t</span> stop, <span class="keyword">const</span> std::vector&lt;size_t&gt; &amp;types);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getTokens(<span class="keywordtype">size_t</span> start, <span class="keywordtype">size_t</span> stop, <span class="keywordtype">size_t</span> ttype);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getHiddenTokensToRight(<span class="keywordtype">size_t</span> tokenIndex, ssize_t channel);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getHiddenTokensToRight(<span class="keywordtype">size_t</span> tokenIndex);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getHiddenTokensToLeft(<span class="keywordtype">size_t</span> tokenIndex, ssize_t channel);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; getHiddenTokensToLeft(<span class="keywordtype">size_t</span> tokenIndex);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">virtual</span> std::string getSourceName() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">virtual</span> std::string getText() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">virtual</span> std::string getText(<span class="keyword">const</span> <a class="code hl_class" href="classantlr4_1_1misc_1_1_interval.html">misc::Interval</a> &amp;interval) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">virtual</span> std::string getText(<a class="code hl_class" href="classantlr4_1_1_rule_context.html">RuleContext</a> *ctx) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">virtual</span> std::string getText(<a class="code hl_class" href="classantlr4_1_1_token.html">Token</a> *start, <a class="code hl_class" href="classantlr4_1_1_token.html">Token</a> *stop) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> fill();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#aa0a28e43e9e3329ddfe404804f726023">  101</a></span>    <a class="code hl_class" href="classantlr4_1_1_token_source.html">TokenSource</a> *<a class="code hl_variable" href="classantlr4_1_1_buffered_token_stream.html#aa0a28e43e9e3329ddfe404804f726023">_tokenSource</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">  108</a></span>    std::vector&lt;std::unique_ptr&lt;Token&gt;&gt; <a class="code hl_variable" href="classantlr4_1_1_buffered_token_stream.html#ac681a8540466ec9aab6cff49bbcbdb4b">_tokens</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// ml: since -1 requires to make this member signed for just this single aspect we use a member _needSetup instead.</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">//     Use bool isInitialized() to find out if this stream has started reading.</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">  123</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classantlr4_1_1_buffered_token_stream.html#aa8ab272f9ef3f5195ef8aeb4da15f9ca">_p</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classantlr4_1_1_buffered_token_stream.html#a400797b54a3d7d151aa0ace27e766e8e">  138</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classantlr4_1_1_buffered_token_stream.html#a400797b54a3d7d151aa0ace27e766e8e">_fetchedEOF</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> sync(<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> fetch(<span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classantlr4_1_1_token.html">Token</a>* LB(<span class="keywordtype">size_t</span> k);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keyword">virtual</span> ssize_t adjustSeekIndex(<span class="keywordtype">size_t</span> i);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">void</span> lazyInit();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setup();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keyword">virtual</span> ssize_t nextTokenOnChannel(<span class="keywordtype">size_t</span> i, <span class="keywordtype">size_t</span> channel);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keyword">virtual</span> ssize_t previousTokenOnChannel(<span class="keywordtype">size_t</span> i, <span class="keywordtype">size_t</span> channel);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keyword">virtual</span> std::vector&lt;Token *&gt; filterForChannel(<span class="keywordtype">size_t</span> from, <span class="keywordtype">size_t</span> to, ssize_t channel);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">bool</span> isInitialized() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordtype">bool</span> _needSetup;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordtype">void</span> InitializeInstanceFields();</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  };</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>} <span class="comment">// namespace antlr4</span></div>
 <div class="ttc" id="a_token_stream_8h_html"><div class="ttname"><a href="_token_stream_8h.html">TokenStream.h</a></div></div>
 <div class="ttc" id="aantlr4-common_8h_html_a856abffd348f82209d9588078d9fea33"><div class="ttname"><a href="antlr4-common_8h.html#a856abffd348f82209d9588078d9fea33">ANTLR4CPP_PUBLIC</a></div><div class="ttdeci">#define ANTLR4CPP_PUBLIC</div><div class="ttdef"><b>Definition:</b> antlr4-common.h:106</div></div>
 <div class="ttc" id="aclassantlr4_1_1_buffered_token_stream_html"><div class="ttname"><a href="classantlr4_1_1_buffered_token_stream.html">antlr4::BufferedTokenStream</a></div><div class="ttdef"><b>Definition:</b> BufferedTokenStream.h:24</div></div>
@@ -181,7 +180,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

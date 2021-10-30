@@ -1,6 +1,6 @@
 <map id="antlr4::Lexer::getCharPositionInLine" name="antlr4::Lexer::getCharPositionInLine">
-<area shape="rect" id="node1" title="Get the index into the current line for the current position in the input stream. The first character..." alt="" coords="644,5,839,47"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_lexer.html#a813ff6ac8dd5fb3853ad48b3132956e9" title=" " alt="" coords="441,13,596,39"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_lexer.html#a50ac15500fabb9c3fee8d23af11fdc02" title="Return a token from this source; i.e., match a token on the char stream." alt="" coords="231,13,393,39"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_lexer.html#a113a0f0bdb864c0137f173a6c441f363" title=" " alt="" coords="5,13,183,39"/>
+<area shape="rect" id="node1" title="Get the index into the current line for the current position in the input stream. The first character..." alt="" coords="687,5,901,47"/>
+<area shape="rect" id="node2" href="$classantlr4_1_1_lexer.html#a813ff6ac8dd5fb3853ad48b3132956e9" title=" " alt="" coords="472,13,639,39"/>
+<area shape="rect" id="node3" href="$classantlr4_1_1_lexer.html#a50ac15500fabb9c3fee8d23af11fdc02" title="Return a token from this source; i.e., match a token on the char stream." alt="" coords="247,13,424,39"/>
+<area shape="rect" id="node4" href="$classantlr4_1_1_lexer.html#a113a0f0bdb864c0137f173a6c441f363" title=" " alt="" coords="5,13,199,39"/>
 </map>
