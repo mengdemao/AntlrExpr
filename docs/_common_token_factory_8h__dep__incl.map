@@ -1,8 +1,0 @@
-<map id="runtime/CommonTokenFactory.h" name="runtime/CommonTokenFactory.h">
-<area shape="rect" id="node1" title=" " alt="" coords="229,5,459,32"/>
-<area shape="rect" id="node2" href="$_common_token_factory_8cpp.html" title=" " alt="" coords="5,80,251,107"/>
-<area shape="rect" id="node3" href="$_lexer_8cpp.html" title=" " alt="" coords="275,80,413,107"/>
-<area shape="rect" id="node4" href="$_list_token_source_8h.html" title=" " alt="" coords="438,80,631,107"/>
-<area shape="rect" id="node5" href="$_list_token_source_8cpp.html" title=" " alt="" coords="313,162,521,189"/>
-<area shape="rect" id="node6" href="$_parse_tree_pattern_matcher_8cpp.html" title=" " alt="" coords="545,155,759,196"/>
-</map>

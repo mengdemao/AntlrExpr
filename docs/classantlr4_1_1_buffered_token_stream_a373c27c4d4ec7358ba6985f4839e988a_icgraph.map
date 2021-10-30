@@ -1,6 +1,0 @@
-<map id="antlr4::BufferedTokenStream::fill" name="antlr4::BufferedTokenStream::fill">
-<area shape="rect" id="node1" title="Get all tokens from lexer until EOF." alt="" coords="287,95,493,136"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_common_token_stream.html#aafecb98aeb51496b59bc3bb19e228128" title="Count EOF just once." alt="" coords="5,5,239,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_buffered_token_stream.html#ad7a1573fe9be79daf42c793ebfe1abc6" title=" " alt="" coords="19,95,225,136"/>
-<area shape="rect" id="node4" href="$main_8cc.html#ac0f2228420376f4db7e1274f2b41667c" title="主函数" alt="" coords="95,161,149,187"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="antlr4::RuleContext::toStringTree" name="antlr4::RuleContext::toStringTree">
-<area shape="rect" id="node1" title="Print out a whole tree, not just a node, in LISP format (root child1 .. childN). Print just a node if..." alt="" coords="5,29,153,71"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1tree_1_1_trees.html#ace5fff86a0ab0fb3011d7ef5a229673c" title=" " alt="" coords="201,29,337,71"/>
-</map>

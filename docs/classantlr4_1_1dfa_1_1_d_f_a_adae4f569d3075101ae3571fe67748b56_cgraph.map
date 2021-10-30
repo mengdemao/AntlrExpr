@@ -1,7 +1,0 @@
-<map id="antlr4::dfa::DFA::toString" name="antlr4::dfa::DFA::toString">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,187,98"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a3a459289bc5dac02365e5474a51ade1d" title=" " alt="" coords="235,64,417,105"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1dfa_1_1_d_f_a_serializer.html#a93719dde2778b820567b40726e896610" title=" " alt="" coords="470,5,653,47"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1dfa_1_1_d_f_a.html#afe9610a3706058c0d5d1e61f386ccd29" title="Return a list of all states in this DFA, ordered by state number." alt="" coords="465,71,657,98"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1dfa_1_1_d_f_a_serializer.html#acc1d210c8d845dbc2ecf21c497ecbfaa" title=" " alt="" coords="470,123,653,164"/>
-</map>

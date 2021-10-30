@@ -1,8 +1,0 @@
-<map id="antlr4::misc::symbolToNumeric" name="antlr4::misc::symbolToNumeric">
-<area shape="rect" id="node1" title=" " alt="" coords="713,126,937,153"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1misc_1_1_interval_set.html#ae45ff96376a2cd90fa0b72ea32decaf9" title="Is el in any range of this set?" alt="" coords="487,29,665,71"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1misc_1_1_interval_set.html#a3da04b62224782f63599594039b4379a" title=" " alt="" coords="487,119,665,160"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1_common_token.html#aecd5533e96fb8dca20b71cb2d146b94d" title=" " alt="" coords="494,184,658,225"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_set_transition.html#a1f0ff223f77d8c0b0c352ebc7c326540" title=" " alt="" coords="257,29,439,71"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1atn_1_1_not_set_transition.html#a9515bb7349db5dd1c182b2178d05d5e9" title=" " alt="" coords="5,29,209,71"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="antlr4::Parser" name="antlr4::Parser">
-<area shape="rect" id="node1" title="This is all the parsing support code essentially; most of it is error recovery stuff." alt="" coords="75,80,183,107"/>
-<area shape="rect" id="node3" href="$class_expr_parser.html" title=" " alt="" coords="5,155,96,181"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_parser_interpreter.html" title="A parser simulator that mimics what ANTLR&#39;s generated parser code does. A ParserATNSimulator is used ..." alt="" coords="121,155,298,181"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_recognizer.html" title=" " alt="" coords="59,5,199,32"/>
-</map>

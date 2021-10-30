@@ -1,6 +1,0 @@
-<map id="antlr4::atn::StarLoopEntryState" name="antlr4::atn::StarLoopEntryState">
-<area shape="rect" id="node1" title=" " alt="" coords="109,185,297,227"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_decision_state.html" title=" " alt="" coords="5,89,192,115"/>
-<area shape="rect" id="node3" title=" " alt="" coords="161,5,244,32"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1atn_1_1_star_loopback_state.html" title=" " alt="" coords="217,81,402,123"/>
-</map>

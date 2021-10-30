@@ -1,8 +1,0 @@
-<map id="antlrcpp::BitSet::nextSetBit" name="antlrcpp::BitSet::nextSetBit">
-<area shape="rect" id="node1" title=" " alt="" coords="853,78,1052,105"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#ac7fbaf0a637744b43e6709660a5b12f2" title="Performs ATN simulation to compute a predicted alternative based upon the remaining input,..." alt="" coords="573,5,799,47"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#aa3eea846d54eff30cf00d36ec404481d" title=" " alt="" coords="567,71,805,112"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#a8e6287c59cd670e368fbe478ba9886e4" title=" " alt="" coords="567,136,805,177"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a80d4e987d48fc4d0b506184670a8a1e5" title=" " alt="" coords="292,5,519,47"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1atn_1_1_profiling_a_t_n_simulator.html#ab75cfac2534e32419fca3820ad3e8143" title=" " alt="" coords="5,5,244,47"/>
-</map>

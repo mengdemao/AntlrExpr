@@ -1,5 +1,0 @@
-<map id="ExprParser" name="ExprParser">
-<area shape="rect" id="node1" title=" " alt="" coords="30,155,121,181"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_parser.html" title="This is all the parsing support code essentially; most of it is error recovery stuff." alt="" coords="21,80,129,107"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_recognizer.html" title=" " alt="" coords="5,5,145,32"/>
-</map>

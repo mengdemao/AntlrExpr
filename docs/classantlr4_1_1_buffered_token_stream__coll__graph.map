@@ -1,5 +1,0 @@
-<map id="antlr4::BufferedTokenStream" name="antlr4::BufferedTokenStream">
-<area shape="rect" id="node1" title=" " alt="" coords="31,95,238,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_token_source.html" title="A source of tokens must provide a sequence of tokens via nextToken(), CommonToken,..." alt="" coords="136,5,285,32"/>
-</map>

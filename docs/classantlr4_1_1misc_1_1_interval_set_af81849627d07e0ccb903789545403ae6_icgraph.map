@@ -1,7 +1,0 @@
-<map id="antlr4::misc::IntervalSet::IntervalSet" name="antlr4::misc::IntervalSet::IntervalSet">
-<area shape="rect" id="node1" title=" " alt="" coords="501,92,680,133"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1misc_1_1_interval_set.html#ad7b2791799066867e684ab8a69b78fb7" title="Create a set with a single element, el." alt="" coords="255,70,453,97"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1misc_1_1_interval_set.html#a1a3f30153b722dd4ce77325305b6470a" title=" " alt="" coords="265,121,443,163"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1misc_1_1_interval_set.html#a48ee1cc2b279df1c451e99328370d274" title=" " alt="" coords="17,29,195,71"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1atn_1_1_range_transition.html#a9a2182967156bb6bd3895e06a944cc66" title=" " alt="" coords="5,95,207,136"/>
-</map>

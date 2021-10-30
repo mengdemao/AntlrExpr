@@ -1,9 +1,0 @@
-<map id="antlr4::atn::DecisionState" name="antlr4::atn::DecisionState">
-<area shape="rect" id="node1" title=" " alt="" coords="136,103,323,130"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_block_start_state.html" title="The start of a regular {" alt="" coords="371,45,569,71"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1atn_1_1_star_loop_entry_state.html" title=" " alt="" coords="376,96,564,137"/>
-<area shape="rect" id="node7" href="$classantlr4_1_1atn_1_1_tokens_start_state.html" title="The Tokens rule start state linking to each lexer rule start state." alt="" coords="384,161,556,203"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,103,88,130"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1atn_1_1_basic_block_start_state.html" title=" " alt="" coords="617,5,816,47"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1atn_1_1_star_block_start_state.html" title="The block that begins a closure loop." alt="" coords="621,71,812,112"/>
-</map>

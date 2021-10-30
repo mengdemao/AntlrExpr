@@ -1,7 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" title=" " alt="" coords="5,85,168,112"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_failed_predicate_exception.html" title=" " alt="" coords="216,5,447,32"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_input_mismatch_exception.html" title="This signifies any kind of mismatched input exceptions such as when the current input does not match ..." alt="" coords="217,56,446,83"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_lexer_no_viable_alt_exception.html" title=" " alt="" coords="241,107,421,149"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_no_viable_alt_exception.html" title=" " alt="" coords="227,173,436,200"/>
-</map>

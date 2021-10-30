@@ -1,5 +1,0 @@
-<map id="antlr4::Recognizer::getRuleIndexMap" name="antlr4::Recognizer::getRuleIndexMap">
-<area shape="rect" id="node1" title="Get a map from rule names to rule indexes. Used for XPath and tree pattern compilation." alt="" coords="5,35,149,76"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_recognizer.html#a3cc9d749ebead9a9852450cce334211d" title=" " alt="" coords="197,5,337,47"/>
-<area shape="rect" id="node3" href="$namespaceantlrcpp.html#ac162d6f46677840e74b6b1d8374c3918" title=" " alt="" coords="205,71,329,98"/>
-</map>

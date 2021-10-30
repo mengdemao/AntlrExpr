@@ -1,7 +1,0 @@
-<map id="antlr4::InterpreterRuleContext" name="antlr4::InterpreterRuleContext">
-<area shape="rect" id="node1" title=" " alt="" coords="91,261,308,288"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_parser_rule_context.html" title="A rule invocation record for parsing." alt="" coords="105,185,293,212"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_rule_context.html" title=" " alt="" coords="13,81,161,108"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1tree_1_1_parse_tree.html" title=" " alt="" coords="5,5,169,32"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_token.html" title=" " alt="" coords="185,81,291,108"/>
-</map>

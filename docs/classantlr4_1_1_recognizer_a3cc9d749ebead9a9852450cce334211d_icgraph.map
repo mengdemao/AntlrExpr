@@ -1,9 +1,0 @@
-<map id="antlr4::Recognizer::getRuleNames" name="antlr4::Recognizer::getRuleNames">
-<area shape="rect" id="node1" title=" " alt="" coords="464,160,604,201"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1tree_1_1_trees.html#a194c79806c6d475d702f1415ea050fae" title=" " alt="" coords="235,29,371,71"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_recognizer.html#a0475c564435567fc8cc6644221727d6a" title="Get a map from rule names to rule indexes. Used for XPath and tree pattern compilation." alt="" coords="231,95,375,136"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1atn_1_1_parser_a_t_n_simulator.html#a183b00733905fd53dc42e8e2655c5853" title=" " alt="" coords="189,160,416,201"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1_rule_context.html#abe90e4ee8e178f95faf2fd2f36b292be" title=" " alt="" coords="229,225,377,267"/>
-<area shape="rect" id="node7" href="$classantlr4_1_1tree_1_1_trees.html#aa067909cbabcd36e33fb6ea526022035" title=" " alt="" coords="235,291,371,332"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1tree_1_1_trees.html#a512d404d399127de920dbfd8f199ab7f" title=" " alt="" coords="5,29,141,71"/>
-</map>

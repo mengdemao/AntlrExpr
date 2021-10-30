@@ -1,5 +1,0 @@
-<map id="antlr4::misc::IntervalSet::contains" name="antlr4::misc::IntervalSet::contains">
-<area shape="rect" id="node1" title="Is el in any range of this set?" alt="" coords="487,29,665,71"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_set_transition.html#a1f0ff223f77d8c0b0c352ebc7c326540" title=" " alt="" coords="257,29,439,71"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_not_set_transition.html#a9515bb7349db5dd1c182b2178d05d5e9" title=" " alt="" coords="5,29,209,71"/>
-</map>

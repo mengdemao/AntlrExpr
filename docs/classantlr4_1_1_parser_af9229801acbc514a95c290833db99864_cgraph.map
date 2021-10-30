@@ -1,5 +1,0 @@
-<map id="antlr4::Parser::reset" name="antlr4::Parser::reset">
-<area shape="rect" id="node1" title="reset the parser&#39;s state" alt="" coords="5,46,155,73"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_recognizer.html#ae782662a47981e152b39dd8fbb151141" title=" " alt="" coords="226,5,366,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_a_t_n_simulator.html#a282a76fb17fd8529c48e695b4dc5134c" title=" " alt="" coords="203,71,389,112"/>
-</map>

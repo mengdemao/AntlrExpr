@@ -1,6 +1,0 @@
-<map id="antlr4::atn::Transition::getSerializationType" name="antlr4::atn::Transition::getSerializationType">
-<area shape="rect" id="node1" title=" " alt="" coords="463,39,625,80"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_a_t_n_serializer.html#ae4d16b888446eddfd0faaf5356d6d884" title="Serialize state descriptors, edge descriptors, and decision&#45;&gt;state map into list of ints:" alt="" coords="231,5,415,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_parser_interpreter.html#a266e656481c12b349e82d874df829a2f" title=" " alt="" coords="234,71,411,112"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_parser_interpreter.html#aaa891c8229fdbebdafc7e6c01cf92b8d" title="Begin parsing at startRuleIndex" alt="" coords="5,71,183,112"/>
-</map>

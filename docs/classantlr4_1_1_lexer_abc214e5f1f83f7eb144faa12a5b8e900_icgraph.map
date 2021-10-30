@@ -1,6 +1,0 @@
-<map id="antlr4::Lexer::emit" name="antlr4::Lexer::emit">
-<area shape="rect" id="node1" title=" " alt="" coords="687,31,828,57"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_lexer.html#a813ff6ac8dd5fb3853ad48b3132956e9" title=" " alt="" coords="472,5,639,32"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_lexer.html#a50ac15500fabb9c3fee8d23af11fdc02" title="Return a token from this source; i.e., match a token on the char stream." alt="" coords="247,31,424,57"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_lexer.html#a113a0f0bdb864c0137f173a6c441f363" title=" " alt="" coords="5,31,199,57"/>
-</map>

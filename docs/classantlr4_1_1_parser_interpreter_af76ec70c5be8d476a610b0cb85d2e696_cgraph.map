@@ -1,9 +1,0 @@
-<map id="antlr4::ParserInterpreter::recover" name="antlr4::ParserInterpreter::recover">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,183,196"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_token_factory.html#a79c6f4416497b2981978e1bd30274338" title=" " alt="" coords="263,5,415,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_token.html#af4e82682816ba4166068e5b525dee31d" title=" " alt="" coords="231,71,447,112"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_token.html#a0820632f5ff92138362cba4c41293df0" title="The line number on which the 1st character of this token was matched, line=1..n" alt="" coords="258,137,419,163"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_token.html#ae288d9f2d72d0209a24e0cc5215e8844" title="Get the text of the token." alt="" coords="258,187,419,214"/>
-<area shape="rect" id="node6" href="$classantlr4_1_1_recognizer.html#a6c66800a0120fc6b4112d8105ef9cbbe" title=" " alt="" coords="269,239,409,280"/>
-<area shape="rect" id="node7" href="$classantlr4_1_1_token.html#a8f9ba9cf1310745fa686f16e4d5456d8" title="Gets the TokenSourcewhich created this token." alt="" coords="231,305,446,331"/>
-</map>

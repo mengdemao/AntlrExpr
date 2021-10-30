@@ -1,4 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$classantlr4_1_1atn_1_1_a_t_n_config.html" title="A tuple: (ATN state, predicted alt, syntactic, semantic context). The syntactic context is a graph&#45;st..." alt="" coords="5,5,169,32"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_lexer_a_t_n_config.html" title=" " alt="" coords="217,5,416,32"/>
-</map>

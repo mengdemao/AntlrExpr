@@ -1,5 +1,0 @@
-<map id="antlr4::misc::Interval::disjoint" name="antlr4::misc::Interval::disjoint">
-<area shape="rect" id="node1" title="Are both ranges disjoint? I.e., no overlap?" alt="" coords="5,39,163,80"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1misc_1_1_interval.html#a9a0cc6ae72135b1bb58d86e08eef139e" title="Does this start completely after other? Disjoint" alt="" coords="212,5,369,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1misc_1_1_interval.html#a74cbb460b47b3f30a9b1c974ff96698e" title="Does this start completely before other? Disjoint" alt="" coords="211,71,371,112"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$classantlr4_1_1atn_1_1_prediction_context.html" title=" " alt="" coords="5,46,219,73"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1atn_1_1_array_prediction_context.html" title=" " alt="" coords="279,5,477,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1atn_1_1_singleton_prediction_context.html" title=" " alt="" coords="267,71,489,112"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1atn_1_1_empty_prediction_context.html" title=" " alt="" coords="537,71,741,112"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$classantlr4_1_1tree_1_1_parse_tree_listener.html" title=" " alt="" coords="5,56,221,83"/>
-<area shape="rect" id="node2" href="$class_expr_listener.html" title=" " alt="" coords="319,5,422,32"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_parser_1_1_trace_listener.html" title=" " alt="" coords="269,56,472,83"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_parser_1_1_trim_to_size_listener.html" title=" " alt="" coords="278,107,463,149"/>
-<area shape="rect" id="node3" href="$class_expr_base_listener.html" title=" " alt="" coords="520,5,655,32"/>
-</map>

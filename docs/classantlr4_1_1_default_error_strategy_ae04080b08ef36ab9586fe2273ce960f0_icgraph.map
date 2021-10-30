@@ -1,5 +1,0 @@
-<map id="antlr4::DefaultErrorStrategy::endErrorCondition" name="antlr4::DefaultErrorStrategy::endErrorCondition">
-<area shape="rect" id="node1" title="This method is called to leave error recovery mode after recovering from a recognition exception." alt="" coords="256,39,459,80"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_default_error_strategy.html#a9ec4d98c54d479e46909579fb3460300" title="The default implementation simply calls endErrorCondition." alt="" coords="5,5,208,47"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_default_error_strategy.html#a09526cdda0619309a8063dbfe8138c2d" title="The default implementation simply calls endErrorConditionto ensure that the handler is not in error r..." alt="" coords="5,71,208,112"/>
-</map>

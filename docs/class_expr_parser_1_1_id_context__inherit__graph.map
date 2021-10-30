@@ -1,7 +1,0 @@
-<map id="ExprParser::IdContext" name="ExprParser::IdContext">
-<area shape="rect" id="node1" title=" " alt="" coords="18,304,181,331"/>
-<area shape="rect" id="node2" href="$class_expr_parser_1_1_expr_context.html" title=" " alt="" coords="10,229,189,256"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_parser_rule_context.html" title="A rule invocation record for parsing." alt="" coords="5,155,193,181"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1_rule_context.html" title=" " alt="" coords="25,80,173,107"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1tree_1_1_parse_tree.html" title=" " alt="" coords="17,5,181,32"/>
-</map>

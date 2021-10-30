@@ -1,4 +1,0 @@
-<map id="antlr4::RuleContext::isEmpty" name="antlr4::RuleContext::isEmpty">
-<area shape="rect" id="node1" title="A context is empty if there is no invoking state; meaning nobody called current context." alt="" coords="201,5,349,47"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_rule_context.html#ac62fa052c96061993df78332adac0430" title=" " alt="" coords="5,5,153,47"/>
-</map>

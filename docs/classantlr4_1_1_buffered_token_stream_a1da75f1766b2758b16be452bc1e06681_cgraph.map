@@ -1,4 +1,0 @@
-<map id="antlr4::BufferedTokenStream::getTokens" name="antlr4::BufferedTokenStream::getTokens">
-<area shape="rect" id="node1" title="Given a start and stop index, return a List of all tokens in the token type BitSet...." alt="" coords="5,5,212,47"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_token.html#a518342431db9dd9d982880a59ef0e4f4" title="Get the token type of the token" alt="" coords="260,13,424,39"/>
-</map>

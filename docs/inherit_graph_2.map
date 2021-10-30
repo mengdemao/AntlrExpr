@@ -1,7 +1,0 @@
-<map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="node1" href="$classantlr4_1_1_a_n_t_l_r_error_listener.html" title="How to emit recognition errors (an interface in Java)." alt="" coords="5,60,200,87"/>
-<area shape="rect" id="node2" href="$classantlr4_1_1_base_error_listener.html" title=" " alt="" coords="251,35,433,61"/>
-<area shape="rect" id="node5" href="$classantlr4_1_1_proxy_error_listener.html" title=" " alt="" coords="248,85,436,112"/>
-<area shape="rect" id="node3" href="$classantlr4_1_1_console_error_listener.html" title=" " alt="" coords="484,5,687,32"/>
-<area shape="rect" id="node4" href="$classantlr4_1_1tree_1_1xpath_1_1_x_path_lexer_error_listener.html" title=" " alt="" coords="493,57,678,98"/>
-</map>
