@@ -43,7 +43,7 @@ configure_file(inc/config.h.in inc/config.h)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/inc)
 
 # 添加头文件路径
-include_directories(${CMAKE_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR}/inc)
 
 include_directories(
   ${CMAKE_SOURCE_DIR}/runtime
