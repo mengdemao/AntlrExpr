@@ -19,6 +19,8 @@
 #include "antlr4-runtime.h"
 #include "ExprLexer.h"
 #include "ExprParser.h"
+#include "ExprVisitor.h"
+#include "ExprBaseVisitor.h"
 #include "ExprBaseListener.h"
 
 using namespace antlr4;
@@ -27,102 +29,170 @@ class ExprTreeListener : public ExprBaseListener {
 public:
 	  void enterProg(ExprParser::ProgContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	  }
+
 	  void exitProg(ExprParser::ProgContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	  }
 
 	  void enterPrintExpr(ExprParser::PrintExprContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	  }
+
 	  void exitPrintExpr(ExprParser::PrintExprContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	  }
 
 	  void enterAssign(ExprParser::AssignContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
 	  }
+
 	  void exitAssign(ExprParser::AssignContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
 	  }
 
 	  void enterBlank(ExprParser::BlankContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	  }
+
 	  void exitBlank(ExprParser::BlankContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	  }
 
 	  void enterParens(ExprParser::ParensContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	  }
+
 	  void exitParens(ExprParser::ParensContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	  }
 
 	  void enterMulDiv(ExprParser::MulDivContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  if (ctx->op->getType() == ExprParser::MUL) {
+			  std::cout << __func__ << "\t" << ctx->MUL()->getText() << std::endl;
+		  } else {
+			  std::cout << __func__ << "\t" << ctx->DIV()->getText() << std::endl;
+		  }
 	  }
+
 	  void exitMulDiv(ExprParser::MulDivContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  if (ctx->op->getType() == ExprParser::MUL) {
+			  std::cout << __func__ << "\t" << ctx->MUL()->getText() << std::endl;
+		  } else {
+			  std::cout << __func__ << "\t" << ctx->DIV()->getText() << std::endl;
+		  }
 	  }
 
 	  void enterAddSub(ExprParser::AddSubContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  if (ctx->op->getType() == ExprParser::ADD) {
+			  std::cout << __func__ << "\t" << ctx->ADD()->getText() << std::endl;
+		  } else {
+			  std::cout << __func__ << "\t" << ctx->SUB()->getText() << std::endl;
+		  }
 	  }
+
 	  void exitAddSub(ExprParser::AddSubContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  if (ctx->op->getType() == ExprParser::ADD) {
+			  std::cout << __func__ << "\t" << ctx->ADD()->getText() << std::endl;
+		  } else {
+			  std::cout << __func__ << "\t" << ctx->SUB()->getText() << std::endl;
+		  }
 	  }
 
 	  void enterId(ExprParser::IdContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
 	  }
+
 	  void exitId(ExprParser::IdContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t\t" << ctx->ID()->getText() << std::endl;
 	  }
 
 	  void enterInt(ExprParser::IntContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t" << ctx->INT()->toString() << std::endl;
 	  }
 	  void exitInt(ExprParser::IntContext *ctx) override
 	  {
-		  DEBUG_FUNC
+		  std::cout << __func__ << "\t\t" << ctx->INT()->toString() << std::endl;
 	  }
-
 
 	  void enterEveryRule(antlr4::ParserRuleContext *ctx) override
 	  {
-		  DEBUG_FUNC
 	  }
 	  void exitEveryRule(antlr4::ParserRuleContext *ctx) override
 	  {
-		  DEBUG_FUNC
 	  }
+
 	  void visitTerminal(antlr4::tree::TerminalNode *node) override
 	  {
-		  DEBUG_FUNC
 	  }
 	  void visitErrorNode(antlr4::tree::ErrorNode *node) override
 	  {
-		  DEBUG_FUNC
 	  }
+};
+
+class ExprTreeVisitor : public ExprVisitor {
+public:
+    antlrcpp::Any visitProg(ExprParser::ProgContext *context)
+    {
+    	return 0;
+    }
+
+    antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext *context)
+    {
+    	return 0;
+    }
+
+    antlrcpp::Any visitAssign(ExprParser::AssignContext *context)
+    {
+    	return 0;
+    }
+
+    antlrcpp::Any visitBlank(ExprParser::BlankContext *context)
+    {
+    	return 0;
+    }
+
+    antlrcpp::Any visitParens(ExprParser::ParensContext *context)
+    {
+    	return 0;
+    }
+
+    antlrcpp::Any visitMulDiv(ExprParser::MulDivContext *context)
+    {
+    	return 0;
+    }
+
+    antlrcpp::Any visitAddSub(ExprParser::AddSubContext *context)
+    {
+    	return 0;
+    }
+
+    antlrcpp::Any visitId(ExprParser::IdContext *context)
+    {
+    	return 0;
+    }
+
+    antlrcpp::Any visitInt(ExprParser::IntContext *context)
+    {
+    	return 0;
+    }
 };
 
 /**

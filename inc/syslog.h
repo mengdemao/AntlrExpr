@@ -7,9 +7,4 @@
 #ifndef __SYSLOG_H__
 #define __SYSLOG_H__
 
-#define DEBUG_FUNC			\
-do {						\
-	std::cout << __func__ << "\t" << __LINE__ << std::endl;	\
-} while(0);
-
 #endif /* __SYSLOG_H__ */
