@@ -24,6 +24,7 @@
 #include "ExprBaseListener.h"
 
 using namespace antlr4;
+using namespace tree;
 
 class ExprTreeListener : public ExprBaseListener {
 public:
@@ -128,16 +129,19 @@ public:
 	{
 	}
 
-	void visitTerminal(antlr4::tree::TerminalNode *node) override
-	{
-		std::cout << __func__ << "\t" << node->getText() << std::endl;
-	}
-
-	void visitErrorNode(antlr4::tree::ErrorNode *node) override
-	{
-		std::cout << __func__ << "\t" << node->getText() << std::endl;
-	}
+	void visitTerminal(antlr4::tree::TerminalNode *node) override;
+	void visitErrorNode(antlr4::tree::ErrorNode *node) override;
 };
+
+void ExprTreeListener::visitErrorNode(antlr4::tree::ErrorNode *node)
+{
+	std::cout << __func__ << "\t" << node->getText() << std::endl;
+}
+
+void ExprTreeListener::visitTerminal(antlr4::tree::TerminalNode *node)
+{
+	std::cout << __func__ << "\t" << node->getText() << std::endl;
+}
 
 class ExprTreeVisitor : public ExprVisitor {
 public:
@@ -207,15 +211,20 @@ int main(int argc, const char *argv[])
 	ANTLRInputStream input(InputString);
 	ExprLexer lexer(&input);
 	CommonTokenStream tokens(&lexer);
-
-	tokens.fill();
-
 	ExprParser parser(&tokens);
-	tree::ParseTree* tree = parser.prog();
+	ParseTree* tree = parser.prog();
 
+	// 1. Listener
+	std::cout << "监听模式开始" << std::endl;
 	ExprTreeListener listener;
+	ParseTreeWalker walker;
+	walker.walk(&listener, tree);
+	std::cout << "监听模式结束" << std::endl;
 
-	tree::ParseTreeWalker::DEFAULT.walk(&listener, tree);
-
+	// 2. Vistor
+	std::cout << "访问模式开始" << std::endl;
+	ExprTreeVisitor visitor;
+	visitor.visit(tree);
+	std::cout << "访问模式结束" << std::endl;
 	return 0;
 }
