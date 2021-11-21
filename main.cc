@@ -130,9 +130,12 @@ public:
 
 	void visitTerminal(antlr4::tree::TerminalNode *node) override
 	{
+		std::cout << __func__ << "\t" << node->getText() << std::endl;
 	}
+
 	void visitErrorNode(antlr4::tree::ErrorNode *node) override
 	{
+		std::cout << __func__ << "\t" << node->getText() << std::endl;
 	}
 };
 
@@ -193,11 +196,11 @@ public:
 int main(int argc, const char *argv[])
 {
 	if (!argv[1])
-		{
-			std::cout << "Antlr expr version " << AntlrExpr_VERSION << std::endl;
-			std::cout << "Please input expression" << std::endl;
-			return -1;
-		}
+	{
+		std::cout << "Antlr expr version " << AntlrExpr_VERSION << std::endl;
+		std::cout << "Please input expression" << std::endl;
+		return -1;
+	}
 	std::string InputString(argv[1]);
 	InputString.append("\n");
 
@@ -211,6 +214,7 @@ int main(int argc, const char *argv[])
 	tree::ParseTree* tree = parser.prog();
 
 	ExprTreeListener listener;
+
 	tree::ParseTreeWalker::DEFAULT.walk(&listener, tree);
 
 	return 0;
