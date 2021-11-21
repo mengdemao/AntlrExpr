@@ -4,8 +4,8 @@
  * @author mengdemao19951021@163.com (mengdemao)
  * @version V0.0.0
  * @date 2021-10-23
- * 
- * 
+ *
+ *
  */
 #include <iostream>
 #include <string>
@@ -27,172 +27,172 @@ using namespace antlr4;
 
 class ExprTreeListener : public ExprBaseListener {
 public:
-	  void enterProg(ExprParser::ProgContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
-	  }
+	void enterProg(ExprParser::ProgContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
+	}
 
-	  void exitProg(ExprParser::ProgContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
-	  }
+	void exitProg(ExprParser::ProgContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
+	}
 
-	  void enterPrintExpr(ExprParser::PrintExprContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
-	  }
+	void enterPrintExpr(ExprParser::PrintExprContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
+	}
 
-	  void exitPrintExpr(ExprParser::PrintExprContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
-	  }
+	void exitPrintExpr(ExprParser::PrintExprContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
+	}
 
-	  void enterAssign(ExprParser::AssignContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
-	  }
+	void enterAssign(ExprParser::AssignContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
+	}
 
-	  void exitAssign(ExprParser::AssignContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
-	  }
+	void exitAssign(ExprParser::AssignContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
+	}
 
-	  void enterBlank(ExprParser::BlankContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
-	  }
+	void enterBlank(ExprParser::BlankContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
+	}
 
-	  void exitBlank(ExprParser::BlankContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
-	  }
+	void exitBlank(ExprParser::BlankContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
+	}
 
-	  void enterParens(ExprParser::ParensContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
-	  }
+	void enterParens(ExprParser::ParensContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
+	}
 
-	  void exitParens(ExprParser::ParensContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->toString() << std::endl;
-	  }
+	void exitParens(ExprParser::ParensContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
+	}
 
-	  void enterMulDiv(ExprParser::MulDivContext *ctx) override
-	  {
-		  if (ctx->op->getType() == ExprParser::MUL) {
-			  std::cout << __func__ << "\t" << ctx->MUL()->getText() << std::endl;
-		  } else {
-			  std::cout << __func__ << "\t" << ctx->DIV()->getText() << std::endl;
-		  }
-	  }
+	void enterMulDiv(ExprParser::MulDivContext *ctx) override
+	{
+		if (ctx->op->getType() == ExprParser::MUL) {
+			std::cout << __func__ << "\t" << ctx->MUL()->getText() << std::endl;
+		} else {
+			std::cout << __func__ << "\t" << ctx->DIV()->getText() << std::endl;
+		}
+	}
 
-	  void exitMulDiv(ExprParser::MulDivContext *ctx) override
-	  {
-		  if (ctx->op->getType() == ExprParser::MUL) {
-			  std::cout << __func__ << "\t" << ctx->MUL()->getText() << std::endl;
-		  } else {
-			  std::cout << __func__ << "\t" << ctx->DIV()->getText() << std::endl;
-		  }
-	  }
+	void exitMulDiv(ExprParser::MulDivContext *ctx) override
+	{
+		if (ctx->op->getType() == ExprParser::MUL) {
+			std::cout << __func__ << "\t" << ctx->MUL()->getText() << std::endl;
+		} else {
+			std::cout << __func__ << "\t" << ctx->DIV()->getText() << std::endl;
+		}
+	}
 
-	  void enterAddSub(ExprParser::AddSubContext *ctx) override
-	  {
-		  if (ctx->op->getType() == ExprParser::ADD) {
-			  std::cout << __func__ << "\t" << ctx->ADD()->getText() << std::endl;
-		  } else {
-			  std::cout << __func__ << "\t" << ctx->SUB()->getText() << std::endl;
-		  }
-	  }
+	void enterAddSub(ExprParser::AddSubContext *ctx) override
+	{
+		if (ctx->op->getType() == ExprParser::ADD) {
+			std::cout << __func__ << "\t" << ctx->ADD()->getText() << std::endl;
+		} else {
+			std::cout << __func__ << "\t" << ctx->SUB()->getText() << std::endl;
+		}
+	}
 
-	  void exitAddSub(ExprParser::AddSubContext *ctx) override
-	  {
-		  if (ctx->op->getType() == ExprParser::ADD) {
-			  std::cout << __func__ << "\t" << ctx->ADD()->getText() << std::endl;
-		  } else {
-			  std::cout << __func__ << "\t" << ctx->SUB()->getText() << std::endl;
-		  }
-	  }
+	void exitAddSub(ExprParser::AddSubContext *ctx) override
+	{
+		if (ctx->op->getType() == ExprParser::ADD) {
+			std::cout << __func__ << "\t" << ctx->ADD()->getText() << std::endl;
+		} else {
+			std::cout << __func__ << "\t" << ctx->SUB()->getText() << std::endl;
+		}
+	}
 
-	  void enterId(ExprParser::IdContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
-	  }
+	void enterId(ExprParser::IdContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
+	}
 
-	  void exitId(ExprParser::IdContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t\t" << ctx->ID()->getText() << std::endl;
-	  }
+	void exitId(ExprParser::IdContext *ctx) override
+	{
+		std::cout << __func__ << "\t\t" << ctx->ID()->getText() << std::endl;
+	}
 
-	  void enterInt(ExprParser::IntContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t" << ctx->INT()->toString() << std::endl;
-	  }
-	  void exitInt(ExprParser::IntContext *ctx) override
-	  {
-		  std::cout << __func__ << "\t\t" << ctx->INT()->toString() << std::endl;
-	  }
+	void enterInt(ExprParser::IntContext *ctx) override
+	{
+		std::cout << __func__ << "\t" << ctx->INT()->toString() << std::endl;
+	}
+	void exitInt(ExprParser::IntContext *ctx) override
+	{
+		std::cout << __func__ << "\t\t" << ctx->INT()->toString() << std::endl;
+	}
 
-	  void enterEveryRule(antlr4::ParserRuleContext *ctx) override
-	  {
-	  }
-	  void exitEveryRule(antlr4::ParserRuleContext *ctx) override
-	  {
-	  }
+	void enterEveryRule(antlr4::ParserRuleContext *ctx) override
+	{
+	}
+	void exitEveryRule(antlr4::ParserRuleContext *ctx) override
+	{
+	}
 
-	  void visitTerminal(antlr4::tree::TerminalNode *node) override
-	  {
-	  }
-	  void visitErrorNode(antlr4::tree::ErrorNode *node) override
-	  {
-	  }
+	void visitTerminal(antlr4::tree::TerminalNode *node) override
+	{
+	}
+	void visitErrorNode(antlr4::tree::ErrorNode *node) override
+	{
+	}
 };
 
 class ExprTreeVisitor : public ExprVisitor {
 public:
-    antlrcpp::Any visitProg(ExprParser::ProgContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitProg(ExprParser::ProgContext *context)
+	{
+		return 0;
+	}
 
-    antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext *context)
+	{
+		return 0;
+	}
 
-    antlrcpp::Any visitAssign(ExprParser::AssignContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitAssign(ExprParser::AssignContext *context)
+	{
+		return 0;
+	}
 
-    antlrcpp::Any visitBlank(ExprParser::BlankContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitBlank(ExprParser::BlankContext *context)
+	{
+		return 0;
+	}
 
-    antlrcpp::Any visitParens(ExprParser::ParensContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitParens(ExprParser::ParensContext *context)
+	{
+		return 0;
+	}
 
-    antlrcpp::Any visitMulDiv(ExprParser::MulDivContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitMulDiv(ExprParser::MulDivContext *context)
+	{
+		return 0;
+	}
 
-    antlrcpp::Any visitAddSub(ExprParser::AddSubContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitAddSub(ExprParser::AddSubContext *context)
+	{
+		return 0;
+	}
 
-    antlrcpp::Any visitId(ExprParser::IdContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitId(ExprParser::IdContext *context)
+	{
+		return 0;
+	}
 
-    antlrcpp::Any visitInt(ExprParser::IntContext *context)
-    {
-    	return 0;
-    }
+	antlrcpp::Any visitInt(ExprParser::IntContext *context)
+	{
+		return 0;
+	}
 };
 
 /**
@@ -201,29 +201,28 @@ public:
  * @param  argv 参数列表
  * @return int  返回数据
  */
-int main(int argc, const char *argv[]) 
+int main(int argc, const char *argv[])
 {
 	if (!argv[1])
-	{
-		std::cout << "Antlr expr version " << AntlrExpr_VERSION << std::endl;
-		std::cout << "Please input expression" << std::endl;
-		return -1;
-	}
+		{
+			std::cout << "Antlr expr version " << AntlrExpr_VERSION << std::endl;
+			std::cout << "Please input expression" << std::endl;
+			return -1;
+		}
 	std::string InputString(argv[1]);
 	InputString.append("\n");
 
-    ANTLRInputStream input(InputString);
-    ExprLexer lexer(&input);
-    CommonTokenStream tokens(&lexer);
+	ANTLRInputStream input(InputString);
+	ExprLexer lexer(&input);
+	CommonTokenStream tokens(&lexer);
 
-    tokens.fill();
+	tokens.fill();
 
-    ExprParser parser(&tokens);
-    tree::ParseTree* tree = parser.prog();
+	ExprParser parser(&tokens);
+	tree::ParseTree* tree = parser.prog();
 
-    ExprTreeListener listener;
-    tree::ParseTreeWalker::DEFAULT.walk(&listener, tree);
+	ExprTreeListener listener;
+	tree::ParseTreeWalker::DEFAULT.walk(&listener, tree);
 
-    return 0;
+	return 0;
 }
-
