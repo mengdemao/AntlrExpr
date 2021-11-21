@@ -44,6 +44,24 @@ AntlrExpr笔记
 3. REVERT
 
 ## g4代码学习
+### 编译指令
+antlr4脚本内容
+```shell
+# antlr4编译脚本
+java org.antlr.v4.Tool %*
+
+# grun运行程序
+java org.antlr.v4.gui.TestRig %*
+
+# 编译G4文件
+antlr4 Test.g4
+
+# 编译java
+javac *.java
+
+# 运行程序
+grun Test prog -gui
+```
 
 ## antlr源码分析
 
