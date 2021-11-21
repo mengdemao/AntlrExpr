@@ -29,22 +29,15 @@ class ExprTreeListener : public ExprBaseListener {
 public:
 	void enterProg(ExprParser::ProgContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	}
-
 	void exitProg(ExprParser::ProgContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	}
-
 	void enterPrintExpr(ExprParser::PrintExprContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	}
-
 	void exitPrintExpr(ExprParser::PrintExprContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	}
 
 	void enterAssign(ExprParser::AssignContext *ctx) override
@@ -59,22 +52,18 @@ public:
 
 	void enterBlank(ExprParser::BlankContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	}
 
 	void exitBlank(ExprParser::BlankContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	}
 
 	void enterParens(ExprParser::ParensContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	}
 
 	void exitParens(ExprParser::ParensContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->toString() << std::endl;
 	}
 
 	void enterMulDiv(ExprParser::MulDivContext *ctx) override

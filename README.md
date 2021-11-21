@@ -63,7 +63,36 @@ javac *.java
 grun Test prog -gui
 ```
 
-## antlr源码分析
+## antlr运行时
 
-## doxygen
+### 语法分析树分析
 
+#### 监听器
+为了将遍历树时触发的时间转换为监听器的调用,antlr提供了ParseTree-Walker类,我们可以实现对应处理节点的接口,每条规则都有对应的`enter`和`exit`规则
+
+测试语句
+
+```
+./AntlrExpr "1 + ( 2 - 3 ) * 4 / 5"
+```
+![计算流程](doc/Expr.png)
+```
+enterAddSub		+
+enterInt		1
+exitInt			1
+enterMulDiv		/
+enterMulDiv		*
+enterAddSub		-
+enterInt		2
+exitInt			2
+enterInt		3
+exitInt			3
+exitAddSub		-
+enterInt		4
+exitInt			4
+exitMulDiv		*
+enterInt		5
+exitInt			5
+exitMulDiv		/
+exitAddSub		+
+```
