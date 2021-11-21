@@ -217,16 +217,9 @@ int main(int argc, const char *argv[])
     CommonTokenStream tokens(&lexer);
 
     tokens.fill();
-    /*
-    for (auto token : tokens.getTokens()) {
-       std::cout << token->toString() << std::endl;
-    }
-	*/
 
     ExprParser parser(&tokens);
     tree::ParseTree* tree = parser.prog();
-
-    // std::cout << tree->toStringTree(&parser) << std::endl << std::endl;
 
     ExprTreeListener listener;
     tree::ParseTreeWalker::DEFAULT.walk(&listener, tree);
