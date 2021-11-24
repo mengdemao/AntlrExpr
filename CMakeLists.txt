@@ -39,7 +39,7 @@ set(PROJECT_VERSION_MAJOR ${${PROJECT_NAME}_VERSION_MAJOR})
 set(PROJECT_VERSION_MINOR ${${PROJECT_NAME}_VERSION_MINOR})
 
 # 生成配置文件
-configure_file(inc/config.h.in inc/config.h)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/inc/config.h.in ${CMAKE_CURRENT_BINARY_DIR}/inc/config.h)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/inc)
 
 # 添加头文件路径

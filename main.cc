@@ -147,16 +147,21 @@ class ExprTreeVisitor : public ExprVisitor {
 public:
 	antlrcpp::Any visitProg(ExprParser::ProgContext *context)
 	{
+		std::cout << __func__ << __LINE__ << std::endl;
+		this->visit(context);
+		std::cout << __func__ << __LINE__ << std::endl;
 		return 0;
 	}
 
 	antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext *context)
 	{
+		this->visit(context);
 		return 0;
 	}
 
 	antlrcpp::Any visitAssign(ExprParser::AssignContext *context)
 	{
+		this->visit(context);
 		return 0;
 	}
 
@@ -172,11 +177,18 @@ public:
 
 	antlrcpp::Any visitMulDiv(ExprParser::MulDivContext *context)
 	{
+		std::string text = context->op->getText();
+		std::cout << __func__ << "\t" << text << std::endl;
+		this->visit(context);
 		return 0;
 	}
 
 	antlrcpp::Any visitAddSub(ExprParser::AddSubContext *context)
 	{
+		std::string text = context->op->getText();
+		std::cout << __func__ << "\t" << text << std::endl;
+		this->visit(context);
+
 		return 0;
 	}
 
@@ -208,23 +220,32 @@ int main(int argc, const char *argv[])
 	std::string InputString(argv[1]);
 	InputString.append("\n");
 
+	// 输入字符串
 	ANTLRInputStream input(InputString);
+
+	// 词法解析
 	ExprLexer lexer(&input);
+
+	// 分割单词
 	CommonTokenStream tokens(&lexer);
+
+	// 解析语法单元
 	ExprParser parser(&tokens);
-	ParseTree* tree = parser.prog();
+
+	// 生成语法树
+	ParseTree *tree = parser.prog();
 
 	// 1. Listener
-	std::cout << "监听模式开始" << std::endl;
+	std::cout << "Listener mode start" << std::endl;
 	ExprTreeListener listener;
 	ParseTreeWalker walker;
 	walker.walk(&listener, tree);
-	std::cout << "监听模式结束" << std::endl;
+	std::cout << "Listener mode end" << std::endl;
 
-	// 2. Vistor
-	std::cout << "访问模式开始" << std::endl;
+	// 2. Visitor
+	std::cout << "Visitor mode start" << std::endl;
 	ExprTreeVisitor visitor;
 	visitor.visit(tree);
-	std::cout << "访问模式结束" << std::endl;
+	std::cout << "Visitor mode end" << std::endl;
 	return 0;
 }
