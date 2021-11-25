@@ -147,59 +147,55 @@ class ExprTreeVisitor : public ExprVisitor {
 public:
 	antlrcpp::Any visitProg(ExprParser::ProgContext *context)
 	{
-		std::cout << __func__ << __LINE__ << std::endl;
-		this->visit(context);
-		std::cout << __func__ << __LINE__ << std::endl;
-		return 0;
+		return visitChildren(context);
 	}
 
 	antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext *context)
 	{
-		this->visit(context);
-		return 0;
+		return visitChildren(context);
 	}
 
 	antlrcpp::Any visitAssign(ExprParser::AssignContext *context)
 	{
-		this->visit(context);
-		return 0;
+		return visitChildren(context);
 	}
 
 	antlrcpp::Any visitBlank(ExprParser::BlankContext *context)
 	{
-		return 0;
+		return visitChildren(context);
 	}
 
 	antlrcpp::Any visitParens(ExprParser::ParensContext *context)
 	{
-		return 0;
+		return visitChildren(context);
 	}
 
 	antlrcpp::Any visitMulDiv(ExprParser::MulDivContext *context)
 	{
 		std::string text = context->op->getText();
 		std::cout << __func__ << "\t" << text << std::endl;
-		this->visit(context);
-		return 0;
+		return visitChildren(context);
 	}
 
 	antlrcpp::Any visitAddSub(ExprParser::AddSubContext *context)
 	{
 		std::string text = context->op->getText();
 		std::cout << __func__ << "\t" << text << std::endl;
-		this->visit(context);
-
-		return 0;
+		return visitChildren(context);
 	}
 
 	antlrcpp::Any visitId(ExprParser::IdContext *context)
 	{
-		return 0;
+		std::string text = context->ID()->getText();
+		std::cout << __func__ << "\t" << text << std::endl;
+		return visitChildren(context);
 	}
 
 	antlrcpp::Any visitInt(ExprParser::IntContext *context)
 	{
-		return 0;
+		std::string text = context->INT()->getText();
+		std::cout << __func__ << "\t" << text << std::endl;
+		return visitChildren(context);
 	}
 };
 
