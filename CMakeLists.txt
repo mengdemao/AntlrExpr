@@ -26,19 +26,28 @@ set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
 add_compile_options(
 	$<$<COMPILE_LANGUAGE:C>:-std=c11>
 	$<$<COMPILE_LANGUAGE:CXX>:-std=c++17>
-	$<$<COMPILE_LANGUAGE:CXX>:-Woverloaded-virtual>
 	-Wall
-	-Wextra
 	-Werror
 	-pedantic
 	-Wno-unused-parameter
-	-Wno-dollar-in-identifier-extension
- 	-Wpointer-arith
- 	-Wshadow
- 	-Wwrite-strings
- 	-march=native
- 	-rdynamic
+	-Wpointer-arith
+	-Wwrite-strings
+	-march=native
 )
+
+# Clang
+if ("${CMAKE_C_COMPILER_ID}" STREQUAL "Clang")
+add_compile_options(
+  -Wno-dollar-in-identifier-extension
+)
+endif()
+
+# Gcc
+if ("${CMAKE_C_COMPILER_ID}" STREQUAL "Gnu")
+add_compile_options(
+  -rdynamic
+)
+endif()
 
 # 设置三方库
 # find_package(Boost REQUIRED)
