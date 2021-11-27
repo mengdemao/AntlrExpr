@@ -27,6 +27,9 @@ using namespace antlr4;
 using namespace tree;
 
 class ExprTreeListener : public ExprBaseListener {
+private:
+	stack<double> ExprStack;
+
 public:
 	void enterProg(ExprParser::ProgContext *ctx) override
 	{
@@ -213,14 +216,14 @@ int main(int argc, const char *argv[])
 	// 生成语法树
 	ParseTree *tree = parser.prog();
 
-	// 1. Listener
+	// 1. Listener模式解析语法树
 	std::cout << "Listener mode start" << std::endl;
 	ExprTreeListener listener;
 	ParseTreeWalker walker;
 	walker.walk(&listener, tree);
 	std::cout << "Listener mode end\n" << std::endl;
 
-	// 2. Visitor
+	// 2. Visitor模式解析语法树
 	std::cout << "Visitor mode start" << std::endl;
 	ExprTreeVisitor visitor;
 	visitor.visit(tree);

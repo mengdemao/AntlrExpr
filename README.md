@@ -118,4 +118,15 @@ ParseTree *tree = parser.prog();
 | exitAddSub  | +    |
 
 #### 访问器(Visitor)
->
+
+| 事件         | 数据  |
+| ----------- | ---- |
+| visitAddSub |	+    |
+| visitInt    |	1    |
+| visitMulDiv |	/    |
+| visitMulDiv |	*    |
+| visitAddSub |	-    |
+| visitInt	  | 2    |
+| visitInt	  | 3    |
+| visitInt	  | 4    |
+| visitInt	  | 5    |
