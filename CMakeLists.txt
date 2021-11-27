@@ -2,16 +2,46 @@ cmake_minimum_required(VERSION 3.10)
 
 project(AntlrExpr C CXX)
 
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# 设置优化选项
+set(CMAKE_C_FLAGS_DEBUG "-O0 -g -DDEBUG")
+set(CMAKE_CXX_FLAGS_DEBUG "-O3 -flto")
+set(CMAKE_C_FLAGS_RELEASE "-O0 -g -DDEBUG")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -flto")
 
 # 显示详细信息
 set (CMAKE_VERBOSE_MAKEFILE OFF)
 
+# 设置默认编译类型
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE "Release")
+endif()
+
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
+
+# 添加编译选项
+add_compile_options(
+	$<$<COMPILE_LANGUAGE:C>:-std=c11>
+	$<$<COMPILE_LANGUAGE:CXX>:-std=c++17>
+	$<$<COMPILE_LANGUAGE:CXX>:-Woverloaded-virtual>
+	-Wall
+	-Wextra
+	-Werror
+	-pedantic
+	-Wno-unused-parameter
+	-Wno-dollar-in-identifier-extension
+ 	-Wpointer-arith
+ 	-Wshadow
+ 	-Wwrite-strings
+ 	-march=native
+ 	-rdynamic
+)
+
+# 设置三方库
+# find_package(Boost REQUIRED)
 
 # 设置版本号
 find_package(Git QUIET)

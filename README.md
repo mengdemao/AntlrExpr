@@ -2,8 +2,6 @@ AntlrExpr笔记
 ====
 [![CMake](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml)
 
-[代码阅读](https://mengdemao.github.io/AntlrExpr/)
-
 > 提交模板
 ```markdown
 <type> (<scope>): <subject>
@@ -65,9 +63,29 @@ grun Test prog -gui
 
 ## antlr运行时
 
-### 语法分析树分析
+### 生成法分析树
+
+```c
+// 输入字符串
+ANTLRInputStream input(InputString);
+
+// 词法解析
+ExprLexer lexer(&input);
+
+// 分割单词
+CommonTokenStream tokens(&lexer);
+
+// 解析语法单元
+ExprParser parser(&tokens);
+
+// 生成语法树
+ParseTree *tree = parser.prog();
+```
+
+### 分析语法分析树
 
 #### 监听器(Listener)
+
 为了将遍历树时触发的时间转换为监听器的调用,antlr提供了ParseTree-Walker类,我们可以实现对应处理节点的接口,每条规则都有对应的`enter`和`exit`规则
 
 测试语句
@@ -98,3 +116,5 @@ grun Test prog -gui
 | exitInt     | 5    |
 | exitMulDiv  | /    |
 | exitAddSub  | +    |
+
+#### 访问器(Visitor)
