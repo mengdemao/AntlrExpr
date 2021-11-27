@@ -43,12 +43,10 @@ public:
 
 	void enterAssign(ExprParser::AssignContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
 	}
 
 	void exitAssign(ExprParser::AssignContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
 	}
 
 	void enterBlank(ExprParser::BlankContext *ctx) override
@@ -69,57 +67,33 @@ public:
 
 	void enterMulDiv(ExprParser::MulDivContext *ctx) override
 	{
-		if (ctx->op->getType() == ExprParser::MUL) {
-			std::cout << __func__ << "\t" << ctx->MUL()->getText() << std::endl;
-		} else {
-			std::cout << __func__ << "\t" << ctx->DIV()->getText() << std::endl;
-		}
 	}
 
 	void exitMulDiv(ExprParser::MulDivContext *ctx) override
 	{
-		if (ctx->op->getType() == ExprParser::MUL) {
-			std::cout << __func__ << "\t" << ctx->MUL()->getText() << std::endl;
-		} else {
-			std::cout << __func__ << "\t" << ctx->DIV()->getText() << std::endl;
-		}
 	}
 
 	void enterAddSub(ExprParser::AddSubContext *ctx) override
 	{
-		if (ctx->op->getType() == ExprParser::ADD) {
-			std::cout << __func__ << "\t" << ctx->ADD()->getText() << std::endl;
-		} else {
-			std::cout << __func__ << "\t" << ctx->SUB()->getText() << std::endl;
-		}
 	}
 
 	void exitAddSub(ExprParser::AddSubContext *ctx) override
 	{
-		if (ctx->op->getType() == ExprParser::ADD) {
-			std::cout << __func__ << "\t" << ctx->ADD()->getText() << std::endl;
-		} else {
-			std::cout << __func__ << "\t" << ctx->SUB()->getText() << std::endl;
-		}
 	}
 
 	void enterId(ExprParser::IdContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->ID()->getText() << std::endl;
 	}
 
 	void exitId(ExprParser::IdContext *ctx) override
 	{
-		std::cout << __func__ << "\t\t" << ctx->ID()->getText() << std::endl;
 	}
 
 	void enterInt(ExprParser::IntContext *ctx) override
 	{
-		std::cout << __func__ << "\t" << ctx->INT()->toString() << std::endl;
 	}
 	void exitInt(ExprParser::IntContext *ctx) override
 	{
-		std::cout << __func__ << "\t\t" << ctx->INT()->toString() << std::endl;
 	}
 
 	void enterEveryRule(antlr4::ParserRuleContext *ctx) override
@@ -135,12 +109,20 @@ public:
 
 void ExprTreeListener::visitErrorNode(antlr4::tree::ErrorNode *node)
 {
-	std::cout << __func__ << "\t" << node->getText() << std::endl;
+	std::string getText = node->getText();
+	if (!getText.empty())
+	{
+		std::cout << __func__ << "\t" << node->getText() << std::endl;
+	}
 }
 
 void ExprTreeListener::visitTerminal(antlr4::tree::TerminalNode *node)
 {
-	std::cout << __func__ << "\t" << node->getText() << std::endl;
+	std::string getText = node->getText();
+	if (getText != "\n")
+	{
+		std::cout << __func__ << "\t" << node->getText() << std::endl;
+	}
 }
 
 class ExprTreeVisitor : public ExprVisitor {
@@ -236,12 +218,12 @@ int main(int argc, const char *argv[])
 	ExprTreeListener listener;
 	ParseTreeWalker walker;
 	walker.walk(&listener, tree);
-	std::cout << "Listener mode end" << std::endl;
+	std::cout << "Listener mode end\n" << std::endl;
 
 	// 2. Visitor
 	std::cout << "Visitor mode start" << std::endl;
 	ExprTreeVisitor visitor;
 	visitor.visit(tree);
-	std::cout << "Visitor mode end" << std::endl;
+	std::cout << "Visitor mode end\n" << std::endl;
 	return 0;
 }
