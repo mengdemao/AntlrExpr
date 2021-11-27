@@ -207,12 +207,12 @@ public:
  */
 int main(int argc, const char *argv[])
 {
-	if (!argv[1])
-	{
+	if (!argv[1]) {
 		std::cout << "Antlr expr version " << AntlrExpr_VERSION << std::endl;
 		std::cout << "Please input expression" << std::endl;
 		return -1;
 	}
+
 	std::string InputString(argv[1]);
 	InputString.append("\n");
 

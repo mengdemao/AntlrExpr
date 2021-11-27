@@ -29,7 +29,7 @@ AntlrExpr笔记
 
 + 改动1
   + 详细1
-  + 详细2 
+  + 详细2
 + 改动2
   + 详细1
   + 详细2
@@ -94,9 +94,9 @@ ParseTree *tree = parser.prog();
 ./AntlrExpr "1 + ( 2 - 3 ) * 4 / 5"
 ```
 
-![计算流程](doc/Expr.png) 
+![计算流程](doc/Expr.png)
 
-| 事件        | 数据 |
+| 事件         | 数据  |
 | ----------- | ---- |
 | enterAddSub | +    |
 | enterInt    | 1    |
@@ -118,3 +118,4 @@ ParseTree *tree = parser.prog();
 | exitAddSub  | +    |
 
 #### 访问器(Visitor)
+>
