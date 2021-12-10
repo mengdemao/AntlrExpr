@@ -28,13 +28,25 @@ endif()
 # 安装文件
 FetchContent_Declare(
 	googletest
-	GIT_REPOSITORY https://gitclone.com/github.com/google/googletest.git
-	GIT_TAG        master
+	GIT_REPOSITORY https://github.com/google/googletest.git
+	GIT_TAG        release-1.11.0
 )
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-# target_link_libraries(${PROJECT_NAME} gtest:gtest_main)
+FetchContent_Declare(
+	fmt
+	GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+	GIT_TAG        8.0.1
+)
+FetchContent_MakeAvailable(fmt)
+
+FetchContent_Declare(
+	gflags
+	GIT_REPOSITORY https://github.com/gflags/gflags.git
+	GIT_TAG        v2.2.2
+)
+FetchContent_MakeAvailable(gflags)
 
 # 添加外部软件
 find_package(Boost REQUIRED)
@@ -175,6 +187,8 @@ add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/main.cc
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
+
+target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main gflags fmt)
 
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})
 if(BUILD_DOCUMENTATION)
