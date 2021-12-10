@@ -180,18 +180,10 @@ endif(BUILD_DOCUMENTATION)
 include(CTest)
 enable_testing()
 
+# clang-tidy 
+set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)
+
 # 添加测试
-add_test(NAME AntlrExprTest_1 COMMAND AntlrExpr "1+2+3")
-set_tests_properties(AntlrExprTest_1 PROPERTIES PASS_REGULAR_EXPRESSION 1)
+add_test(NAME AntlrExprTest_1 COMMAND AntlrExpr "1+2")
+set_tests_properties(AntlrExprTest_1 PROPERTIES PASS_REGULAR_EXPRESSION "success")
 
-add_test(NAME AntlrExprTest_2 COMMAND AntlrExpr "1+2*3")
-set_tests_properties(AntlrExprTest_2 PROPERTIES PASS_REGULAR_EXPRESSION 0)
-
-add_test(NAME AntlrExprTest_3 COMMAND AntlrExpr "(1+2)*3")
-set_tests_properties(AntlrExprTest_3 PROPERTIES PASS_REGULAR_EXPRESSION 0)
-
-add_test(NAME AntlrExprTest_4 COMMAND AntlrExpr "1*(2+3)")
-set_tests_properties(AntlrExprTest_4 PROPERTIES PASS_REGULAR_EXPRESSION 0)
-
-add_test(NAME AntlrExprTest_5 COMMAND AntlrExpr "1*(2+3)")
-set_tests_properties(AntlrExprTest_5 PROPERTIES PASS_REGULAR_EXPRESSION 0)
