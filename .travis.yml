@@ -11,7 +11,7 @@ addons:
     packages:
       - cmake-data
       - cmake
-      - libboost-dev-all
+      - libboost
       - libgtest-dev
       - libprotobuf-dev
       - protobuf-compiler

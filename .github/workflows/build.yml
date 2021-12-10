@@ -26,7 +26,7 @@ jobs:
 
     - uses: mstksg/get-package@v1
       with:
-        apt-get: libboost-dev-all libgtest-dev libprotobuf-dev protobuf-compiler
+        apt-get: libboost-dev libgtest-dev libprotobuf-dev protobuf-compiler
 
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
