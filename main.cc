@@ -152,7 +152,6 @@ int main (int argc, const char* argv[])
 		std::cout << "Please input expression" << std::endl;
 		return -1;
 	}
-
 	std::string InputString (argv[1]);
 	InputString.append ("\n");
 

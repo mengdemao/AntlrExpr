@@ -19,6 +19,13 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release")
 endif()
 
+# 添加外部软件
+find_package(Boost REQUIRED)
+find_package(GTest REQUIRED)
+find_package(Protobuf REQUIRED)
+find_package(Doxygen REQUIRED)
+find_package(Git REQUIRED)
+
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
 
@@ -49,11 +56,7 @@ add_compile_options(
 )
 endif()
 
-# 设置三方库
-# find_package(Boost REQUIRED)
-
 # 设置版本号
-find_package(Git QUIET)
 if (GIT_FOUND)
 	# 主版本号
 	execute_process(
@@ -83,7 +86,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/inc)
 
 # 添加头文件路径
 include_directories(${CMAKE_SOURCE_DIR}/inc)
-
+include_directories(${Boost_INCLUDE_DIRS})
 include_directories(
   ${CMAKE_SOURCE_DIR}/runtime
   ${CMAKE_SOURCE_DIR}/runtime/atn
@@ -94,6 +97,9 @@ include_directories(
   ${CMAKE_SOURCE_DIR}/runtime/tree/pattern
   ${CMAKE_SOURCE_DIR}/runtime/tree/xpath
 )
+
+# 添加链接文件路径
+link_directories(${Boost_LIBRARY_DIRS})
 
 add_definitions(-DANTLR4CPP_STATIC)
 file(GLOB_RECURSE ANTLR_RUNTIME_SRC ${CMAKE_SOURCE_DIR}/runtime/*.cpp)
@@ -155,8 +161,8 @@ add_executable(${PROJECT_NAME}
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
 
-#
-find_package(Doxygen)
+target_link_libraries(${PROJECT_NAME} GTest::gtest GTest::gtest_main)
+
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})
 
 if(BUILD_DOCUMENTATION)

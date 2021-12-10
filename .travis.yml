@@ -11,9 +11,12 @@ addons:
     packages:
       - cmake-data
       - cmake
+      - boost
+      - gtest
+      - protobuf
 
 compiler:
-  - clang
+  - gcc
 
 before_script:
   - mkdir build
@@ -21,7 +24,7 @@ before_script:
   - cmake ..
 
 script:
-  - make
+  - make -j `nproc`
   - make test
 
 after_success:
