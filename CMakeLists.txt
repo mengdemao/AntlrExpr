@@ -2,13 +2,19 @@ cmake_minimum_required(VERSION 3.10)
 
 project(AntlrExpr C CXX)
 
+include(CTest)
+include(FetchContent)
+include(GNUInstallDirs)
+include(ExternalProject)
+include(CMakeDependentOption)
+
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # 设置优化选项
 set(CMAKE_C_FLAGS_DEBUG "-O0 -g -DDEBUG")
-set(CMAKE_CXX_FLAGS_DEBUG "-O3 -flto")
-set(CMAKE_C_FLAGS_RELEASE "-O0 -g -DDEBUG")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -DDEBUG")
+set(CMAKE_C_FLAGS_RELEASE "-O3 -flto")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -flto")
 
 # 显示详细信息
@@ -19,10 +25,19 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release")
 endif()
 
+# 安装文件
+FetchContent_Declare(
+	googletest
+	GIT_REPOSITORY https://gitclone.com/github.com/google/googletest.git
+	GIT_TAG        master
+)
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
+# target_link_libraries(${PROJECT_NAME} gtest:gtest_main)
+
 # 添加外部软件
 find_package(Boost REQUIRED)
-find_package(GTest REQUIRED)
-find_package(Protobuf REQUIRED)
 find_package(Doxygen REQUIRED)
 find_package(Git REQUIRED)
 
@@ -161,10 +176,7 @@ add_executable(${PROJECT_NAME}
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
 
-target_link_libraries(${PROJECT_NAME} GTest::gtest GTest::gtest_main)
-
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})
-
 if(BUILD_DOCUMENTATION)
 	if(NOT DOXYGEN_FOUND)
 		message(FATAL_ERROR "Doxygen is needed to build the documentation.")
@@ -183,7 +195,6 @@ if(BUILD_DOCUMENTATION)
 endif(BUILD_DOCUMENTATION)
 
 # 启动测试
-include(CTest)
 enable_testing()
 
 # clang-tidy 
@@ -192,4 +203,3 @@ set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)
 # 添加测试
 add_test(NAME AntlrExprTest_1 COMMAND AntlrExpr "1+2")
 set_tests_properties(AntlrExprTest_1 PROPERTIES PASS_REGULAR_EXPRESSION "success")
-
