@@ -24,7 +24,7 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - use: mstksg/get-package@v1
+    - uses: mstksg/get-package@v1
       with:
         apt-get: libboost-dev-all libgtest-dev libprotobuf-dev protobuf-compiler
 

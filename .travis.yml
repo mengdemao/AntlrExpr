@@ -11,9 +11,10 @@ addons:
     packages:
       - cmake-data
       - cmake
-      - boost
-      - gtest
-      - protobuf
+      - libboost-dev-all
+      - libgtest-dev
+      - libprotobuf-dev
+      - protobuf-compiler
 
 compiler:
   - gcc
