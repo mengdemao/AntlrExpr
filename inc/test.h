@@ -17,7 +17,7 @@ public:
 	TestExpr()
 	{
 		Expr = std::string("1+2");
-		result = 0;
+		result = 3;
 	}
 
 	std::string GetExpr(void)

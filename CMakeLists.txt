@@ -221,7 +221,7 @@ set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)
 
 # 添加测试
 add_test(NAME AntlrExprText COMMAND AntlrExpr "--test=true")
-set_tests_properties(AntlrExprText PROPERTIES PASS_REGULAR_EXPRESSION "3")
+set_tests_properties(AntlrExprText PROPERTIES PASS_REGULAR_EXPRESSION "AntlrExpr Test Success")
 
 add_test(NAME AntlrExprVersion COMMAND AntlrExpr "--version")
 set_tests_properties(AntlrExprVersion PROPERTIES PASS_REGULAR_EXPRESSION "AntlrExpr version")
