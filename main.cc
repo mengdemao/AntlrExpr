@@ -13,7 +13,6 @@
 #include "antlr4-runtime.h"
 #include <iostream>
 #include <string>
-
 #include "ExprBaseListener.h"
 #include "ExprBaseVisitor.h"
 #include "ExprLexer.h"
@@ -22,6 +21,8 @@
 #include "antlr4-runtime.h"
 #include <config.h>
 #include <syslog.h>
+#include <option.h>
+#include <test.h>
 
 using namespace antlr4;
 using namespace tree;
@@ -145,30 +146,41 @@ class ExprTreeVisitor : public ExprVisitor
  * @param  argv 参数列表
  * @return int  返回数据
  */
-int main (int argc, const char* argv[])
+int main(int argc, char* argv[])
 {
-	if (!argv[1]) {
-		std::cout << "Antlr expr version " << AntlrExpr_VERSION << std::endl;
-		std::cout << "Please input expression" << std::endl;
-		return -1;
-	}
-	std::string InputString (argv[1]);
-	InputString.append ("\n");
+	string InputString;
+	syslog syslog;
+	int result;
+
+	// 解析命令行参数
+	(void)option_init(argc, argv);
 
 	// 输入字符串
-	ANTLRInputStream input (InputString);
+	if (FLAGS_test) {
+		TestExpr TestExpr;
+		InputString = TestExpr.GetExpr();
+		result = TestExpr.GetResult();
+	} else {
+		InputString = string(FLAGS_text);
+	}
+
+	// 追加结束符
+	InputString.append("\n");
+
+	// 生成解析字符串
+	ANTLRInputStream input(InputString);
 
 	// 词法解析
-	ExprLexer lexer (&input);
+	ExprLexer lexer(&input);
 
 	// 分割单词
-	CommonTokenStream tokens (&lexer);
+	CommonTokenStream tokens(&lexer);
 
 	// 解析语法单元
-	ExprParser parser (&tokens);
+	ExprParser parser(&tokens);
 
 	// 生成语法树
-	ParseTree* tree = parser.prog ();
+	ParseTree* tree = parser.prog();
 
 	// 1. Listener模式解析语法树
 	ExprTreeListener listener;
@@ -179,6 +191,10 @@ int main (int argc, const char* argv[])
 	ExprTreeVisitor visitor;
 	visitor.visit (tree);
 
-	cout << "success" << endl;
-	return 0;
+	// 处于自动化测试状态下返回状态
+	if (FLAGS_test) {
+		cout << "AntlrExpr Test Success" << endl;
+		return 0;
+	}
+	return result;
 }

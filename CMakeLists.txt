@@ -188,6 +188,8 @@ add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 # 添加可执行文件
 add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/main.cc
+			   ${CMAKE_SOURCE_DIR}/src/option.cc
+			   ${CMAKE_SOURCE_DIR}/src/syslog.cc
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
 
@@ -218,5 +220,8 @@ enable_testing()
 set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)
 
 # 添加测试
-add_test(NAME AntlrExprTest_1 COMMAND AntlrExpr "1+2")
-set_tests_properties(AntlrExprTest_1 PROPERTIES PASS_REGULAR_EXPRESSION "success")
+add_test(NAME AntlrExprText COMMAND AntlrExpr "--test=true")
+set_tests_properties(AntlrExprText PROPERTIES PASS_REGULAR_EXPRESSION "3")
+
+add_test(NAME AntlrExprVersion COMMAND AntlrExpr "--version")
+set_tests_properties(AntlrExprVersion PROPERTIES PASS_REGULAR_EXPRESSION "AntlrExpr version")
