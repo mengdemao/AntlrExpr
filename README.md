@@ -1,6 +1,12 @@
 AntlrExpr笔记
 ====
 [![CMake](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml)
+![Travis (.com)](https://img.shields.io/travis/com/mengdemao/AntlrExpr?style=plastic)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mengdemao/AntlrExpr)
+![GitHub all releases](https://img.shields.io/github/downloads/mengdemao/AntlrExpr/total)
+![GitHub](https://img.shields.io/github/license/mengdemao/AntlrExpr)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/mengdemao/AntlrExpr)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/mengdemao/AntlrExpr)
 
 > 提交模板
 ```markdown
