@@ -4,6 +4,7 @@ project(AntlrExpr C CXX)
 
 include(CTest)
 include(FetchContent)
+include(ProcessorCount)
 include(GNUInstallDirs)
 include(ExternalProject)
 include(CMakeDependentOption)
@@ -23,6 +24,14 @@ set (CMAKE_VERBOSE_MAKEFILE OFF)
 # 设置默认编译类型
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release")
+endif()
+
+# 设置默认的并行编译
+ProcessorCount(N)
+if(NOT N EQUAL 0)
+  set(CTEST_BUILD_FLAGS -j${N})
+  set(ctest_test_args ${ctest_test_args} PARALLEL_LEVEL ${N})
+  set(CMAKE_MAKE_PROGRAM"${CMAKE_MAKE_PROGRAM} -j ${N}")
 endif()
 
 # 安装文件

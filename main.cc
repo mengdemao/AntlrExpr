@@ -8,20 +8,16 @@
  *
  */
 #include "ExprBaseListener.h"
-#include "ExprLexer.h"
-#include "ExprParser.h"
-#include "antlr4-runtime.h"
-#include <iostream>
-#include <string>
-#include "ExprBaseListener.h"
 #include "ExprBaseVisitor.h"
 #include "ExprLexer.h"
 #include "ExprParser.h"
 #include "ExprVisitor.h"
 #include "antlr4-runtime.h"
 #include <config.h>
-#include <syslog.h>
+#include <iostream>
 #include <option.h>
+#include <string>
+#include <syslog.h>
 #include <test.h>
 
 using namespace antlr4;
@@ -34,55 +30,55 @@ class ExprTreeListener : public ExprBaseListener
 	stack<double> ExprStack;
 
   public:
-	void enterProg (ExprParser::ProgContext* ctx) override {}
-	void exitProg (ExprParser::ProgContext* ctx) override {}
-	void enterPrintExpr (ExprParser::PrintExprContext* ctx) override {}
-	void exitPrintExpr (ExprParser::PrintExprContext* ctx) override {}
+	void enterProg(ExprParser::ProgContext* ctx) override {}
+	void exitProg(ExprParser::ProgContext* ctx) override {}
+	void enterPrintExpr(ExprParser::PrintExprContext* ctx) override {}
+	void exitPrintExpr(ExprParser::PrintExprContext* ctx) override {}
 
-	void enterAssign (ExprParser::AssignContext* ctx) override {}
+	void enterAssign(ExprParser::AssignContext* ctx) override {}
 
-	void exitAssign (ExprParser::AssignContext* ctx) override {}
+	void exitAssign(ExprParser::AssignContext* ctx) override {}
 
-	void enterBlank (ExprParser::BlankContext* ctx) override {}
+	void enterBlank(ExprParser::BlankContext* ctx) override {}
 
-	void exitBlank (ExprParser::BlankContext* ctx) override {}
+	void exitBlank(ExprParser::BlankContext* ctx) override {}
 
-	void enterParens (ExprParser::ParensContext* ctx) override {}
+	void enterParens(ExprParser::ParensContext* ctx) override {}
 
-	void exitParens (ExprParser::ParensContext* ctx) override {}
+	void exitParens(ExprParser::ParensContext* ctx) override {}
 
-	void enterMulDiv (ExprParser::MulDivContext* ctx) override {}
+	void enterMulDiv(ExprParser::MulDivContext* ctx) override {}
 
-	void exitMulDiv (ExprParser::MulDivContext* ctx) override {}
+	void exitMulDiv(ExprParser::MulDivContext* ctx) override {}
 
-	void enterAddSub (ExprParser::AddSubContext* ctx) override {}
+	void enterAddSub(ExprParser::AddSubContext* ctx) override {}
 
-	void exitAddSub (ExprParser::AddSubContext* ctx) override {}
+	void exitAddSub(ExprParser::AddSubContext* ctx) override {}
 
-	void enterId (ExprParser::IdContext* ctx) override {}
+	void enterId(ExprParser::IdContext* ctx) override {}
 
-	void exitId (ExprParser::IdContext* ctx) override {}
+	void exitId(ExprParser::IdContext* ctx) override {}
 
-	void enterInt (ExprParser::IntContext* ctx) override {}
-	void exitInt (ExprParser::IntContext* ctx) override {}
+	void enterInt(ExprParser::IntContext* ctx) override {}
+	void exitInt(ExprParser::IntContext* ctx) override {}
 
-	void enterEveryRule (antlr4::ParserRuleContext* ctx) override {}
-	void exitEveryRule (antlr4::ParserRuleContext* ctx) override {}
+	void enterEveryRule(antlr4::ParserRuleContext* ctx) override {}
+	void exitEveryRule(antlr4::ParserRuleContext* ctx) override {}
 
-	void visitTerminal (antlr4::tree::TerminalNode* node) override;
-	void visitErrorNode (antlr4::tree::ErrorNode* node) override;
+	void visitTerminal(antlr4::tree::TerminalNode* node) override;
+	void visitErrorNode(antlr4::tree::ErrorNode* node) override;
 };
 
-void ExprTreeListener::visitErrorNode (antlr4::tree::ErrorNode* node)
+void ExprTreeListener::visitErrorNode(antlr4::tree::ErrorNode* node)
 {
-	std::string getText = node->getText ();
-	if (!getText.empty ()) {
+	std::string getText = node->getText();
+	if (!getText.empty()) {
 	}
 }
 
-void ExprTreeListener::visitTerminal (antlr4::tree::TerminalNode* node)
+void ExprTreeListener::visitTerminal(antlr4::tree::TerminalNode* node)
 {
-	std::string getText = node->getText ();
+	std::string getText = node->getText();
 	if (getText != "\n") {
 	}
 }
@@ -90,53 +86,53 @@ void ExprTreeListener::visitTerminal (antlr4::tree::TerminalNode* node)
 class ExprTreeVisitor : public ExprVisitor
 {
   public:
-	antlrcpp::Any visitProg (ExprParser::ProgContext* context)
+	antlrcpp::Any visitProg(ExprParser::ProgContext* context)
 	{
-		return visitChildren (context);
+		return visitChildren(context);
 	}
 
-	antlrcpp::Any visitPrintExpr (ExprParser::PrintExprContext* context)
+	antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext* context)
 	{
-		return visitChildren (context);
+		return visitChildren(context);
 	}
 
-	antlrcpp::Any visitAssign (ExprParser::AssignContext* context)
+	antlrcpp::Any visitAssign(ExprParser::AssignContext* context)
 	{
-		return visitChildren (context);
+		return visitChildren(context);
 	}
 
-	antlrcpp::Any visitBlank (ExprParser::BlankContext* context)
+	antlrcpp::Any visitBlank(ExprParser::BlankContext* context)
 	{
-		return visitChildren (context);
+		return visitChildren(context);
 	}
 
-	antlrcpp::Any visitParens (ExprParser::ParensContext* context)
+	antlrcpp::Any visitParens(ExprParser::ParensContext* context)
 	{
-		return visitChildren (context);
+		return visitChildren(context);
 	}
 
-	antlrcpp::Any visitMulDiv (ExprParser::MulDivContext* context)
+	antlrcpp::Any visitMulDiv(ExprParser::MulDivContext* context)
 	{
-		std::string text = context->op->getText ();
-		return visitChildren (context);
+		std::string text = context->op->getText();
+		return visitChildren(context);
 	}
 
-	antlrcpp::Any visitAddSub (ExprParser::AddSubContext* context)
+	antlrcpp::Any visitAddSub(ExprParser::AddSubContext* context)
 	{
-		std::string text = context->op->getText ();
-		return visitChildren (context);
+		std::string text = context->op->getText();
+		return visitChildren(context);
 	}
 
-	antlrcpp::Any visitId (ExprParser::IdContext* context)
+	antlrcpp::Any visitId(ExprParser::IdContext* context)
 	{
-		std::string text = context->ID ()->getText ();
-		return visitChildren (context);
+		std::string text = context->ID()->getText();
+		return visitChildren(context);
 	}
 
-	antlrcpp::Any visitInt (ExprParser::IntContext* context)
+	antlrcpp::Any visitInt(ExprParser::IntContext* context)
 	{
-		std::string text = context->INT ()->getText ();
-		return visitChildren (context);
+		std::string text = context->INT()->getText();
+		return visitChildren(context);
 	}
 };
 
@@ -150,7 +146,7 @@ int main(int argc, char* argv[])
 {
 	string InputString;
 	syslog syslog;
-	int result;
+	int	   result;
 
 	// 解析命令行参数
 	(void)option_init(argc, argv);
@@ -159,7 +155,7 @@ int main(int argc, char* argv[])
 	if (FLAGS_test) {
 		TestExpr TestExpr;
 		InputString = TestExpr.GetExpr();
-		result = TestExpr.GetResult();
+		result		= TestExpr.GetResult();
 	} else {
 		InputString = string(FLAGS_text);
 	}
@@ -185,11 +181,11 @@ int main(int argc, char* argv[])
 	// 1. Listener模式解析语法树
 	ExprTreeListener listener;
 	ParseTreeWalker	 walker;
-	walker.walk (&listener, tree);
+	walker.walk(&listener, tree);
 
 	// 2. Visitor模式解析语法树
 	ExprTreeVisitor visitor;
-	visitor.visit (tree);
+	visitor.visit(tree);
 
 	// 处于自动化测试状态下返回状态
 	if (FLAGS_test) {

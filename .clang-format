@@ -67,7 +67,7 @@ BraceWrapping:
   # class定义后面
   AfterClass:	true
   # 控制语句后面
-  AfterControlStatement:	false
+  AfterControlStatement:	Never
   # enum定义后面
   AfterEnum:	false
   # 函数定义后面
@@ -83,7 +83,7 @@ BraceWrapping:
   # catch之前
   BeforeCatch:	true
   # else之前
-  BeforeElse:	true
+  BeforeElse:	false
   # 缩进大括号
   IndentBraces:	false
 
@@ -209,10 +209,15 @@ SpaceAfterCStyleCast:	false
 SpaceBeforeAssignmentOperators:	true
 
 # 开圆括号之前添加一个空格: Never, ControlStatements, Always
-SpaceBeforeParens:	Always
+SpaceBeforeParens:	ControlStatements
 
 # 在空的圆括号中添加空格
 SpaceInEmptyParentheses:	false
+
+# 在函数空格前面添加空格 clang-format-14
+# BeforeNonEmptyParentheses: false
+# AfterFunctionDefinitionName: false
+# AfterFunctionDeclarationName: false
 
 # 在尾随的评论前添加的空格数(只适用于//)
 SpacesBeforeTrailingComments:	2
