@@ -111,10 +111,12 @@ set(PROJECT_VERSION_MAJOR ${${PROJECT_NAME}_VERSION_MAJOR})
 set(PROJECT_VERSION_MINOR ${${PROJECT_NAME}_VERSION_MINOR})
 
 # 生成配置文件
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/inc/version.h.in ${CMAKE_CURRENT_BINARY_DIR}/inc/version.h)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/inc/config.h.in ${CMAKE_CURRENT_BINARY_DIR}/inc/config.h)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/inc)
 
 # 添加头文件路径
+include_directories(${CMAKE_SOURCE_DIR}/grammar)
 include_directories(${CMAKE_SOURCE_DIR}/inc)
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(
@@ -143,22 +145,22 @@ macro(ANTLR_TARGET Name)
 			${CMAKE_SOURCE_DIR})
 
 	list(APPEND ANTLR_${Name}_CXX_OUTPUTS
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Lexer.h
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Lexer.cpp
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Parser.h
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Parser.cpp
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}BaseListener.h
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}BaseListener.cpp
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Listener.h
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Listener.cpp
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Visitor.h
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Visitor.cpp
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}BaseVisitor.h
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}BaseVisitor.cpp)
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Lexer.h
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Lexer.cpp
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Parser.h
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Parser.cpp
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}BaseListener.h
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}BaseListener.cpp
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Listener.h
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Listener.cpp
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Visitor.h
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Visitor.cpp
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}BaseVisitor.h
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}BaseVisitor.cpp)
 
 	list(APPEND ANTLR_${Name}_OUTPUTS
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Lexer.interp
-		${ANTLR_${Name}_OUTPUT_DIR}/src/${Name}Lexer.tokens
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Lexer.interp
+		${ANTLR_${Name}_OUTPUT_DIR}/grammar/${Name}Lexer.tokens
 		${ANTLR_${Name}_CXX_OUTPUTS})
 
 	list(APPEND ANTLR_TARGET_COMPILE_FLAGS
@@ -167,7 +169,7 @@ macro(ANTLR_TARGET Name)
 	add_custom_command(
 		OUTPUT ${ANTLR_${Name}_OUTPUTS}
 		COMMAND java -jar ${ANTLR_EXECUTABLE}
-			-o ${ANTLR_${Name}_OUTPUT_DIR}/src
+			-o ${ANTLR_${Name}_OUTPUT_DIR}/grammar
 			-Dlanguage=Cpp
 			${ANTLR_TARGET_COMPILE_FLAGS}
 			${ANTLR_${Name}_INPUT}
@@ -179,7 +181,7 @@ endmacro(ANTLR_TARGET)
 ANTLR_TARGET(Expr)
 
 # 添加编译头文件
-include_directories(${CMAKE_SOURCE_DIR}/src)
+include_directories(${CMAKE_SOURCE_DIR}/gtammar)
 
 # Disable warning C4819
 add_compile_options("$<$<C_COMPILER_ID:MSVC>:/utf-8>")

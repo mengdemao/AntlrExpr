@@ -4,6 +4,7 @@
 #include <syslog.h>
 #include <option.h>
 #include <stdint.h>
+#include <version.h>
 
 #include <gflags/gflags.h>
 using namespace std;

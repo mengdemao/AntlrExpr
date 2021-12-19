@@ -1,0 +1,23 @@
+/**
+ * @file version.h
+ * @brief Auto generated version file
+ * @version @AntlrExpr_VERSION_MAJOR@-@AntlrExpr_VERSION_MINOR@
+ *
+ *
+ */
+#ifndef __VERSION_H__
+#define __VERSION_H__
+
+#ifndef AntlrExpr_VERSION_MAJOR
+#define AntlrExpr_VERSION_MAJOR		"@AntlrExpr_VERSION_MAJOR@"
+#endif
+
+#ifndef AntlrExpr_VERSION_MINOR
+#define AntlrExpr_VERSION_MINOR		"@AntlrExpr_VERSION_MINOR@"
+#endif
+
+#ifndef AntlrExpr_VERSION
+#define AntlrExpr_VERSION			"@AntlrExpr_VERSION_MAJOR@-@AntlrExpr_VERSION_MINOR@"
+#endif
+
+#endif /* __VERSION_H__ */
