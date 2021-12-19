@@ -64,6 +64,12 @@ FetchContent_MakeAvailable(gflags)
 find_package(Boost REQUIRED)
 find_package(Doxygen REQUIRED)
 find_package(Git REQUIRED)
+find_package(LLVM REQUIRED)
+
+message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
+message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
+include_directories(${LLVM_INCLUDE_DIRS})
+add_definitions(${LLVM_DEFINITIONS})
 
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
@@ -203,8 +209,94 @@ add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/src/syslog.cc
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
+# 添加LLVM库
+set(TARGET_WebAssembly WebAssemblyCodeGen WebAssemblyAsmParser WebAssemblyDesc WebAssemblyInfo)
+set(TARGET_XCore XCoreCodeGen XCoreDesc XCoreInfo)
+set(TARGET_SystemZ SystemZCodeGen SystemZAsmParser SystemZDesc SystemZInfo) 
+set(TARGET_Sparc SparcCodeGen SparcAsmParser SparcDesc SparcInfo) 
+set(TARGET_RISCV RISCVCodeGen RISCVAsmParser RISCVDesc RISCVInfo) 
+set(TARGET_PowerPC PowerPCCodeGen PowerPCAsmParser PowerPCDesc PowerPCInfo) 
+set(TARGET_NVPTX NVPTXCodeGen NVPTXDesc NVPTXInfo) 
+set(TARGET_MSP430 MSP430CodeGen MSP430AsmParser MSP430Desc MSP430Info) 
+set(TARGET_Mips MipsCodeGen MipsAsmParser MipsDesc MipsInfo) 
+set(TARGET_Lanai LanaiCodeGen LanaiAsmParser LanaiDesc LanaiInfo) 
+set(TARGET_Hexagon HexagonCodeGen HexagonAsmParser HexagonDesc HexagonInfo) 
+set(TARGET_BPF BPFCodeGen BPFAsmParser BPFDesc BPFInfo) 
+set(TARGET_ARM ARMCodeGen ARMAsmParser ARMDesc ARMUtils ARMInfo) 
+set(TARGET_AMDGPU AMDGPUCodeGen AMDGPUAsmParser AMDGPUDesc AMDGPUUtils AMDGPUInfo)
+set(TARGET_X86 X86CodeGen X86AsmParser X86Desc X86Info)
+set(TARGET_AArch64 AArch64CodeGen AArch64AsmParser AArch64Desc AArch64Utils AArch64Info)
+set(TARGET_AVR AVRCodeGen AVRAsmParser AVRDesc AVRInfo)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main gflags fmt)
+set(TARGETS_TO_BUILD "WebAssembly" "XCore" "SystemZ" "Sparc" "RISCV" "PowerPC" "NVPTX" "MSP430" "Mips" "Lanai" "Hexagon" "BPF" "ARM" "AMDGPU" "X86" "AArch64" "AVR")
+
+set(LLVM_TARGETS)
+foreach (target IN ITEMS ${TARGETS_TO_BUILD})
+    list(APPEND LLVM_TARGETS "${TARGET_${target}}")
+endforeach(target)
+
+llvm_map_components_to_libnames(llvm_libs 
+    TextAPI
+    OrcJIT
+    JITLink
+    ObjectYAML
+    WindowsManifest
+    Coverage
+    TableGen
+    LTO
+    Passes
+    ObjCARCOpts
+    Coroutines
+    LibDriver
+    XRay
+    ${LLVM_TARGETS}
+    MIRParser
+    ipo
+    Instrumentation
+    Vectorize
+    Linker
+    IRReader
+    AsmParser
+    Symbolize
+    DebugInfoPDB
+    FuzzMutate
+    LineEditor
+    MCA
+    DebugInfoGSYM
+    GlobalISel
+    SelectionDAG
+    AsmPrinter
+    DebugInfoDWARF
+    MCJIT
+    Interpreter
+    ExecutionEngine
+    RuntimeDyld
+    CodeGen
+    Target
+    ScalarOpts
+    InstCombine
+    AggressiveInstCombine
+    TransformUtils
+    BitWriter
+    Analysis
+    ProfileData
+    DlltoolDriver
+    Option
+    Object
+    MCParser
+    MC
+    DebugInfoCodeView
+    DebugInfoMSF
+    BitReader
+    Core
+    Remarks
+    BinaryFormat
+    BitstreamReader
+    Support
+    Demangle
+)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE ${llvm_libs} gtest gtest_main gflags fmt)
 
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})
 if(BUILD_DOCUMENTATION)
