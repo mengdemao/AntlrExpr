@@ -12,6 +12,7 @@ addons:
       - cmake-data
       - cmake
       - doxygen
+      - graphviz
       - libboost-dev
       - libgtest-dev
       - libprotobuf-dev
@@ -27,6 +28,7 @@ before_script:
 
 script:
   - make -j `nproc`
+  - make doc
   - make test
 
 after_success:
