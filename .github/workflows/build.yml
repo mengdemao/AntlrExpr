@@ -51,7 +51,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.DEPLOY_KEY }}
-        external_repository: mengdemao/AntlrExpr.io
+        external_repository: mengdemao/AntlrExprDocs
         publish_dir: ${{github.workspace}}/build/html
         keep_files: false
         publish_branch: master
