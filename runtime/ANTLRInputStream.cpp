@@ -14,8 +14,8 @@
 
 #include "ANTLRInputStream.h"
 
-using namespace antlr4;
-using namespace antlrcpp;
+using namespace antlr4;		// 导入命名空间antlr4
+using namespace antlrcpp;	// 导入命名空间antlrcpp
 
 using misc::Interval;
 

@@ -41,3 +41,16 @@ jobs:
     - name: Package
       working-directory: ${{github.workspace}}/build
       run: cpack -C ${{env.BUILD_TYPE}}
+
+    - name: DocsGen
+      working-directory: ${{github.workspace}}/build
+      run: cmake --build ${{github.workspace}}/build --target doc
+
+    - name: DocsDeploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        deploy_key: ${{ secrets.DEPLOY_KEY }}
+        external_repository: mengdemao/AntlrExpr.io
+        publish_dir: ${{github.workspace}}/build/html
+        keep_files: false
+        publish_branch: master
