@@ -17,6 +17,7 @@ jobs:
     - name: Checkout github repo
       uses: actions/checkout@v2
       with:
+        fetch-depth: 0
         lfs: false
 
     - uses: actions/setup-java@v2
