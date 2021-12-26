@@ -4,9 +4,9 @@
  * @brief syslog协议实现
  * @version 0.1
  * @date 2021-12-19
- * 
+ *
  * @copyright Copyright (c) 2021
- * 
+ *
  */
 #include <iostream>
 #include <string>
@@ -46,11 +46,9 @@ syslog::syslog()
 
 syslog::~syslog()
 {
-
 }
 
 bool syslog::connect()
 {
 	return true;
 }
-

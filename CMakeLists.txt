@@ -234,7 +234,7 @@ endif(BUILD_DOCUMENTATION)
 # 启动测试
 enable_testing()
 
-# clang-tidy 
+# clang-tidy
 set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)
 
 # 添加测试
@@ -245,7 +245,7 @@ add_test(NAME AntlrExprVersion COMMAND AntlrExpr "--version")
 set_tests_properties(AntlrExprVersion PROPERTIES PASS_REGULAR_EXPRESSION "AntlrExpr version")
 
 # 安装
-INSTALL(TARGETS ${PROJECT_NAME} 
+INSTALL(TARGETS ${PROJECT_NAME}
 		RUNTIME DESTINATION bin
 )
 

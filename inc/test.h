@@ -8,15 +8,16 @@
 #define __TEST_H__
 #include <iostream>
 
-class TestExpr {
-private:
-	std::string Expr;	// 生成表达式
-	int result;		// 产生的结果
+class TestExpr
+{
+  private:
+	std::string Expr;	 // 生成表达式
+	int			result;	 // 产生的结果
 
-public:
+  public:
 	TestExpr()
 	{
-		Expr = std::string("1+2");
+		Expr   = std::string("1+2");
 		result = 3;
 	}
 
