@@ -1,0 +1,14 @@
+/**
+ * @file config.h
+ * @brief Auto generated config file
+ * @version @AntlrExpr_VERSION_MAJOR@-@AntlrExpr_VERSION_MINOR@
+ * @date @BUILD_TIME@
+ * @author @BUILD_HOST@
+ *
+ */
+#ifndef __CONFIG_H__
+#define __CONFIG_H__
+
+#cmakedefine DEBUG_EXPR
+
+#endif /* __CONFIG_H__ */

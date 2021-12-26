@@ -73,6 +73,9 @@ void ExprTreeListener::visitErrorNode(antlr4::tree::ErrorNode* node)
 {
     std::string getText = node->getText();
     if (!getText.empty()) {
+#ifdef DEBUG_EXPR
+    	std::cout << getText << std::endl;
+#endif /* DEBUG_EXPR */
     }
 }
 
@@ -80,6 +83,9 @@ void ExprTreeListener::visitTerminal(antlr4::tree::TerminalNode* node)
 {
     std::string getText = node->getText();
     if (getText != "\n") {
+#ifdef DEBUG_EXPR
+    	std::cout << getText << std::endl;
+#endif /* DEBUG_EXPR */
     }
 }
 

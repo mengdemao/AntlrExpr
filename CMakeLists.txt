@@ -126,6 +126,16 @@ set(${PROJECT_NAME}_VERSION_MINOR ${GIT_SHA})
 set(PROJECT_VERSION_MAJOR ${${PROJECT_NAME}_VERSION_MAJOR})
 set(PROJECT_VERSION_MINOR ${${PROJECT_NAME}_VERSION_MINOR})
 
+# 提取编译信息
+string(TIMESTAMP COMPILE_TIME %Y/%m/%d-%H/%M/%S)
+set(BUILD_TIME ${COMPILE_TIME})
+cmake_host_system_information(RESULT BUILD_HOST QUERY HOSTNAME)
+
+option(DEBUG_EXPR_ENABLE "print expr debug" ON)
+if(DEBUG_EXPR_ENABLE)
+set(DEBUG_EXPR 1)
+endif()
+
 # 生成配置文件
 configure_file(${CMAKE_SOURCE_DIR}/inc/version.h.in ${CMAKE_SOURCE_DIR}/inc/generated/version.h)
 configure_file(${CMAKE_SOURCE_DIR}/inc/config.h.in ${CMAKE_SOURCE_DIR}/inc/generated/config.h)

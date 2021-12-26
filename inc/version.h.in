@@ -2,7 +2,8 @@
  * @file version.h
  * @brief Auto generated version file
  * @version @AntlrExpr_VERSION_MAJOR@-@AntlrExpr_VERSION_MINOR@
- *
+ * @date @BUILD_TIME@
+ * @author @BUILD_HOST@
  *
  */
 #ifndef __VERSION_H__
