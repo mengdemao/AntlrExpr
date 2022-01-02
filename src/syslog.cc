@@ -44,9 +44,7 @@ syslog::syslog()
 	this->init = this->connect();
 }
 
-syslog::~syslog()
-{
-}
+syslog::~syslog() {}
 
 bool syslog::connect()
 {
