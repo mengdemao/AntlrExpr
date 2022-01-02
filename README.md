@@ -1,4 +1,4 @@
-AntlrExpr笔记
+**AntlrExpr笔记**
 ====
 [![CMake](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml)
 ![Travis (.com)](https://img.shields.io/travis/com/mengdemao/AntlrExpr?style=plastic)
@@ -53,19 +53,21 @@ ParseTree *tree = parser.prog();
 
 ### 分析语法分析树
 
+测试语句
+
+```sh
+./AntlrExpr "1 + ( 2 - 3 ) * 4 / 5"
+```
+
+<div align=center>
+<img src="doc/Expr.png">
+<div>
+
 #### 监听器(Listener)
 
 为了将遍历树时触发的时间转换为监听器的调用,antlr提供了ParseTree-Walker类,我们可以实现对应处理节点的接口,每条规则都有对应的`enter`和`exit`规则
 
-测试语句
-
-```
-./AntlrExpr "1 + ( 2 - 3 ) * 4 / 5"
-```
-
-![计算流程](doc/Expr.png)
-
-| 事件         | 数据  |
+| 事件        | 数据 |
 | ----------- | ---- |
 | enterAddSub | +    |
 | enterInt    | 1    |
@@ -88,7 +90,7 @@ ParseTree *tree = parser.prog();
 
 #### 访问器(Visitor)
 
-| 事件         | 数据  |
+| 事件        | 数据 |
 | ----------- | ---- |
 | visitAddSub |	+    |
 | visitInt    |	1    |

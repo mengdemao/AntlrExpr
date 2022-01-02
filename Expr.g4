@@ -11,7 +11,7 @@ expr: expr op=('*'|'/') expr        # MulDiv
 	| expr op=('+'|'-') expr        # AddSub
 	| INT                           # int
 	| ID                            # id
-	| '('expr')'                  # parens
+	| '('expr')'                  	# parens
 	;
 
 MUL     : '*' ; // assigns token name to '*' used above in grammar

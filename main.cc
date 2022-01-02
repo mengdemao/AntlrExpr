@@ -19,6 +19,8 @@
 #include <string>
 #include <syslog.h>
 #include <test.h>
+#include <stack>
+#include <sbvm.h>
 
 using namespace antlr4;
 using namespace tree;
@@ -27,7 +29,7 @@ using namespace std;
 class ExprTreeListener : public ExprBaseListener
 {
     private:
-    stack<double> ExprStack;
+	class sbvm sbvm;	// 计算虚拟机
 
     public:
     void enterProg(ExprParser::ProgContext* ctx) override {}
@@ -71,22 +73,22 @@ class ExprTreeListener : public ExprBaseListener
 
 void ExprTreeListener::visitErrorNode(antlr4::tree::ErrorNode* node)
 {
+#ifdef DEBUG_EXPR
     std::string getText = node->getText();
     if (!getText.empty()) {
-#ifdef DEBUG_EXPR
     	std::cout << getText << std::endl;
-#endif /* DEBUG_EXPR */
     }
+#endif /* DEBUG_EXPR */
 }
 
 void ExprTreeListener::visitTerminal(antlr4::tree::TerminalNode* node)
 {
-    std::string getText = node->getText();
-    if (getText != "\n") {
 #ifdef DEBUG_EXPR
+	std::string getText = node->getText();
+    if (getText != "\n") {
     	std::cout << getText << std::endl;
-#endif /* DEBUG_EXPR */
     }
+#endif /* DEBUG_EXPR */
 }
 
 class ExprTreeVisitor : public ExprVisitor
@@ -166,11 +168,11 @@ int main(int argc, char* argv[])
 
     // 输入字符串
     if (FLAGS_test) {
-	TestExpr TestExpr;
-	InputString = TestExpr.GetExpr();
-	InputResult = TestExpr.GetResult();
+    	TestExpr TestExpr;
+    	InputString = TestExpr.GetExpr();
+    	InputResult = TestExpr.GetResult();
     } else {
-	InputString = string(FLAGS_text);
+    	InputString = string(FLAGS_text);
     }
 
     // 追加结束符
@@ -202,8 +204,8 @@ int main(int argc, char* argv[])
 
     // 处于自动化测试状态下返回状态
     if (FLAGS_test) {
-	std::cout << "AntlrExpr Test Success" << std::endl;
-	return 0;
+    	std::cout << "AntlrExpr Test Success" << std::endl;
+    	return 0;
     }
 
     return 0;
