@@ -16,5 +16,7 @@
 #include <test.h>
 
 namespace ast {
+	class ast {
 
-};	// namespace ast
+	};
+}	// namespace ast

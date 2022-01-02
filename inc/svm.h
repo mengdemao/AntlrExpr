@@ -44,4 +44,4 @@ class svm
 	int	 call(svm_ops ops);
 	void dis(void);
 };
-};	// namespace svm
+}	// namespace svm

@@ -17,7 +17,7 @@
 #include <svm.h>
 
 namespace svm {
-int svm::push(double sym)
+void svm::push(double sym)
 {
 	call_stacks.push(sym);
 }
@@ -69,4 +69,4 @@ int svm::call(svm_ops ops)
 
 	return 0;
 }
-};	// namespace svm
+}	// namespace svm

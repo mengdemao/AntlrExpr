@@ -18,4 +18,4 @@
 
 namespace ast {
 
-};	// namespace ast
+}	// namespace ast

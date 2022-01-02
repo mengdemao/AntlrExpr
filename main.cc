@@ -27,6 +27,7 @@ using namespace antlr4;
 using namespace tree;
 using namespace std;
 using namespace svm;
+using namespace ast;
 
 #ifdef DEBUG_EXPR
 #define TRACE()				\
