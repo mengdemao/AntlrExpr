@@ -8,6 +8,13 @@ include(ProcessorCount)
 include(GNUInstallDirs)
 include(ExternalProject)
 
+# 添加外部软件
+find_package(Boost REQUIRED)
+find_package(Doxygen REQUIRED)
+find_package(Git REQUIRED)
+find_package(LLVM REQUIRED)
+find_package(Threads)
+
 # 检查编译器
 include(CheckCXXCompilerFlag)
 include(CheckCXXSourceCompiles)
@@ -233,12 +240,6 @@ set(BUILD_gflags_nothreads_LIB OFF CACHE BOOL "" FORCE)
 set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
 set(GFLAGS_IS_SUBPROJECT ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(gflags)
-
-# 添加外部软件
-find_package(Boost REQUIRED)
-find_package(Doxygen REQUIRED)
-find_package(Git REQUIRED)
-find_package(LLVM REQUIRED)
 
 # 添加LLVM相关库
 include_directories(${LLVM_INCLUDE_DIRS})
