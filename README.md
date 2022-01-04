@@ -12,6 +12,11 @@
 
 ### 编译指令
 
+```shell
+export CLASSPATH=".:${pwd}/bin/antlr-complete.jar:$CLASSPATH"
+alias antlr4='java -jar ${pwd}/bin/antlr-complete.jar'
+alias grun='java org.antlr.v4.gui.TestRig'
+```
 antlr4脚本内容
 ```shell
 # antlr4编译脚本

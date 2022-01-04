@@ -17,6 +17,7 @@
 
 namespace ast {
 	class ast {
-
+		private:
+		public:
 	};
-}	// namespace ast
+} // namespace ast
