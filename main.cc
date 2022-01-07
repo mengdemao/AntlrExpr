@@ -160,7 +160,6 @@ class ExprTreeListener : public ExprBaseListener
 	}
 };
 
-
 class ExprTreeVisitor : public ExprVisitor
 {
   public:

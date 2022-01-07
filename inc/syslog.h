@@ -20,6 +20,7 @@ class syslog
 	enum {
 		ALERT,
 		ERROR,
+		WARNING,
 		DEBUG,
 		TRACE,
 	};
