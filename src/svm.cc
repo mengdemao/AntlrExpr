@@ -19,19 +19,19 @@
 namespace svm {
 void svm::push(double sym)
 {
-	call_stacks.push(sym);
+	call_stack.push(sym);
 }
 
 double svm::pop(void)
 {
-	double ret = call_stacks.top();
-	call_stacks.pop();
+	double ret = call_stack.top();
+	call_stack.pop();
 	return ret;
 }
 
 void svm::dis(void)
 {
-	double ret = call_stacks.top();
+	double ret = call_stack.top();
 	std::cout << ret << std::endl;
 }
 
@@ -39,7 +39,6 @@ int svm::call(svm_ops ops)
 {
 	double sym1, sym2;
 	double res;
-	int	   ret;
 
 	sym1 = pop();
 	sym2 = pop();

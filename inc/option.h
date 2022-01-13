@@ -7,12 +7,12 @@
 #ifndef __OPTION_H__
 #define __OPTION_H__
 
-#include <gflags/gflags.h>
-using namespace gflags;
+typedef enum {
+	OPTION_NONEUSE,	// 不需要解析
+	OPTION_SUCCESS,	// 解析成功
+	OPTION_FAILURE, // 解析失败
+} option_result;
 
-DECLARE_bool(test);
-DECLARE_string(text);
-
-extern int option_init(int argc, char* argv[]);
+extern option_result option_main(int argc, char* argv[]);
 
 #endif /* __OPTION_H__ */

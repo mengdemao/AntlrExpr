@@ -10,24 +10,22 @@
 class syslog
 {
   private:
-	static bool init;  // 链接状态
-	static int	addr;  // IP地址
-	static int	port;  // 端口号
+	bool init;  // 链接状态
+	int	addr;  // IP地址
+	int	port;  // 端口号
 
 	int rank;  // 打印等级
 
   public:
 	enum {
-		ALERT,
-		ERROR,
-		WARNING,
-		DEBUG,
-		TRACE,
+		LOG_ALERT,
+		LOG_ERROR,
+		LOG_WARNING,
+		LOG_DEBUG,
+		LOG_TRACE,
 	};
 
 	syslog(int addr, int port, int rank);
-	syslog(int rank);
-	syslog();
 
 	~syslog();
 

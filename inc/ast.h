@@ -7,6 +7,8 @@
  *
  *
  */
+#ifndef __AST_H__
+#define __AST_H__
 #include <config.h>
 #include <iostream>
 #include <option.h>
@@ -21,3 +23,5 @@ namespace ast {
 		public:
 	};
 } // namespace ast
+
+#endif /* __AST_H__ */

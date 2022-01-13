@@ -7,6 +7,8 @@
  *
  *
  */
+#ifndef __SVM_H__
+#define __SVM_H__
 #include <config.h>
 #include <iostream>
 #include <option.h>
@@ -45,3 +47,5 @@ class svm
 	void dis(void);
 };
 }	// namespace svm
+
+#endif /* __SVM_H__ */

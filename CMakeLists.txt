@@ -188,6 +188,7 @@ void foo(std::nullptr_t) {}
 int main(void) { foo(nullptr); }
 " HAVE_CXX11_NULLPTR_T)
 
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -198,7 +199,7 @@ set(CMAKE_C_FLAGS_RELEASE "-O3 -flto")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -flto")
 
 # 显示详细信息
-set (CMAKE_VERBOSE_MAKEFILE OFF)
+set (CMAKE_VERBOSE_MAKEFILE ON)
 
 # 设置默认编译类型
 if(NOT CMAKE_BUILD_TYPE)
@@ -230,23 +231,23 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(fmt)
 
-FetchContent_Declare(
-	gflags
-	GIT_REPOSITORY https://github.com/gflags/gflags.git
-	GIT_TAG        v2.2.2
-)
-set(GFLAGS_INSTALL_HEADERS OFF CACHE BOOL "" FORCE)
-set(GFLAGS_INSTALL_SHARED_LIBS OFF CACHE BOOL "" FORCE)
-set(GFLAGS_INSTALL_STATIC_LIBS OFF CACHE BOOL "" FORCE)
-set(BUILD_gflags_LIB ON CACHE BOOL "" FORCE)
-set(BUILD_gflags_nothreads_LIB OFF CACHE BOOL "" FORCE)
-set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
-set(GFLAGS_IS_SUBPROJECT ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(gflags)
-
 # 添加LLVM相关库
 include_directories(${LLVM_INCLUDE_DIRS})
 add_definitions(${LLVM_DEFINITIONS})
+
+# 添加boost库
+set(Boost_USE_STATIC_LIBS        ON)
+set(Boost_USE_MULTITHREADED      ON)
+set(Boost_USE_STATIC_RUNTIME    OFF)
+find_package(Boost REQUIRED program_options system filesystem)
+
+if(Boost_FOUND)
+    message(STATUS "boost include path is : ${Boost_INCLUDE_DIRS}")
+    message(STATUS "boost library path is : ${Boost_LIBRARY_DIRS}")
+    message(STATUS "boost libraries is : ${Boost_LIBRARIES}")
+    include_directories(${Boost_INCLUDE_DIRS})
+    link_directories(${Boost_LIBRARY_DIRS})
+endif(Boost_FOUND)
 
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
@@ -392,12 +393,16 @@ add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 # 添加可执行文件
 add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/main.cc
+			   ${CMAKE_SOURCE_DIR}/src/ast.cc
+			   ${CMAKE_SOURCE_DIR}/src/svm.cc
+			   ${CMAKE_SOURCE_DIR}/src/test.cc
 			   ${CMAKE_SOURCE_DIR}/src/option.cc
 			   ${CMAKE_SOURCE_DIR}/src/syslog.cc
+			   ${CMAKE_SOURCE_DIR}/src/grammar.cc
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main gflags fmt)
+target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main fmt ${Boost_LIBRARIES})
 
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})
 if(BUILD_DOCUMENTATION)
@@ -423,12 +428,16 @@ enable_testing()
 # clang-tidy
 set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)
 
-# 添加测试
-add_test(NAME AntlrExprText COMMAND AntlrExpr "--test=true")
-set_tests_properties(AntlrExprText PROPERTIES PASS_REGULAR_EXPRESSION "AntlrExpr Test Success")
+# 添加命令行的测试
+add_test(NAME AntlrExprHelp COMMAND AntlrExpr "--help")
+set_tests_properties(AntlrExprHelp PROPERTIES PASS_REGULAR_EXPRESSION "Usage: AntlrExpr")
 
 add_test(NAME AntlrExprVersion COMMAND AntlrExpr "--version")
-set_tests_properties(AntlrExprVersion PROPERTIES PASS_REGULAR_EXPRESSION "AntlrExpr version")
+set_tests_properties(AntlrExprVersion PROPERTIES PASS_REGULAR_EXPRESSION "AntlrExpr")
+
+add_test(NAME AntlrExprText_1 COMMAND AntlrExpr "1+2+3" 	RETURN_VALUE 6)
+add_test(NAME AntlrExprText_2 COMMAND AntlrExpr "1+2*3" 	RETURN_VALUE 7)
+add_test(NAME AntlrExprText_3 COMMAND AntlrExpr "(1+2*3)" 	RETURN_VALUE 8)
 
 # 设置标准安装目录
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_LIBDIR})
