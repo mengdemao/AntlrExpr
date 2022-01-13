@@ -21,4 +21,8 @@
 #define AntlrExpr_VERSION			"@AntlrExpr_VERSION_MAJOR@-@AntlrExpr_VERSION_MINOR@"
 #endif
 
+#ifndef AntlrExpr_BUILD
+#define AntlrExpr_BUILD				"@BUILD_TIME@ @BUILD_HOST@"
+#endif
+
 #endif /* __VERSION_H__ */

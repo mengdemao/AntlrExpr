@@ -13,7 +13,7 @@ addons:
       - cmake
       - doxygen
       - graphviz
-      - libboost-dev
+      - libboost-all-dev
       - libgtest-dev
       - libprotobuf-dev
       - protobuf-compiler

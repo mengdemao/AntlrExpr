@@ -52,7 +52,7 @@ option_result option_main(int argc, char* argv[])
         }
 		
 		if (variables_map.count("version")) {
-            std::cout << "AntlrExpr " << AntlrExpr_VERSION << "\n"
+            std::cout << "AntlrExpr " << AntlrExpr_VERSION << " " << AntlrExpr_BUILD << "\n"
 			"Copyright (C) 2022 MengDemao mengdemao19951021@163.com \n"
 			"This is free software; see the source for copying conditions.  There is NO\n"
 			"warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
