@@ -27,7 +27,7 @@ jobs:
 
     - uses: mstksg/get-package@v1
       with:
-        apt-get: libboost-all-dev libgtest-dev libprotobuf-dev protobuf-compiler doxygen graphviz
+        apt-get: libboost-all-dev libgtest-dev libfmt-dev libprotobuf-dev protobuf-compiler doxygen graphviz 
 
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}

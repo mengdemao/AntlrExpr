@@ -10,9 +10,11 @@ addons:
   apt:
     packages:
       - cmake-data
+      - cmake-extras
       - cmake
       - doxygen
       - graphviz
+      - libfmt-dev
       - libboost-all-dev
       - libgtest-dev
       - libprotobuf-dev
