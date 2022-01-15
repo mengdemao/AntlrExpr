@@ -7,22 +7,24 @@
  *
  *
  */
-#include <config.h>
 #include "ExprBaseVisitor.h"
 #include "ExprLexer.h"
 #include "ExprParser.h"
 #include "ExprVisitor.h"
 #include "antlr4-runtime.h"
 #include <ExprBaseListener.h>
+#include <ast.h>
+#include <boost/iterator/iterator_facade.hpp>
+#include <config.h>
 #include <cstdlib>
+#include <fmt/core.h>
+#include <grammar.h>
 #include <iostream>
 #include <option.h>
 #include <stack>
 #include <string>
-#include <test.h>
 #include <svm.h>
-#include <ast.h>
-#include <grammar.h>
+#include <test.h>
 
 using namespace std;
 
@@ -35,24 +37,22 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	string InputString;
-	double InputResult	  = 0;
+	double InputResult = 0;
 
 	// avoid warning
 	(void)InputResult;
 
 	// 解析命令行参数
-	if (OPTION_NONEUSE != option_main(argc, argv))
-	{
+	if (OPTION_NONEUSE != option_main(argc, argv)) {
 		return 0;
 	}
 
 	InputString = argv[1];
 	InputString.append("\n");
 
-	if (GRAMMAR_SUCCESS != grammar_main(InputString))
-	{
+	if (GRAMMAR_SUCCESS != grammar_main(InputString)) {
 		return EXIT_FAILURE;
 	}
 
-	return 0;
+	return EXIT_SUCCESS;
 }

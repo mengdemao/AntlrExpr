@@ -11,6 +11,7 @@
 #include <config.h>
 #include <cstdlib>
 #include <option.h>
+#include <string>
 #include <version.h>
 #include <iostream>
 #include <cstddef>
@@ -34,9 +35,9 @@ option_result option_main(int argc, char* argv[])
 		description.add_options()
             ("help,h",    "Display this information.")
             ("version,v", "Display compiler version information.")
-            ("file,f", "Open file as input.")
-            ("text,t", "Use string as input");
-
+            ("file,f",    "Use file as input.")
+            ("text,t",    "Use string as input")
+			("pipe,p",    "Use pipe as input");
         store(parse_command_line(argc, argv, description), variables_map);
         notify(variables_map);
 

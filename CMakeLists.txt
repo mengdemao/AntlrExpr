@@ -9,11 +9,13 @@ include(GNUInstallDirs)
 include(ExternalProject)
 
 # 添加外部软件
-find_package(Boost REQUIRED)
+find_package(Boost REQUIRED program_options system filesystem regex date_time) 
 find_package(Doxygen REQUIRED)
 find_package(Git REQUIRED)
 find_package(LLVM REQUIRED)
-find_package(Threads)
+find_package(Threads REQUIRED)
+find_package(GTest REQUIRED)
+find_package(fmt REQUIRED)
 
 # 检查编译器
 include(CheckCXXCompilerFlag)
@@ -25,6 +27,33 @@ include(CheckIncludeFileCXX)
 include(CheckLibraryExists)
 include(CheckStructHasMember)
 include(CheckTypeSize)
+
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# 设置优化选项
+set(CMAKE_C_FLAGS_DEBUG "-O0 -g -DDEBUG")
+set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -DDEBUG")
+set(CMAKE_C_FLAGS_RELEASE "-O3 -flto")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -flto")
+
+# 显示详细信息
+set (CMAKE_VERBOSE_MAKEFILE ON)
+
+# 设置默认编译类型
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE "Release")
+endif()
+
+# 设置默认的并行编译
+ProcessorCount(N)
+if(NOT N EQUAL 0)
+  set(CTEST_BUILD_FLAGS -j${N})
+  set(ctest_test_args ${ctest_test_args} PARALLEL_LEVEL ${N})
+  set(CMAKE_MAKE_PROGRAM"${CMAKE_MAKE_PROGRAM} -j ${N}")
+endif()
 
 check_include_file_cxx (dlfcn.h HAVE_DLFCN_H)
 check_include_file_cxx (execinfo.h HAVE_EXECINFO_H)
@@ -41,7 +70,6 @@ check_include_file_cxx (sys/types.h HAVE_SYS_TYPES_H)
 check_include_file_cxx (sys/utsname.h HAVE_SYS_UTSNAME_H)
 check_include_file_cxx (sys/wait.h HAVE_SYS_WAIT_H)
 check_include_file_cxx (syscall.h HAVE_SYSCALL_H)
-check_include_file_cxx (syslog.h HAVE_SYSLOG_H)
 check_include_file_cxx (ucontext.h HAVE_UCONTEXT_H)
 check_include_file_cxx (unistd.h HAVE_UNISTD_H)
 
@@ -157,7 +185,7 @@ int main() { }
 check_cxx_source_compiles ("
 thread_local int tls;
 int main() { }
-" HAVE_CXX11_TLS)
+" HAVE_CXX20_TLS)
 
 check_cxx_source_compiles ("
 #include <type_traits>
@@ -169,77 +197,38 @@ check_cxx_source_compiles ("
 #include <atomic>
 std::atomic<int> i;
 int main() { }
-" HAVE_CXX11_ATOMIC)
+" HAVE_CXX20_ATOMIC)
 
 check_cxx_source_compiles ("
 constexpr int x = 0;
 int main() { }
-" HAVE_CXX11_CONSTEXPR)
+" HAVE_CXX20_CONSTEXPR)
 
 check_cxx_source_compiles ("
 #include <chrono>
 std::chrono::seconds s;
 int main() { }
-" HAVE_CXX11_CHRONO)
+" HAVE_CXX20_CHRONO)
 
 check_cxx_source_compiles ("
 #include <cstddef>
 void foo(std::nullptr_t) {}
 int main(void) { foo(nullptr); }
-" HAVE_CXX11_NULLPTR_T)
-
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-# 设置优化选项
-set(CMAKE_C_FLAGS_DEBUG "-O0 -g -DDEBUG")
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -DDEBUG")
-set(CMAKE_C_FLAGS_RELEASE "-O3 -flto")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -flto")
-
-# 显示详细信息
-set (CMAKE_VERBOSE_MAKEFILE ON)
-
-# 设置默认编译类型
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE "Release")
-endif()
-
-# 设置默认的并行编译
-ProcessorCount(N)
-if(NOT N EQUAL 0)
-  set(CTEST_BUILD_FLAGS -j${N})
-  set(ctest_test_args ${ctest_test_args} PARALLEL_LEVEL ${N})
-  set(CMAKE_MAKE_PROGRAM"${CMAKE_MAKE_PROGRAM} -j ${N}")
-endif()
-
-# 安装文件
-FetchContent_Declare(
-	googletest
-	GIT_REPOSITORY https://github.com/google/googletest.git
-	GIT_TAG        release-1.11.0
-)
-set(BUILD_GMOCK OFF CACHE BOOL "" FORCE)
-set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
-
-FetchContent_Declare(
-	fmt
-	GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-	GIT_TAG        8.0.1
-)
-FetchContent_MakeAvailable(fmt)
+" HAVE_CXX20_NULLPTR_T)
 
 # 添加LLVM相关库
 include_directories(${LLVM_INCLUDE_DIRS})
 add_definitions(${LLVM_DEFINITIONS})
 
+# 添加gtest库
+include_directories(${GTEST_INCLUDE_DIRS})
+
+include_directories(${FMT_INCLUDE_DIRS})
+
 # 添加boost库
 set(Boost_USE_STATIC_LIBS        ON)
 set(Boost_USE_MULTITHREADED      ON)
 set(Boost_USE_STATIC_RUNTIME    OFF)
-find_package(Boost REQUIRED program_options system filesystem)
 
 if(Boost_FOUND)
     message(STATUS "boost include path is : ${Boost_INCLUDE_DIRS}")
@@ -254,8 +243,6 @@ set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
 
 # 添加编译选项
 add_compile_options(
-	$<$<COMPILE_LANGUAGE:C>:-std=c11>
-	$<$<COMPILE_LANGUAGE:CXX>:-std=c++17>
 	-Wall
 	-Werror
 	-pedantic
@@ -397,12 +384,11 @@ add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/src/svm.cc
 			   ${CMAKE_SOURCE_DIR}/src/test.cc
 			   ${CMAKE_SOURCE_DIR}/src/option.cc
-			   ${CMAKE_SOURCE_DIR}/src/syslog.cc
 			   ${CMAKE_SOURCE_DIR}/src/grammar.cc
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
 
-target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main fmt ${Boost_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${Boost_LIBRARIES} fmt::fmt ${GTEST_BOTH_LIBRARIES})
 
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})
 if(BUILD_DOCUMENTATION)
@@ -450,12 +436,23 @@ INSTALL(TARGETS ${PROJECT_NAME}
 )
 
 # 打包安装包
-set(CPACK_GENERATOR "7Z")
-set(CPACK_PACKAGE_VERSION_MAJOR ${${PROJECT_NAME}_VERSION_MAJOR})
-set(CPACK_PACKAGE_VERSION_MINOR ${${PROJECT_NAME}_VERSION_MINOR})
+include (InstallRequiredSystemLibraries)
+set (CPACK_RESOURCE_FILE_LICENSE  
+     "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+set(CPACK_GENERATOR "DEB")
 
+# 设置包信息
 set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+
+set(CPACK_PACKAGE_VERSION "${${PROJECT_NAME}_VERSION_MAJOR}")
+
+# 指定
+set(CPACK_DEBIAN_PACKAGE_NAME ${PROJECT_NAME})
+set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "MengDemao")
+set(CPACK_PACKAGE_CONTACT "mengdemao19951021@gmail.com")
 set(CPACK_SET_DESTDIR true)
 set(CPACK_INSTALL_PREFIX "/usr/AntlrExpr")
 set(CPACK_OUTPUT_FILE_PREFIX  ${CMAKE_CURRENT_BINARY_DIR})
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtest-dev libfmt-dev libboost-all-dev")
 include(CPack)
