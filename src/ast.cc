@@ -7,10 +7,10 @@
  *
  *
  */
+#include <ast.h>
 #include <config.h>
 #include <iostream>
 #include <option.h>
-#include <ast.h>
 #include <stack>
 #include <string>
 #include <syslog.h>
