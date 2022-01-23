@@ -12,6 +12,7 @@ addons:
       - cmake-data
       - cmake-extras
       - cmake
+      - libedit-dev
       - doxygen
       - graphviz
       - libfmt-dev
