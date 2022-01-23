@@ -1,10 +1,12 @@
 /**
  * @file svm.h
- * @brief 栈式虚拟机实现
- * @author mengdemao19951021@163.com (mengdemao)
- * @version V1.0.0
- * @date 2022-01-02
+ * @author mengdemao (mengdemao19951021@163.com)
+ * @version 1.0
+ * @date 2022-01-23
  *
+ * @brief 虚拟机实现
+ *
+ * @copyright Copyright (c) 2022  mengdemao
  *
  */
 #ifndef __SVM_H__
@@ -46,6 +48,6 @@ class svm
 	int	 call(svm_ops ops);
 	void dis(void);
 };
-}	// namespace svm
+}  // namespace svm
 
 #endif /* __SVM_H__ */

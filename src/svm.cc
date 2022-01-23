@@ -1,6 +1,6 @@
 /**
  * @file svm.cc
- * @brief 栈式虚拟机实现
+ * @brief 虚拟机实现
  * @author mengdemao19951021@163.com (mengdemao)
  * @version V1.0.0
  * @date 2022-01-02
@@ -12,9 +12,9 @@
 #include <option.h>
 #include <stack>
 #include <string>
+#include <svm.h>
 #include <syslog.h>
 #include <test.h>
-#include <svm.h>
 
 namespace svm {
 void svm::push(double sym)
@@ -24,9 +24,9 @@ void svm::push(double sym)
 
 double svm::pop(void)
 {
-	double ret = call_stack.top();
+	double Ret = call_stack.top();
 	call_stack.pop();
-	return ret;
+	return Ret;
 }
 
 void svm::dis(void)
@@ -68,4 +68,4 @@ int svm::call(svm_ops ops)
 
 	return 0;
 }
-}	// namespace svm
+}  // namespace svm

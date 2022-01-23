@@ -20,6 +20,7 @@
 #include <fmt/core.h>
 #include <grammar.h>
 #include <iostream>
+#include <llvm/Support/TargetSelect.h>
 #include <option.h>
 #include <stack>
 #include <string>
@@ -41,6 +42,13 @@ int main(int argc, char* argv[])
 
 	// avoid warning
 	(void)InputResult;
+
+	// llvm初始化
+	llvm::InitializeAllTargetInfos();
+	llvm::InitializeAllTargets();
+	llvm::InitializeAllTargetMCs();
+	llvm::InitializeAllAsmParsers();
+	llvm::InitializeAllAsmPrinters();
 
 	// 解析命令行参数
 	if (OPTION_NONEUSE != option_main(argc, argv)) {
