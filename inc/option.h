@@ -8,11 +8,11 @@
 #define __OPTION_H__
 
 typedef enum {
-	OPTION_NONEUSE,	// 不需要解析
-	OPTION_SUCCESS,	// 解析成功
-	OPTION_FAILURE, // 解析失败
+	OPTION_NONEUSE,	 // 不需要解析
+	OPTION_SUCCESS,	 // 解析成功
+	OPTION_FAILURE,	 // 解析失败
 } option_result;
 
-extern option_result option_main(int argc, char* argv[]);
+extern option_result optionMain(int Argc, char* Argv[]);
 
 #endif /* __OPTION_H__ */

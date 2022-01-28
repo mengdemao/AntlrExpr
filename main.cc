@@ -37,11 +37,11 @@ using namespace std;
  */
 int main(int argc, char* argv[])
 {
-	string InputString;
-	double InputResult = 0;
+	string input_string;
+	double input_result = 0;
 
 	// avoid warning
-	(void)InputResult;
+	(void)input_result;
 
 	// llvm初始化
 	llvm::InitializeAllTargetInfos();
@@ -51,14 +51,15 @@ int main(int argc, char* argv[])
 	llvm::InitializeAllAsmPrinters();
 
 	// 解析命令行参数
-	if (OPTION_NONEUSE != option_main(argc, argv)) {
+	if (OPTION_NONEUSE != optionMain(argc, argv)) {
 		return 0;
 	}
 
-	InputString = argv[1];
-	InputString.append("\n");
+	input_string = argv[1];
+	input_string.append("\n");
 
-	if (GRAMMAR_SUCCESS != grammar_main(InputString)) {
+	// 生成语法树
+	if (GRAMMAR_SUCCESS != grammarMain(input_string)) {
 		return EXIT_FAILURE;
 	}
 

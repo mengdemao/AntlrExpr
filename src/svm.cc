@@ -17,9 +17,9 @@
 #include <test.h>
 
 namespace svm {
-void svm::push(double sym)
+void svm::push(double Sym)
 {
-	call_stack.push(sym);
+	call_stack.push(Sym);
 }
 
 double svm::pop(void)

@@ -1,5 +1,6 @@
 language: cpp
-
+os: linux
+sudo: required
 dist: focal
 
 branches:
@@ -8,10 +9,13 @@ branches:
 
 addons:
   apt:
+    update: true
     packages:
       - cmake-data
       - cmake-extras
       - cmake
+      - clang
+      - llvm
       - libedit-dev
       - doxygen
       - graphviz
@@ -20,6 +24,11 @@ addons:
       - libgtest-dev
       - libprotobuf-dev
       - protobuf-compiler
+
+before_install:
+  - wget https://apt.llvm.org/llvm.sh
+  - chmod +x llvm.sh
+  - sudo ./llvm.sh 13
 
 compiler:
   - gcc
@@ -31,7 +40,6 @@ before_script:
 
 script:
   - make -j `nproc`
-  - make doc
   - make test
 
 after_success:
