@@ -92,7 +92,7 @@ ParseTree *tree = parser.prog();
 
 #### 监听器(Listener)
 
-为了将遍历树时触发的时间转换为监听器的调用,antlr提供了ParseTree-Walker类,我们可以实现对应处理节点的接口,每条规则都有对应的`enter`和`exit`规则
+为了将遍历树时触发的时间转换为监听器的调用,antlr提供了ParseTree-Walker类,我们可以实现对应处理节点的接口,每条规则都有对应的`enter`和`exit`规则,na
 
 #### 访问器(Visitor)
 

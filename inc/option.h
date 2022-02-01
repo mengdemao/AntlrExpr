@@ -13,6 +13,6 @@ typedef enum {
 	OPTION_FAILURE,	 // 解析失败
 } option_result;
 
-extern option_result optionMain(int Argc, char* Argv[]);
+extern option_result option_main(int argc, char* argv[]);
 
 #endif /* __OPTION_H__ */

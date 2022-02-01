@@ -9,37 +9,45 @@
  */
 #include <config.h>
 #include <grammar.h>
+#include <proto.h>
 
 /**
  * @brief
  * @param  InputString      My Param doc
  * @return grammar_result
  */
-grammar_result grammarMain(std::string InputString)
+grammar_result grammar_main(std::string input_string)
 {
 	// 生成解析字符串
-	ANTLRInputStream InputStream(InputString);
+	ANTLRInputStream input_stream(input_string);
 
 	// 词法解析
-	ExprLexer Lexer(&InputStream);
+	ExprLexer lexer(&input_stream);
 
 	// 分割单词
-	CommonTokenStream Tokens(&Lexer);
+	CommonTokenStream tokens(&lexer);
 
 	// 解析语法单元
-	ExprParser Parser(&Tokens);
+	ExprParser parser(&tokens);
 
 	// 生成语法树
-	ParseTree* Tree = Parser.prog();
+	ParseTree* tree = parser.prog();
+
+	// 检查词法分析和语法分析
+	if (lexer.getNumberOfSyntaxErrors() > 0 ||
+    	parser.getNumberOfSyntaxErrors() > 0) {
+		std::cout << "Lexical and/or syntactical errors have been found." << std::endl;
+		return GRAMMAR_FAILURE;
+	}
 
 	// 1. Listener模式解析语法树
-	ExprTreeListener Listener;
-	ParseTreeWalker	 Walker;
-	Walker.walk(&Listener, Tree);
+	expr_listener listener;
+	ParseTreeWalker	 walker;
+	walker.walk(&listener, tree);
 
 	// 2. Visitor模式校验语法树
-	ExprTreeVisitor Visitor;
-	Visitor.visit(Tree);
+	expr_visitor visitor;
+	visitor.visit(tree);
 
 	return GRAMMAR_SUCCESS;
 }

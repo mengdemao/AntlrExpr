@@ -305,8 +305,8 @@ cmake_host_system_information(RESULT BUILD_HOST QUERY HOSTNAME)
 
 option(DEBUG_EXPR_ENABLE "print expr debug" ON)
 if(DEBUG_EXPR_ENABLE)
-set(DEBUG_EXPR 1)
-endif()
+	set(DEBUG_EXPR 1)
+endif(DEBUG_EXPR_ENABLE)
 
 # 生成配置文件
 configure_file(${CMAKE_SOURCE_DIR}/inc/version.h.in ${CMAKE_SOURCE_DIR}/inc/generated/version.h)
@@ -391,10 +391,12 @@ add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/src/ast.cc
 			   ${CMAKE_SOURCE_DIR}/src/svm.cc
 			   ${CMAKE_SOURCE_DIR}/src/test.cc
+         ${CMAKE_SOURCE_DIR}/src/llvm.cc
 			   ${CMAKE_SOURCE_DIR}/src/option.cc
 			   ${CMAKE_SOURCE_DIR}/src/grammar.cc
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
+
 
 # 添加LLVM库
 set(TARGET_WebAssembly WebAssemblyCodeGen WebAssemblyAsmParser WebAssemblyDesc WebAssemblyInfo)

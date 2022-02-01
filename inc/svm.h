@@ -22,10 +22,23 @@
 namespace svm {
 
 typedef enum {
-	ADD,
-	SUB,
-	MUL,
-	DIV,
+	OP_NOP,	 //
+	OP_MOV,	 //
+	OP_LOD,	 //
+	OP_STR,	 //
+	OP_ADD,	 //
+	OP_SUB,	 //
+	OP_MUL,	 //
+	OP_DIV,	 //
+	OP_MOD,	 //
+	OP_POW,	 //
+	OP_UNM,	 //
+	OP_NOT,	 //
+	OP_LEN,	 //
+	OP_TST,	 //
+	OP_CAL,	 //
+	OP_JMP,	 //
+	OP_RET,	 //
 } svm_ops;
 
 class svm

@@ -13,20 +13,19 @@
 #include <stack>
 #include <string>
 #include <svm.h>
-#include <syslog.h>
 #include <test.h>
 
 namespace svm {
-void svm::push(double Sym)
+void svm::push(double sym)
 {
-	call_stack.push(Sym);
+	call_stack.push(sym);
 }
 
 double svm::pop(void)
 {
-	double Ret = call_stack.top();
+	double ret = call_stack.top();
 	call_stack.pop();
-	return Ret;
+	return ret;
 }
 
 void svm::dis(void)
@@ -44,19 +43,22 @@ int svm::call(svm_ops ops)
 	sym2 = pop();
 
 	switch (ops) {
-	case ADD:
+	case OP_NOP:
+		break;
+
+	case OP_ADD:
 		res = sym1 + sym2;
 		break;
 
-	case SUB:
+	case OP_SUB:
 		res = sym1 - sym2;
 		break;
 
-	case MUL:
+	case OP_MUL:
 		res = sym1 * sym2;
 		break;
 
-	case DIV:
+	case OP_DIV:
 		res = sym1 / sym2;
 		break;
 

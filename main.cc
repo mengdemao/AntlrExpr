@@ -20,7 +20,8 @@
 #include <fmt/core.h>
 #include <grammar.h>
 #include <iostream>
-#include <llvm/Support/TargetSelect.h>
+#include <llvm.h>
+#include <logger.h>
 #include <option.h>
 #include <stack>
 #include <string>
@@ -43,23 +44,18 @@ int main(int argc, char* argv[])
 	// avoid warning
 	(void)input_result;
 
-	// llvm初始化
-	llvm::InitializeAllTargetInfos();
-	llvm::InitializeAllTargets();
-	llvm::InitializeAllTargetMCs();
-	llvm::InitializeAllAsmParsers();
-	llvm::InitializeAllAsmPrinters();
+	llvm_init();
 
-	// 解析命令行参数
-	if (OPTION_NONEUSE != optionMain(argc, argv)) {
-		return 0;
+ 	// 解析命令行参数
+	if (OPTION_NONEUSE != option_main(argc, argv)) {
+		return EXIT_FAILURE;
 	}
 
 	input_string = argv[1];
 	input_string.append("\n");
 
 	// 生成语法树
-	if (GRAMMAR_SUCCESS != grammarMain(input_string)) {
+	if (GRAMMAR_SUCCESS != grammar_main(input_string)) {
 		return EXIT_FAILURE;
 	}
 

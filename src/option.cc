@@ -23,11 +23,11 @@ using namespace std;
 /**
  * @brief 解析输入的命令行
  *
- * @param Argc 输入参数个数
- * @param Argv 输入参数内容
+ * @param argc 输入参数个数
+ * @param argv 输入参数内容
  * @return option_result 执行结果
  */
-option_result optionMain(int Argc, char* Argv[])
+option_result option_main(int argc, char* argv[])
 {
 	try {
 		variables_map		variables_map;
@@ -35,10 +35,10 @@ option_result optionMain(int Argc, char* Argv[])
 		description.add_options()("help,h", "Display this information.")("version,v", "Display compiler version information.")("file,f", "Use file as input.")("text,t", "Use string as input")(
 			"pipe,p", "Use pipe as input")("debug,d", "Run as debug mode");
 
-		store(parse_command_line(Argc, Argv, description), variables_map);
+		store(parse_command_line(argc, argv, description), variables_map);
 		notify(variables_map);
 
-		if (1 == Argc) {
+		if (1 == argc) {
 			std::cout << description << "\n";
 			return OPTION_FAILURE;
 		}
