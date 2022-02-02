@@ -23,9 +23,9 @@
 #include <llvm.h>
 #include <logger.h>
 #include <option.h>
+#include <proto.h>
 #include <stack>
 #include <string>
-#include <svm.h>
 #include <test.h>
 
 using namespace std;

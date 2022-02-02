@@ -8,6 +8,8 @@
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/mengdemao/AntlrExpr)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/mengdemao/AntlrExpr)
 
+![说明文件](doc/AntlrExpr.png "AntlrExpr Logo")
+
 ## 程序结构
 ```shell
 .

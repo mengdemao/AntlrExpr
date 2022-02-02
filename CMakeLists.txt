@@ -389,7 +389,7 @@ add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/utf-8>")
 add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/main.cc
 			   ${CMAKE_SOURCE_DIR}/src/ast.cc
-			   ${CMAKE_SOURCE_DIR}/src/svm.cc
+			   ${CMAKE_SOURCE_DIR}/src/proto.cc
 			   ${CMAKE_SOURCE_DIR}/src/test.cc
          ${CMAKE_SOURCE_DIR}/src/llvm.cc
 			   ${CMAKE_SOURCE_DIR}/src/option.cc

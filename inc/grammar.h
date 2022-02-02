@@ -24,7 +24,6 @@
 #include <option.h>
 #include <stack>
 #include <string>
-#include <svm.h>
 #include <test.h>
 
 typedef enum {

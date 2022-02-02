@@ -42,14 +42,14 @@ typedef struct {
 
 } AST_VAR;
 
-class AstBase
+class ast_base
 {
   public:
-	AstBase();
-	~AstBase();
+	ast_base();
+	~ast_base();
 
-	virtual void addRoot();
-	virtual void getRoot();
+	virtual void add_root();
+	virtual void get_root();
 
 	virtual void addNode();
 	virtual void getNode();
@@ -63,12 +63,12 @@ class AstBase
   private:
 	string	 Name;
 	AST_TYPE Type;
-	AstBase* Parent;
-	AstBase* Left;
-	AstBase* Right;
+	ast_base* Parent;
+	ast_base* Left;
+	ast_base* Right;
 };
 
-class AstNum : AstBase
+class AstNum : ast_base
 {
   public:
 	double	 getNum(void);
@@ -78,7 +78,7 @@ class AstNum : AstBase
 	double Num;
 };
 
-class AstSym : AstBase
+class AstSym : ast_base
 {
   public:
 	AST_SYM	 getSym(void);
@@ -88,7 +88,7 @@ class AstSym : AstBase
 	AST_SYM Sym;
 };
 
-class AstVar : AstBase
+class AstVar : ast_base
 {
   public:
 	AST_VAR	 getVar(void);
