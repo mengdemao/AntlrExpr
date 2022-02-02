@@ -1,7 +1,6 @@
-**AntlrExpr笔记**
+**AntlrExpr README**
 ====
 ![Github Action](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master)
-![Travis](https://img.shields.io/travis/com/mengdemao/AntlrExpr?style=plastic)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mengdemao/AntlrExpr)
 ![GitHub all releases](https://img.shields.io/github/downloads/mengdemao/AntlrExpr/total)
 ![GitHub](https://img.shields.io/github/license/mengdemao/AntlrExpr)
