@@ -118,12 +118,12 @@ class proto {
 	~proto() = default;
 
 	void dump(std::string buffer);	/* 生成字符指令 */
-	proto_code next(void);		/* 获取下一个指令 */
-	void do_jmp(uint64_t pc);	/* 执行跳转 */
-	void do_ret(void); 			/* 执行返回 */
-	void do_cal(uint64_t pc); 	/* 函数调用 */
+	proto_code next(void);			/* 获取下一个指令 */
+	void do_jmp(uint64_t pc);		/* 执行跳转 */
+	void do_ret(void); 				/* 执行返回 */
+	void do_cal(uint64_t pc); 		/* 函数调用 */
 };
 
-}; // namespace proto
+} // namespace proto
 
 #endif /* __PROTO_H__ */

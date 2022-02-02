@@ -32,8 +32,13 @@ option_result option_main(int argc, char* argv[])
 	try {
 		variables_map		variables_map;
 		options_description description("Usage: AntlrExpr [options] text...");
-		description.add_options()("help,h", "Display this information.")("version,v", "Display compiler version information.")("file,f", "Use file as input.")("text,t", "Use string as input")(
-			"pipe,p", "Use pipe as input")("debug,d", "Run as debug mode");
+		description.add_options()
+					("help,h", 		"Display this information.")
+					("version,v", 	"Display compiler version information.")
+					("file,f", 		"Use file as input.")
+					("text,t", 		"Use string as input")
+					("pipe,p", 		"Use pipe as input")
+					("debug,d", 	"Run as debug mode");
 
 		store(parse_command_line(argc, argv, description), variables_map);
 		notify(variables_map);
