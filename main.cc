@@ -26,7 +26,6 @@
 #include <proto.h>
 #include <stack>
 #include <string>
-#include <test.h>
 
 using namespace std;
 

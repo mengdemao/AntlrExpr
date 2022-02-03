@@ -4,12 +4,15 @@
  * @version 1.1
  * @date 2022-01-30
  *
- * @brief 代码生成
+ * @brief 代码生成与虚拟机实现
  *
  * @copyright Copyright (c) 2022  mengdemao
  *
  */
+#include <cassert>
+#include <cmath>
 #include <cstdint>
+#include <gtest/gtest.h>
 #include <iostream>
 #include <proto.h>
 #include <string>
@@ -21,13 +24,20 @@ namespace proto {
 /**
  * @brief Construct a new proto::proto object
  */
-proto::proto()
+proto::proto() : psvm(this)
 {
-	pcode = nullptr;
-	pdata = nullptr;
-
 	pc = 0;
 	lr = 0;
+}
+
+void proto::insert_code(proto_code code)
+{
+	this->pcode.push_back(code);
+}
+
+void proto::insert_data(proto_data data)
+{
+	this->pdata.push_back(data);
 }
 
 /**
@@ -45,7 +55,7 @@ proto_code proto::next(void)
  */
 void proto::dump(std::string buffer)
 {
-	for (uint32_t index = 0; index < this->ps; index++) {
+	for (uint32_t index = 0; index < this->pcode.size(); index++) {
 		switch (this->pcode[index].code) {
 		case OP_NOP:
 			break;
@@ -150,6 +160,16 @@ void proto::dump(std::string buffer)
 }
 
 /**
+ * @brief 
+ */
+void proto::do_run(void)
+{
+	while (this->pc < this->pcode.size()) {
+		psvm.exe(next());
+	}
+}
+
+/**
  * @brief 执行跳转
  * @param  pc 指令计数器
  */
@@ -179,9 +199,10 @@ void proto::do_cal(uint64_t pc)
 /**
  * @brief Construct a new svm::svm object
  */
-svm::svm()
+svm::svm(proto *sproto)
 {
-	/* No Body */
+	assert(sproto == nullptr);
+	this->sproto = sproto;
 }
 
 /**
@@ -190,7 +211,7 @@ svm::svm()
  */
 void svm::psh(int32_t sym)
 {
-	call_stack.push(sym);
+	call.push(sym);
 }
 
 /**
@@ -199,17 +220,17 @@ void svm::psh(int32_t sym)
  */
 int32_t svm::pop(void)
 {
-	int32_t ret = call_stack.top();
-	call_stack.pop();
+	int32_t ret = call.top();
+	call.pop();
 	return ret;
 }
 
 /**
  * @brief
  */
-void svm::disp(void)
+void svm::dis(void)
 {
-	double ret = call_stack.top();
+	double ret = call.top();
 	std::cout << ret << std::endl;
 }
 
@@ -218,7 +239,7 @@ void svm::disp(void)
  * @param  pcode
  * @return int
  */
-int svm::call(proto_code pcode)
+int svm::exe(proto_code pcode)
 {
 	int32_t sym1 = 0, sym2 = 0;
 	int32_t res = 0;
@@ -242,7 +263,6 @@ int svm::call(proto_code pcode)
 		sym1 = pop();
 		sym2 = pop();
 		res	 = sym1 + sym2;
-		psh(res);
 		break;
 
 	case OP_SUB:
@@ -273,6 +293,39 @@ int svm::call(proto_code pcode)
 		psh(res);
 		break;
 
+	case OP_POW:
+		sym1 = pop();
+		sym2 = pop();
+		res	 = pow(sym1, sym2);
+		psh(res);
+		break;
+
+	case OP_UNM:
+		sym1 = pop();
+		res	 = abs(sym2);
+		psh(res);
+		break;
+
+	case OP_AND:
+		sym1 = pop();
+		sym2 = pop();
+		res	 = sym1 & sym2;
+		psh(res);
+		break;
+
+	case OP_ORR:
+		sym1 = pop();
+		sym2 = pop();
+		res	 = sym1 | sym2;
+		psh(res);
+		break;
+
+	case OP_NOT:
+		sym1 = pop();
+		res	 = ~sym1;
+		psh(res);
+		break;
+
 	default:
 		return -1;
 		break;
@@ -280,4 +333,5 @@ int svm::call(proto_code pcode)
 
 	return 0;
 }
+
 }  // namespace proto

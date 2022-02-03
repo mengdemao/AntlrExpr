@@ -12,6 +12,7 @@
 #include <config.h>
 #include <cstddef>
 #include <cstdlib>
+#include <gtest/gtest.h>
 #include <iostream>
 #include <option.h>
 #include <string>

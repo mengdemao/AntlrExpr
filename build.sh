@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT_PATH=`pwd`
+ROOT_PATH=$(pwd)
 BUILD_DIR=${ROOT_PATH}/build
 
 if [ ! -d ${BUILD_DIR} ];
@@ -8,9 +8,13 @@ then
 	mkdir -p ${BUILD_DIR}
 fi
 
-cmake -DCMAKE_CXX_CPPCHECK:FILEPATH=cppcheck -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=Debug
+cmake -DCMAKE_CXX_CPPCHECK:FILEPATH=cppcheck \
+	  -DCMAKE_CXX_CPPLINT:FILEPATH=cpplint 	 \
+	  -DCMAKE_CXX_CLANG_TIDY:FILEPATH=clang-tidy \
+	  -DCMAKE_CXX_INCLUDE_WHAT_YOU_USE:FILEPATH=include-what-you-use \
+	  -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=Debug -G Ninja
 
-cmake --build ${BUILD_DIR} --config Debug
+cmake --build ${BUILD_DIR} --config Debug -j $(nproc)
 
 ln -sf ${BUILD_DIR}/compile_commands.json
 

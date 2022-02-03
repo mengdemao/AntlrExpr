@@ -24,7 +24,6 @@
 #include <option.h>
 #include <stack>
 #include <string>
-#include <test.h>
 
 typedef enum {
 	GRAMMAR_SUCCESS,  // 解析成功

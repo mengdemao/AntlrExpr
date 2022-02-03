@@ -15,7 +15,6 @@
 #include <stack>
 #include <string>
 #include <syslog.h>
-#include <test.h>
 
 namespace ast {
 using namespace std;
@@ -51,51 +50,51 @@ class ast_base
 	virtual void add_root();
 	virtual void get_root();
 
-	virtual void addNode();
-	virtual void getNode();
+	virtual void add_node();
+	virtual void get_node();
 
-	virtual void addLeft();
-	virtual void getLeft();
+	virtual void add_left();
+	virtual void get_left();
 
-	virtual void addRight();
-	virtual void setRight();
+	virtual void add_right();
+	virtual void set_right();
 
   private:
-	string	 Name;
-	AST_TYPE Type;
-	ast_base* Parent;
-	ast_base* Left;
-	ast_base* Right;
+	string	 name;
+	AST_TYPE type;
+	ast_base* parent;
+	ast_base* left;
+	ast_base* right;
 };
 
-class AstNum : ast_base
+class ast_num : ast_base
 {
   public:
-	double	 getNum(void);
-	AST_BOOL setNum(double Num);
+	double	 get_num(void);
+	AST_BOOL set_num(double num);
 
   private:
-	double Num;
+	double num;
 };
 
-class AstSym : ast_base
+class ast_sym : ast_base
 {
   public:
-	AST_SYM	 getSym(void);
-	AST_BOOL setSym(AST_SYM Sym);
+	AST_SYM	 get_sym(void);
+	AST_BOOL set_sym(AST_SYM sym);
 
   private:
-	AST_SYM Sym;
+	AST_SYM sym;
 };
 
-class AstVar : ast_base
+class ast_var : ast_base
 {
   public:
-	AST_VAR	 getVar(void);
-	AST_BOOL setSym(AST_VAR Var);
+	AST_VAR	 get_var(void);
+	AST_BOOL set_var(AST_VAR var);
 
   private:
-	AST_VAR Var;
+	AST_VAR var;
 };
 
 }  // namespace ast

@@ -11,6 +11,8 @@ include(ProcessorCount)
 include(GNUInstallDirs)
 include(Compiler)
 
+include(ThirdParty)
+
 # 添加外部软件
 find_package(Boost REQUIRED program_options system filesystem regex date_time)
 find_package(Threads REQUIRED)
@@ -21,6 +23,9 @@ find_package(fmt REQUIRED)
 
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
+
+option(CONFIG_TEST "单元测试" ON)
+add_subdirectory(unit)
 
 # 设置版本号
 if (GIT_FOUND)
@@ -131,7 +136,6 @@ add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/main.cc
 			   ${CMAKE_SOURCE_DIR}/src/ast.cc
 			   ${CMAKE_SOURCE_DIR}/src/proto.cc
-			   ${CMAKE_SOURCE_DIR}/src/test.cc
          	   ${CMAKE_SOURCE_DIR}/src/llvm.cc
 			   ${CMAKE_SOURCE_DIR}/src/option.cc
 			   ${CMAKE_SOURCE_DIR}/src/grammar.cc
@@ -254,9 +258,7 @@ if (FMT_FOUND)
 endif(FMT_FOUND)
 
 # 执行测试
-find_package(GTest QUIET)
 if (GTest_FOUND)
-	set(CONFIG_TEST ON)
 	include_directories(${GTEST_INCLUDE_DIRS})
 	link_directories(${GTEST_LIBRARY_DIRS})
 	target_link_libraries(${PROJECT_NAME} PRIVATE ${GTEST_LIBRARIES})

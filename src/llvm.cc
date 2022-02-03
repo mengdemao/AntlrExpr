@@ -9,11 +9,14 @@
  * @copyright Copyright (c) 2022  mengdemao
  *
  */
+#include <cassert>
 #include <llvm/Support/TargetSelect.h>
 #include <exception>
+#include <gtest/gtest.h>
 #include <iostream>
 #include <llvm.h>
 #include <vector>
+
 /**
  * @brief LLVM相关库的初始化
  */
