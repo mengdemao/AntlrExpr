@@ -11,21 +11,29 @@ include(ProcessorCount)
 include(GNUInstallDirs)
 include(Compiler)
 
-include(ThirdParty)
-
 # 添加外部软件
 find_package(Boost REQUIRED program_options system filesystem regex date_time)
 find_package(Threads REQUIRED)
 find_package(Doxygen REQUIRED)
 find_package(LLVM REQUIRED)
 find_package(Git REQUIRED)
-find_package(fmt REQUIRED)
+
+find_package(fmt   QUIET)
+find_package(gtest QUIET)
+# include(ThirdParty)
 
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
 
-option(CONFIG_TEST "单元测试" ON)
-add_subdirectory(unit)
+option(ENABLE_CHECK "单元测试" ON)
+option(ENABLE_DEBUG "高级打印" ON)
+if(ENABLE_CHECK)
+	set(CONFIG_CHECK 1)
+	add_subdirectory(unit)
+endif(ENABLE_CHECK)
+if(ENABLE_DEBUG)
+	set(CONFIG_DEBUG 1)
+endif(ENABLE_DEBUG)
 
 # 设置版本号
 if (GIT_FOUND)
@@ -56,14 +64,9 @@ string(TIMESTAMP COMPILE_TIME %Y/%m/%d-%H:%M:%S)
 set(BUILD_TIME ${COMPILE_TIME})
 cmake_host_system_information(RESULT BUILD_HOST QUERY HOSTNAME)
 
-option(DEBUG_EXPR_ENABLE "print expr debug" ON)
-if(DEBUG_EXPR_ENABLE)
-	set(DEBUG_EXPR 1)
-endif(DEBUG_EXPR_ENABLE)
-
 # 生成配置文件
 configure_file(${CMAKE_SOURCE_DIR}/inc/version.h.in ${CMAKE_SOURCE_DIR}/inc/generated/version.h)
-configure_file(${CMAKE_SOURCE_DIR}/inc/config.h.in ${CMAKE_SOURCE_DIR}/inc/generated/config.h)
+configure_file(${CMAKE_SOURCE_DIR}/inc/config.h.in 	${CMAKE_SOURCE_DIR}/inc/generated/config.h)
 
 # 添加头文件路径
 include_directories(${CMAKE_SOURCE_DIR}/inc/generated)
@@ -139,6 +142,7 @@ add_executable(${PROJECT_NAME}
          	   ${CMAKE_SOURCE_DIR}/src/llvm.cc
 			   ${CMAKE_SOURCE_DIR}/src/option.cc
 			   ${CMAKE_SOURCE_DIR}/src/grammar.cc
+			   ${CMAKE_SOURCE_DIR}/src/semantic.cc
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
 

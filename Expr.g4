@@ -2,9 +2,9 @@ grammar Expr;
 
 prog : stat+;
 
-stat: expr NEWLINE          # printExpr
-	| ID '=' expr NEWLINE   # assign
-	| NEWLINE               # blank
+stat: expr NEWLINE          		# printExpr
+	| ID '=' expr NEWLINE   		# assign
+	| NEWLINE               		# blank
 	;
 
 expr: expr op=('*'|'/') expr        # MulDiv
@@ -14,7 +14,8 @@ expr: expr op=('*'|'/') expr        # MulDiv
 	| '('expr')'                  	# parens
 	;
 
-MUL     : '*' ; // assigns token name to '*' used above in grammar
+MOD		: '%' ;
+MUL     : '*' ;
 DIV     : '/' ;
 ADD     : '+' ;
 SUB     : '-' ;

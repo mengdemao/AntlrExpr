@@ -24,8 +24,11 @@ namespace proto {
 /**
  * @brief Construct a new proto::proto object
  */
-proto::proto() : psvm(this)
+proto::proto()
 {
+	static_assert(sizeof(proto_code) == 8);
+	static_assert(OP_MARK < 65535);
+
 	pc = 0;
 	lr = 0;
 }
@@ -60,7 +63,10 @@ void proto::dump(std::string buffer)
 		case OP_NOP:
 			break;
 
-		case OP_MOV:
+		case OP_PSH:
+			break;
+
+		case OP_POP:
 			break;
 
 		case OP_LDR:
@@ -160,13 +166,26 @@ void proto::dump(std::string buffer)
 }
 
 /**
- * @brief 
+ * @brief 编译指令
+ * @param  buffer  指令存储缓冲区
  */
-void proto::do_run(void)
+void proto::make(std::string buffer)
 {
+	/* No body */
+}
+
+/**
+ * @brief
+ */
+double proto::execute(void)
+{
+	proto_value tmp_value;
+	double ret_value = 0;
+
 	while (this->pc < this->pcode.size()) {
-		psvm.exe(next());
 	}
+
+	return ret_value;
 }
 
 /**
@@ -197,40 +216,31 @@ void proto::do_cal(uint64_t pc)
 }
 
 /**
- * @brief Construct a new svm::svm object
+ * @brief 虚拟机调用堆栈压栈
+ * @param  value 需要压入的参数
  */
-svm::svm(proto *sproto)
+void proto::psh(proto_value value)
 {
-	assert(sproto == nullptr);
-	this->sproto = sproto;
+	call.push(value);
 }
 
 /**
- * @brief
- * @param  sym
+ * @brief 调用堆栈弹栈
+ * @return proto_value
  */
-void svm::psh(int32_t sym)
+proto_value proto::pop(void)
 {
-	call.push(sym);
-}
-
-/**
- * @brief
- * @return int32_t
- */
-int32_t svm::pop(void)
-{
-	int32_t ret = call.top();
+	proto_value value = call.top();
 	call.pop();
-	return ret;
+	return value;
 }
 
 /**
  * @brief
  */
-void svm::dis(void)
+void proto::dis(void)
 {
-	double ret = call.top();
+	proto_value ret = call.top();
 	std::cout << ret << std::endl;
 }
 
@@ -239,24 +249,31 @@ void svm::dis(void)
  * @param  pcode
  * @return int
  */
-int svm::exe(proto_code pcode)
+bool proto::exe(proto_code pcode)
 {
-	int32_t sym1 = 0, sym2 = 0;
-	int32_t res = 0;
+	proto_value sym1 = 0, sym2 = 0;
+	proto_value res = 0;
 
 	switch (pcode.code) {
 	case OP_NOP:
 		break;
 
-	case OP_MOV:
+	case OP_PSH:
 		res = pcode.data;
 		psh(res);
 		break;
 
+	case OP_POP:
+		(void)pop();
+		break;
+
 	case OP_LDR:
+		get_var(pcode.data, res);
 		break;
 
 	case OP_STR:
+		res = pop();
+		set_var(pcode.data, res);
 		break;
 
 	case OP_ADD:
@@ -327,11 +344,68 @@ int svm::exe(proto_code pcode)
 		break;
 
 	default:
-		return -1;
+		return false;
 		break;
 	}
 
+	return true;
+}
+
+/**
+ * @brief 设置变量值
+ * @param  index 索引
+ * @param  value 数值
+ */
+int proto::set_var(int32_t index, proto_value value)
+{
+	assert(index >= pdata.size());
+	pdata[index].value = value;
 	return 0;
+}
+
+/**
+ * @brief 获取变量值
+ * @param  index 	索引
+ * @return int64_t  数值
+ */
+int proto::get_var(int32_t index, proto_value& value)
+{
+	assert(index >= pdata.size());
+	value = pdata[index].value;
+	return 0;
+}
+
+/**
+ * @brief 设置变量值
+ * @param  name  变量名
+ * @param  value 数值
+ */
+int proto::set_var(std::string name, proto_value value)
+{
+	for (int index = 0; index < pdata.size(); index++) {
+		if (pdata[index].name == name) {
+			pdata[index].value = value;
+			return 0;
+		}
+	}
+
+	return -1;
+}
+
+/**
+ * @brief 设置变量值
+ * @param  name  变量名
+ * @param  value 数值
+ */
+int proto::get_var(std::string name, proto_value& value)
+{
+	for (int index = 0; index < pdata.size(); index++) {
+		if (pdata[index].name == name) {
+			value = pdata[index].value;
+			return 0;
+		}
+	}
+	return -1;
 }
 
 }  // namespace proto

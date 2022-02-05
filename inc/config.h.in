@@ -9,6 +9,7 @@
 #ifndef __CONFIG_H__
 #define __CONFIG_H__
 
-#cmakedefine DEBUG_EXPR
+#cmakedefine CONFIG_CHECK
+#cmakedefine CONFIG_DEBUG
 
 #endif /* __CONFIG_H__ */

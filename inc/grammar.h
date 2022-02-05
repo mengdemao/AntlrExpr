@@ -22,6 +22,7 @@
 #include <iostream>
 #include <llvm.h>
 #include <option.h>
+#include <semantic.h>
 #include <stack>
 #include <string>
 
@@ -132,8 +133,8 @@ class expr_visitor : public ExprVisitor
 
   public:
 	expr_visitor() : llvm_context(std::make_unique<llvm::LLVMContext>()), 
-						builder(*this->llvm_context), 
-						module(std::make_unique<llvm::Module>("output", *this->llvm_context)) 
+					 builder(*this->llvm_context), 
+					 module(std::make_unique<llvm::Module>("output", *this->llvm_context)) 
 	{
 		/* No return */
 	}
@@ -196,6 +197,12 @@ class expr_visitor : public ExprVisitor
 	}
 };
 
-grammar_result grammar_main(std::string input_string);
+/**
+ * @brief  语法解析
+ * @param  input_string     解析字符串
+ * @param  ast_root         抽象语法树
+ * @return grammar_result 
+ */
+extern grammar_result grammar_main(std::string input_string, ast::ast_base &ast_root);
 
 #endif /* __GRAMMAR_H__ */

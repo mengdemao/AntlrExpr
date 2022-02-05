@@ -7,16 +7,18 @@
  *
  *
  */
+#include <ast.h>
 #include <config.h>
 #include <grammar.h>
 #include <proto.h>
 
 /**
- * @brief
- * @param  InputString      My Param doc
- * @return grammar_result
+ * @brief  语法解析
+ * @param  input_string     解析字符串
+ * @param  ast_root         抽象语法树
+ * @return grammar_result 
  */
-grammar_result grammar_main(std::string input_string)
+grammar_result grammar_main(std::string input_string, ast::ast_base &ast_root)
 {
 	// 生成解析字符串
 	ANTLRInputStream input_stream(input_string);

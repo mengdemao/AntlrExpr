@@ -39,6 +39,8 @@ int main(int argc, char* argv[])
 {
 	string input_string;
 	double input_result = 0;
+	proto::proto proto_svm; 
+	ast::ast_base ast_root;
 
 	// avoid warning
 	(void)input_result;
@@ -50,13 +52,17 @@ int main(int argc, char* argv[])
 		return EXIT_FAILURE;
 	}
 
+	// TODO: 解析输入的数据作为参数使用
 	input_string = argv[1];
 	input_string.append("\n");
 
 	// 生成语法树
-	if (GRAMMAR_SUCCESS != grammar_main(input_string)) {
+	if (GRAMMAR_SUCCESS != grammar_main(input_string, ast_root)) {
 		return EXIT_FAILURE;
 	}
+
+	// 执行程序
+	std::cout << proto_svm.execute() << std::endl;
 
 	return EXIT_SUCCESS;
 }

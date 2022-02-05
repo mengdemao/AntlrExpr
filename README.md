@@ -1,5 +1,6 @@
 **AntlrExpr README**
 ====
+
 ![Github Action](https://github.com/mengdemao/AntlrExpr/actions/workflows/build.yml/badge.svg?branch=master)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mengdemao/AntlrExpr)
 ![GitHub all releases](https://img.shields.io/github/downloads/mengdemao/AntlrExpr/total)
@@ -10,9 +11,10 @@
 ![说明文件](doc/AntlrExpr.png "AntlrExpr Logo")
 
 ## 程序结构
+
 ```shell
 .
-├── bin	
+├── bin 
 ├── build.sh
 ├── CMakeLists.txt
 ├── doc
@@ -31,7 +33,8 @@
 ### 编译指令
 
 ### 设置antlr编译器
-1. 设置java运行环境 
+
+1. 设置java运行环境
 2. 下载antlr执行文件
 3. 设置环境变量
 
@@ -64,6 +67,7 @@ grun Expr prog -gui
 ## antlr运行时
 
 ### 生成法分析树
+
 > 写法相对固定,写成如下的固定即可
 
 ```c
@@ -101,6 +105,5 @@ ParseTree *tree = parser.prog();
 
 监听器生成抽象语法树并且运算结果,
 访问器校验抽象语法树使用LLVM校验结果
-
 
 ![主要运行框图](doc/AntlrExprMain.png "AntlrExpr Main")

@@ -43,9 +43,23 @@ typedef struct {
 
 class ast_base
 {
+  private:
+	string	 name;
+	AST_TYPE type;
+	ast_base* parent;
+	ast_base* left;
+	ast_base* right;
+
   public:
-	ast_base();
-	~ast_base();
+	ast_base()
+	{
+		/* No Body */
+	}
+
+	~ast_base()
+	{
+		/* No Body */
+	}
 
 	virtual void add_root();
 	virtual void get_root();
@@ -58,13 +72,6 @@ class ast_base
 
 	virtual void add_right();
 	virtual void set_right();
-
-  private:
-	string	 name;
-	AST_TYPE type;
-	ast_base* parent;
-	ast_base* left;
-	ast_base* right;
 };
 
 class ast_num : ast_base
