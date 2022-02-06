@@ -10,6 +10,7 @@
 #ifndef __GRAMMAR_H__
 #define __GRAMMAR_H__
 #include "ExprBaseVisitor.h"
+#include "ExprBaseListener.h"
 #include "ExprLexer.h"
 #include "ExprParser.h"
 #include "ExprVisitor.h"
@@ -23,6 +24,7 @@
 #include <semantic.h>
 #include <stack>
 #include <string>
+#include <proto.h>
 
 typedef enum {
 	GRAMMAR_SUCCESS,  // 解析成功
@@ -116,6 +118,7 @@ class expr_listener : public ExprBaseListener
 
 	void visitTerminal(antlr4::tree::TerminalNode* node) override
 	{
+		std::cout << node->getText() << std::endl;
 	}
 
 	void visitErrorNode(antlr4::tree::ErrorNode* node) override
@@ -203,6 +206,6 @@ class expr_visitor : public ExprVisitor
  * @param  ast_root         抽象语法树
  * @return grammar_result 
  */
-extern grammar_result grammar_main(std::string input_string, ast::ast_base &ast_root);
+extern grammar_result grammar_main(std::string input, proto::proto &proto);
 
 #endif /* __GRAMMAR_H__ */

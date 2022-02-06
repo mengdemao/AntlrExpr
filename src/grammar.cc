@@ -17,7 +17,7 @@
  * @param  ast_root         抽象语法树
  * @return grammar_result 
  */
-grammar_result grammar_main(std::string input_string, ast::ast_base &ast_root)
+grammar_result grammar_main(std::string input_string, proto::proto &proto)
 {
 	// 生成解析字符串
 	ANTLRInputStream input_stream(input_string);

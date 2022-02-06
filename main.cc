@@ -26,8 +26,6 @@
 #include <stack>
 #include <string>
 
-using namespace std;
-
 /**
  * @brief 主函数
  * @param  argc 参数个数
@@ -36,10 +34,9 @@ using namespace std;
  */
 int main(int argc, char* argv[])
 {
-	string input_string;
+	std::string input_string;
 	double input_result = 0;
 	proto::proto proto_svm; 
-	ast::ast_base ast_root;
 
 	// avoid warning
 	(void)input_result;
@@ -55,8 +52,8 @@ int main(int argc, char* argv[])
 	input_string = argv[1];
 	input_string.append("\n");
 
-	// 生成语法树
-	if (GRAMMAR_SUCCESS != grammar_main(input_string, ast_root)) {
+	// 语义分析与代码生成
+	if (GRAMMAR_SUCCESS != grammar_main(input_string, proto_svm)) {
 		return EXIT_FAILURE;
 	}
 

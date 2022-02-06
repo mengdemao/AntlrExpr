@@ -20,6 +20,12 @@
 
 namespace proto {
 
+/**
+ * @brief 栈式虚拟机最核心的数据结构之一
+ * 用作高精度数学计算
+ */
+typedef int64_t proto_value;
+
 // 指定操作码的类型为16-->65536
 typedef enum : int16_t {
 	OP_NOP,	 // 空指令
@@ -84,12 +90,6 @@ typedef struct {
 	op_cond cond;
 	op_data data;
 } proto_code;
-
-/**
- * @brief 栈式虚拟机最核心的数据结构之一
- * 用作高精度数学计算
- */
-typedef int64_t proto_value;
 
 /**
  * @brief 全局变量描述
