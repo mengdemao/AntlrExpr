@@ -7,7 +7,6 @@
  *
  *
  */
-#include <ast.h>
 #include <config.h>
 #include <grammar.h>
 #include <proto.h>
@@ -44,7 +43,7 @@ grammar_result grammar_main(std::string input_string, ast::ast_base &ast_root)
 
 	// 1. Listener模式解析语法树
 	expr_listener listener;
-	ParseTreeWalker	 walker;
+	ParseTreeWalker	walker;
 	walker.walk(&listener, tree);
 
 	// 2. Visitor模式校验语法树

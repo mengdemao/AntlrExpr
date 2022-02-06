@@ -9,7 +9,10 @@
 #ifndef __CONFIG_H__
 #define __CONFIG_H__
 
+// 单元测试
 #cmakedefine CONFIG_CHECK
+
+// 调试模式
 #cmakedefine CONFIG_DEBUG
 
 #endif /* __CONFIG_H__ */

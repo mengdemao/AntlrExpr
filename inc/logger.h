@@ -12,7 +12,7 @@
 #ifndef __LOGGER_H__
 #define __LOGGER_H__
 
-enum LOG_LEVEL {
+enum log_level {
 	LL_TRACE,
 	LL_DEBUG,
 	LL_INFO,

@@ -9,7 +9,6 @@
  * @copyright Copyright (c) 2022  mengdemao
  * 
  */
-#include <ast.h>
 #include <boost/uuid/uuid.hpp>
 #include <semantic.h>
 #include <string.h>

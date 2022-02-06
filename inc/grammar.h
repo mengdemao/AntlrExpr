@@ -16,8 +16,6 @@
 #include "antlr4-runtime.h"
 #include <llvm/IR/IRBuilder.h>
 #include <llvm/Support/raw_ostream.h>
-#include <ExprBaseListener.h>
-#include <ast.h>
 #include <config.h>
 #include <iostream>
 #include <llvm.h>
@@ -103,6 +101,7 @@ class expr_listener : public ExprBaseListener
 	void enterInt(ExprParser::IntContext* ctx) override
 	{
 	}
+
 	void exitInt(ExprParser::IntContext* ctx) override
 	{
 	}
@@ -110,6 +109,7 @@ class expr_listener : public ExprBaseListener
 	void enterEveryRule(antlr4::ParserRuleContext* ctx) override
 	{
 	}
+
 	void exitEveryRule(antlr4::ParserRuleContext* ctx) override
 	{
 	}

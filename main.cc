@@ -13,7 +13,6 @@
 #include "ExprVisitor.h"
 #include "antlr4-runtime.h"
 #include <ExprBaseListener.h>
-#include <ast.h>
 #include <boost/iterator/iterator_facade.hpp>
 #include <config.h>
 #include <cstdlib>

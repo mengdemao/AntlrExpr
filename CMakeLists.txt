@@ -137,7 +137,6 @@ include_directories(${CMAKE_SOURCE_DIR}/grammar)
 # 添加可执行文件
 add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/main.cc
-			   ${CMAKE_SOURCE_DIR}/src/ast.cc
 			   ${CMAKE_SOURCE_DIR}/src/proto.cc
          	   ${CMAKE_SOURCE_DIR}/src/llvm.cc
 			   ${CMAKE_SOURCE_DIR}/src/option.cc
