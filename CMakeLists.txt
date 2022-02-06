@@ -17,9 +17,10 @@ find_package(Threads REQUIRED)
 find_package(Doxygen REQUIRED)
 find_package(LLVM REQUIRED)
 find_package(Git REQUIRED)
+find_package(Folly REQUIRED)
+find_package(fmt   REQUIRED)
+find_package(Gtest REQUIRED)
 
-find_package(fmt   QUIET)
-find_package(gtest QUIET)
 # include(ThirdParty)
 
 # 设置编译工具
@@ -255,6 +256,10 @@ endif(LLVM_FOUND)
 
 # 格式化打印
 if (FMT_FOUND)
+	message(STATUS ${FMT_INCLUDE_DIRS})
+	message(STATUS ${FMT_LIBRARY_DIRS})
+	message(STATUS ${FMT_LIBRARIES})
+
 	include_directories(${FMT_INCLUDE_DIRS})
 	link_directories(${FMT_LIBRARY_DIRS})
 	target_link_libraries(${PROJECT_NAME} PRIVATE ${FMT_LIBRARIES})
@@ -262,9 +267,13 @@ endif(FMT_FOUND)
 
 # 执行测试
 if (GTest_FOUND)
+	message(STATUS ${GTEST_INCLUDE_DIRS})
+	message(STATUS ${GTEST_LIBRARY_DIRS})
+	message(STATUS ${GTEST_BOTH_LIBRARIES})
+	
 	include_directories(${GTEST_INCLUDE_DIRS})
 	link_directories(${GTEST_LIBRARY_DIRS})
-	target_link_libraries(${PROJECT_NAME} PRIVATE ${GTEST_LIBRARIES})
+	target_link_libraries(${PROJECT_NAME} PRIVATE ${GTEST_BOTH_LIBRARIES})
 endif(GTest_FOUND)
 
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})

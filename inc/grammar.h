@@ -20,11 +20,12 @@
 #include <config.h>
 #include <iostream>
 #include <llvm.h>
+#include <logger.h>
 #include <option.h>
+#include <proto.h>
 #include <semantic.h>
 #include <stack>
 #include <string>
-#include <proto.h>
 
 typedef enum {
 	GRAMMAR_SUCCESS,  // 解析成功
@@ -37,93 +38,72 @@ using namespace tree;
 class expr_listener : public ExprBaseListener
 {
   public:
-	void enterProg(ExprParser::ProgContext* ctx) override
-	{
-	}
 
-	void exitProg(ExprParser::ProgContext* ctx) override
-	{
-	}
+	/**
+	 * @fn void enterProg(ExprParser::ProgContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
+	void enterProg(ExprParser::ProgContext* ctx) override;
 
-	void enterPrintExpr(ExprParser::PrintExprContext* ctx) override
-	{
-	}
-	void exitPrintExpr(ExprParser::PrintExprContext* ctx) override
-	{
-	}
+	/**
+     * @fn void exitProg(ExprParser::ProgContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
+	void exitProg(ExprParser::ProgContext* ctx) override;
 
-	void enterAssign(ExprParser::AssignContext* ctx) override
-	{
-	}
+	/**
+	 * @fn void enterPrintExpr(ExprParser::PrintExprContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
+	void enterPrintExpr(ExprParser::PrintExprContext* ctx) override;
 
-	void exitAssign(ExprParser::AssignContext* ctx) override
-	{
-	}
+	/**
+	 * @fn void exitPrintExpr(ExprParser::PrintExprContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
+	void exitPrintExpr(ExprParser::PrintExprContext* ctx) override;
 
-	void enterBlank(ExprParser::BlankContext* ctx) override
-	{
-	}
+	/**
+	 * @fn void enterAssign(ExprParser::AssignContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
+	void enterAssign(ExprParser::AssignContext* ctx) override;
+	void exitAssign(ExprParser::AssignContext* ctx) override;
 
-	void exitBlank(ExprParser::BlankContext* ctx) override
-	{
-	}
+	void enterBlank(ExprParser::BlankContext* ctx) override;
+	void exitBlank(ExprParser::BlankContext* ctx) override;
 
-	void enterParens(ExprParser::ParensContext* ctx) override
-	{
-	}
+	void enterParens(ExprParser::ParensContext* ctx) override;
+	void exitParens(ExprParser::ParensContext* ctx) override;
 
-	void exitParens(ExprParser::ParensContext* ctx) override
-	{
-	}
+	void enterMulDiv(ExprParser::MulDivContext* ctx) override;
+	void exitMulDiv(ExprParser::MulDivContext* ctx) override;
 
-	void enterMulDiv(ExprParser::MulDivContext* ctx) override
-	{
-	}
+	void enterAddSub(ExprParser::AddSubContext* ctx) override;
+	void exitAddSub(ExprParser::AddSubContext* ctx) override;
 
-	void exitMulDiv(ExprParser::MulDivContext* ctx) override
-	{
-	}
+	void enterId(ExprParser::IdContext* ctx) override;
 
-	void enterAddSub(ExprParser::AddSubContext* ctx) override
-	{
-	}
+	void exitId(ExprParser::IdContext* ctx) override;
 
-	void exitAddSub(ExprParser::AddSubContext* ctx) override
-	{
-	}
+	void enterInt(ExprParser::IntContext* ctx) override;
+	void exitInt(ExprParser::IntContext* ctx) override;
 
-	void enterId(ExprParser::IdContext* ctx) override
-	{
-	}
+	void enterEveryRule(antlr4::ParserRuleContext* ctx) override;
+	void exitEveryRule(antlr4::ParserRuleContext* ctx) override;
 
-	void exitId(ExprParser::IdContext* ctx) override
-	{
-	}
-
-	void enterInt(ExprParser::IntContext* ctx) override
-	{
-	}
-
-	void exitInt(ExprParser::IntContext* ctx) override
-	{
-	}
-
-	void enterEveryRule(antlr4::ParserRuleContext* ctx) override
-	{
-	}
-
-	void exitEveryRule(antlr4::ParserRuleContext* ctx) override
-	{
-	}
-
-	void visitTerminal(antlr4::tree::TerminalNode* node) override
-	{
-		std::cout << node->getText() << std::endl;
-	}
-
-	void visitErrorNode(antlr4::tree::ErrorNode* node) override
-	{
-	}
+	void visitTerminal(antlr4::tree::TerminalNode* node) override;
+	void visitErrorNode(antlr4::tree::ErrorNode* node) override;
 };
 
 class expr_visitor : public ExprVisitor
@@ -150,54 +130,86 @@ class expr_visitor : public ExprVisitor
 
     llvm::Function *print_proto();
 
-	antlrcpp::Any visitProg(ExprParser::ProgContext* context)
-	{
-		return visitChildren(context);
-	}
+    /**
+     * @fn antlrcpp::Any visitProg(ExprParser::ProgContext*)
+     * @brief
+     *
+     * @param context
+     * @return
+     */
+	antlrcpp::Any visitProg(ExprParser::ProgContext* context);
 
-	antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext* context)
-	{
-		return visitChildren(context);
-	}
+	/**
+	 * @fn antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext*)
+	 * @brief
+	 *
+	 * @param context
+	 * @return
+	 */
+	antlrcpp::Any visitPrintExpr(ExprParser::PrintExprContext* context);
 
-	antlrcpp::Any visitAssign(ExprParser::AssignContext* context)
-	{
-		return visitChildren(context);
-	}
+	/**
+	 * @fn antlrcpp::Any visitAssign(ExprParser::AssignContext*)
+	 * @brief
+	 *
+	 * @param context
+	 * @return
+	 */
+	antlrcpp::Any visitAssign(ExprParser::AssignContext* context);
 
-	antlrcpp::Any visitBlank(ExprParser::BlankContext* context)
-	{
-		return visitChildren(context);
-	}
+	/**
+	 * @fn antlrcpp::Any visitBlank(ExprParser::BlankContext*)
+	 * @brief
+	 *
+	 * @param context
+	 * @return
+	 */
+	antlrcpp::Any visitBlank(ExprParser::BlankContext* context);
 
-	antlrcpp::Any visitParens(ExprParser::ParensContext* context)
-	{
-		return visitChildren(context);
-	}
+	/**
+	 * @fn antlrcpp::Any visitParens(ExprParser::ParensContext*)
+	 * @brief
+	 *
+	 * @param context
+	 * @return
+	 */
+	antlrcpp::Any visitParens(ExprParser::ParensContext* context);
 
-	antlrcpp::Any visitMulDiv(ExprParser::MulDivContext* context)
-	{
-		std::string text = context->op->getText();
-		return visitChildren(context);
-	}
+	/**
+	 * @fn antlrcpp::Any visitMulDiv(ExprParser::MulDivContext*)
+	 * @brief
+	 *
+	 * @param context
+	 * @return
+	 */
+	antlrcpp::Any visitMulDiv(ExprParser::MulDivContext* context);
 
-	antlrcpp::Any visitAddSub(ExprParser::AddSubContext* context)
-	{
-		std::string text = context->op->getText();
-		return visitChildren(context);
-	}
+	/**
+	 * @fn antlrcpp::Any visitAddSub(ExprParser::AddSubContext*)
+	 * @brief
+	 *
+	 * @param context
+	 * @return
+	 */
+	antlrcpp::Any visitAddSub(ExprParser::AddSubContext* context);
 
-	antlrcpp::Any visitId(ExprParser::IdContext* context)
-	{
-		std::string text = context->ID()->getText();
-		return visitChildren(context);
-	}
+	/**
+	 * @fn antlrcpp::Any visitId(ExprParser::IdContext*)
+	 * @brief
+	 *
+	 * @param context
+	 * @return
+	 */
+	antlrcpp::Any visitId(ExprParser::IdContext* context);
 
-	antlrcpp::Any visitInt(ExprParser::IntContext* context)
-	{
-		std::string text = context->INT()->getText();
-		return visitChildren(context);
-	}
+	/**
+	 * @fn antlrcpp::Any visitInt(ExprParser::IntContext*)
+	 * @brief
+	 *
+	 * @param context
+	 * @return
+	 */
+	antlrcpp::Any visitInt(ExprParser::IntContext* context);
 };
 
 /**

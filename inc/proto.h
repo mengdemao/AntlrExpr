@@ -121,7 +121,7 @@ class proto
 	double execute(void);	// 程序运行
 
 	proto_code next(void); // 获取下一个指令
-	proto_code prev(void); //获取上一个指令
+	proto_code prev(void); // 获取上一个指令
 
 	void dump(std::string buffer); /* 生成字符指令 */
 	void make(std::string buffer); /* 编译字符指令 */

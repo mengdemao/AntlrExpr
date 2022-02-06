@@ -9,7 +9,7 @@ then
 fi
 
 cmake -DCMAKE_CXX_CPPCHECK:FILEPATH=cppcheck \
-	  -DCMAKE_CXX_CPPLINT:FILEPATH=cpplint 	 \
+	  -DCMAKE_CXX_CPPLINT:FILEPATH=cpplint	 \
 	  -DCMAKE_CXX_CLANG_TIDY:FILEPATH=clang-tidy \
 	  -DCMAKE_CXX_INCLUDE_WHAT_YOU_USE:FILEPATH=include-what-you-use \
 	  -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=Debug -G Ninja
