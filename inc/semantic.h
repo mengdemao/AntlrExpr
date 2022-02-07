@@ -18,6 +18,7 @@
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
 #include <proto.h>
+#include <stack>
 #include <string>
 #include <string.h>
 #include <vector>
@@ -83,6 +84,12 @@ public:
 
 	void get_var(sym_name name, sym_data &data);
 	void get_var(sym_uuid uuid, sym_data &data);
+};
+
+class code_generat
+{
+  private:
+  public:
 };
 
 } // namespace semantic

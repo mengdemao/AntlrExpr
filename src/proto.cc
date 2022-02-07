@@ -56,120 +56,16 @@ proto_code proto::next(void)
  * @brief 导出指令
  * @param  buffer  指令存储缓冲区
  */
-void proto::dump(std::string buffer)
+void proto::decode(std::string buffer)
 {
-	for (uint32_t index = 0; index < this->pcode.size(); index++) {
-		switch (this->pcode[index].code) {
-		case OP_NOP:
-			break;
-
-		case OP_PSH:
-			break;
-
-		case OP_POP:
-			break;
-
-		case OP_LDR:
-			break;
-
-		case OP_STR:
-			break;
-
-		case OP_ADD:
-			break;
-
-		case OP_SUB:
-			break;
-
-		case OP_MUL:
-			break;
-
-		case OP_DIV:
-			break;
-
-		case OP_MOD:
-			break;
-
-		case OP_POW:
-			break;
-
-		case OP_UNM:
-			break;
-
-		case OP_AND:
-			break;
-
-		case OP_ORR:
-			break;
-
-		case OP_NOT:
-			break;
-
-		case OP_XOR:
-			break;
-
-		case OP_EQU:
-			break;
-
-		case OP_NEQ:
-			break;
-
-		case OP_SHL:
-			break;
-
-		case OP_SHR:
-			break;
-
-		case OP_LEN:
-			break;
-
-		case OP_CAL:
-			break;
-
-		case OP_JMP:
-			break;
-
-		case OP_RET:
-			break;
-
-		case OP_OPEN:
-			break;
-
-		case OP_READ:
-			break;
-
-		case OP_CLOS:
-			break;
-
-		case OP_PRTF:
-			break;
-
-		case OP_MALC:
-			break;
-
-		case OP_FREE:
-			break;
-
-		case OP_MSET:
-			break;
-
-		case OP_MCMP:
-			break;
-
-		case OP_EXIT:
-			break;
-
-		default:
-			break;
-		}
-	}
+	/* No body */
 }
 
 /**
  * @brief 编译指令
  * @param  buffer  指令存储缓冲区
  */
-void proto::make(std::string buffer)
+void proto::encode(std::string buffer)
 {
 	/* No body */
 }
@@ -251,11 +147,13 @@ void proto::dis(void)
  */
 bool proto::exe(proto_code pcode)
 {
-	proto_value sym1 = 0, sym2 = 0;
+	proto_value sym[PROTO_SYMMAX] = {0};
 	proto_value res = 0;
 
 	switch (pcode.code) {
 	case OP_NOP:
+		res = pop();
+		psh(res);
 		break;
 
 	case OP_PSH:
@@ -264,11 +162,12 @@ bool proto::exe(proto_code pcode)
 		break;
 
 	case OP_POP:
-		(void)pop();
+		pop();
 		break;
 
 	case OP_LDR:
 		get_var(pcode.data, res);
+		psh(res);
 		break;
 
 	case OP_STR:
@@ -277,70 +176,125 @@ bool proto::exe(proto_code pcode)
 		break;
 
 	case OP_ADD:
-		sym1 = pop();
-		sym2 = pop();
-		res	 = sym1 + sym2;
+		sym[0] = pop();
+		sym[1] = pop();
+		res	 = sym[0] + sym[1];
 		break;
 
 	case OP_SUB:
-		sym1 = pop();
-		sym2 = pop();
-		res	 = sym1 - sym2;
+		sym[0] = pop();
+		sym[1] = pop();
+		res	= sym[0]- sym[1];
 		psh(res);
 		break;
 
 	case OP_MUL:
-		sym1 = pop();
-		sym2 = pop();
-		res	 = sym1 * sym2;
+		sym[0] = pop();
+		sym[1] = pop();
+		res	 = sym[0] * sym[1];
 		psh(res);
 		break;
 
 	case OP_DIV:
-		sym1 = pop();
-		sym2 = pop();
-		res	 = sym1 / sym2;
+		sym[0] = pop();
+		sym[1] = pop();
+		res	 = sym[0] / sym[1];
 		psh(res);
 		break;
 
 	case OP_MOD:
-		sym1 = pop();
-		sym2 = pop();
-		res	 = sym1 % sym2;
+		sym[0] = pop();
+		sym[1] = pop();
+		res	 = sym[0] % sym[1];
 		psh(res);
 		break;
 
 	case OP_POW:
-		sym1 = pop();
-		sym2 = pop();
-		res	 = pow(sym1, sym2);
+		sym[0] = pop();
+		sym[1] = pop();
+		res	 = pow(sym[0], sym[1]);
 		psh(res);
 		break;
 
 	case OP_UNM:
-		sym1 = pop();
-		res	 = abs(sym2);
+		sym[0] = pop();
+		res	 = abs(sym[1]);
 		psh(res);
 		break;
 
 	case OP_AND:
-		sym1 = pop();
-		sym2 = pop();
-		res	 = sym1 & sym2;
+		sym[0] = pop();
+		sym[1] = pop();
+		res	 = sym[0] && sym[1];
 		psh(res);
 		break;
 
 	case OP_ORR:
-		sym1 = pop();
-		sym2 = pop();
-		res	 = sym1 | sym2;
+		sym[0] = pop();
+		sym[1] = pop();
+		res	 = sym[0] || sym[1];
 		psh(res);
 		break;
 
 	case OP_NOT:
-		sym1 = pop();
-		res	 = ~sym1;
+		sym[0] = pop();
+		res	 = !sym[0];
 		psh(res);
+		break;
+
+	case OP_XOR:
+		sym[0] = pop();
+		sym[1] = pop();
+		res	 = sym[0] ^ sym[1];
+		psh(res);
+		break;
+
+	case OP_EQU:
+		sym[0] = pop();
+		sym[1] = pop();
+		res = false;
+		if (sym[0] == sym[1]) {
+			res = true;
+		}
+		psh(res);
+		break;
+
+	case OP_NEQ:
+		sym[0] = pop();
+		sym[1] = pop();
+		res = false;
+		if (sym[0] != sym[1]) {
+			res = true;
+		}
+		psh(res);
+		break;
+
+	case OP_SHL:
+		sym[0] = pop();
+		sym[1] = pop();
+		res = sym[0] << sym[1];
+		psh(res);
+		break;
+
+	case OP_SHR:
+		sym[0] = pop();
+		sym[1] = pop();
+		res = sym[0] >> sym[1];
+		psh(res);
+		break;
+
+	case OP_CAL:
+		sym[0] = pop();
+		do_cal(sym[0]);
+		break;
+
+	case OP_JMP:
+		sym[0] = pop();
+		do_jmp(sym[0]);
+		break;
+
+	case OP_RET:
+		do_ret();
 		break;
 
 	default:
@@ -406,6 +360,183 @@ int proto::get_var(std::string name, proto_value& value)
 		}
 	}
 	return -1;
+}
+
+/**
+ * @fn int set_str(int32_t, proto_string)
+ * @brief
+ *
+ * @param index
+ * @param value
+ * @return
+ */
+int proto::set_str(int32_t index, proto_string value)
+{
+	return 0;
+}
+
+/**
+ * @fn int set_str(std::string, proto_string)
+ * @brief
+ *
+ * @param name
+ * @param value
+ * @return
+ */
+int proto::set_str(std::string name, proto_string value)
+{
+	return 0;
+}
+
+/**
+ * @fn int get_str(int32_t, proto_string&)
+ * @brief
+ *
+ * @param index
+ * @param value
+ * @return
+ */
+int proto::get_str(int32_t index, proto_string& value)
+{
+	return 0;
+}
+
+/**
+ * @fn int get_str(std::string, proto_string&)
+ * @brief
+ *
+ * @param name
+ * @param value
+ * @return
+ */
+int proto::get_str(std::string name, proto_string& value)
+{
+	return 0;
+}
+
+/**
+ * @fn void make_code_psh(int32_t)
+ * @brief 压栈代码
+ *
+ * @param dat
+ */
+void proto::make_code_psh(int32_t dat)
+{
+	// TODO: 暂时未实现
+}	
+
+/**
+ * @fn void make_code_pop(void)
+ * @brief 弹栈
+ *
+ */
+void proto::make_code_pop(void)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_ldr(int32_t)
+ * @brief
+ *
+ * @param index
+ */
+void proto::make_code_ldr(int32_t index)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_str(int32_t)
+ * @brief
+ *
+ * @param index
+ */
+void proto::make_code_str(int32_t index)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_add(void)
+ * @brief
+ *
+ */
+void proto::make_code_add(void)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_sub(void)
+ * @brief
+ *
+ */
+void proto::make_code_sub(void)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_mul(void)
+ * @brief
+ *
+ */
+void proto::make_code_mul(void)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_div(void)
+ * @brief
+ *
+ */
+void proto::make_code_div(void)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_cal(int32_t)
+ * @brief
+ *
+ * @param addr
+ */
+void proto::make_code_cal(int32_t addr)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_jmp(int32_t)
+ * @brief
+ *
+ * @param addr
+ */
+void proto::make_code_jmp(int32_t addr)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_ret(void)
+ * @brief
+ *
+ */
+void proto::make_code_ret(void)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_ext(void)
+ * @brief
+ *
+ */
+void proto::make_code_ext(void)
+{
+	// TODO: 暂时未实现
 }
 
 }  // namespace proto
