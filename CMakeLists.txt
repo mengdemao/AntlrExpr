@@ -17,11 +17,10 @@ find_package(Threads REQUIRED)
 find_package(Doxygen REQUIRED)
 find_package(LLVM REQUIRED)
 find_package(Git REQUIRED)
-find_package(Folly REQUIRED)
-find_package(fmt   REQUIRED)
-find_package(Gtest REQUIRED)
 
-# include(ThirdParty)
+# find_package(fmt   REQUIRED)
+# find_package(Gtest REQUIRED)
+include(ThirdParty)
 
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
@@ -145,6 +144,7 @@ add_executable(${PROJECT_NAME}
 			   ${CMAKE_SOURCE_DIR}/src/semantic.cc
 			   ${ANTLR_RUNTIME_SRC}
 			   ${ANTLR_Expr_CXX_OUTPUTS})
+target_link_libraries(${PROJECT_NAME} PRIVATE fmt gtest gtest_main)
 
 # 添加boost库
 if(Boost_FOUND)
@@ -253,28 +253,6 @@ if(LLVM_FOUND)
 	)
 	target_link_libraries(${PROJECT_NAME} PRIVATE ${llvm_libs})
 endif(LLVM_FOUND)
-
-# 格式化打印
-if (FMT_FOUND)
-	message(STATUS ${FMT_INCLUDE_DIRS})
-	message(STATUS ${FMT_LIBRARY_DIRS})
-	message(STATUS ${FMT_LIBRARIES})
-
-	include_directories(${FMT_INCLUDE_DIRS})
-	link_directories(${FMT_LIBRARY_DIRS})
-	target_link_libraries(${PROJECT_NAME} PRIVATE ${FMT_LIBRARIES})
-endif(FMT_FOUND)
-
-# 执行测试
-if (GTest_FOUND)
-	message(STATUS ${GTEST_INCLUDE_DIRS})
-	message(STATUS ${GTEST_LIBRARY_DIRS})
-	message(STATUS ${GTEST_BOTH_LIBRARIES})
-	
-	include_directories(${GTEST_INCLUDE_DIRS})
-	link_directories(${GTEST_LIBRARY_DIRS})
-	target_link_libraries(${PROJECT_NAME} PRIVATE ${GTEST_BOTH_LIBRARIES})
-endif(GTest_FOUND)
 
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})
 if(BUILD_DOCUMENTATION)

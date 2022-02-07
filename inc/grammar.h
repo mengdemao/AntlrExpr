@@ -78,31 +78,141 @@ class expr_listener : public ExprBaseListener
 	 * @param ctx
 	 */
 	void enterAssign(ExprParser::AssignContext* ctx) override;
+
+	/**
+	 * @fn void exitAssign(ExprParser::AssignContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void exitAssign(ExprParser::AssignContext* ctx) override;
 
+	/**
+	 * @fn void enterBlank(ExprParser::BlankContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void enterBlank(ExprParser::BlankContext* ctx) override;
+
+	/**
+	 * @fn void exitBlank(ExprParser::BlankContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void exitBlank(ExprParser::BlankContext* ctx) override;
 
+	/**
+	 * @fn void enterParens(ExprParser::ParensContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void enterParens(ExprParser::ParensContext* ctx) override;
+
+	/**
+	 * @fn void exitParens(ExprParser::ParensContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void exitParens(ExprParser::ParensContext* ctx) override;
 
+	/**
+	 * @fn void enterMulDiv(ExprParser::MulDivContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void enterMulDiv(ExprParser::MulDivContext* ctx) override;
+
+	/**
+	 * @fn void exitMulDiv(ExprParser::MulDivContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void exitMulDiv(ExprParser::MulDivContext* ctx) override;
 
+	/**
+	 * @fn void enterAddSub(ExprParser::AddSubContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void enterAddSub(ExprParser::AddSubContext* ctx) override;
+
+	/**
+	 * @fn void exitAddSub(ExprParser::AddSubContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void exitAddSub(ExprParser::AddSubContext* ctx) override;
 
+	/**
+	 * @fn void enterId(ExprParser::IdContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void enterId(ExprParser::IdContext* ctx) override;
 
+	/**
+	 * @fn void exitId(ExprParser::IdContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void exitId(ExprParser::IdContext* ctx) override;
 
+	/**
+	 * @fn void enterInt(ExprParser::IntContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void enterInt(ExprParser::IntContext* ctx) override;
+
+	/**
+     * @fn void exitInt(ExprParser::IntContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void exitInt(ExprParser::IntContext* ctx) override;
 
+	/**
+	 * @fn void enterEveryRule(antlr4::ParserRuleContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void enterEveryRule(antlr4::ParserRuleContext* ctx) override;
+
+	/**
+	 * @fn void exitEveryRule(antlr4::ParserRuleContext*)
+	 * @brief
+	 *
+	 * @param ctx
+	 */
 	void exitEveryRule(antlr4::ParserRuleContext* ctx) override;
 
+	/**
+     * @fn void visitTerminal(antlr4::tree::TerminalNode*)
+	 * @brief
+	 *
+	 * @param node
+	 */
 	void visitTerminal(antlr4::tree::TerminalNode* node) override;
+
+	/**
+	 * @fn void visitErrorNode(antlr4::tree::ErrorNode*)
+	 * @brief
+	 *
+	 * @param node
+	 */
 	void visitErrorNode(antlr4::tree::ErrorNode* node) override;
 };
 

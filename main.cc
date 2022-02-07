@@ -16,7 +16,11 @@
 #include <boost/iterator/iterator_facade.hpp>
 #include <config.h>
 #include <cstdlib>
+#include <fmt/compile.h>
 #include <fmt/core.h>
+#include <fmt/format.h>
+#include <fmt/os.h>
+#include <fmt/printf.h>
 #include <grammar.h>
 #include <iostream>
 #include <llvm.h>
@@ -42,6 +46,8 @@ int main(int argc, char* argv[])
 	(void)input_result;
 
 	llvm_init();
+	
+	fmt::print(stderr, "System error code = {}\n", errno);
 
  	// 解析命令行参数
 	if (OPTION_NONEUSE != option_main(argc, argv)) {

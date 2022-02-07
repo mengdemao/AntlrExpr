@@ -2,22 +2,19 @@
 #include <iostream>
 
 #include "test_gtest.cc"
-#include "test_ast.cc"
 #include "test_proto.cc"
 
 /**
- * @brief  测试主函数
- * @param  argc #
- * @param  argv #
- * @return int 测试结果
+ * @fn int main(int, char*[])
+ * @brief 测试函数主程序
+ *
+ * @param argc
+ * @param argv
+ * @return
  */
 int main(int argc, char *argv[])
 {
-	test_gtest();
-	
-	test_ast();
+  	testing::InitGoogleTest(&argc, argv);
 
-	test_proto();
-
-	return 0;
+  	return RUN_ALL_TESTS();
 }
