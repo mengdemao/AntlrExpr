@@ -40,6 +40,7 @@ int main(int argc, char* argv[])
 	// avoid warning
 	(void)input_result;
 
+	// llvm初始化
 	llvm_init();
 
 	// 解析命令行参数

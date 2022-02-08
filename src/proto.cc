@@ -33,11 +33,23 @@ proto::proto()
 	lr = 0;
 }
 
+/**
+ * @fn void insert_code(proto_code)
+ * @brief 插入新的代码
+ *
+ * @param code
+ */
 void proto::insert_code(proto_code code)
 {
 	this->pcode.push_back(code);
 }
 
+/**
+ * @fn void insert_data(proto_data)
+ * @brief 添加新的全局变量
+ *
+ * @param data
+ */
 void proto::insert_data(proto_data data)
 {
 	this->pdata.push_back(data);
@@ -71,7 +83,7 @@ void proto::encode(std::string buffer)
 }
 
 /**
- * @brief
+ * @brief 虚拟机执行函数
  */
 double proto::execute(void)
 {
