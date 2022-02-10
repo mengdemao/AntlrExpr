@@ -85,7 +85,7 @@ void proto::encode(std::string buffer)
 /**
  * @brief 虚拟机执行函数
  */
-double proto::execute(void)
+proto_value proto::execute(void)
 {
 	proto_value tmp_value;
 	double ret_value = 0;
@@ -153,9 +153,21 @@ void proto::dis(void)
 }
 
 /**
- * @brief
- * @param  pcode
- * @return int
+ * @fn void optimize(void)
+ * @brief 指令优化
+ *
+ */
+void proto::optimize(void)
+{
+	// No Body
+}
+
+/**
+ * @fn bool exe(proto_code)
+ * @brief 代码执行
+ *
+ * @param pcode
+ * @return
  */
 bool proto::exe(proto_code pcode)
 {
@@ -164,6 +176,7 @@ bool proto::exe(proto_code pcode)
 
 	switch (pcode.code) {
 	case OP_NOP:
+	case OP_LBL:
 		res = pop();
 		psh(res);
 		break;
@@ -533,10 +546,21 @@ void proto::make_code_jmp(int32_t addr)
 
 /**
  * @fn void make_code_ret(void)
- * @brief
+ * @brief 创建返回指令
  *
  */
 void proto::make_code_ret(void)
+{
+	// TODO: 暂时未实现
+}
+
+/**
+ * @fn void make_code_lbl(int32_t)
+ * @brief 创建标号
+ *
+ * @param addr 地址信息
+ */
+void proto::make_code_lbl(int32_t addr)
 {
 	// TODO: 暂时未实现
 }
@@ -547,6 +571,21 @@ void proto::make_code_ret(void)
  *
  */
 void proto::make_code_ext(void)
+{
+	// TODO: 暂时未实现
+}
+
+void proto_value_cast(proto_value value, int &data)
+{
+	// TODO: 暂时未实现
+}
+
+void proto_value_cast(proto_value value, double &data)
+{
+	// TODO: 暂时未实现
+}
+
+void proto_value_cast(proto_value value, bool &data)
 {
 	// TODO: 暂时未实现
 }

@@ -28,6 +28,17 @@ namespace proto {
 typedef int64_t proto_value;
 
 /**
+ * @fn void proto_value_cast(proto_value, int&)
+ * @brief proto_value类型转化为标准类型
+ *
+ * @param value proto_value
+ * @param data 需要转化的数据
+ */
+void proto_value_cast(proto_value value, int &data);
+void proto_value_cast(proto_value value, double &data);
+void proto_value_cast(proto_value value, bool &data);
+
+/**
  * @brief 栈式虚拟机最核心的数据结构之一
  * 用作动态字符串设计
  * FIXME: 使用新定义的数据结构
@@ -77,6 +88,7 @@ typedef enum : int16_t {
 	OP_JMP,	 // 不返回的跳转
 	OP_RET,	 // 程序执行返回
 	OP_EXT,  // 程序运行退出
+	OP_LBL,  // 跳转标号
 
 	OP_OPEN,  // 打开
 	OP_READ,  // 读取
@@ -241,6 +253,14 @@ class proto
 	void make_code_jmp(int32_t addr);
 
 	/**
+	 * @fn void make_code_lbl(int32_t)
+	 * @brief
+	 *
+	 * @param addr
+	 */
+	void make_code_lbl(int32_t addr);
+
+	/**
 	 * @fn void make_code_ret(void)
 	 * @brief
 	 *
@@ -254,7 +274,21 @@ class proto
 	 */
 	void make_code_ext(void);
 
-	double execute(void);	// 程序运行
+	/**
+     * @fn void optimize(void)
+	 * @brief 优化相关指令
+	 *
+	 */
+	void optimize(void);
+
+	/**
+	 * @fn double execute(void)
+	 * @brief 程序运行
+	 *
+	 * @return
+	 */
+	proto_value execute(void);
+
 	proto_code next(void); // 获取下一个指令
 	proto_code prev(void); // 获取上一个指令
 
