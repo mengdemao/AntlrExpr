@@ -12,12 +12,12 @@
 #include <cassert>
 #include <cmath>
 #include <cstdint>
+#include <fmt/core.h>
 #include <gtest/gtest.h>
 #include <iostream>
+#include <logger.h>
 #include <proto.h>
 #include <string>
-
-#include <fmt/core.h>
 
 namespace proto {
 
@@ -447,6 +447,7 @@ int proto::get_str(std::string name, proto_string& value)
  */
 void proto::make_code_psh(int32_t dat)
 {
+	log_trace("psh {}\n", dat);
 	// TODO: 暂时未实现
 }	
 
@@ -457,6 +458,7 @@ void proto::make_code_psh(int32_t dat)
  */
 void proto::make_code_pop(void)
 {
+	log_trace("pop\n");
 	// TODO: 暂时未实现
 }
 
@@ -468,6 +470,7 @@ void proto::make_code_pop(void)
  */
 void proto::make_code_ldr(int32_t index)
 {
+	log_trace("ldr {}\n", index);
 	// TODO: 暂时未实现
 }
 
@@ -479,6 +482,7 @@ void proto::make_code_ldr(int32_t index)
  */
 void proto::make_code_str(int32_t index)
 {
+	log_trace("str {}\n", index);
 	// TODO: 暂时未实现
 }
 
@@ -489,6 +493,7 @@ void proto::make_code_str(int32_t index)
  */
 void proto::make_code_add(void)
 {
+	log_trace("add\n");
 	// TODO: 暂时未实现
 }
 
@@ -499,6 +504,7 @@ void proto::make_code_add(void)
  */
 void proto::make_code_sub(void)
 {
+	log_trace("sub\n");
 	// TODO: 暂时未实现
 }
 
@@ -510,6 +516,7 @@ void proto::make_code_sub(void)
 void proto::make_code_mul(void)
 {
 	// TODO: 暂时未实现
+	log_trace("mul\n");
 }
 
 /**
@@ -520,6 +527,7 @@ void proto::make_code_mul(void)
 void proto::make_code_div(void)
 {
 	// TODO: 暂时未实现
+	log_trace("div\n");
 }
 
 /**
@@ -530,6 +538,7 @@ void proto::make_code_div(void)
  */
 void proto::make_code_cal(int32_t addr)
 {
+	log_trace("cal {}\n", addr);
 	// TODO: 暂时未实现
 }
 

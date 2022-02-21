@@ -57,26 +57,12 @@ grammar_result grammar_main(std::string input_string, proto::proto &proto)
 	return GRAMMAR_SUCCESS;
 }
 
-/**
- * @fn void enterProg(ExprParser::ProgContext*)
- * @brief
- *
- * @param ctx
- */
 void expr_listener::enterProg(ExprParser::ProgContext* ctx)
 {
-	// log_trace("{}", ctx->getText());
 }
-
-/**
- * @fn void exitProg(ExprParser::ProgContext*)
- * @brief
- *
- * @param ctx
- */
 void expr_listener::exitProg(ExprParser::ProgContext* ctx)
 {
-	// log_trace("{}", ctx->getText());
+	m_proto.make_code_pop();
 }
 
 /**
@@ -98,7 +84,6 @@ void expr_listener::enterPrintExpr(ExprParser::PrintExprContext* ctx)
  */
 void expr_listener::exitPrintExpr(ExprParser::PrintExprContext* ctx)
 {
-	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -109,7 +94,7 @@ void expr_listener::exitPrintExpr(ExprParser::PrintExprContext* ctx)
  */
 void expr_listener::enterAssign(ExprParser::AssignContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -131,7 +116,7 @@ void expr_listener::exitAssign(ExprParser::AssignContext* ctx)
  */
 void expr_listener::enterBlank(ExprParser::BlankContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -142,7 +127,7 @@ void expr_listener::enterBlank(ExprParser::BlankContext* ctx)
  */
 void expr_listener::exitBlank(ExprParser::BlankContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -153,7 +138,7 @@ void expr_listener::exitBlank(ExprParser::BlankContext* ctx)
  */
 void expr_listener::enterParens(ExprParser::ParensContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -164,7 +149,7 @@ void expr_listener::enterParens(ExprParser::ParensContext* ctx)
  */
 void expr_listener::exitParens(ExprParser::ParensContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -175,7 +160,7 @@ void expr_listener::exitParens(ExprParser::ParensContext* ctx)
  */
 void expr_listener::enterMulDiv(ExprParser::MulDivContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->op->getText());
 }
 
 /**
@@ -186,7 +171,14 @@ void expr_listener::enterMulDiv(ExprParser::MulDivContext* ctx)
  */
 void expr_listener::exitMulDiv(ExprParser::MulDivContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->op->getText());
+	if (ctx->op->getType() == ExprParser::MUL) {
+		m_proto.make_code_mul();
+	} else if (ctx->op->getType() == ExprParser::DIV) {
+		m_proto.make_code_div();
+	} else {
+		log_trace("Unknow op {}", ctx->op->getText());
+	}
 }
 
 /**
@@ -197,7 +189,7 @@ void expr_listener::exitMulDiv(ExprParser::MulDivContext* ctx)
  */
 void expr_listener::enterAddSub(ExprParser::AddSubContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->op->getText());
 }
 
 /**
@@ -208,7 +200,13 @@ void expr_listener::enterAddSub(ExprParser::AddSubContext* ctx)
  */
 void expr_listener::exitAddSub(ExprParser::AddSubContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	if (ctx->op->getType() == ExprParser::ADD) {
+		m_proto.make_code_add();
+	} else if (ctx->op->getType() == ExprParser::SUB) {
+		m_proto.make_code_sub();
+	} else {
+		log_trace("Unknow op {}", ctx->op->getText());
+	}
 }
 
 /**
@@ -219,7 +217,7 @@ void expr_listener::exitAddSub(ExprParser::AddSubContext* ctx)
  */
 void expr_listener::enterId(ExprParser::IdContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -241,7 +239,7 @@ void expr_listener::exitId(ExprParser::IdContext* ctx)
  */
 void expr_listener::enterInt(ExprParser::IntContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -252,7 +250,8 @@ void expr_listener::enterInt(ExprParser::IntContext* ctx)
  */
 void expr_listener::exitInt(ExprParser::IntContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->INT()->getText());
+	m_proto.make_code_psh(stoi(ctx->INT()->getText()));
 }
 
 /**
@@ -285,7 +284,7 @@ void expr_listener::exitEveryRule(antlr4::ParserRuleContext* ctx)
  */
 void expr_listener::visitTerminal(antlr4::tree::TerminalNode* node)
 {
-	log_trace("{}", node->getText());
+	// log_trace("{}", node->getText());
 }
 
 /**
@@ -296,7 +295,7 @@ void expr_listener::visitTerminal(antlr4::tree::TerminalNode* node)
  */
 void expr_listener::visitErrorNode(antlr4::tree::ErrorNode* node)
 {
-	log_trace("{}", node->getText());
+	// log_trace("{}", node->getText());
 }
 
 /**

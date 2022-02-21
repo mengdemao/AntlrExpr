@@ -58,7 +58,7 @@ int main(int argc, char* argv[])
 	}
 
 	// 执行程序
-	std::cout << proto_svm.execute() << std::endl;
+	std::cout << "execute\t" << proto_svm.execute() << std::endl;
 
 	return EXIT_SUCCESS;
 }

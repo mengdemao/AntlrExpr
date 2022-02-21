@@ -43,12 +43,11 @@ enum log_level {
 // #define log_error(format, ...) 		log_print(LL_ERROR, 	format, __VA_ARGS__)
 // #define log_critical(format, ...) 	log_print(LL_CRITICAL, 	format, __VA_ARGS__)
 
-#define log_trace fmt::print("\r\n[{}][{}][{}]:\t", __FILE__, __func__, __LINE__); fmt::print
-#define log_debug fmt::print("\r\n[{}][{}][{}]:\t", __FILE__, __func__, __LINE__); fmt::print
-#define log_info fmt::print("\r\n[{}][{}][{}]:\t", __FILE__, __func__, __LINE__); fmt::print
-#define log_warning fmt::print("\r\n[{}][{}][{}]:\t", __FILE__, __func__, __LINE__); fmt::print
-#define log_error fmt::print("\r\n[{}][{}][{}]:\t", __FILE__, __func__, __LINE__); fmt::print
-#define log_critical fmt::print("\r\n[{}][{}][{}]:\t", __FILE__, __func__, __LINE__); fmt::print
-
+#define log_trace fmt::print("[{}][{}]:\t",__func__, __LINE__); fmt::print
+#define log_debug fmt::print("[{}][{}]:\t", __func__, __LINE__); fmt::print
+#define log_info fmt::print("[{}][{}]:\t", __func__, __LINE__); fmt::print
+#define log_warning fmt::print("[{}][{}]:\t", __func__, __LINE__); fmt::print
+#define log_error fmt::print("[{}][{}]:\t",  __func__, __LINE__); fmt::print
+#define log_critical fmt::print("[{}][{}]:\t", __func__, __LINE__); fmt::print
 
 #endif /* __LOGGER_H__ */

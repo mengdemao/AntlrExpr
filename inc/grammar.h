@@ -37,6 +37,9 @@ using namespace tree;
 
 class expr_listener : public ExprBaseListener
 {
+  private:
+	proto::proto m_proto;
+
   public:
 
 	/**
