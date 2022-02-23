@@ -147,6 +147,7 @@ class proto
 
 	std::stack<proto_value> call;	 	// 调用堆栈
 	proto_flags				flag;	 	// 状态机标志
+	proto_value 			swap;		// 数据交换
 
 	std::vector<proto_code> pcode;	 	// 代码段
 	std::vector<proto_data> pdata;		// 数据段

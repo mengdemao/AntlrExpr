@@ -46,7 +46,7 @@ grammar_result grammar_main(std::string input_string, proto::proto &proto)
 	}
 
 	// 1. Listener模式解析语法树
-	expr_listener listener;
+	expr_listener listener(&proto);
 	ParseTreeWalker	walker;
 	walker.walk(&listener, tree);
 
@@ -62,7 +62,7 @@ void expr_listener::enterProg(ExprParser::ProgContext* ctx)
 }
 void expr_listener::exitProg(ExprParser::ProgContext* ctx)
 {
-	m_proto.make_code_pop();
+	proto_vm->make_code_pop();
 }
 
 /**
@@ -173,9 +173,9 @@ void expr_listener::exitMulDiv(ExprParser::MulDivContext* ctx)
 {
 	// log_trace("{}", ctx->op->getText());
 	if (ctx->op->getType() == ExprParser::MUL) {
-		m_proto.make_code_mul();
+		proto_vm->make_code_mul();
 	} else if (ctx->op->getType() == ExprParser::DIV) {
-		m_proto.make_code_div();
+		proto_vm->make_code_div();
 	} else {
 		log_trace("Unknow op {}", ctx->op->getText());
 	}
@@ -201,9 +201,9 @@ void expr_listener::enterAddSub(ExprParser::AddSubContext* ctx)
 void expr_listener::exitAddSub(ExprParser::AddSubContext* ctx)
 {
 	if (ctx->op->getType() == ExprParser::ADD) {
-		m_proto.make_code_add();
+		proto_vm->make_code_add();
 	} else if (ctx->op->getType() == ExprParser::SUB) {
-		m_proto.make_code_sub();
+		proto_vm->make_code_sub();
 	} else {
 		log_trace("Unknow op {}", ctx->op->getText());
 	}
@@ -251,7 +251,7 @@ void expr_listener::enterInt(ExprParser::IntContext* ctx)
 void expr_listener::exitInt(ExprParser::IntContext* ctx)
 {
 	// log_trace("{}", ctx->INT()->getText());
-	m_proto.make_code_psh(stoi(ctx->INT()->getText()));
+	proto_vm->make_code_psh(stoi(ctx->INT()->getText()));
 }
 
 /**

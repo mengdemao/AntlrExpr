@@ -89,9 +89,12 @@ proto_value proto::execute(void)
 {
 	proto_value tmp_value;
 	double ret_value = 0;
-
-	while (this->pc < this->pcode.size()) {
+	
+	for (this->pc = 0; this->pc < this->pcode.size(); this->pc++) {
+		exe(pcode[pc]);
 	}
+	tmp_value = swap;
+	ret_value = tmp_value;
 
 	return ret_value;
 }
@@ -187,7 +190,7 @@ bool proto::exe(proto_code pcode)
 		break;
 
 	case OP_POP:
-		pop();
+		swap = pop();
 		break;
 
 	case OP_LDR:
@@ -204,6 +207,7 @@ bool proto::exe(proto_code pcode)
 		sym[0] = pop();
 		sym[1] = pop();
 		res	 = sym[0] + sym[1];
+		psh(res);
 		break;
 
 	case OP_SUB:
@@ -223,7 +227,7 @@ bool proto::exe(proto_code pcode)
 	case OP_DIV:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = sym[0] / sym[1];
+		res	 = sym[1] / sym[0];
 		psh(res);
 		break;
 
@@ -447,8 +451,11 @@ int proto::get_str(std::string name, proto_string& value)
  */
 void proto::make_code_psh(int32_t dat)
 {
+	proto_code code;
+	code.code = OP_PSH;
+	code.data = dat;
+	pcode.push_back(code);
 	log_trace("psh {}\n", dat);
-	// TODO: 暂时未实现
 }	
 
 /**
@@ -458,8 +465,10 @@ void proto::make_code_psh(int32_t dat)
  */
 void proto::make_code_pop(void)
 {
+	proto_code code;
+	code.code = OP_POP;
+	pcode.push_back(code);
 	log_trace("pop\n");
-	// TODO: 暂时未实现
 }
 
 /**
@@ -470,8 +479,11 @@ void proto::make_code_pop(void)
  */
 void proto::make_code_ldr(int32_t index)
 {
+	proto_code code;
+	code.code = OP_LDR;
+	code.data = index;
+	pcode.push_back(code);
 	log_trace("ldr {}\n", index);
-	// TODO: 暂时未实现
 }
 
 /**
@@ -482,8 +494,11 @@ void proto::make_code_ldr(int32_t index)
  */
 void proto::make_code_str(int32_t index)
 {
+	proto_code code;
+	code.code = OP_STR;
+	code.data = index;
+	pcode.push_back(code);
 	log_trace("str {}\n", index);
-	// TODO: 暂时未实现
 }
 
 /**
@@ -493,8 +508,10 @@ void proto::make_code_str(int32_t index)
  */
 void proto::make_code_add(void)
 {
+	proto_code code;
+	code.code = OP_ADD;
+	pcode.push_back(code);
 	log_trace("add\n");
-	// TODO: 暂时未实现
 }
 
 /**
@@ -504,8 +521,10 @@ void proto::make_code_add(void)
  */
 void proto::make_code_sub(void)
 {
+	proto_code code;
+	code.code = OP_SUB;
+	pcode.push_back(code);
 	log_trace("sub\n");
-	// TODO: 暂时未实现
 }
 
 /**
@@ -515,7 +534,9 @@ void proto::make_code_sub(void)
  */
 void proto::make_code_mul(void)
 {
-	// TODO: 暂时未实现
+	proto_code code;
+	code.code = OP_MUL;
+	pcode.push_back(code);
 	log_trace("mul\n");
 }
 
@@ -526,7 +547,9 @@ void proto::make_code_mul(void)
  */
 void proto::make_code_div(void)
 {
-	// TODO: 暂时未实现
+	proto_code code;
+	code.code = OP_DIV;
+	pcode.push_back(code);
 	log_trace("div\n");
 }
 
@@ -538,8 +561,11 @@ void proto::make_code_div(void)
  */
 void proto::make_code_cal(int32_t addr)
 {
+	proto_code code;
+	code.code = OP_CAL;
+	code.data = addr;
+	pcode.push_back(code);
 	log_trace("cal {}\n", addr);
-	// TODO: 暂时未实现
 }
 
 /**
@@ -550,7 +576,10 @@ void proto::make_code_cal(int32_t addr)
  */
 void proto::make_code_jmp(int32_t addr)
 {
-	// TODO: 暂时未实现
+	proto_code code;
+	code.code = OP_JMP;
+	code.data = addr;
+	pcode.push_back(code);
 }
 
 /**
@@ -560,7 +589,9 @@ void proto::make_code_jmp(int32_t addr)
  */
 void proto::make_code_ret(void)
 {
-	// TODO: 暂时未实现
+	proto_code code;
+	code.code = OP_RET;
+	pcode.push_back(code);
 }
 
 /**

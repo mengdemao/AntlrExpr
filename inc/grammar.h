@@ -38,9 +38,14 @@ using namespace tree;
 class expr_listener : public ExprBaseListener
 {
   private:
-	proto::proto m_proto;
+	proto::proto *proto_vm;
 
   public:
+
+	expr_listener(proto::proto *proto_vm)
+	{
+		this->proto_vm = proto_vm;
+	}
 
 	/**
 	 * @fn void enterProg(ExprParser::ProgContext*)
