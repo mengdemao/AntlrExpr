@@ -206,62 +206,62 @@ bool proto::exe(proto_code pcode)
 	case OP_ADD:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = sym[0] + sym[1];
+		res	 = sym[1] + sym[0];
 		psh(res);
 		break;
 
 	case OP_SUB:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	= sym[0]- sym[1];
+		res	= sym[1] - sym[0];
 		psh(res);
 		break;
 
 	case OP_MUL:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = sym[0] * sym[1];
+		res	 = sym[1] * sym[0];
 		psh(res);
 		break;
 
 	case OP_DIV:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = sym[1] / sym[0];
+		res	 = sym[0] / sym[1];
 		psh(res);
 		break;
 
 	case OP_MOD:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = sym[0] % sym[1];
+		res	 = sym[1] % sym[0];
 		psh(res);
 		break;
 
 	case OP_POW:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = pow(sym[0], sym[1]);
+		res	 = pow(sym[1], sym[0]);
 		psh(res);
 		break;
 
 	case OP_UNM:
 		sym[0] = pop();
-		res	 = abs(sym[1]);
+		res	 = abs(sym[0]);
 		psh(res);
 		break;
 
 	case OP_AND:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = sym[0] && sym[1];
+		res	 = sym[1] && sym[0];
 		psh(res);
 		break;
 
 	case OP_ORR:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = sym[0] || sym[1];
+		res	 = sym[1] || sym[0];
 		psh(res);
 		break;
 
@@ -274,7 +274,7 @@ bool proto::exe(proto_code pcode)
 	case OP_XOR:
 		sym[0] = pop();
 		sym[1] = pop();
-		res	 = sym[0] ^ sym[1];
+		res	 = sym[1] ^ sym[0];
 		psh(res);
 		break;
 
@@ -282,7 +282,7 @@ bool proto::exe(proto_code pcode)
 		sym[0] = pop();
 		sym[1] = pop();
 		res = false;
-		if (sym[0] == sym[1]) {
+		if (sym[1] == sym[0]) {
 			res = true;
 		}
 		psh(res);
@@ -292,7 +292,7 @@ bool proto::exe(proto_code pcode)
 		sym[0] = pop();
 		sym[1] = pop();
 		res = false;
-		if (sym[0] != sym[1]) {
+		if (sym[1] != sym[0]) {
 			res = true;
 		}
 		psh(res);
@@ -301,14 +301,14 @@ bool proto::exe(proto_code pcode)
 	case OP_SHL:
 		sym[0] = pop();
 		sym[1] = pop();
-		res = sym[0] << sym[1];
+		res = sym[1] << sym[0];
 		psh(res);
 		break;
 
 	case OP_SHR:
 		sym[0] = pop();
 		sym[1] = pop();
-		res = sym[0] >> sym[1];
+		res = sym[1] >> sym[0];
 		psh(res);
 		break;
 
@@ -551,6 +551,19 @@ void proto::make_code_div(void)
 	code.code = OP_DIV;
 	pcode.push_back(code);
 	log_trace("div\n");
+}
+
+/**
+ * @fn void make_code_mod(void)
+ * @brief
+ *
+ */
+void proto::make_code_mod(void)
+{
+	proto_code code;
+	code.code = OP_MOD;
+	pcode.push_back(code);
+	log_trace("mod\n");
 }
 
 /**

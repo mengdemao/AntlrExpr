@@ -28,7 +28,7 @@ using namespace std;
  * @param argv 输入参数内容
  * @return option_result 执行结果
  */
-option_result option_main(int argc, char* argv[])
+option_result option_main(int argc, char* argv[], option_value &value)
 {
 	try {
 		variables_map		variables_map;
@@ -61,6 +61,27 @@ option_result option_main(int argc, char* argv[])
 						 "This is free software; see the source for copying conditions.  There is NO\n"
 						 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
 					  << std::endl;
+			return OPTION_SUCCESS;
+		}
+
+		if (variables_map.count("file")) {
+			std::cout << "file" << variables_map["file"].as<std::string>() << std::endl;
+			return OPTION_SUCCESS;
+		}
+		
+		if (variables_map.count("text")) {
+			std::cout << "text" << variables_map["text"].as<std::string>() << std::endl;
+			value.input_string = variables_map["text"].as<std::string>();
+			return OPTION_SUCCESS;
+		}
+
+		if (variables_map.count("pipe")) {
+			std::cout << "pipe" << variables_map["pipe"].as<std::string>() << std::endl;
+			return OPTION_SUCCESS;
+		}
+
+		if (variables_map.count("debug")) {
+			std::cout << "debug" << variables_map["debug"].as<std::string>() << std::endl;
 			return OPTION_SUCCESS;
 		}
 	}

@@ -238,6 +238,13 @@ class proto
 	void make_code_div(void);
 
 	/**
+	 * @fn void make_code_mod(void)
+	 * @brief
+	 *
+	 */
+	void make_code_mod(void);
+
+	/**
 	 * @fn void make_code_cal(int32_t)
 	 * @brief
 	 *

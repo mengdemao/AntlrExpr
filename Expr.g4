@@ -7,13 +7,14 @@ stat: expr NEWLINE          		# printExpr
 	| NEWLINE               		# blank
 	;
 
-expr: expr op=('*'|'/') expr        # MulDiv
-	| expr op=('+'|'-') expr        # AddSub
-	| INT                           # int
-	| ID                            # id
-	| '('expr')'                  	# parens
+expr: expr op = (MUL | DIV | MOD) expr    	# MulDiv
+	| expr op = (ADD | SUB) expr        	# AddSub
+	| INT                           		# int
+	| ID                            		# id
+	| '('expr')'                  			# parens
 	;
 
+ASG     : '=' ;
 MOD		: '%' ;
 MUL     : '*' ;
 DIV     : '/' ;

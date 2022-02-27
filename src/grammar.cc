@@ -105,7 +105,7 @@ void expr_listener::enterAssign(ExprParser::AssignContext* ctx)
  */
 void expr_listener::exitAssign(ExprParser::AssignContext* ctx)
 {
-	log_trace("{}", ctx->getText());
+	// log_trace("{}", ctx->getText());
 }
 
 /**
@@ -176,6 +176,8 @@ void expr_listener::exitMulDiv(ExprParser::MulDivContext* ctx)
 		proto_vm->make_code_mul();
 	} else if (ctx->op->getType() == ExprParser::DIV) {
 		proto_vm->make_code_div();
+	} else if (ctx->op->getType() == ExprParser::MOD) {
+		proto_vm->make_code_mod();
 	} else {
 		log_trace("Unknow op {}", ctx->op->getText());
 	}
@@ -217,7 +219,7 @@ void expr_listener::exitAddSub(ExprParser::AddSubContext* ctx)
  */
 void expr_listener::enterId(ExprParser::IdContext* ctx)
 {
-	// log_trace("{}", ctx->getText());
+	log_trace("{}", ctx->getText());
 }
 
 /**

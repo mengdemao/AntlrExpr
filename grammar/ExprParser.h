@@ -12,7 +12,7 @@
 class  ExprParser : public antlr4::Parser {
 public:
   enum {
-    T__0 = 1, T__1 = 2, T__2 = 3, MOD = 4, MUL = 5, DIV = 6, ADD = 7, SUB = 8, 
+    T__0 = 1, T__1 = 2, ASG = 3, MOD = 4, MUL = 5, DIV = 6, ADD = 7, SUB = 8, 
     ID = 9, INT = 10, NEWLINE = 11, WS = 12
   };
 
@@ -91,6 +91,7 @@ public:
     AssignContext(StatContext *ctx);
 
     antlr4::tree::TerminalNode *ID();
+    antlr4::tree::TerminalNode *ASG();
     ExprContext *expr();
     antlr4::tree::TerminalNode *NEWLINE();
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -134,6 +135,7 @@ public:
     ExprContext* expr(size_t i);
     antlr4::tree::TerminalNode *MUL();
     antlr4::tree::TerminalNode *DIV();
+    antlr4::tree::TerminalNode *MOD();
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
 

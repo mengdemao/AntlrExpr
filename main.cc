@@ -44,13 +44,16 @@ int main(int argc, char* argv[])
 	llvm_init();
 
 	// 解析命令行参数
-	if (OPTION_NONEUSE != option_main(argc, argv)) {
+	option_value option_value; 
+	option_result option_result = option_main(argc, argv, option_value);
+	if (OPTION_NONEUSE == option_result) {
+		input_string = argv[1];
+		input_string.append("\n");
+	} else if (OPTION_SUCCESS == option_result) {
+		input_string = option_value.input_string;
+	} else {
 		return EXIT_FAILURE;
 	}
-
-	// TODO: 解析输入的数据作为参数使用
-	input_string = argv[1];
-	input_string.append("\n");
 
 	// 语义分析与代码生成
 	if (GRAMMAR_SUCCESS != grammar_main(input_string, proto_svm)) {

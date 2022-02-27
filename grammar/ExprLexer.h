@@ -12,7 +12,7 @@
 class  ExprLexer : public antlr4::Lexer {
 public:
   enum {
-    T__0 = 1, T__1 = 2, T__2 = 3, MOD = 4, MUL = 5, DIV = 6, ADD = 7, SUB = 8, 
+    T__0 = 1, T__1 = 2, ASG = 3, MOD = 4, MUL = 5, DIV = 6, ADD = 7, SUB = 8, 
     ID = 9, INT = 10, NEWLINE = 11, WS = 12
   };
 
