@@ -17,16 +17,37 @@ namespace semantic {
 
 using namespace std;
 
+/**
+ * @fn string get_stat(antlr4::ParserRuleContext*)
+ * @brief
+ *
+ * @param ctx
+ * @return
+ */
 string attr::get_stat(antlr4::ParserRuleContext* ctx)
 {
 	return stat_attr.get(ctx);
 }
 
+/**
+ * @fn string get_expr(antlr4::ParserRuleContext*)
+ * @brief
+ *
+ * @param ctx
+ * @return
+ */
 string attr::get_expr(antlr4::ParserRuleContext* ctx)
 {
 	return expr_attr.get(ctx);
 }
 
+/**
+ * @fn void put_stat(antlr4::ParserRuleContext*, const string&)
+ * @brief
+ *
+ * @param ctx
+ * @param stat
+ */
 void attr::put_stat(antlr4::ParserRuleContext* ctx, const string& stat)
 {
 	stat_attr.put(ctx, stat);

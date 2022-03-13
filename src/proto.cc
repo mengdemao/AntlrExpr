@@ -628,6 +628,13 @@ void proto::make_code_ext(void)
 	// TODO: 暂时未实现
 }
 
+/**
+ * @fn void proto_value_cast(proto_value, int&)
+ * @brief
+ *
+ * @param value
+ * @param data
+ */
 void proto_value_cast(proto_value value, int &data)
 {
 	// TODO: 暂时未实现
@@ -638,6 +645,13 @@ void proto_value_cast(proto_value value, double &data)
 	// TODO: 暂时未实现
 }
 
+/**
+ * @fn void proto_value_cast(proto_value, bool&)
+ * @brief
+ *
+ * @param value
+ * @param data
+ */
 void proto_value_cast(proto_value value, bool &data)
 {
 	// TODO: 暂时未实现

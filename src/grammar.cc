@@ -105,7 +105,7 @@ void expr_listener::enterAssign(ExprParser::AssignContext* ctx)
  */
 void expr_listener::exitAssign(ExprParser::AssignContext* ctx)
 {
-	// log_trace("{}", ctx->getText());
+	log_trace("{}\r\n", ctx->ID()->getText());
 }
 
 /**

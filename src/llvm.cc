@@ -29,12 +29,27 @@ void llvm_init(void)
 	llvm::InitializeAllAsmPrinters();
 }
 
+/**
+ * @fn llvm::Value set_variable*(const std::string&, llvm::Value*)
+ * @brief
+ *
+ * @param name
+ * @param value
+ * @return
+ */
 llvm::Value* scope::set_variable(const std::string& name, llvm::Value* value)
 {
 	this->variables[name] = value;
 	return value;
 }
 
+/**
+ * @fn llvm::Value get_variable*(const std::string&)
+ * @brief
+ *
+ * @param name
+ * @return
+ */
 llvm::Value* scope::get_variable(const std::string& name)
 {
 	return this->variables.at(name);

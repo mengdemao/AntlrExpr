@@ -55,6 +55,8 @@ int main(int argc, char* argv[])
 		return EXIT_FAILURE;
 	}
 
+	const std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
+
 	// 语义分析与代码生成
 	if (GRAMMAR_SUCCESS != grammar_main(input_string, proto_svm)) {
 		return EXIT_FAILURE;
@@ -64,6 +66,10 @@ int main(int argc, char* argv[])
 	int result = proto_svm.execute();
 
 	std::cout << "execute\t" << result << std::endl;
+
+	const std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+	const auto elapsed_time = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+	std::cout << "Compilation Time: " << elapsed_time.count() << " microseconds\n";
 
 	return EXIT_SUCCESS;
 }
