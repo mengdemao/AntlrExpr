@@ -56,6 +56,17 @@ void proto::insert_data(proto_data data)
 }
 
 /**
+ * @fn void proto::insert_string(proto_string)
+ * @brief 添加新的字符串
+ *
+ * @param data
+ */
+void proto::insert_string(proto_string string)
+{
+	this->pstring.push_back(string);
+}
+
+/**
  * @brief 获取下一个指令
  * @return code
  */
@@ -441,6 +452,22 @@ int proto::get_str(int32_t index, proto_string& value)
 int proto::get_str(std::string name, proto_string& value)
 {
 	return 0;
+}
+
+void proto::make_data(std::string name)
+{
+	proto_data data;
+	data.name = name;
+	insert_data(data);
+	log_trace("val {}\n", name);
+}
+
+void proto::make_string(std::string name)
+{
+	proto_string string;
+	string.name = name;
+	insert_string(string);
+	log_trace("string {}\n", name);
 }
 
 /**

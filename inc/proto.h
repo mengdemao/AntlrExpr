@@ -151,16 +151,12 @@ class proto
 
 	std::vector<proto_code> pcode;	 	// 代码段
 	std::vector<proto_data> pdata;		// 数据段
-	std::vector<proto_string> pstrng;	// 字符串
+	std::vector<proto_string> pstring;	// 字符串
 	
 	void dis(void);
 	bool exe(proto_code code);
 	void psh(proto_value value);
 	proto_value pop(void);
- 
-  public:
-	proto();
-	~proto() = default;
 
 	/**
 	 * @fn void insert_code(proto_code)
@@ -177,6 +173,34 @@ class proto
 	 * @param data
 	 */
 	void insert_data(proto_data data);
+
+	/**
+	 * @fn void insert_string(proto_string)
+	 * @brief 添加新的字符串
+	 *
+	 * @param string
+	 */
+	void insert_string(proto_string string);
+
+  public:
+	proto();
+	~proto() = default;
+
+	/**
+	 * @fn void make_data(std::string)
+	 * @brief 创建变量
+	 *
+	 * @param name
+	 */
+	void make_data(std::string name);
+
+	/**
+	 * @fn void make_string(std::string)
+	 * @brief
+	 *
+	 * @param name
+	 */
+	void make_string(std::string name);
 
 	/**
 	 * @fn void make_code_psh(int32_t)
