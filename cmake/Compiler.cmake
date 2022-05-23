@@ -32,10 +32,10 @@ endif()
 
 # 添加编译选项
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Gnu")
-set(CMAKE_C_FLAGS_DEBUG "-O0 -g -DDEBUG")
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -DDEBUG")
-set(CMAKE_C_FLAGS_RELEASE "-O3 -flto")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -flto")
+set(CMAKE_C_FLAGS_DEBUG "-O2 -g -flto -DDEBUG")
+set(CMAKE_CXX_FLAGS_DEBUG "-O2 -g -flto -DDEBUG")
+set(CMAKE_C_FLAGS_RELEASE "-O2 -flto")
+set(CMAKE_CXX_FLAGS_RELEASE "-O2 -flto")
 add_compile_options(
 	-Wall
 	-Werror
