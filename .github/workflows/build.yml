@@ -1,4 +1,4 @@
-name: CMake
+name: 构建AntlrExpr
 
 on:
   push:
@@ -45,5 +45,5 @@ jobs:
     
     - uses: actions/upload-artifact@v3
       with:
-        name: Upload AntlrExpr
+        name: AntlrExpr
         path: ${{github.workspace}}/build/AntlrExpr
