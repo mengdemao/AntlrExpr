@@ -12,15 +12,10 @@ include(GNUInstallDirs)
 include(Compiler)
 
 # 添加外部软件
-find_package(Boost REQUIRED program_options system filesystem regex date_time)
 find_package(Threads REQUIRED)
 find_package(Doxygen REQUIRED)
 find_package(LLVM REQUIRED)
 find_package(Git REQUIRED)
-
-# find_package(fmt   REQUIRED)
-# find_package(Gtest REQUIRED)
-include(ThirdParty)
 
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
@@ -67,6 +62,10 @@ cmake_host_system_information(RESULT BUILD_HOST QUERY HOSTNAME)
 # 生成配置文件
 configure_file(${CMAKE_SOURCE_DIR}/inc/version.h.in ${CMAKE_SOURCE_DIR}/inc/generated/version.h)
 configure_file(${CMAKE_SOURCE_DIR}/inc/config.h.in	${CMAKE_SOURCE_DIR}/inc/generated/config.h)
+
+# 三方库
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
 
 # 添加头文件路径
 include_directories(${CMAKE_SOURCE_DIR}/inc/generated)
@@ -147,6 +146,7 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} PRIVATE fmt gtest gtest_main)
 
 # 添加boost库
+find_package(Boost REQUIRED program_options system filesystem regex date_time)
 if(Boost_FOUND)
   set(Boost_USE_STATIC_LIBS        ON)
   set(Boost_USE_MULTITHREADED      ON)
@@ -184,7 +184,8 @@ if(LLVM_FOUND)
   set(TARGET_X86 X86CodeGen X86AsmParser X86Desc X86Info)
   set(TARGET_AArch64 AArch64CodeGen AArch64AsmParser AArch64Desc AArch64Utils AArch64Info)
   set(TARGET_AVR AVRCodeGen AVRAsmParser AVRDesc AVRInfo)
-  set(TARGETS_TO_BUILD "WebAssembly" "XCore" "SystemZ" "Sparc" "RISCV" "PowerPC" "NVPTX" "MSP430" "Mips" "Lanai" "Hexagon" "BPF" "ARM" "AMDGPU" "X86" "AArch64" "AVR")
+  set(TARGET_VE VECodeGen VEAsmParser VEDesc VEInfo)
+  set(TARGETS_TO_BUILD "WebAssembly" "XCore" "SystemZ" "Sparc" "RISCV" "PowerPC" "NVPTX" "MSP430" "Mips" "Lanai" "Hexagon" "BPF" "ARM" "AMDGPU" "X86" "AArch64" "AVR" "VE")
 
   set(LLVM_TARGETS)
   foreach (target IN ITEMS ${TARGETS_TO_BUILD})

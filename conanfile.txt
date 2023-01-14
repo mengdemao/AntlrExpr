@@ -1,0 +1,8 @@
+[requires]
+fmt/9.1.0
+gtest/1.12.1
+benchmark/1.7.0
+boost/1.80.0
+
+[generators]
+cmake
