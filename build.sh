@@ -3,10 +3,8 @@
 ROOT_PATH=$(pwd)
 BUILD_DIR=${ROOT_PATH}/build
 
-if [ ! -d ${BUILD_DIR} ];
-then
-	mkdir -p ${BUILD_DIR}
-fi
+[ -d ${BUILD_DIR} ] && rm -rf ${BUILD_DIR}
+[ ! -d ${BUILD_DIR} ] && mkdir -p ${BUILD_DIR}
 
 log_err() {
 	local logTime="$(date -d today +'%Y-%m-%d %H:%M:%S')"
@@ -42,8 +40,7 @@ conan_config() {
 	conan install conanfile.txt --build=missing -s build_type=${BUILD_TYPE} || exit 1
 }
 
-cmake_preset()
-{
+cmake_preset() {
 	local BUILD_TYPE=$1
 	check_config ${BUILD_TYPE} || exit 1
 
@@ -54,8 +51,24 @@ cmake_preset()
 	fi
 }
 
-do_infer()
-{
+cmake_config() {
+	local BUILD_TYPE=$1
+	check_config ${BUILD_TYPE} || exit 1
+
+	cmake -DCMAKE_TOOLCHAIN_FILE="${ROOT_PATH}"/build/"${BUILD_TYPE}"/generators/conan_toolchain.cmake \
+		-B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
+
+	ln -sf ${BUILD_DIR}/compile_commands.json
+}
+
+cmake_build() {
+	local BUILD_TYPE=$1
+	check_config ${BUILD_TYPE} || exit 1
+
+	cmake --build ${BUILD_DIR} --config ${BUILD_TYPE} -j $(nproc)
+}
+
+do_infer() {
 	# 执行静态分析 https://github.com/facebook/infer.git
 	infer run --compilation-database ${ROOT_PATH}/compile_commands.json -o ${BUILD_DIR}/infer_out
 }
@@ -94,9 +107,9 @@ while true; do
 		;;
 
 	-x | --lint)
-	   BUILD_CHECK=1
-	   shift 1
-	   ;;
+		BUILD_CHECK=1
+		shift 1
+		;;
 
 	--)
 		shift
@@ -113,13 +126,8 @@ done
 check_config ${BUILD_TYPE} || exit 1
 conan_config ${BUILD_TYPE} || exit 1
 cmake_preset ${BUILD_TYPE} || exit 1
-
-ln -sf ${BUILD_DIR}/compile_commands.json
-
-cmake -DCMAKE_TOOLCHAIN_FILE="${ROOT_PATH}"/build/"${BUILD_TYPE}"/generators/conan_toolchain.cmake \
-	  -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
-
-cmake --build ${BUILD_DIR} --config ${BUILD_TYPE} -j $(nproc)
+cmake_config ${BUILD_TYPE} || exit 1
+cmake_build ${BUILD_TYPE} || exit 1
 
 if [ ${BUILD_CHECK} == 1 ]; then
 	do_infer

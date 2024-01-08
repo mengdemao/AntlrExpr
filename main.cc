@@ -47,6 +47,7 @@ int main(int argc, char* argv[])
 		input_string.append("\n");
 	} else if (OPTION_SUCCESS == option_result) {
 		input_string = option_value.input_string;
+		return EXIT_SUCCESS;
 	} else {
 		return EXIT_FAILURE;
 	}

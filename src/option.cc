@@ -57,7 +57,7 @@ option_result option_main(int argc, char* argv[], option_value &value)
 		if (variables_map.count("version")) {
 			std::cout << "AntlrExpr " << AntlrExpr_VERSION << " " << AntlrExpr_BUILD
 					  << "\n"
-						 "Copyright (C) 2022 MengDemao mengdemao19951021@163.com \n"
+						 "Copyright (C) 2024 MengDemao mengdemao19951021@163.com \n"
 						 "This is free software; see the source for copying conditions.  There is NO\n"
 						 "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
 					  << std::endl;
@@ -68,7 +68,7 @@ option_result option_main(int argc, char* argv[], option_value &value)
 			std::cout << "file" << variables_map["file"].as<std::string>() << std::endl;
 			return OPTION_SUCCESS;
 		}
-		
+
 		if (variables_map.count("text")) {
 			std::cout << "text" << variables_map["text"].as<std::string>() << std::endl;
 			value.input_string = variables_map["text"].as<std::string>();
