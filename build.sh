@@ -117,9 +117,9 @@ cmake_preset ${BUILD_TYPE} || exit 1
 ln -sf ${BUILD_DIR}/compile_commands.json
 
 cmake -DCMAKE_TOOLCHAIN_FILE="${ROOT_PATH}"/build/"${BUILD_TYPE}"/generators/conan_toolchain.cmake \
-	  -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -G Ninja
+	  -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
 
-cmake --build ${BUILD_DIR} --config Debug -j $(nproc)
+cmake --build ${BUILD_DIR} --config ${BUILD_TYPE} -j $(nproc)
 
 if [ ${BUILD_CHECK} == 1 ]; then
 	do_infer

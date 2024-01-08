@@ -23,48 +23,38 @@ jobs:
     - uses: actions/setup-java@v3
       with:
         distribution: 'adopt'
-        java-version: '11'
+        java-version: '17'
 
     - name: Set up GCC
       uses: egor-tensin/setup-gcc@v1
       with:
         version: latest
         platform: x64
-    
+
     - name: 安装软件
       run: |
         sudo apt -y update
         sudo apt -y upgrade
-        sudo apt remove llvm-*
-        sudo apt autoremove
-        wget https://apt.llvm.org/llvm.sh
-        chmod +x llvm.sh
-        sudo ./llvm.sh 14 all
-        sudo apt -y install cppcheck iwyu python3 python3-pip doxygen graphviz libedit-dev libpolly-14-dev
+        sudo apt -y install cppcheck iwyu python3 python3-pip doxygen graphviz libgtest-dev libfmt-dev ninja-build
 
     - name: conan install
       run: |
         pip3 install conan
-        conan profile new default --detect
-        conan profile update settings.compiler.libcxx=libstdc++11 default
-        [ -d ${{github.workspace}}/build ] || mkdir -p ${{github.workspace}}/build
-        cd ${{github.workspace}}/build
-        conan install .. --build=missing
-
-    - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        conan profile detect --force
 
     - name: Build
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+      run: |
+        chmod +x ./build.sh
+        ./build.sh -c ${{env.BUILD_TYPE}}
 
     - name: Test
       working-directory: ${{github.workspace}}/build
       run: ctest -C ${{env.BUILD_TYPE}}
-    
+
     - name: Package
       working-directory: ${{github.workspace}}/build
       run: cpack -C ${{env.BUILD_TYPE}}
-    
+
     - uses: actions/upload-artifact@v3
       with:
         name: AntlrExpr
