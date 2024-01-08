@@ -15,11 +15,8 @@
 #include "ExprParser.h"
 #include "ExprVisitor.h"
 #include "antlr4-runtime.h"
-#include <llvm/IR/IRBuilder.h>
-#include <llvm/Support/raw_ostream.h>
 #include <config.h>
 #include <iostream>
-#include <llvm.h>
 #include <logger.h>
 #include <option.h>
 #include <proto.h>
@@ -227,26 +224,14 @@ class expr_listener : public ExprBaseListener
 class expr_visitor : public ExprVisitor
 {
   private:
-	std::unique_ptr<llvm::LLVMContext> llvm_context;
-	llvm::IRBuilder<>				   builder;
-	std::unique_ptr<llvm::Module>	   module;
-	std::vector<scope>				   scopes;
-
   public:
-	expr_visitor() : llvm_context(std::make_unique<llvm::LLVMContext>()), 
-					 builder(*this->llvm_context), 
-					 module(std::make_unique<llvm::Module>("output", *this->llvm_context)) 
+	expr_visitor()
 	{
 		/* No return */
 	}
 
-	scope &current_scope();
-
-    llvm::Value *get_variable(const std::string &name);
-
     void read_buffer(const std::string &buffer);
 
-    llvm::Function *print_proto();
 
     /**
      * @fn antlrcpp::Any visitProg(ExprParser::ProgContext*)
@@ -334,7 +319,7 @@ class expr_visitor : public ExprVisitor
  * @brief  语法解析
  * @param  input_string     解析字符串
  * @param  ast_root         抽象语法树
- * @return grammar_result 
+ * @return grammar_result
  */
 extern grammar_result grammar_main(std::string input, proto::proto &proto);
 

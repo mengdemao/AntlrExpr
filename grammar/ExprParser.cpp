@@ -1,5 +1,5 @@
 
-// Generated from /home/mengdemao/work/AntlrExpr/Expr.g4 by ANTLR 4.9.2
+// Generated from /home/mengdemao/work/AntlrExpr/Expr.g4 by ANTLR 4.13.1
 
 
 #include "ExprListener.h"
@@ -9,14 +9,103 @@
 
 
 using namespace antlrcpp;
+
 using namespace antlr4;
 
-ExprParser::ExprParser(TokenStream *input) : Parser(input) {
-  _interpreter = new atn::ParserATNSimulator(this, _atn, _decisionToDFA, _sharedContextCache);
+namespace {
+
+struct ExprParserStaticData final {
+  ExprParserStaticData(std::vector<std::string> ruleNames,
+                        std::vector<std::string> literalNames,
+                        std::vector<std::string> symbolicNames)
+      : ruleNames(std::move(ruleNames)), literalNames(std::move(literalNames)),
+        symbolicNames(std::move(symbolicNames)),
+        vocabulary(this->literalNames, this->symbolicNames) {}
+
+  ExprParserStaticData(const ExprParserStaticData&) = delete;
+  ExprParserStaticData(ExprParserStaticData&&) = delete;
+  ExprParserStaticData& operator=(const ExprParserStaticData&) = delete;
+  ExprParserStaticData& operator=(ExprParserStaticData&&) = delete;
+
+  std::vector<antlr4::dfa::DFA> decisionToDFA;
+  antlr4::atn::PredictionContextCache sharedContextCache;
+  const std::vector<std::string> ruleNames;
+  const std::vector<std::string> literalNames;
+  const std::vector<std::string> symbolicNames;
+  const antlr4::dfa::Vocabulary vocabulary;
+  antlr4::atn::SerializedATNView serializedATN;
+  std::unique_ptr<antlr4::atn::ATN> atn;
+};
+
+::antlr4::internal::OnceFlag exprParserOnceFlag;
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+static thread_local
+#endif
+ExprParserStaticData *exprParserStaticData = nullptr;
+
+void exprParserInitialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  if (exprParserStaticData != nullptr) {
+    return;
+  }
+#else
+  assert(exprParserStaticData == nullptr);
+#endif
+  auto staticData = std::make_unique<ExprParserStaticData>(
+    std::vector<std::string>{
+      "prog", "stat", "expr"
+    },
+    std::vector<std::string>{
+      "", "'('", "')'", "'='", "'%'", "'*'", "'/'", "'+'", "'-'"
+    },
+    std::vector<std::string>{
+      "", "", "", "ASG", "MOD", "MUL", "DIV", "ADD", "SUB", "ID", "INT", 
+      "NEWLINE", "WS"
+    }
+  );
+  static const int32_t serializedATNSegment[] = {
+  	4,1,12,43,2,0,7,0,2,1,7,1,2,2,7,2,1,0,4,0,8,8,0,11,0,12,0,9,1,1,1,1,1,
+  	1,1,1,1,1,1,1,1,1,1,1,1,1,3,1,21,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,
+  	30,8,2,1,2,1,2,1,2,1,2,1,2,1,2,5,2,38,8,2,10,2,12,2,41,9,2,1,2,0,1,4,
+  	3,0,2,4,0,2,1,0,4,6,1,0,7,8,46,0,7,1,0,0,0,2,20,1,0,0,0,4,29,1,0,0,0,
+  	6,8,3,2,1,0,7,6,1,0,0,0,8,9,1,0,0,0,9,7,1,0,0,0,9,10,1,0,0,0,10,1,1,0,
+  	0,0,11,12,3,4,2,0,12,13,5,11,0,0,13,21,1,0,0,0,14,15,5,9,0,0,15,16,5,
+  	3,0,0,16,17,3,4,2,0,17,18,5,11,0,0,18,21,1,0,0,0,19,21,5,11,0,0,20,11,
+  	1,0,0,0,20,14,1,0,0,0,20,19,1,0,0,0,21,3,1,0,0,0,22,23,6,2,-1,0,23,30,
+  	5,10,0,0,24,30,5,9,0,0,25,26,5,1,0,0,26,27,3,4,2,0,27,28,5,2,0,0,28,30,
+  	1,0,0,0,29,22,1,0,0,0,29,24,1,0,0,0,29,25,1,0,0,0,30,39,1,0,0,0,31,32,
+  	10,5,0,0,32,33,7,0,0,0,33,38,3,4,2,6,34,35,10,4,0,0,35,36,7,1,0,0,36,
+  	38,3,4,2,5,37,31,1,0,0,0,37,34,1,0,0,0,38,41,1,0,0,0,39,37,1,0,0,0,39,
+  	40,1,0,0,0,40,5,1,0,0,0,41,39,1,0,0,0,5,9,20,29,37,39
+  };
+  staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
+
+  antlr4::atn::ATNDeserializer deserializer;
+  staticData->atn = deserializer.deserialize(staticData->serializedATN);
+
+  const size_t count = staticData->atn->getNumberOfDecisions();
+  staticData->decisionToDFA.reserve(count);
+  for (size_t i = 0; i < count; i++) { 
+    staticData->decisionToDFA.emplace_back(staticData->atn->getDecisionState(i), i);
+  }
+  exprParserStaticData = staticData.release();
+}
+
+}
+
+ExprParser::ExprParser(TokenStream *input) : ExprParser(input, antlr4::atn::ParserATNSimulatorOptions()) {}
+
+ExprParser::ExprParser(TokenStream *input, const antlr4::atn::ParserATNSimulatorOptions &options) : Parser(input) {
+  ExprParser::initialize();
+  _interpreter = new atn::ParserATNSimulator(this, *exprParserStaticData->atn, exprParserStaticData->decisionToDFA, exprParserStaticData->sharedContextCache, options);
 }
 
 ExprParser::~ExprParser() {
   delete _interpreter;
+}
+
+const atn::ATN& ExprParser::getATN() const {
+  return *exprParserStaticData->atn;
 }
 
 std::string ExprParser::getGrammarFileName() const {
@@ -24,11 +113,15 @@ std::string ExprParser::getGrammarFileName() const {
 }
 
 const std::vector<std::string>& ExprParser::getRuleNames() const {
-  return _ruleNames;
+  return exprParserStaticData->ruleNames;
 }
 
-dfa::Vocabulary& ExprParser::getVocabulary() const {
-  return _vocabulary;
+const dfa::Vocabulary& ExprParser::getVocabulary() const {
+  return exprParserStaticData->vocabulary;
+}
+
+antlr4::atn::SerializedATNView ExprParser::getSerializedATN() const {
+  return exprParserStaticData->serializedATN;
 }
 
 
@@ -64,7 +157,7 @@ void ExprParser::ProgContext::exitRule(tree::ParseTreeListener *listener) {
 }
 
 
-antlrcpp::Any ExprParser::ProgContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::ProgContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitProg(this);
   else
@@ -95,10 +188,7 @@ ExprParser::ProgContext* ExprParser::prog() {
       _errHandler->sync(this);
       _la = _input->LA(1);
     } while ((((_la & ~ 0x3fULL) == 0) &&
-      ((1ULL << _la) & ((1ULL << ExprParser::T__0)
-      | (1ULL << ExprParser::ID)
-      | (1ULL << ExprParser::INT)
-      | (1ULL << ExprParser::NEWLINE))) != 0));
+      ((1ULL << _la) & 3586) != 0));
    
   }
   catch (RecognitionException &e) {
@@ -144,7 +234,7 @@ void ExprParser::BlankContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitBlank(this);
 }
 
-antlrcpp::Any ExprParser::BlankContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::BlankContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitBlank(this);
   else
@@ -173,7 +263,7 @@ void ExprParser::PrintExprContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitPrintExpr(this);
 }
 
-antlrcpp::Any ExprParser::PrintExprContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::PrintExprContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitPrintExpr(this);
   else
@@ -210,7 +300,7 @@ void ExprParser::AssignContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitAssign(this);
 }
 
-antlrcpp::Any ExprParser::AssignContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::AssignContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitAssign(this);
   else
@@ -232,7 +322,7 @@ ExprParser::StatContext* ExprParser::stat() {
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 1, _ctx)) {
     case 1: {
-      _localctx = dynamic_cast<StatContext *>(_tracker.createInstance<ExprParser::PrintExprContext>(_localctx));
+      _localctx = _tracker.createInstance<ExprParser::PrintExprContext>(_localctx);
       enterOuterAlt(_localctx, 1);
       setState(11);
       expr(0);
@@ -242,7 +332,7 @@ ExprParser::StatContext* ExprParser::stat() {
     }
 
     case 2: {
-      _localctx = dynamic_cast<StatContext *>(_tracker.createInstance<ExprParser::AssignContext>(_localctx));
+      _localctx = _tracker.createInstance<ExprParser::AssignContext>(_localctx);
       enterOuterAlt(_localctx, 2);
       setState(14);
       match(ExprParser::ID);
@@ -256,7 +346,7 @@ ExprParser::StatContext* ExprParser::stat() {
     }
 
     case 3: {
-      _localctx = dynamic_cast<StatContext *>(_tracker.createInstance<ExprParser::BlankContext>(_localctx));
+      _localctx = _tracker.createInstance<ExprParser::BlankContext>(_localctx);
       enterOuterAlt(_localctx, 3);
       setState(19);
       match(ExprParser::NEWLINE);
@@ -311,7 +401,7 @@ void ExprParser::ParensContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitParens(this);
 }
 
-antlrcpp::Any ExprParser::ParensContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::ParensContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitParens(this);
   else
@@ -352,7 +442,7 @@ void ExprParser::MulDivContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitMulDiv(this);
 }
 
-antlrcpp::Any ExprParser::MulDivContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::MulDivContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitMulDiv(this);
   else
@@ -389,7 +479,7 @@ void ExprParser::AddSubContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitAddSub(this);
 }
 
-antlrcpp::Any ExprParser::AddSubContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::AddSubContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitAddSub(this);
   else
@@ -414,7 +504,7 @@ void ExprParser::IdContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitId(this);
 }
 
-antlrcpp::Any ExprParser::IdContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::IdContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitId(this);
   else
@@ -439,7 +529,7 @@ void ExprParser::IntContext::exitRule(tree::ParseTreeListener *listener) {
     parserListener->exitInt(this);
 }
 
-antlrcpp::Any ExprParser::IntContext::accept(tree::ParseTreeVisitor *visitor) {
+std::any ExprParser::IntContext::accept(tree::ParseTreeVisitor *visitor) {
   if (auto parserVisitor = dynamic_cast<ExprVisitor*>(visitor))
     return parserVisitor->visitInt(this);
   else
@@ -529,13 +619,11 @@ ExprParser::ExprContext* ExprParser::expr(int precedence) {
 
           if (!(precpred(_ctx, 5))) throw FailedPredicateException(this, "precpred(_ctx, 5)");
           setState(32);
-          dynamic_cast<MulDivContext *>(_localctx)->op = _input->LT(1);
+          antlrcpp::downCast<MulDivContext *>(_localctx)->op = _input->LT(1);
           _la = _input->LA(1);
           if (!((((_la & ~ 0x3fULL) == 0) &&
-            ((1ULL << _la) & ((1ULL << ExprParser::MOD)
-            | (1ULL << ExprParser::MUL)
-            | (1ULL << ExprParser::DIV))) != 0))) {
-            dynamic_cast<MulDivContext *>(_localctx)->op = _errHandler->recoverInline(this);
+            ((1ULL << _la) & 112) != 0))) {
+            antlrcpp::downCast<MulDivContext *>(_localctx)->op = _errHandler->recoverInline(this);
           }
           else {
             _errHandler->reportMatch(this);
@@ -554,12 +642,12 @@ ExprParser::ExprContext* ExprParser::expr(int precedence) {
 
           if (!(precpred(_ctx, 4))) throw FailedPredicateException(this, "precpred(_ctx, 4)");
           setState(35);
-          dynamic_cast<AddSubContext *>(_localctx)->op = _input->LT(1);
+          antlrcpp::downCast<AddSubContext *>(_localctx)->op = _input->LT(1);
           _la = _input->LA(1);
           if (!(_la == ExprParser::ADD
 
           || _la == ExprParser::SUB)) {
-            dynamic_cast<AddSubContext *>(_localctx)->op = _errHandler->recoverInline(this);
+            antlrcpp::downCast<AddSubContext *>(_localctx)->op = _errHandler->recoverInline(this);
           }
           else {
             _errHandler->reportMatch(this);
@@ -589,7 +677,7 @@ ExprParser::ExprContext* ExprParser::expr(int precedence) {
 
 bool ExprParser::sempred(RuleContext *context, size_t ruleIndex, size_t predicateIndex) {
   switch (ruleIndex) {
-    case 2: return exprSempred(dynamic_cast<ExprContext *>(context), predicateIndex);
+    case 2: return exprSempred(antlrcpp::downCast<ExprContext *>(context), predicateIndex);
 
   default:
     break;
@@ -608,92 +696,10 @@ bool ExprParser::exprSempred(ExprContext *_localctx, size_t predicateIndex) {
   return true;
 }
 
-// Static vars and initialization.
-std::vector<dfa::DFA> ExprParser::_decisionToDFA;
-atn::PredictionContextCache ExprParser::_sharedContextCache;
-
-// We own the ATN which in turn owns the ATN states.
-atn::ATN ExprParser::_atn;
-std::vector<uint16_t> ExprParser::_serializedATN;
-
-std::vector<std::string> ExprParser::_ruleNames = {
-  "prog", "stat", "expr"
-};
-
-std::vector<std::string> ExprParser::_literalNames = {
-  "", "'('", "')'", "'='", "'%'", "'*'", "'/'", "'+'", "'-'"
-};
-
-std::vector<std::string> ExprParser::_symbolicNames = {
-  "", "", "", "ASG", "MOD", "MUL", "DIV", "ADD", "SUB", "ID", "INT", "NEWLINE", 
-  "WS"
-};
-
-dfa::Vocabulary ExprParser::_vocabulary(_literalNames, _symbolicNames);
-
-std::vector<std::string> ExprParser::_tokenNames;
-
-ExprParser::Initializer::Initializer() {
-	for (size_t i = 0; i < _symbolicNames.size(); ++i) {
-		std::string name = _vocabulary.getLiteralName(i);
-		if (name.empty()) {
-			name = _vocabulary.getSymbolicName(i);
-		}
-
-		if (name.empty()) {
-			_tokenNames.push_back("<INVALID>");
-		} else {
-      _tokenNames.push_back(name);
-    }
-	}
-
-  static const uint16_t serializedATNSegment0[] = {
-    0x3, 0x608b, 0xa72a, 0x8133, 0xb9ed, 0x417c, 0x3be7, 0x7786, 0x5964, 
-       0x3, 0xe, 0x2d, 0x4, 0x2, 0x9, 0x2, 0x4, 0x3, 0x9, 0x3, 0x4, 0x4, 
-       0x9, 0x4, 0x3, 0x2, 0x6, 0x2, 0xa, 0xa, 0x2, 0xd, 0x2, 0xe, 0x2, 
-       0xb, 0x3, 0x3, 0x3, 0x3, 0x3, 0x3, 0x3, 0x3, 0x3, 0x3, 0x3, 0x3, 
-       0x3, 0x3, 0x3, 0x3, 0x3, 0x3, 0x5, 0x3, 0x17, 0xa, 0x3, 0x3, 0x4, 
-       0x3, 0x4, 0x3, 0x4, 0x3, 0x4, 0x3, 0x4, 0x3, 0x4, 0x3, 0x4, 0x5, 
-       0x4, 0x20, 0xa, 0x4, 0x3, 0x4, 0x3, 0x4, 0x3, 0x4, 0x3, 0x4, 0x3, 
-       0x4, 0x3, 0x4, 0x7, 0x4, 0x28, 0xa, 0x4, 0xc, 0x4, 0xe, 0x4, 0x2b, 
-       0xb, 0x4, 0x3, 0x4, 0x2, 0x3, 0x6, 0x5, 0x2, 0x4, 0x6, 0x2, 0x4, 
-       0x3, 0x2, 0x6, 0x8, 0x3, 0x2, 0x9, 0xa, 0x2, 0x30, 0x2, 0x9, 0x3, 
-       0x2, 0x2, 0x2, 0x4, 0x16, 0x3, 0x2, 0x2, 0x2, 0x6, 0x1f, 0x3, 0x2, 
-       0x2, 0x2, 0x8, 0xa, 0x5, 0x4, 0x3, 0x2, 0x9, 0x8, 0x3, 0x2, 0x2, 
-       0x2, 0xa, 0xb, 0x3, 0x2, 0x2, 0x2, 0xb, 0x9, 0x3, 0x2, 0x2, 0x2, 
-       0xb, 0xc, 0x3, 0x2, 0x2, 0x2, 0xc, 0x3, 0x3, 0x2, 0x2, 0x2, 0xd, 
-       0xe, 0x5, 0x6, 0x4, 0x2, 0xe, 0xf, 0x7, 0xd, 0x2, 0x2, 0xf, 0x17, 
-       0x3, 0x2, 0x2, 0x2, 0x10, 0x11, 0x7, 0xb, 0x2, 0x2, 0x11, 0x12, 0x7, 
-       0x5, 0x2, 0x2, 0x12, 0x13, 0x5, 0x6, 0x4, 0x2, 0x13, 0x14, 0x7, 0xd, 
-       0x2, 0x2, 0x14, 0x17, 0x3, 0x2, 0x2, 0x2, 0x15, 0x17, 0x7, 0xd, 0x2, 
-       0x2, 0x16, 0xd, 0x3, 0x2, 0x2, 0x2, 0x16, 0x10, 0x3, 0x2, 0x2, 0x2, 
-       0x16, 0x15, 0x3, 0x2, 0x2, 0x2, 0x17, 0x5, 0x3, 0x2, 0x2, 0x2, 0x18, 
-       0x19, 0x8, 0x4, 0x1, 0x2, 0x19, 0x20, 0x7, 0xc, 0x2, 0x2, 0x1a, 0x20, 
-       0x7, 0xb, 0x2, 0x2, 0x1b, 0x1c, 0x7, 0x3, 0x2, 0x2, 0x1c, 0x1d, 0x5, 
-       0x6, 0x4, 0x2, 0x1d, 0x1e, 0x7, 0x4, 0x2, 0x2, 0x1e, 0x20, 0x3, 0x2, 
-       0x2, 0x2, 0x1f, 0x18, 0x3, 0x2, 0x2, 0x2, 0x1f, 0x1a, 0x3, 0x2, 0x2, 
-       0x2, 0x1f, 0x1b, 0x3, 0x2, 0x2, 0x2, 0x20, 0x29, 0x3, 0x2, 0x2, 0x2, 
-       0x21, 0x22, 0xc, 0x7, 0x2, 0x2, 0x22, 0x23, 0x9, 0x2, 0x2, 0x2, 0x23, 
-       0x28, 0x5, 0x6, 0x4, 0x8, 0x24, 0x25, 0xc, 0x6, 0x2, 0x2, 0x25, 0x26, 
-       0x9, 0x3, 0x2, 0x2, 0x26, 0x28, 0x5, 0x6, 0x4, 0x7, 0x27, 0x21, 0x3, 
-       0x2, 0x2, 0x2, 0x27, 0x24, 0x3, 0x2, 0x2, 0x2, 0x28, 0x2b, 0x3, 0x2, 
-       0x2, 0x2, 0x29, 0x27, 0x3, 0x2, 0x2, 0x2, 0x29, 0x2a, 0x3, 0x2, 0x2, 
-       0x2, 0x2a, 0x7, 0x3, 0x2, 0x2, 0x2, 0x2b, 0x29, 0x3, 0x2, 0x2, 0x2, 
-       0x7, 0xb, 0x16, 0x1f, 0x27, 0x29, 
-  };
-
-  _serializedATN.insert(_serializedATN.end(), serializedATNSegment0,
-    serializedATNSegment0 + sizeof(serializedATNSegment0) / sizeof(serializedATNSegment0[0]));
-
-
-  atn::ATNDeserializer deserializer;
-  _atn = deserializer.deserialize(_serializedATN);
-
-  size_t count = _atn.getNumberOfDecisions();
-  _decisionToDFA.reserve(count);
-  for (size_t i = 0; i < count; i++) { 
-    _decisionToDFA.emplace_back(_atn.getDecisionState(i), i);
-  }
+void ExprParser::initialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  exprParserInitialize();
+#else
+  ::antlr4::internal::call_once(exprParserOnceFlag, exprParserInitialize);
+#endif
 }
-
-ExprParser::Initializer ExprParser::_init;

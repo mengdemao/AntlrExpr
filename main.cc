@@ -18,7 +18,6 @@
 #include <cstdlib>
 #include <grammar.h>
 #include <iostream>
-#include <llvm.h>
 #include <logger.h>
 #include <option.h>
 #include <proto.h>
@@ -35,16 +34,13 @@ int main(int argc, char* argv[])
 {
 	std::string input_string;
 	double input_result = 0;
-	proto::proto proto_svm; 
+	proto::proto proto_svm;
 
 	// avoid warning
 	(void)input_result;
 
-	// llvm初始化
-	llvm_init();
-
 	// 解析命令行参数
-	option_value option_value; 
+	option_value option_value;
 	option_result option_result = option_main(argc, argv, option_value);
 	if (OPTION_NONEUSE == option_result) {
 		input_string = argv[1];

@@ -12,3 +12,4 @@ GTAGS
 HTML
 compile_commands.json
 *.user
+CMakeUserPresets.json

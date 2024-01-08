@@ -11,14 +11,16 @@ include(ProcessorCount)
 include(GNUInstallDirs)
 include(Compiler)
 
+set(CMAKE_CXX_STANDARD 17)
+
 # 添加外部软件
 find_package(Threads REQUIRED)
 find_package(Doxygen REQUIRED)
-find_package(LLVM REQUIRED)
 find_package(Git REQUIRED)
+find_package(antlr4-runtime REQUIRED)
 
 # 设置编译工具
-set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-complete.jar)
+set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-4.13.1-complete.jar)
 
 option(ENABLE_CHECK "单元测试" ON)
 option(ENABLE_DEBUG "高级打印" ON)
@@ -59,28 +61,7 @@ cmake_host_system_information(RESULT BUILD_HOST QUERY HOSTNAME)
 configure_file(${CMAKE_SOURCE_DIR}/inc/version.h.in ${CMAKE_SOURCE_DIR}/inc/generated/version.h)
 configure_file(${CMAKE_SOURCE_DIR}/inc/config.h.in	${CMAKE_SOURCE_DIR}/inc/generated/config.h)
 
-# 三方库
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
-
-# 添加头文件路径
-include_directories(${CMAKE_SOURCE_DIR}/inc/generated)
-include_directories(${CMAKE_SOURCE_DIR}/grammar)
-include_directories(${CMAKE_SOURCE_DIR}/inc)
-include_directories(${Boost_INCLUDE_DIRS})
-include_directories(
-  ${CMAKE_SOURCE_DIR}/runtime
-  ${CMAKE_SOURCE_DIR}/runtime/atn
-  ${CMAKE_SOURCE_DIR}/runtime/dfa
-  ${CMAKE_SOURCE_DIR}/runtime/misc
-  ${CMAKE_SOURCE_DIR}/runtime/support
-  ${CMAKE_SOURCE_DIR}/runtime/tree
-  ${CMAKE_SOURCE_DIR}/runtime/tree/pattern
-  ${CMAKE_SOURCE_DIR}/runtime/tree/xpath
-  )
-
 add_definitions(-DANTLR4CPP_STATIC)
-file(GLOB_RECURSE ANTLR_RUNTIME_SRC ${CMAKE_SOURCE_DIR}/runtime/*.cpp)
 
 macro(ANTLR_TARGET Name)
   # 一个相同名字的文件结构
@@ -128,18 +109,29 @@ ANTLR_TARGET(Expr)
 
 # 添加编译头文件
 include_directories(${CMAKE_SOURCE_DIR}/grammar)
+include_directories(${CMAKE_SOURCE_DIR}/inc)
+include_directories(${CMAKE_SOURCE_DIR}/inc/generated)
 
 # 添加可执行文件
 add_executable(${PROJECT_NAME}
   ${CMAKE_SOURCE_DIR}/main.cc
   ${CMAKE_SOURCE_DIR}/src/proto.cc
-  ${CMAKE_SOURCE_DIR}/src/llvm.cc
   ${CMAKE_SOURCE_DIR}/src/option.cc
   ${CMAKE_SOURCE_DIR}/src/grammar.cc
   ${CMAKE_SOURCE_DIR}/src/semantic.cc
   ${ANTLR_RUNTIME_SRC}
   ${ANTLR_Expr_CXX_OUTPUTS})
 target_link_libraries(${PROJECT_NAME} PRIVATE fmt gtest gtest_main)
+
+if(antlr4-runtime_FOUND)
+  message(STATUS "antlr4-runtime include path is : ${antlr4-runtime_INCLUDE_DIRS}")
+  message(STATUS "antlr4-runtime libraries    is : ${antlr4-runtime_LIBRARIES}")
+
+  add_definitions(${antlr4-runtime_DEFINITIONS})
+  include_directories(${antlr4-runtime_INCLUDE_DIRS})
+  link_directories(${antlr4-runtime_LIBRARIES})
+  target_link_libraries(${PROJECT_NAME} PRIVATE ${antlr4-runtime_LIBRARIES})
+endif(antlr4-runtime_FOUND)
 
 # 添加boost库
 find_package(Boost REQUIRED program_options system filesystem regex date_time)
@@ -154,103 +146,6 @@ if(Boost_FOUND)
   link_directories(${Boost_LIBRARY_DIRS})
   target_link_libraries(${PROJECT_NAME} PRIVATE ${Boost_LIBRARIES})
 endif(Boost_FOUND)
-
-# 添加LLVM库
-if(LLVM_FOUND)
-  message(STATUS "llvm include path is : ${LLVM_INCLUDE_DIRS}")
-  message(STATUS "llvm library path is : ${LLVM_LIBRARY_DIRS}")
-  add_definitions(${LLVM_DEFINITIONS})
-  include_directories(${LLVM_INCLUDE_DIRS})
-  link_directories(${LLVM_LIBRARY_DIRS})
-
-  set(TARGET_WebAssembly WebAssemblyCodeGen WebAssemblyAsmParser WebAssemblyDesc WebAssemblyInfo)
-  set(TARGET_XCore XCoreCodeGen XCoreDesc XCoreInfo)
-  set(TARGET_SystemZ SystemZCodeGen SystemZAsmParser SystemZDesc SystemZInfo)
-  set(TARGET_Sparc SparcCodeGen SparcAsmParser SparcDesc SparcInfo)
-  set(TARGET_RISCV RISCVCodeGen RISCVAsmParser RISCVDesc RISCVInfo)
-  set(TARGET_PowerPC PowerPCCodeGen PowerPCAsmParser PowerPCDesc PowerPCInfo)
-  set(TARGET_NVPTX NVPTXCodeGen NVPTXDesc NVPTXInfo)
-  set(TARGET_MSP430 MSP430CodeGen MSP430AsmParser MSP430Desc MSP430Info)
-  set(TARGET_Mips MipsCodeGen MipsAsmParser MipsDesc MipsInfo)
-  set(TARGET_Lanai LanaiCodeGen LanaiAsmParser LanaiDesc LanaiInfo)
-  set(TARGET_Hexagon HexagonCodeGen HexagonAsmParser HexagonDesc HexagonInfo)
-  set(TARGET_BPF BPFCodeGen BPFAsmParser BPFDesc BPFInfo)
-  set(TARGET_ARM ARMCodeGen ARMAsmParser ARMDesc ARMUtils ARMInfo)
-  set(TARGET_AMDGPU AMDGPUCodeGen AMDGPUAsmParser AMDGPUDesc AMDGPUUtils AMDGPUInfo)
-  set(TARGET_X86 X86CodeGen X86AsmParser X86Desc X86Info)
-  set(TARGET_AArch64 AArch64CodeGen AArch64AsmParser AArch64Desc AArch64Utils AArch64Info)
-  set(TARGET_AVR AVRCodeGen AVRAsmParser AVRDesc AVRInfo)
-  set(TARGET_VE VECodeGen VEAsmParser VEDesc VEInfo)
-  set(TARGET_M68K M68KCodeGen M68KAsmParser M68KDesc M68KInfo)
-  set(TARGETS_TO_BUILD "WebAssembly" "XCore" "SystemZ" "Sparc" "RISCV" "PowerPC" "NVPTX" "MSP430" "Mips" "Lanai" "Hexagon" "BPF" "ARM" "AMDGPU" "X86" "AArch64" "AVR" "VE" "M68K")
-
-  set(LLVM_TARGETS)
-  foreach (target IN ITEMS ${TARGETS_TO_BUILD})
-    list(APPEND LLVM_TARGETS "${TARGET_${target}}")
-  endforeach(target)
-
-  llvm_map_components_to_libnames(llvm_libs
-    TextAPI
-    OrcJIT
-    JITLink
-    ObjectYAML
-    WindowsManifest
-    Coverage
-    TableGen
-    LTO
-    Passes
-    ObjCARCOpts
-    Coroutines
-    LibDriver
-    XRay
-    ${LLVM_TARGETS}
-    MIRParser
-    ipo
-    Instrumentation
-    Vectorize
-    Linker
-    IRReader
-    AsmParser
-    Symbolize
-    DebugInfoPDB
-    FuzzMutate
-    LineEditor
-    MCA
-    DebugInfoGSYM
-    GlobalISel
-    SelectionDAG
-    AsmPrinter
-    DebugInfoDWARF
-    MCJIT
-    Interpreter
-    ExecutionEngine
-    RuntimeDyld
-    CodeGen
-    Target
-    ScalarOpts
-    InstCombine
-    AggressiveInstCombine
-    TransformUtils
-    BitWriter
-    Analysis
-    ProfileData
-    DlltoolDriver
-    Option
-    Object
-    MCParser
-    MC
-    DebugInfoCodeView
-    DebugInfoMSF
-    BitReader
-    Core
-    Remarks
-    BinaryFormat
-    BitstreamReader
-    Support
-    Demangle
-    )
-  target_link_libraries(${PROJECT_NAME} PRIVATE ${llvm_libs})
-endif(LLVM_FOUND)
 
 option(BUILD_DOCUMENTATION "Create and install the HTML based API documentation (requires Doxygen)" ${DOXYGEN_FOUND})
 if(BUILD_DOCUMENTATION)

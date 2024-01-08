@@ -1,5 +1,5 @@
 
-// Generated from /home/mengdemao/work/AntlrExpr/Expr.g4 by ANTLR 4.9.2
+// Generated from /home/mengdemao/work/AntlrExpr/Expr.g4 by ANTLR 4.13.1
 
 
 #include "ExprLexer.h"
@@ -8,8 +8,112 @@
 using namespace antlr4;
 
 
+
+using namespace antlr4;
+
+namespace {
+
+struct ExprLexerStaticData final {
+  ExprLexerStaticData(std::vector<std::string> ruleNames,
+                          std::vector<std::string> channelNames,
+                          std::vector<std::string> modeNames,
+                          std::vector<std::string> literalNames,
+                          std::vector<std::string> symbolicNames)
+      : ruleNames(std::move(ruleNames)), channelNames(std::move(channelNames)),
+        modeNames(std::move(modeNames)), literalNames(std::move(literalNames)),
+        symbolicNames(std::move(symbolicNames)),
+        vocabulary(this->literalNames, this->symbolicNames) {}
+
+  ExprLexerStaticData(const ExprLexerStaticData&) = delete;
+  ExprLexerStaticData(ExprLexerStaticData&&) = delete;
+  ExprLexerStaticData& operator=(const ExprLexerStaticData&) = delete;
+  ExprLexerStaticData& operator=(ExprLexerStaticData&&) = delete;
+
+  std::vector<antlr4::dfa::DFA> decisionToDFA;
+  antlr4::atn::PredictionContextCache sharedContextCache;
+  const std::vector<std::string> ruleNames;
+  const std::vector<std::string> channelNames;
+  const std::vector<std::string> modeNames;
+  const std::vector<std::string> literalNames;
+  const std::vector<std::string> symbolicNames;
+  const antlr4::dfa::Vocabulary vocabulary;
+  antlr4::atn::SerializedATNView serializedATN;
+  std::unique_ptr<antlr4::atn::ATN> atn;
+};
+
+::antlr4::internal::OnceFlag exprlexerLexerOnceFlag;
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+static thread_local
+#endif
+ExprLexerStaticData *exprlexerLexerStaticData = nullptr;
+
+void exprlexerLexerInitialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  if (exprlexerLexerStaticData != nullptr) {
+    return;
+  }
+#else
+  assert(exprlexerLexerStaticData == nullptr);
+#endif
+  auto staticData = std::make_unique<ExprLexerStaticData>(
+    std::vector<std::string>{
+      "T__0", "T__1", "ASG", "MOD", "MUL", "DIV", "ADD", "SUB", "ID", "INT", 
+      "NEWLINE", "WS"
+    },
+    std::vector<std::string>{
+      "DEFAULT_TOKEN_CHANNEL", "HIDDEN"
+    },
+    std::vector<std::string>{
+      "DEFAULT_MODE"
+    },
+    std::vector<std::string>{
+      "", "'('", "')'", "'='", "'%'", "'*'", "'/'", "'+'", "'-'"
+    },
+    std::vector<std::string>{
+      "", "", "", "ASG", "MOD", "MUL", "DIV", "ADD", "SUB", "ID", "INT", 
+      "NEWLINE", "WS"
+    }
+  );
+  static const int32_t serializedATNSegment[] = {
+  	4,0,12,63,6,-1,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+  	6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,1,0,1,0,1,1,1,1,1,2,1,2,
+  	1,3,1,3,1,4,1,4,1,5,1,5,1,6,1,6,1,7,1,7,1,8,4,8,43,8,8,11,8,12,8,44,1,
+  	9,4,9,48,8,9,11,9,12,9,49,1,10,3,10,53,8,10,1,10,1,10,1,11,4,11,58,8,
+  	11,11,11,12,11,59,1,11,1,11,0,0,12,1,1,3,2,5,3,7,4,9,5,11,6,13,7,15,8,
+  	17,9,19,10,21,11,23,12,1,0,3,2,0,65,90,97,122,1,0,48,57,2,0,9,9,32,32,
+  	66,0,1,1,0,0,0,0,3,1,0,0,0,0,5,1,0,0,0,0,7,1,0,0,0,0,9,1,0,0,0,0,11,1,
+  	0,0,0,0,13,1,0,0,0,0,15,1,0,0,0,0,17,1,0,0,0,0,19,1,0,0,0,0,21,1,0,0,
+  	0,0,23,1,0,0,0,1,25,1,0,0,0,3,27,1,0,0,0,5,29,1,0,0,0,7,31,1,0,0,0,9,
+  	33,1,0,0,0,11,35,1,0,0,0,13,37,1,0,0,0,15,39,1,0,0,0,17,42,1,0,0,0,19,
+  	47,1,0,0,0,21,52,1,0,0,0,23,57,1,0,0,0,25,26,5,40,0,0,26,2,1,0,0,0,27,
+  	28,5,41,0,0,28,4,1,0,0,0,29,30,5,61,0,0,30,6,1,0,0,0,31,32,5,37,0,0,32,
+  	8,1,0,0,0,33,34,5,42,0,0,34,10,1,0,0,0,35,36,5,47,0,0,36,12,1,0,0,0,37,
+  	38,5,43,0,0,38,14,1,0,0,0,39,40,5,45,0,0,40,16,1,0,0,0,41,43,7,0,0,0,
+  	42,41,1,0,0,0,43,44,1,0,0,0,44,42,1,0,0,0,44,45,1,0,0,0,45,18,1,0,0,0,
+  	46,48,7,1,0,0,47,46,1,0,0,0,48,49,1,0,0,0,49,47,1,0,0,0,49,50,1,0,0,0,
+  	50,20,1,0,0,0,51,53,5,13,0,0,52,51,1,0,0,0,52,53,1,0,0,0,53,54,1,0,0,
+  	0,54,55,5,10,0,0,55,22,1,0,0,0,56,58,7,2,0,0,57,56,1,0,0,0,58,59,1,0,
+  	0,0,59,57,1,0,0,0,59,60,1,0,0,0,60,61,1,0,0,0,61,62,6,11,0,0,62,24,1,
+  	0,0,0,5,0,44,49,52,59,1,6,0,0
+  };
+  staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
+
+  antlr4::atn::ATNDeserializer deserializer;
+  staticData->atn = deserializer.deserialize(staticData->serializedATN);
+
+  const size_t count = staticData->atn->getNumberOfDecisions();
+  staticData->decisionToDFA.reserve(count);
+  for (size_t i = 0; i < count; i++) { 
+    staticData->decisionToDFA.emplace_back(staticData->atn->getDecisionState(i), i);
+  }
+  exprlexerLexerStaticData = staticData.release();
+}
+
+}
+
 ExprLexer::ExprLexer(CharStream *input) : Lexer(input) {
-  _interpreter = new atn::LexerATNSimulator(this, _atn, _decisionToDFA, _sharedContextCache);
+  ExprLexer::initialize();
+  _interpreter = new atn::LexerATNSimulator(this, *exprlexerLexerStaticData->atn, exprlexerLexerStaticData->decisionToDFA, exprlexerLexerStaticData->sharedContextCache);
 }
 
 ExprLexer::~ExprLexer() {
@@ -21,147 +125,36 @@ std::string ExprLexer::getGrammarFileName() const {
 }
 
 const std::vector<std::string>& ExprLexer::getRuleNames() const {
-  return _ruleNames;
+  return exprlexerLexerStaticData->ruleNames;
 }
 
 const std::vector<std::string>& ExprLexer::getChannelNames() const {
-  return _channelNames;
+  return exprlexerLexerStaticData->channelNames;
 }
 
 const std::vector<std::string>& ExprLexer::getModeNames() const {
-  return _modeNames;
+  return exprlexerLexerStaticData->modeNames;
 }
 
-const std::vector<std::string>& ExprLexer::getTokenNames() const {
-  return _tokenNames;
+const dfa::Vocabulary& ExprLexer::getVocabulary() const {
+  return exprlexerLexerStaticData->vocabulary;
 }
 
-dfa::Vocabulary& ExprLexer::getVocabulary() const {
-  return _vocabulary;
-}
-
-const std::vector<uint16_t> ExprLexer::getSerializedATN() const {
-  return _serializedATN;
+antlr4::atn::SerializedATNView ExprLexer::getSerializedATN() const {
+  return exprlexerLexerStaticData->serializedATN;
 }
 
 const atn::ATN& ExprLexer::getATN() const {
-  return _atn;
+  return *exprlexerLexerStaticData->atn;
 }
 
 
 
 
-// Static vars and initialization.
-std::vector<dfa::DFA> ExprLexer::_decisionToDFA;
-atn::PredictionContextCache ExprLexer::_sharedContextCache;
-
-// We own the ATN which in turn owns the ATN states.
-atn::ATN ExprLexer::_atn;
-std::vector<uint16_t> ExprLexer::_serializedATN;
-
-std::vector<std::string> ExprLexer::_ruleNames = {
-  "T__0", "T__1", "ASG", "MOD", "MUL", "DIV", "ADD", "SUB", "ID", "INT", 
-  "NEWLINE", "WS"
-};
-
-std::vector<std::string> ExprLexer::_channelNames = {
-  "DEFAULT_TOKEN_CHANNEL", "HIDDEN"
-};
-
-std::vector<std::string> ExprLexer::_modeNames = {
-  "DEFAULT_MODE"
-};
-
-std::vector<std::string> ExprLexer::_literalNames = {
-  "", "'('", "')'", "'='", "'%'", "'*'", "'/'", "'+'", "'-'"
-};
-
-std::vector<std::string> ExprLexer::_symbolicNames = {
-  "", "", "", "ASG", "MOD", "MUL", "DIV", "ADD", "SUB", "ID", "INT", "NEWLINE", 
-  "WS"
-};
-
-dfa::Vocabulary ExprLexer::_vocabulary(_literalNames, _symbolicNames);
-
-std::vector<std::string> ExprLexer::_tokenNames;
-
-ExprLexer::Initializer::Initializer() {
-  // This code could be in a static initializer lambda, but VS doesn't allow access to private class members from there.
-	for (size_t i = 0; i < _symbolicNames.size(); ++i) {
-		std::string name = _vocabulary.getLiteralName(i);
-		if (name.empty()) {
-			name = _vocabulary.getSymbolicName(i);
-		}
-
-		if (name.empty()) {
-			_tokenNames.push_back("<INVALID>");
-		} else {
-      _tokenNames.push_back(name);
-    }
-	}
-
-  static const uint16_t serializedATNSegment0[] = {
-    0x3, 0x608b, 0xa72a, 0x8133, 0xb9ed, 0x417c, 0x3be7, 0x7786, 0x5964, 
-       0x2, 0xe, 0x41, 0x8, 0x1, 0x4, 0x2, 0x9, 0x2, 0x4, 0x3, 0x9, 0x3, 
-       0x4, 0x4, 0x9, 0x4, 0x4, 0x5, 0x9, 0x5, 0x4, 0x6, 0x9, 0x6, 0x4, 
-       0x7, 0x9, 0x7, 0x4, 0x8, 0x9, 0x8, 0x4, 0x9, 0x9, 0x9, 0x4, 0xa, 
-       0x9, 0xa, 0x4, 0xb, 0x9, 0xb, 0x4, 0xc, 0x9, 0xc, 0x4, 0xd, 0x9, 
-       0xd, 0x3, 0x2, 0x3, 0x2, 0x3, 0x3, 0x3, 0x3, 0x3, 0x4, 0x3, 0x4, 
-       0x3, 0x5, 0x3, 0x5, 0x3, 0x6, 0x3, 0x6, 0x3, 0x7, 0x3, 0x7, 0x3, 
-       0x8, 0x3, 0x8, 0x3, 0x9, 0x3, 0x9, 0x3, 0xa, 0x6, 0xa, 0x2d, 0xa, 
-       0xa, 0xd, 0xa, 0xe, 0xa, 0x2e, 0x3, 0xb, 0x6, 0xb, 0x32, 0xa, 0xb, 
-       0xd, 0xb, 0xe, 0xb, 0x33, 0x3, 0xc, 0x5, 0xc, 0x37, 0xa, 0xc, 0x3, 
-       0xc, 0x3, 0xc, 0x3, 0xd, 0x6, 0xd, 0x3c, 0xa, 0xd, 0xd, 0xd, 0xe, 
-       0xd, 0x3d, 0x3, 0xd, 0x3, 0xd, 0x2, 0x2, 0xe, 0x3, 0x3, 0x5, 0x4, 
-       0x7, 0x5, 0x9, 0x6, 0xb, 0x7, 0xd, 0x8, 0xf, 0x9, 0x11, 0xa, 0x13, 
-       0xb, 0x15, 0xc, 0x17, 0xd, 0x19, 0xe, 0x3, 0x2, 0x5, 0x4, 0x2, 0x43, 
-       0x5c, 0x63, 0x7c, 0x3, 0x2, 0x32, 0x3b, 0x4, 0x2, 0xb, 0xb, 0x22, 
-       0x22, 0x2, 0x44, 0x2, 0x3, 0x3, 0x2, 0x2, 0x2, 0x2, 0x5, 0x3, 0x2, 
-       0x2, 0x2, 0x2, 0x7, 0x3, 0x2, 0x2, 0x2, 0x2, 0x9, 0x3, 0x2, 0x2, 
-       0x2, 0x2, 0xb, 0x3, 0x2, 0x2, 0x2, 0x2, 0xd, 0x3, 0x2, 0x2, 0x2, 
-       0x2, 0xf, 0x3, 0x2, 0x2, 0x2, 0x2, 0x11, 0x3, 0x2, 0x2, 0x2, 0x2, 
-       0x13, 0x3, 0x2, 0x2, 0x2, 0x2, 0x15, 0x3, 0x2, 0x2, 0x2, 0x2, 0x17, 
-       0x3, 0x2, 0x2, 0x2, 0x2, 0x19, 0x3, 0x2, 0x2, 0x2, 0x3, 0x1b, 0x3, 
-       0x2, 0x2, 0x2, 0x5, 0x1d, 0x3, 0x2, 0x2, 0x2, 0x7, 0x1f, 0x3, 0x2, 
-       0x2, 0x2, 0x9, 0x21, 0x3, 0x2, 0x2, 0x2, 0xb, 0x23, 0x3, 0x2, 0x2, 
-       0x2, 0xd, 0x25, 0x3, 0x2, 0x2, 0x2, 0xf, 0x27, 0x3, 0x2, 0x2, 0x2, 
-       0x11, 0x29, 0x3, 0x2, 0x2, 0x2, 0x13, 0x2c, 0x3, 0x2, 0x2, 0x2, 0x15, 
-       0x31, 0x3, 0x2, 0x2, 0x2, 0x17, 0x36, 0x3, 0x2, 0x2, 0x2, 0x19, 0x3b, 
-       0x3, 0x2, 0x2, 0x2, 0x1b, 0x1c, 0x7, 0x2a, 0x2, 0x2, 0x1c, 0x4, 0x3, 
-       0x2, 0x2, 0x2, 0x1d, 0x1e, 0x7, 0x2b, 0x2, 0x2, 0x1e, 0x6, 0x3, 0x2, 
-       0x2, 0x2, 0x1f, 0x20, 0x7, 0x3f, 0x2, 0x2, 0x20, 0x8, 0x3, 0x2, 0x2, 
-       0x2, 0x21, 0x22, 0x7, 0x27, 0x2, 0x2, 0x22, 0xa, 0x3, 0x2, 0x2, 0x2, 
-       0x23, 0x24, 0x7, 0x2c, 0x2, 0x2, 0x24, 0xc, 0x3, 0x2, 0x2, 0x2, 0x25, 
-       0x26, 0x7, 0x31, 0x2, 0x2, 0x26, 0xe, 0x3, 0x2, 0x2, 0x2, 0x27, 0x28, 
-       0x7, 0x2d, 0x2, 0x2, 0x28, 0x10, 0x3, 0x2, 0x2, 0x2, 0x29, 0x2a, 
-       0x7, 0x2f, 0x2, 0x2, 0x2a, 0x12, 0x3, 0x2, 0x2, 0x2, 0x2b, 0x2d, 
-       0x9, 0x2, 0x2, 0x2, 0x2c, 0x2b, 0x3, 0x2, 0x2, 0x2, 0x2d, 0x2e, 0x3, 
-       0x2, 0x2, 0x2, 0x2e, 0x2c, 0x3, 0x2, 0x2, 0x2, 0x2e, 0x2f, 0x3, 0x2, 
-       0x2, 0x2, 0x2f, 0x14, 0x3, 0x2, 0x2, 0x2, 0x30, 0x32, 0x9, 0x3, 0x2, 
-       0x2, 0x31, 0x30, 0x3, 0x2, 0x2, 0x2, 0x32, 0x33, 0x3, 0x2, 0x2, 0x2, 
-       0x33, 0x31, 0x3, 0x2, 0x2, 0x2, 0x33, 0x34, 0x3, 0x2, 0x2, 0x2, 0x34, 
-       0x16, 0x3, 0x2, 0x2, 0x2, 0x35, 0x37, 0x7, 0xf, 0x2, 0x2, 0x36, 0x35, 
-       0x3, 0x2, 0x2, 0x2, 0x36, 0x37, 0x3, 0x2, 0x2, 0x2, 0x37, 0x38, 0x3, 
-       0x2, 0x2, 0x2, 0x38, 0x39, 0x7, 0xc, 0x2, 0x2, 0x39, 0x18, 0x3, 0x2, 
-       0x2, 0x2, 0x3a, 0x3c, 0x9, 0x4, 0x2, 0x2, 0x3b, 0x3a, 0x3, 0x2, 0x2, 
-       0x2, 0x3c, 0x3d, 0x3, 0x2, 0x2, 0x2, 0x3d, 0x3b, 0x3, 0x2, 0x2, 0x2, 
-       0x3d, 0x3e, 0x3, 0x2, 0x2, 0x2, 0x3e, 0x3f, 0x3, 0x2, 0x2, 0x2, 0x3f, 
-       0x40, 0x8, 0xd, 0x2, 0x2, 0x40, 0x1a, 0x3, 0x2, 0x2, 0x2, 0x7, 0x2, 
-       0x2e, 0x33, 0x36, 0x3d, 0x3, 0x8, 0x2, 0x2, 
-  };
-
-  _serializedATN.insert(_serializedATN.end(), serializedATNSegment0,
-    serializedATNSegment0 + sizeof(serializedATNSegment0) / sizeof(serializedATNSegment0[0]));
-
-
-  atn::ATNDeserializer deserializer;
-  _atn = deserializer.deserialize(_serializedATN);
-
-  size_t count = _atn.getNumberOfDecisions();
-  _decisionToDFA.reserve(count);
-  for (size_t i = 0; i < count; i++) { 
-    _decisionToDFA.emplace_back(_atn.getDecisionState(i), i);
-  }
+void ExprLexer::initialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  exprlexerLexerInitialize();
+#else
+  ::antlr4::internal::call_once(exprlexerLexerOnceFlag, exprlexerLexerInitialize);
+#endif
 }
-
-ExprLexer::Initializer ExprLexer::_init;

@@ -14,7 +14,7 @@
 
 ```shell
 .
-├── bin 
+├── bin
 ├── build.sh
 ├── CMakeLists.txt
 ├── doc
@@ -34,13 +34,15 @@
 
 ### 设置antlr编译器
 
+[antlr下载地址](https://www.antlr.org/download/antlr-4.13.1-complete.jar)
+
 1. 设置java运行环境
 2. 下载antlr执行文件
 3. 设置环境变量
 
 ```shell
-export CLASSPATH=".:${pwd}/bin/antlr-complete.jar:$CLASSPATH"
-alias antlr4='java -jar ${pwd}/bin/antlr-complete.jar'
+export CLASSPATH=".:${pwd}/bin/antlr-4.13.1-complete.jar:$CLASSPATH"
+alias antlr4='java -jar ${pwd}/bin/antlr-4.13.1-complete.jar'
 alias grun='java org.antlr.v4.gui.TestRig'
 ```
 
@@ -103,7 +105,6 @@ ParseTree *tree = parser.prog();
 
 ### 总体框架
 
-监听器生成抽象语法树并且运算结果,
-访问器校验抽象语法树使用LLVM校验结果
+监听器生成抽象语法树并且运算结果
 
 ![主要运行框图](doc/AntlrExprMain.png "AntlrExpr Main")
