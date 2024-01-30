@@ -1,8 +1,8 @@
 [requires]
-fmt/10.1.0
+fmt/10.2.1
 gtest/1.14.0
-benchmark/1.7.0
-boost/1.83.0
+benchmark/1.8.3
+boost/1.84.0
 antlr4-cppruntime/4.13.1
 
 [generators]

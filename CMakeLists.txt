@@ -18,6 +18,8 @@ find_package(Threads REQUIRED)
 find_package(Doxygen REQUIRED)
 find_package(Git REQUIRED)
 find_package(antlr4-runtime REQUIRED)
+find_package(GTest REQUIRED)
+find_package(fmt REQUIRED)
 
 # 设置编译工具
 set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-4.13.1-complete.jar)
@@ -121,7 +123,6 @@ add_executable(${PROJECT_NAME}
   ${CMAKE_SOURCE_DIR}/src/semantic.cc
   ${ANTLR_RUNTIME_SRC}
   ${ANTLR_Expr_CXX_OUTPUTS})
-target_link_libraries(${PROJECT_NAME} PRIVATE fmt gtest gtest_main)
 
 if(antlr4-runtime_FOUND)
   message(STATUS "antlr4-runtime include path is : ${antlr4-runtime_INCLUDE_DIRS}")
@@ -132,6 +133,22 @@ if(antlr4-runtime_FOUND)
   link_directories(${antlr4-runtime_LIBRARIES})
   target_link_libraries(${PROJECT_NAME} PRIVATE ${antlr4-runtime_LIBRARIES})
 endif(antlr4-runtime_FOUND)
+
+if(GTest_FOUND)
+  message(STATUS "GTest include path is : ${GTest_INCLUDE_DIR}")
+  message(STATUS "GTest libraries is    : ${GTest_LIBRARIES}")
+  include_directories(${GTest_INCLUDE_DIR})
+  link_libraries(${GTest_LIBRARIES})
+  target_link_libraries(${PROJECT_NAME} PRIVATE ${GTest_LIBRARIES})
+endif(GTest_FOUND)
+
+if(fmt_FOUND)
+  message(STATUS "fmt include path is : ${fmt_INCLUDE_DIR}")
+  message(STATUS "fmt libraries is    : ${fmt_LIBRARIES}")
+  include_directories(${fmt_INCLUDE_DIR})
+  link_libraries(${fmt_LIBRARIES})
+  target_link_libraries(${PROJECT_NAME} PRIVATE ${fmt_LIBRARIES})
+endif(fmt_FOUND)
 
 # 添加boost库
 find_package(Boost REQUIRED program_options system filesystem regex date_time)
