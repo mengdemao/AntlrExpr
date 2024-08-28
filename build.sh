@@ -56,7 +56,7 @@ cmake_config() {
 	check_config ${BUILD_TYPE} || exit 1
 
 	cmake -DCMAKE_TOOLCHAIN_FILE="${ROOT_PATH}"/build/"${BUILD_TYPE}"/generators/conan_toolchain.cmake \
-		-B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=${BUILD_TYPE}
+		-B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_INSTALL_PREFIX="${ROOT_PATH}"/install
 
 	ln -sf ${BUILD_DIR}/compile_commands.json
 }
