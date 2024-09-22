@@ -22,7 +22,7 @@ find_package(GTest REQUIRED)
 find_package(fmt REQUIRED)
 
 # 设置编译工具
-set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-4.13.1-complete.jar)
+set(ANTLR_EXECUTABLE ${CMAKE_SOURCE_DIR}/bin/antlr-4.13.2-complete.jar)
 
 option(ENABLE_CHECK "单元测试" ON)
 option(ENABLE_DEBUG "高级打印" ON)
