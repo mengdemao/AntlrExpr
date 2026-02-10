@@ -1,9 +1,9 @@
 [requires]
-fmt/11.0.2
-gtest/1.15.0
-benchmark/1.9.0
-boost/1.86.0
-antlr4-cppruntime/4.13.1
+fmt/12.1.0
+gtest/1.17.0
+benchmark/1.9.4
+boost/1.90.0
+antlr4-cppruntime/4.13.2
 
 [generators]
 CMakeDeps
